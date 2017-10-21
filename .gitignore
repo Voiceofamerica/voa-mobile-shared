@@ -58,3 +58,7 @@ typings/
 .env
 
 .DS_Store
+*.d.ts
+*.js
+*.js.map
+!interfaces/*
