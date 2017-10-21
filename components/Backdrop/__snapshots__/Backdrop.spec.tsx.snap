@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Backdrop /> snapshots renders correctly with blur 1`] = `
+<RX.View
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Image
+    defaultSource={undefined}
+    onLoadEnd={[Function]}
+    resizeMode="cover"
+    source={1}
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</RX.View>
+`;
+
+exports[`<Backdrop /> snapshots renders correctly without blur 1`] = `
+<RX.View
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Image
+    defaultSource={undefined}
+    onLoadEnd={[Function]}
+    resizeMode="cover"
+    source={1}
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</RX.View>
+`;
