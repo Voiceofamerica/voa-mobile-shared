@@ -1,0 +1,39 @@
+{
+  "preset": "react-native",
+  "transform": {
+    "\\.(ts|tsx)$": "ts-jest/preprocessor.js",
+    "\\.(js|jsx)$": "babel-jest"
+  },
+  "testRegex": "\\.spec\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsConfigFile": "tsconfig.test.json"
+    }
+  },
+  "moduleNameMapper": {
+    "^components/(.*)$": "<rootDir>/components/$1/index.ts",
+    "^interfaces/(.*)$": "<rootDir>/interfaces/$1",
+    "^styles/(.*)$": "<rootDir>/styles/$1.ts"
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{ts,tsx}",
+    "!**/index.{ts,tsx}",
+    "!**/*.story.tsx",
+    "!**/*.d.ts"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 20,
+      "functions": 20,
+      "lines": 20,
+      "statements": 20
+    }
+  }
+}

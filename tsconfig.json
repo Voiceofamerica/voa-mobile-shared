@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es5",
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["components/*"],
+      "interfaces/*": ["interfaces/*"],
+      "styles/*": ["styles/*"]
+    },
+    "skipLibCheck": true
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "node_modules/**/*",
+    "./**/*.spec.tsx",
+    "./**/*.story.tsx"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

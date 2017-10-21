@@ -1,0 +1,52 @@
+{
+  "name": "voa-shared",
+  "version": "1.0.0",
+  "description": "Shared code and components",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "postinstall": "tsc",
+    "test": "jest --config jest.json",
+    "lint": "tslint --project .",
+    "check": "run-s -c test lint check:uninstall check:peerinstall postinstall && npm i",
+    "check:uninstall": "rm -rf node_modules",
+    "check:peerinstall": "npm i --no-save npm-install-peers npm && npm-install-peers",
+    "clean": "git clean -X -f"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excellaco/voa-mobile-shared.git"
+  },
+  "bugs": {
+    "url": "https://github.com/excellaco/voa-mobile-shared/issues"
+  },
+  "homepage": "https://github.com/excellaco/voa-mobile-shared#readme",
+  "devDependencies": {
+    "@types/jest": "^21.1.4",
+    "@types/react": "^15.6.4",
+    "@types/react-native": "^0.49.2",
+    "babel-jest": "^21.2.0",
+    "enzyme": "^3.1.0",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.1",
+    "react": "^16.0.0",
+    "react-native": "^0.49.1",
+    "react-native-blur": "^3.2.0",
+    "react-native-linear-gradient": "^2.3.0",
+    "react-test-renderer": "16.0.0-beta.5",
+    "reactxp": "^0.46.3",
+    "ts-jest": "^21.1.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "peerDependencies": {
+    "@types/react": "^15.6.4",
+    "@types/react-native": "^0.49.2",
+    "react": "^16.0.0",
+    "react-native": "^0.49.1",
+    "react-native-blur": "^3.2.0",
+    "react-native-linear-gradient": "^2.3.0",
+    "reactxp": "^0.46.3",
+    "typescript": "^2.5.3"
+  }
+}
