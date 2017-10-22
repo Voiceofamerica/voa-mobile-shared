@@ -19,7 +19,6 @@ export interface State {
   blurrinessVal: number
 }
 
-const MIN_BLUR = 0
 const MAX_BLUR = 10
 const BLUR_CUTOFF = 1
 
@@ -126,34 +125,7 @@ class Backdrop extends RX.Component<Props, State> {
     )
   }
 
-  renderImageOld = () => {
-    const { imgSrc } = this.props
-    let content
-
-    if (typeof imgSrc === 'number') {
-      return (
-        <Image
-          ref={img => this.backgroundImage = img}
-          style={styles.image as any}
-          source={imgSrc}
-          onLoadEnd={this.imageLoaded}
-          resizeMode='cover' />
-      )
-    } else {
-      return (
-        <RX.Image
-          ref={img => this.backgroundImage = img}
-          style={styles.image}
-          source={imgSrc}
-          onLoad={this.imageLoaded}
-          resizeMode='cover' />
-      )
-    }
-  }
-
   render () {
-    const { imgSrc, blur, children } = this.props
-
     return (
       <RX.View style={styles.container}>
         { this.renderImage() }

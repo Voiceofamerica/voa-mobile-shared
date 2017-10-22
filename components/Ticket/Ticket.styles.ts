@@ -1,5 +1,4 @@
 
-import * as RN from 'react-native'
 import * as RX from 'reactxp'
 
 const minHeight = 100
