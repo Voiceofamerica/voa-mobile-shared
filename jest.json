@@ -4,13 +4,14 @@
     "\\.(ts|tsx)$": "ts-jest/preprocessor.js",
     "\\.(js|jsx)$": "babel-jest"
   },
-  "testRegex": "\\.spec\\.(ts|tsx|js)$",
+  "testRegex": "\\.spec\\.(ts|tsx)$",
   "moduleFileExtensions": [
     "ts",
     "tsx",
     "js",
     "json"
   ],
+  "cacheDirectory": "jestCache",
   "globals": {
     "ts-jest": {
       "tsConfigFile": "tsconfig.test.json"

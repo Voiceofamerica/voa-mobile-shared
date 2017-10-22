@@ -10,7 +10,7 @@ export interface ArticleBlurb {
   minor: string
 }
 
-interface Props {
+export interface Props {
   onPress: () => void
   blurb: ArticleBlurb
   factor?: number

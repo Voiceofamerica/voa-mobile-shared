@@ -17,6 +17,7 @@ exports[`<Card /> snapshots renders correctly 1`] = `
         "flexDirection": "column",
         "justifyContent": "flex-end",
         "margin": 5,
+        "overflow": "hidden",
         "shadowColor": "#000",
         "shadowOffset": Object {
           "height": 10,
@@ -71,7 +72,7 @@ exports[`<Card /> snapshots renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundColor": "transparent",
               "color": "#FFF",
               "paddingBottom": 5,
             },
@@ -87,7 +88,7 @@ exports[`<Card /> snapshots renders correctly 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "backgroundColor": "transparent",
               "color": "#FFF",
               "fontWeight": "bold",
             },

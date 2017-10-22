@@ -14,7 +14,7 @@ export interface Props {
   blurDone?: (isBlurred: boolean) => void
 }
 
-interface State {
+export interface State {
   viewRef: any
   blurrinessVal: number
 }

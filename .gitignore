@@ -61,4 +61,5 @@ typings/
 *.d.ts
 *.js
 *.js.map
+jestCache
 !interfaces/*

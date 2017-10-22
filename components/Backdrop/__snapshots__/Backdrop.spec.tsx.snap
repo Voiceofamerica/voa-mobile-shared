@@ -13,7 +13,7 @@ exports[`<Backdrop /> snapshots renders correctly with blur 1`] = `
   }
 >
   <Image
-    defaultSource={undefined}
+    defaultSource={1}
     onLoadEnd={[Function]}
     resizeMode="cover"
     source={1}
@@ -40,7 +40,7 @@ exports[`<Backdrop /> snapshots renders correctly without blur 1`] = `
   }
 >
   <Image
-    defaultSource={undefined}
+    defaultSource={1}
     onLoadEnd={[Function]}
     resizeMode="cover"
     source={1}

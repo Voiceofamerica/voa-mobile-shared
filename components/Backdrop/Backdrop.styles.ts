@@ -1,7 +1,7 @@
 
 import * as RX from 'reactxp'
 
-import { button, buttonText } from 'commonStyles'
+import { button, buttonText } from 'styles'
 
 export default {
   container: RX.Styles.createViewStyle({

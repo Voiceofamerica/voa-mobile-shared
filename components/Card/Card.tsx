@@ -11,13 +11,13 @@ export interface ArticleBlurb {
   minor: string
 }
 
-interface Props {
+export interface Props {
   onPress: () => void
   blurb: ArticleBlurb
   factor?: number
 }
 
-interface State {
+export interface State {
   layout: RX.Types.ViewOnLayoutEvent
 }
 
@@ -26,7 +26,7 @@ const TITLE_RATIO = 1 / 20
 const MINOR_RATIO = 1 / 30
 const TEXT_POWER = 1 / 2
 
-export default class Card extends RX.Component<Props, State> {
+class Card extends RX.Component<Props, State> {
   state = {
     layout: {} as RX.Types.ViewOnLayoutEvent,
   }
@@ -72,3 +72,5 @@ export default class Card extends RX.Component<Props, State> {
     )
   }
 }
+
+export default Card
