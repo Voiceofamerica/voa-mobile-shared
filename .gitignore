@@ -65,3 +65,6 @@ typings/
 *.js
 *.js.map
 jestCache
+
+!jest.storybook.js
+!.storybook/*
