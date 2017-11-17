@@ -1,4 +1,6 @@
 
+declare var __DEV__: boolean
+
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/observable/fromEvent'
 import 'rxjs/add/observable/merge'
