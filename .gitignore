@@ -66,5 +66,9 @@ typings/
 *.js.map
 jestCache
 
+# explicitly allow
 !jest.storybook.js
-!.storybook/*
+!.storybook/**/*
+!__mocks__/**/*
+!.jest/**/*
+!__global.d.ts

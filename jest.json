@@ -1,9 +1,11 @@
 {
-  "preset": "react-native",
   "transform": {
     "\\.(ts|tsx)$": "ts-jest/preprocessor.js",
     "\\.(js|jsx)$": "babel-jest"
   },
+  "setupFiles": [
+    "<rootDir>/.jest/rAF.js"
+  ],
   "testRegex": "\\.spec\\.(ts|tsx)$",
   "moduleFileExtensions": [
     "ts",
@@ -13,6 +15,7 @@
   ],
   "cacheDirectory": "jestCache",
   "globals": {
+    "__DEV__": true,
     "ts-jest": {
       "tsConfigFile": "tsconfig.test.json"
     }
@@ -20,7 +23,9 @@
   "moduleNameMapper": {
     "^components/(.*)$": "<rootDir>/components/$1/index.ts",
     "^helpers/(.*)$": "<rootDir>/helpers/$1.ts",
-    "^types/(.*)$": "<rootDir>/styles/$1.d.ts"
+    "^types/(.*)$": "<rootDir>/styles/$1.d.ts",
+    "\\.s?css$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|gif)$": "<rootDir>/__mocks__/fileMock.js"
   },
   "collectCoverage": true,
   "collectCoverageFrom": [

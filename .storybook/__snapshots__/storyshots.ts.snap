@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Card display 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="card"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 768,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+    </div>
+    <div
+      className="gradient"
+    >
+      <div
+        className="minorText"
+        style={
+          Object {
+            "fontSize": 33.96787751983093,
+          }
+        }
+      >
+        15:08
+      </div>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "fontSize": 50.951816279746396,
+          }
+        }
+      >
+        President Trump: From North Korea to Iran, we confront dangerous governments
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card display two 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="card"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 384,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+    </div>
+    <div
+      className="gradient"
+    >
+      <div
+        className="minorText"
+        style={
+          Object {
+            "fontSize": 23.90360662192994,
+          }
+        }
+      >
+        15:08
+      </div>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "fontSize": 35.85540993289491,
+          }
+        }
+      >
+        President Trump: From North Korea to Iran, we confront dangerous governments
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 384,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/01D5530E-3642-4CBF-957E-AE990ABE9167_cx0_cy14_cw0_w650_r1.jpg"
+      />
+    </div>
+    <div
+      className="gradient"
+    >
+      <div
+        className="minorText"
+        style={
+          Object {
+            "fontSize": 23.90360662192994,
+          }
+        }
+      >
+        21:55
+      </div>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "fontSize": 35.85540993289491,
+          }
+        }
+      >
+        At least seven people were killed in a police vehicle in Balochistan, Pakistan
+      </div>
+    </div>
+  </div>
+</div>
+`;

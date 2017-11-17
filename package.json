@@ -6,8 +6,10 @@
   "private": true,
   "scripts": {
     "postinstall": "run-s scss:types compile",
-    "compile": "tsc",
-    "test": "jest --config jest.json",
+    "compile": "tsc --project ./tsconfig.json",
+    "test": "run-s -c test:unit test:storyshots",
+    "test:unit": "jest --config jest.json",
+    "test:storyshots": "jest --config jest.storybook.js",
     "lint": "tslint --project .",
     "check": "run-s -c test lint postinstall",
     "clean": "git clean -X -f",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/excellaco/voa-mobile-shared#readme",
   "devDependencies": {
+    "@storybook/addon-storyshots": "^3.2.16",
     "@storybook/react": "^3.2.15",
     "@types/enzyme": "^3.1.0",
     "@types/enzyme-adapter-react-16": "^1.0.0",
@@ -44,6 +47,7 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "file-loader": "^1.1.5",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
     "json-loader": "^0.5.7",
     "node-sass": "^4.6.1",
