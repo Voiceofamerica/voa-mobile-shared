@@ -1,6 +1,6 @@
 {
   "name": "voa-shared",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Shared code and components",
   "main": "index.js",
   "private": true,
