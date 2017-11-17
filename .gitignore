@@ -67,6 +67,7 @@ typings/
 jestCache
 
 # explicitly allow
+!types/**/*
 !jest.storybook.js
 !.storybook/**/*
 !__mocks__/**/*
