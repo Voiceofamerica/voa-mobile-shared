@@ -19,13 +19,11 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es6",
-    "baseUrl": ".",
+    "skipLibCheck": true,
+    "baseUrl": "./types",
     "paths": {
-      "components/*": ["components/*"],
-      "helpers/*": ["helpers/*"],
-      "types/*": ["types/*"]
-    },
-    "skipLibCheck": true
+      "voa-shared/*": ["../*"]
+    }
   },
   "include": [
     "./components/**/*",

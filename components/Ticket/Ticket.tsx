@@ -2,10 +2,10 @@
 import * as React from 'react'
 import { Subscription } from 'rxjs/Subscription'
 
-import { resize } from 'helpers/windowHelper'
+import { resize } from 'voa-shared/helpers/windowHelper'
 
-import ResilientImage from 'components/ResilientImage'
-import ArticleBlurb from 'types/ArticleBlurb'
+import ResilientImage from 'voa-shared/components/ResilientImage'
+import ArticleBlurb from 'voa-shared/types/ArticleBlurb'
 
 import { ticket, imageArea, show, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 

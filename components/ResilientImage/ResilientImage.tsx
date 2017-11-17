@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { Subscription } from 'rxjs/Subscription'
 
-import { waitUntilOnline } from 'helpers/resilience'
+import { waitUntilOnline } from 'voa-shared/helpers/resilience'
 
 import { resilientImage, imageContent } from './ResilientImage.scss'
 
