@@ -19,8 +19,8 @@
   },
   "moduleNameMapper": {
     "^components/(.*)$": "<rootDir>/components/$1/index.ts",
-    "^interfaces/(.*)$": "<rootDir>/interfaces/$1",
-    "^styles/(.*)$": "<rootDir>/styles/$1.ts"
+    "^helpers/(.*)$": "<rootDir>/helpers/$1.ts",
+    "^types/(.*)$": "<rootDir>/styles/$1.d.ts"
   },
   "collectCoverage": true,
   "collectCoverageFrom": [

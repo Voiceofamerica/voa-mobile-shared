@@ -1,35 +1,56 @@
 
 import * as React from 'react'
-import * as RX from 'reactxp'
+import { Subscription } from 'rxjs/Subscription'
 
-import styles from './Ticket.styles'
+import { resize } from 'helpers/windowHelper'
 
-export interface ArticleBlurb {
-  image: string
-  title: string
-  minor: string
-}
+import ResilientImage from 'components/ResilientImage'
+import ArticleBlurb from 'types/ArticleBlurb'
+
+import { ticket, imageArea, show, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 
 export interface Props {
   onPress: () => void
   blurb: ArticleBlurb
-  factor?: number
 }
 
-export default ({ onPress, blurb: { image, minor, title }, factor = 1 }: Props) => (
-  <RX.View
-    style={styles.container}
-    onPress={onPress}>
-    <RX.Image source={image} style={styles.image} resizeMode='cover' resizeMethod='scale' />
-    <RX.View style={styles.textContainer}>
-      <RX.View style={styles.titleContainer}>
-        <RX.Text style={styles.titleText}>
-          {title}
-        </RX.Text>
-      </RX.View>
-      <RX.Text style={styles.minorText}>
-        {minor}
-      </RX.Text>
-    </RX.View>
-  </RX.View>
-)
+export interface State {
+  showImage: boolean
+}
+
+class Ticket extends React.Component<Props, State> {
+  state = {
+    showImage: false,
+  }
+
+  onImageLoaded = () =>
+    this.setState({
+      showImage: true,
+    })
+
+  render () {
+    const { onPress, blurb: { image, title, minor } } = this.props
+    const { showImage } = this.state
+
+    const imageClass = showImage
+                     ? `${imageArea} ${show}`
+                     : imageArea
+
+    return (
+      <div className={ticket} onClick={onPress}>
+        <ResilientImage src={image} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded} />
+        <div className={textContent}>
+          <div className={titleText}>
+            {title}
+            <div className={fadeOut}/>
+          </div>
+          <div className={minorText}>
+            {minor}
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Ticket

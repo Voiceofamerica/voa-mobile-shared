@@ -22,13 +22,14 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["components/*"],
-      "interfaces/*": ["interfaces/*"],
-      "styles/*": ["styles/*"]
+      "helpers/*": ["helpers/*"],
+      "types/*": ["types/*"]
     },
     "skipLibCheck": true
   },
   "include": [
-    "./**/*"
+    "./components/**/*",
+    "./helpers/**/*"
   ],
   "exclude": [
     "node_modules",

@@ -62,4 +62,3 @@ typings/
 *.js
 *.js.map
 jestCache
-!interfaces/*

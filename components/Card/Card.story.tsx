@@ -1,16 +1,15 @@
 
-import 'react-native'
 import * as React from 'react'
-import * as RX from 'reactxp'
-import { storiesOf, linkTo } from '@storybook/react-native'
+import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import ArticleBlurb from 'types/ArticleBlurb'
 
-import Card, { ArticleBlurb } from './Card'
+import Card from './Card'
 
 const testArticle: ArticleBlurb = {
   image: 'https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png',
   minor: '15:08',
-  title: 'Pressident Trump: From North Korea to Iran, we confront dangerous governments',
+  title: 'President Trump: From North Korea to Iran, we confront dangerous governments',
 }
 
 const testArticle2: ArticleBlurb = {
@@ -21,13 +20,13 @@ const testArticle2: ArticleBlurb = {
 
 storiesOf('Card', module)
   .add('display', () => (
-    <RX.View style={{ flexDirection: 'row' }}>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
       <Card onPress={action('Card.onPress')} blurb={testArticle} />
-    </RX.View>
+    </div>
   ))
   .add('display two', () => (
-    <RX.View style={{ flexDirection: 'row' }}>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
       <Card onPress={action('Card.onPress')} blurb={testArticle} factor={2} />
       <Card onPress={action('Card.onPress')} blurb={testArticle2} factor={2} />
-    </RX.View>
+    </div>
   ))

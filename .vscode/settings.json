@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "components/**/*.js": true,
+    "components/**/*.js.map": true,
+    "components/**/*.d.ts": true,
+    "helpers/**/*.js": true,
+    "helpers/**/*.js.map": true,
+    "helpers/**/*.d.ts": true
+  }
+}

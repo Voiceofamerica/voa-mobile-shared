@@ -1,0 +1,13 @@
+
+@mixin touchable() {
+  transition: opacity 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:active {
+    opacity: 0.2;
+    transition: opacity 0s;
+  }
+}
+
+@mixin menu-pad() {
+  padding-top: $menu-height;
+}
