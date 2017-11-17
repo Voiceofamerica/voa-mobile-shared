@@ -57,6 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# editor
+.vscode
+
 .DS_Store
 *.d.ts
 *.js
