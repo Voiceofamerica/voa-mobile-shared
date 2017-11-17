@@ -46,7 +46,7 @@ class ReilientImage extends React.Component<Props, State> {
     this.mounted = true
   }
 
-  componentDidUnmount () {
+  componentWillUnmount () {
     this.mounted = false
   }
 
