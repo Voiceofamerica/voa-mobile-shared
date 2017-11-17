@@ -31,6 +31,8 @@ class ReilientImage extends React.Component<Props, State> {
     imageStaus: 'loading',
   }
 
+  mounted: boolean = false
+
   componentWillMount () {
     const shouldRender = navigator.onLine || this.props.alwaysShow
     this.setState({
@@ -40,11 +42,17 @@ class ReilientImage extends React.Component<Props, State> {
     if (shouldRender) {
       this.tryFetchImage()
     }
+
+    this.mounted = true
+  }
+
+  componentDidUnmount () {
+    this.mounted = false
   }
 
   tryFetchImage = () => {
     if (!navigator.onLine) {
-      return waitUntilOnline().then(() => this.tryFetchImage())
+      return waitUntilOnline().then(() => this.mounted && this.tryFetchImage())
     }
 
     const { onLoadDone = noop } = this.props
@@ -52,11 +60,13 @@ class ReilientImage extends React.Component<Props, State> {
     const img = new Image()
 
     img.addEventListener('error', () => {
+      if (!this.mounted) { return }
       this.setImageStatus('error')
       setTimeout(this.tryFetchImage, IMAGE_FETCH_RETRY_RATE)
     })
 
     img.addEventListener('load', () => {
+      if (!this.mounted) { return }
       this.setImageStatus('loaded')
       onLoadDone()
     })
