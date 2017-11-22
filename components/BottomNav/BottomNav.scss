@@ -32,6 +32,10 @@ $round-item-size: calc(2.5vh + 50px);
     outline: none;
     font-size: 1em;
 
+    &.activeItem {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
     &:active {
       background: white;
     }
@@ -56,6 +60,10 @@ $round-item-size: calc(2.5vh + 50px);
     box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.2);
     background: $light-grey;
     font-size: 1em;
+    
+    &.activeItem {
+      color: rgba(0, 0, 0, 0.3);
+    }
 
     &:active {
       background: white;

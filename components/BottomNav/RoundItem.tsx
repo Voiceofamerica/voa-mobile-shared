@@ -2,15 +2,19 @@
 import * as React from 'react'
 import { Subscription } from 'rxjs/Subscription'
 
-import { roundItem } from './BottomNav.scss'
+import { roundItem, activeItem } from './BottomNav.scss'
 
 export type Props = React.Props<any> & {
   onClick?: () => void,
+  active?: boolean,
 }
 
-function RoundItem ({ children, onClick = () => null }: Props) {
+function RoundItem ({ children, onClick = () => null, active = false }: Props) {
+  const className = active
+    ? `${roundItem} ${activeItem}`
+    : roundItem
   return (
-    <button className={roundItem} onClick={() => onClick()}>
+    <button className={className} onClick={() => onClick()}>
       {
         children
       }

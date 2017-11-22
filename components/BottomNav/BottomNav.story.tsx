@@ -28,3 +28,21 @@ storiesOf('BottomNav', module)
       <IconItem onClick={clickAction}>IJ</IconItem>
     </BottomNav>
   ))
+  .add('with active item', () => (
+    <BottomNav>
+      <IconItem onClick={clickAction}>AB</IconItem>
+      <IconItem onClick={clickAction} active>CD</IconItem>
+      <RoundItem onClick={roundClickAction}>EF</RoundItem>
+      <IconItem onClick={clickAction}>GH</IconItem>
+      <IconItem onClick={clickAction}>IJ</IconItem>
+    </BottomNav>
+  ))
+  .add('with active round item', () => (
+    <BottomNav>
+      <IconItem onClick={clickAction}>AB</IconItem>
+      <IconItem onClick={clickAction}>CD</IconItem>
+      <RoundItem onClick={roundClickAction} active>EF</RoundItem>
+      <IconItem onClick={clickAction}>GH</IconItem>
+      <IconItem onClick={clickAction}>IJ</IconItem>
+    </BottomNav>
+  ))

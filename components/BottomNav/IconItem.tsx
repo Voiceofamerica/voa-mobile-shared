@@ -2,15 +2,20 @@
 import * as React from 'react'
 import { Subscription } from 'rxjs/Subscription'
 
-import { iconItem } from './BottomNav.scss'
+import { iconItem, activeItem } from './BottomNav.scss'
 
 export type Props = React.Props<any> & {
   onClick?: () => void,
+  active?: boolean,
 }
 
-function IconItem ({ children, onClick = () => null }: Props) {
+function IconItem ({ children, onClick = () => null, active = false }: Props) {
+  const className = active
+    ? `${iconItem} ${activeItem}`
+    : iconItem
+
   return (
-    <button className={iconItem} onClick={() => onClick()}>
+    <button className={className} onClick={() => onClick()}>
       {
         children
       }
