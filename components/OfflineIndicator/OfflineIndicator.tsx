@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { Subscription } from 'rxjs/Subscription'
 
-import { onlineStatusObservable } from 'voa-shared/helpers/resilience'
+import { onlineStatusObservable } from '../../helpers/resilience'
 
 import { offlineIndicator, offline, online, text } from './OfflineIndicator.scss'
 
