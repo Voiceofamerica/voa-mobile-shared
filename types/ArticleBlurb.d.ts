@@ -1,7 +1,11 @@
 
+interface Image {
+  url: string
+}
+
 export default interface ArticleBlurb {
-  id: string
-  image: string
+  id: number
+  image: Image | null
   title: string
-  minor: string
+  pubDate: string
 }

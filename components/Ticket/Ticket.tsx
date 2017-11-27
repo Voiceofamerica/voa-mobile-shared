@@ -1,5 +1,6 @@
 
 import * as React from 'react'
+import * as moment from 'moment'
 import { Subscription } from 'rxjs/Subscription'
 
 import { resize } from '../../helpers/windowHelper'
@@ -29,7 +30,7 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, blurb: { image, title, minor } } = this.props
+    const { onPress, blurb: { image, title, pubDate } } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -38,14 +39,14 @@ class Ticket extends React.Component<Props, State> {
 
     return (
       <div className={ticket} onClick={onPress}>
-        <ResilientImage src={image} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded} />
+        <ResilientImage src={image && image.url} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded} />
         <div className={textContent}>
           <div className={titleText}>
             {title}
             <div className={fadeOut}/>
           </div>
           <div className={minorText}>
-            {minor}
+          {moment(pubDate).fromNow()}
           </div>
         </div>
       </div>
