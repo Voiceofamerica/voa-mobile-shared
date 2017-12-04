@@ -66,6 +66,7 @@ commonStyles
 coverage
 helpers
 jestCache
+types
 !src/**/*
 *.scss.d.ts
 
