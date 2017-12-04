@@ -20,14 +20,11 @@
     "moduleResolution": "node",
     "target": "es6",
     "skipLibCheck": true,
-    "baseUrl": "./types",
-    "paths": {
-      "voa-shared/*": ["../*"]
-    }
+    "baseUrl": "./src",
+    "outDir": "."
   },
   "include": [
-    "./components/**/*",
-    "./helpers/**/*"
+    "./src/**/*"
   ],
   "exclude": [
     "node_modules",
