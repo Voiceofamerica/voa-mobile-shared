@@ -1,9 +1,8 @@
 {
-  "name": "voa-shared",
+  "name": "@voiceofamerica/voa-shared",
   "version": "1.5.0",
   "description": "Shared code and components",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "prepare": "run-s scss:types compile files:copy",
     "compile": "tsc --project ./tsconfig.json",
