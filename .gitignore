@@ -61,15 +61,16 @@ typings/
 .vscode
 
 .DS_Store
-*.d.ts
-*.js
-*.js.map
+components
+commonStyles
+coverage
+helpers
 jestCache
+!src/**/*
+*.scss.d.ts
 
 # explicitly allow
-!src/types/**/*
 !jest.storybook.js
 !.storybook/**/*
 !__mocks__/**/*
 !.jest/**/*
-!__global.d.ts

@@ -1,0 +1,6 @@
+src
+__mocks__
+.jest
+.storybook
+coverage
+jestCache

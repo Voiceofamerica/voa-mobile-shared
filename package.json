@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "postinstall": "run-s scss:types compile",
+    "prepare": "run-s scss:types compile scss:copy",
     "compile": "tsc --project ./tsconfig.json",
     "test": "run-s -c test:unit test:storyshots",
     "test:unit": "jest --config jest.json",
@@ -13,6 +13,7 @@
     "lint": "tslint --project .",
     "check": "run-s -c test lint postinstall",
     "clean": "git clean -X -f",
+    "scss:copy": "cd src && rsync -R **/*.scss ..",
     "scss:types": "tcm -p './src/**/*.scss'",
     "scss:types:watch": "npm run scss:types -- -w",
     "storybook": "run-p storybook:start storybook:open",
