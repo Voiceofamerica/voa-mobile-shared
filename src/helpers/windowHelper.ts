@@ -87,7 +87,7 @@ if (__DEV__) {
       .filter(amts => amts.reduce((pass, amt) => pass && amt > MIN_SHAKE, true))
 
     menuObservable = Observable
-      .merge<void>(menuButtonObservable, shakeObservable)
+      .merge<any>(menuButtonObservable, shakeObservable)
       .debounceTime(300)
   })
 }
