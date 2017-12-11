@@ -12,6 +12,7 @@ export interface Props {
   style?: React.CSSProperties
   onLoadDone?: () => void
   playbackRate?: number
+  autoPlay?: boolean
 }
 
 class MediaPlayer extends React.Component<Props> {
@@ -35,9 +36,9 @@ class MediaPlayer extends React.Component<Props> {
   }
 
   renderContent = () => {
-    const { src } = this.props
+    const { src, autoPlay } = this.props
 
-    return (<video ref={this.setPlayer} controls src={src} className={mediaContent} />)
+    return (<video ref={this.setPlayer} controls src={src} className={mediaContent} autoPlay={autoPlay} />)
   }
 
   render () {
