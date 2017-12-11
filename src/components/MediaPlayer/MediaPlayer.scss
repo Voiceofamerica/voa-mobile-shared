@@ -1,7 +1,10 @@
 
 .mediaPlayer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   .mediaContent {
-    
+    flex: 1;
   }
 }
