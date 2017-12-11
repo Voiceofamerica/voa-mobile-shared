@@ -53,5 +53,11 @@
     height: $menu-height;
     width: 30vw;
     z-index: 1001;
+
+    [dir="rtl"] & {
+      right: auto;
+      left: 0;
+      background: linear-gradient(-90deg, rgba(256, 256, 256, 0), #fff 90%, #fff);
+    }
   }
 }
