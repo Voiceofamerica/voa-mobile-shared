@@ -4,11 +4,11 @@ const tapPromise = new Promise(resolve => {
   const touchHandler = () => {
     setTimeout(() => {
       resolve()
-      document.removeEventListener('touch', touchHandler)
+      document.removeEventListener('click', touchHandler)
     }, 50)
   }
 
-  document.addEventListener('touch', touchHandler)
+  document.addEventListener('click', touchHandler)
 })
 
 const readyPromise = Promise.race([timeoutPromise, tapPromise])
