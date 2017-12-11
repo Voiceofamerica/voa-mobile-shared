@@ -24,7 +24,6 @@
 
   .topNavItem {
     @include touchable();
-    box-sizing: border-box;
     flex-grow: 1;
     flex-wrap: nowrap;
     display: flex;
@@ -32,10 +31,18 @@
     align-items: center;
     padding: 0 10px;
     white-space: nowrap;
+    background: transparent;
+    outline: none;
+    border: none;
     border-bottom: 3px solid transparent;
+    border-radius: 0;
+    font-size: 1em;
+    color: #888;
+    box-sizing: border-box;
 
     &.selectedItem {
-      border-bottom-color: $voa-blue;
+      border-bottom-color: $voa-red;
+      color: $voa-blue;
       font-weight: bold;
     }
 
