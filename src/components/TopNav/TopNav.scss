@@ -1,0 +1,57 @@
+
+@import '../../commonStyles/index.scss';
+
+.topNav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  height: $menu-height;
+  overflow-x: scroll;
+  font-size: $menu-font-size;
+  color: $voa-blue;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topNavItem {
+    @include touchable();
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+
+    &.selectedItem {
+      border-bottom-color: $voa-blue;
+      font-weight: bold;
+    }
+
+    &:last-of-type {
+      min-width: 100vw;
+    }
+  }
+  
+  .fadeout {
+    position: fixed;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(256, 256, 256, 0), #fff 90%, #fff);
+    top: 0;
+    right: 0;
+    height: $menu-height;
+    width: 30vw;
+    z-index: 1001;
+  }
+}
