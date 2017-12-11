@@ -5,19 +5,20 @@ import { topNavItem, selectedItem } from './TopNav.scss'
 
 export interface Props extends React.Props<any> {
   selected?: boolean
+  onClick?: () => void
 }
 
 function TopNavItem (props: Props) {
-  const { children, selected } = props
+  const { children, selected, onClick = () => null } = props
 
   const className = selected
                   ? `${topNavItem} ${selectedItem}`
                   : topNavItem
 
   return (
-    <div className={className}>
+    <button className={className} onClick={() => onClick()}>
       {children}
-    </div>
+    </button>
   )
 }
 
