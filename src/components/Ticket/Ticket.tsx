@@ -8,11 +8,12 @@ import { resize } from '../../helpers/windowHelper'
 import ResilientImage from '../ResilientImage'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { ticket, imageArea, show, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
+import { ticket, imageArea, show, iconOverlay, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 
 export interface Props {
   onPress: () => void
   blurb: ArticleBlurb
+  icon?: JSX.Element
 }
 
 export interface State {
@@ -30,7 +31,7 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, blurb: { image, title, pubDate } } = this.props
+    const { onPress, blurb: { image, title, pubDate }, icon } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -39,7 +40,9 @@ class Ticket extends React.Component<Props, State> {
 
     return (
       <div className={ticket} onClick={onPress}>
-        <ResilientImage src={image && image.url} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded} />
+        <ResilientImage src={image && image.url} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
+          {icon}
+        </ResilientImage>
         <div className={textContent}>
           <div className={titleText}>
             {title}

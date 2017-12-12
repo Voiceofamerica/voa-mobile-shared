@@ -8,12 +8,13 @@ import { resize } from '../../helpers/windowHelper'
 import ResilientImage from '../ResilientImage'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { card, imageStyle, imageContainer, gradient, minorText, titleText } from './Card.scss'
+import { card, imageStyle, imageContainer, iconOverlay, gradient, minorText, titleText } from './Card.scss'
 
 export interface Props {
   onPress: () => void
   blurb: ArticleBlurb
   factor?: number
+  icon?: JSX.Element
 }
 
 export interface State {
@@ -42,10 +43,9 @@ class Card extends React.Component<Props, State> {
   componentWillUnmount () {
     this._resizeSub.unsubscribe()
   }
-
   render () {
     const { windowWidth } = this.state
-    const { onPress, blurb: { image, pubDate, title }, factor = 1 } = this.props
+    const { onPress, blurb: { image, pubDate, title }, factor = 1, icon } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
 
     const height = width * HEIGHT_RATIO
@@ -60,7 +60,9 @@ class Card extends React.Component<Props, State> {
         className={card}
         style={{ height }}
         onClick={onPress}>
-        <ResilientImage className={imageContainer} src={image && image.url} alwaysShow />
+        <ResilientImage className={imageContainer} src={image && image.url} alwaysShow>
+          {icon}
+        </ResilientImage>
         <div className={gradient}>
           <div className={minorText} style={{ fontSize: minorSize }}>
             {moment(pubDate).fromNow()}

@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { waitUntilOnline } from '../../helpers/resilience'
 
-import { resilientImage, imageContent } from './ResilientImage.scss'
+import { resilientImage, imageContent, childrenArea } from './ResilientImage.scss'
 
 export interface Props {
   src: string
@@ -94,6 +94,16 @@ class ReilientImage extends React.Component<Props, State> {
     return (<img src={srcToUse} className={imageContent} />)
   }
 
+  renderChildren = () => {
+    const { children } = this.props
+
+    return (
+      <div className={childrenArea}>
+        {children}
+      </div>
+    )
+  }
+
   render () {
     const { shouldRender = navigator.onLine } = this.state
     if (!shouldRender) {
@@ -107,6 +117,7 @@ class ReilientImage extends React.Component<Props, State> {
       return (
         <div className={`${resilientImage} ${className}`} style={style}>
           { this.renderContent() }
+          { this.props.children ? this.renderChildren() : null }
         </div>
       )
     }

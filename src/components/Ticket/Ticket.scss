@@ -29,6 +29,7 @@ $image-width: 30vw;
 
   .imageArea {
     width: 0;
+    position: relative;
     visibility: hidden;
     background-size: cover;
     background-position: center;
@@ -39,6 +40,17 @@ $image-width: 30vw;
       animation-duration: 0.3s;
       animation-name: imageSlide;
       animation-iteration-count: 1;
+    }
+
+    .iconOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import Card from './Card'
+import Ticket from './Ticket'
 
 const testArticle: ArticleBlurb = {
   id: 1,
@@ -20,21 +20,15 @@ const testArticle2: ArticleBlurb = {
   title: 'At least seven people were killed in a police vehicle in Balochistan, Pakistan',
 }
 
-storiesOf('Card', module)
+storiesOf('Ticket', module)
   .add('display', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Card onPress={action('Card.onPress')} blurb={testArticle} />
-    </div>
-  ))
-  .add('display two', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Card onPress={action('Card.onPress')} blurb={testArticle} factor={2} />
-      <Card onPress={action('Card.onPress')} blurb={testArticle2} factor={2} />
+      <Ticket onPress={action('Card.onPress')} blurb={testArticle} />
     </div>
   ))
   .add('display with icon', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Card
+      <Ticket
         onPress={action('Card.onPress')}
         blurb={testArticle}
         icon={<img src={require('./headphones.svg')} />}
