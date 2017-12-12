@@ -17,6 +17,8 @@ export interface Props {
   minorText?: JSX.Element|string
   factor?: number
   icon?: JSX.Element
+  className?: string
+  style?: React.CSSProperties
 }
 
 export interface State {
@@ -45,9 +47,10 @@ class Card extends React.Component<Props, State> {
   componentWillUnmount () {
     this._resizeSub.unsubscribe()
   }
+
   render () {
     const { windowWidth } = this.state
-    const { onPress, factor = 1, icon, title, imageUrl, minorText: minor } = this.props
+    const { onPress, factor = 1, icon, title, imageUrl, minorText: minor, className, style } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
 
     const height = width * HEIGHT_RATIO
@@ -59,8 +62,8 @@ class Card extends React.Component<Props, State> {
     return (
       <div
         ref={el => this._self = el}
-        className={card}
-        style={{ height }}
+        className={`${card} ${className}`}
+        style={{ height, ...style }}
         onClick={onPress}>
         <ResilientImage className={imageContainer} src={imageUrl} alwaysShow>
           {icon}
