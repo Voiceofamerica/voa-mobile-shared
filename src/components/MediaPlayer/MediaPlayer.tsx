@@ -45,7 +45,7 @@ class MediaPlayer extends React.Component<Props> {
 
     return (
       <video
-        className={`${mediaPlayer} ${className}`}
+        className={className}
         ref={this.setPlayer}
         controls
         src={src}
