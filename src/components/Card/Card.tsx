@@ -8,11 +8,13 @@ import { resize } from '../../helpers/windowHelper'
 import ResilientImage from '../ResilientImage'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { card, imageStyle, imageContainer, iconOverlay, gradient, minorText, titleText } from './Card.scss'
+import { card, imageStyle, imageContainer, gradient, minorText, titleText } from './Card.scss'
 
 export interface Props {
   onPress: () => void
-  blurb: ArticleBlurb
+  title: JSX.Element|string
+  imageUrl?: string
+  minorText?: JSX.Element|string
   factor?: number
   icon?: JSX.Element
 }
@@ -45,7 +47,7 @@ class Card extends React.Component<Props, State> {
   }
   render () {
     const { windowWidth } = this.state
-    const { onPress, blurb: { image, pubDate, title }, factor = 1, icon } = this.props
+    const { onPress, factor = 1, icon, title, imageUrl, minorText: minor } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
 
     const height = width * HEIGHT_RATIO
@@ -60,12 +62,12 @@ class Card extends React.Component<Props, State> {
         className={card}
         style={{ height }}
         onClick={onPress}>
-        <ResilientImage className={imageContainer} src={image && image.url} alwaysShow>
+        <ResilientImage className={imageContainer} src={imageUrl} alwaysShow>
           {icon}
         </ResilientImage>
         <div className={gradient}>
           <div className={minorText} style={{ fontSize: minorSize }}>
-            {moment(pubDate).fromNow()}
+            {minor}
           </div>
           <div className={titleText} style={{ fontSize: titleSize }}>
             {title}

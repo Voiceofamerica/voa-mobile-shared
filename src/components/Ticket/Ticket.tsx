@@ -12,7 +12,9 @@ import { ticket, imageArea, show, iconOverlay, textContent, minorText, titleText
 
 export interface Props {
   onPress: () => void
-  blurb: ArticleBlurb
+  title: JSX.Element|string
+  imageUrl?: string
+  minorText?: JSX.Element|string
   icon?: JSX.Element
 }
 
@@ -31,7 +33,7 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, blurb: { image, title, pubDate }, icon } = this.props
+    const { onPress, imageUrl, title, minorText: minor, icon } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -40,7 +42,7 @@ class Ticket extends React.Component<Props, State> {
 
     return (
       <div className={ticket} onClick={onPress}>
-        <ResilientImage src={image && image.url} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
+        <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
           {icon}
         </ResilientImage>
         <div className={textContent}>
@@ -49,7 +51,7 @@ class Ticket extends React.Component<Props, State> {
             <div className={fadeOut}/>
           </div>
           <div className={minorText}>
-          {moment(pubDate).fromNow()}
+          {minor}
           </div>
         </div>
       </div>
