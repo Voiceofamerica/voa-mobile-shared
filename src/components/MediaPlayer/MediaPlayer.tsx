@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { waitUntilOnline } from '../../helpers/resilience'
 
-import { mediaPlayer, mediaContent } from './MediaPlayer.scss'
+import { mediaPlayer } from './MediaPlayer.scss'
 
 export interface Props {
   src: string
@@ -35,22 +35,22 @@ class MediaPlayer extends React.Component<Props> {
     }
   }
 
-  renderContent = () => {
-    const { src, autoPlay } = this.props
-
-    return (<video ref={this.setPlayer} controls src={src} className={mediaContent} autoPlay={autoPlay} />)
-  }
-
   render () {
     const {
       className = '',
       style,
+      src,
+      autoPlay,
     } = this.props
 
     return (
-      <div className={`${mediaPlayer} ${className}`} style={style}>
-        { this.renderContent() }
-      </div>
+      <video
+        className={`${mediaPlayer} ${className}`}
+        ref={this.setPlayer}
+        controls
+        src={src}
+        autoPlay={autoPlay}
+      />
     )
   }
 }

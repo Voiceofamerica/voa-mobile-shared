@@ -2,9 +2,7 @@
 .mediaPlayer {
   display: flex;
   flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
   flex: 1;
-
-  .mediaContent {
-    flex: 1;
-  }
 }
