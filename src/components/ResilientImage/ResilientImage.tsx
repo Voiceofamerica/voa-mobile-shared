@@ -7,7 +7,7 @@ import { waitUntilOnline } from '../../helpers/resilience'
 import { resilientImage, imageContent, childrenArea } from './ResilientImage.scss'
 
 export interface Props {
-  src: string
+  src: string | null
   className?: string
   alwaysShow?: boolean
   style?: React.CSSProperties
@@ -22,7 +22,6 @@ export interface State {
   imageStaus: ImageStatus
 }
 
-const makeAttemptUrl = (src: string) => `${src}#${Date.now()}`
 const noop = () => null
 const IMAGE_FETCH_RETRY_RATE = 2000
 
@@ -51,6 +50,12 @@ class ReilientImage extends React.Component<Props, State> {
   }
 
   tryFetchImage = () => {
+    const { src } = this.props
+
+    if (!src) {
+      return
+    }
+
     if (!navigator.onLine) {
       return waitUntilOnline().then(() => this.mounted && this.tryFetchImage())
     }
@@ -71,7 +76,7 @@ class ReilientImage extends React.Component<Props, State> {
       onLoadDone()
     })
 
-    img.src = this.props.src
+    img.src = src
   }
 
   setImageStatus = (imageStaus: ImageStatus) =>
