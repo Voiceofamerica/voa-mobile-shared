@@ -18,7 +18,7 @@
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "es6",
+    "target": "es5",
     "skipLibCheck": true,
     "baseUrl": "./src",
     "outDir": "."
