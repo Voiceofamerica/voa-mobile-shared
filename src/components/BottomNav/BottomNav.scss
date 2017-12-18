@@ -15,11 +15,9 @@ $round-item-size: calc(2.5vh + 50px);
   display: flex;
   flex-direction: row;
   font-size: $menu-font-size;
-  overflow-y: show;
 
   .iconItem {
     flex: 1;
-    background: none;
     font-weight: bold;
     border: none;
     border-radius: 0;
@@ -31,6 +29,7 @@ $round-item-size: calc(2.5vh + 50px);
     justify-content: center;
     outline: none;
     font-size: 1em;
+    margin: 0;
 
     &.activeItem {
       color: rgba(0, 0, 0, 0.3);
@@ -42,7 +41,6 @@ $round-item-size: calc(2.5vh + 50px);
   }
 
   .roundItem {
-    background: none;
     font-weight: bold;
     border: none;
     border-radius: 0;
@@ -60,6 +58,7 @@ $round-item-size: calc(2.5vh + 50px);
     box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.2);
     background: $light-grey;
     font-size: 1em;
+    margin: 0;
     
     &.activeItem {
       color: rgba(0, 0, 0, 0.3);
