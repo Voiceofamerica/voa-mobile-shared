@@ -75,3 +75,4 @@ types
 !.storybook/**/*
 !__mocks__/**/*
 !.jest/**/*
+src/components/.DS_Store
