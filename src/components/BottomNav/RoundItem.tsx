@@ -7,14 +7,16 @@ import { roundItem, activeItem } from './BottomNav.scss'
 export type Props = React.Props<any> & {
   onClick?: () => void,
   active?: boolean,
+  style?: React.CSSProperties,
+  className?: string,
 }
 
-function RoundItem ({ children, onClick = () => null, active = false }: Props) {
-  const className = active
-    ? `${roundItem} ${activeItem}`
-    : roundItem
+function RoundItem ({ className, style, children, onClick = () => null, active = false }: Props) {
+  const fullClassName = active
+    ? `${roundItem} ${activeItem} ${className}`
+    : `${roundItem} ${className}`
   return (
-    <button className={className} onClick={() => onClick()}>
+    <button className={fullClassName} style={style} onClick={() => onClick()}>
       {
         children
       }
