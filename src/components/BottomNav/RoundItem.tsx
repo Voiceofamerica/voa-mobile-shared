@@ -11,7 +11,7 @@ export type Props = React.Props<any> & {
   className?: string,
 }
 
-function RoundItem ({ className, style, children, onClick = () => null, active = false }: Props) {
+function RoundItem ({ className = '', style, children, onClick = () => null, active = false }: Props) {
   const fullClassName = active
     ? `${roundItem} ${activeItem} ${className}`
     : `${roundItem} ${className}`
