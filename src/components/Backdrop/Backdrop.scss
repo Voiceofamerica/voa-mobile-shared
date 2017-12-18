@@ -9,6 +9,7 @@
   background-position: center;
   transition: filter 1s;
   background: #444;
+  z-index: -1;
 
   .image {
     display: block;
