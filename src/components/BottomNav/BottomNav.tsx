@@ -4,11 +4,14 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { bottomNav } from './BottomNav.scss'
 
-export type Props = React.Props<any> & {}
+export type Props = React.Props<any> & {
+  style?: React.CSSProperties,
+  className?: string,
+}
 
-function BottomNav ({ children }: Props) {
+function BottomNav ({ children, className = '', style }: Props) {
   return (
-    <div className={bottomNav}>
+    <div className={`${bottomNav} ${className}`} style={style}>
       {
         children
       }
