@@ -8,19 +8,24 @@ import { resize } from '../../helpers/windowHelper'
 import ResilientImage from '../ResilientImage'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { card, imageStyle, imageContainer, gradient, minorText, titleText } from './SecondaryCard.scss'
+import { card, imageContainer, titleText } from './SecondaryCard.scss'
 
 export interface Props {
   onPress: () => void
-  blurb: ArticleBlurb
+  title: JSX.Element|string
+  imageUrl?: string
+  minorText?: JSX.Element|string
   factor?: number
+  icon?: JSX.Element
+  className?: string
+  style?: React.CSSProperties
 }
 
 export interface State {
   windowWidth: number
 }
 
-const HEIGHT_RATIO = 3 / 4
+const HEIGHT_RATIO = 4 / 5
 const TITLE_RATIO = 1 / 20
 const MINOR_RATIO = 1 / 30
 const TEXT_POWER = 1 / 2
@@ -43,9 +48,16 @@ class Card extends React.Component<Props, State> {
     this._resizeSub.unsubscribe()
   }
 
+  setSelf = (el) => {
+    this._self = el
+    setTimeout(() => {
+      this.forceUpdate()
+    }, 50)
+  }
+
   render () {
     const { windowWidth } = this.state
-    const { onPress, blurb: { image, pubDate, title }, factor = 2 } = this.props
+    const { onPress, factor = 2, icon, title, imageUrl, minorText: minor, className, style } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
 
     const height = width * HEIGHT_RATIO
@@ -56,18 +68,13 @@ class Card extends React.Component<Props, State> {
 
     return (
       <div
-        ref={el => this._self = el}
+        ref={this.setSelf}
         className={card}
         style={{ height }}
         onClick={onPress}>
-        <ResilientImage className={imageContainer} src={image && image.url} alwaysShow />
-        <div className={gradient}>
-          <div className={minorText} style={{ fontSize: minorSize }}>
-            {moment(pubDate).fromNow()}
-          </div>
-          <div className={titleText} style={{ fontSize: titleSize }}>
-            {title}
-          </div>
+        <ResilientImage className={imageContainer} src={imageUrl} alwaysShow />
+        <div className={titleText} style={{ fontSize: titleSize }}>
+          {title}
         </div>
       </div>
     )
