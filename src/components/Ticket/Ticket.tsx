@@ -8,11 +8,12 @@ import { resize } from '../../helpers/windowHelper'
 import ResilientImage from '../ResilientImage'
 import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { ticket, imageArea, show, iconOverlay, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
+import { ticket, imageArea, show, iconOverlay, content, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 
 export interface Props {
   onPress: () => void
   title: JSX.Element|string
+  description?: string
   imageUrl?: string
   minorText?: JSX.Element|string
   icon?: JSX.Element
@@ -33,7 +34,7 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, imageUrl, title, minorText: minor, icon } = this.props
+    const { onPress, imageUrl, title, description, minorText: minor, icon } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -45,13 +46,16 @@ class Ticket extends React.Component<Props, State> {
         <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
           {icon}
         </ResilientImage>
-        <div className={textContent}>
-          <div className={titleText}>
-            {title}
+        <div className={content}>
+          <div className={textContent}>
+            <div className={titleText}>
+              {title}
+            </div>
+            {description}
             <div className={fadeOut}/>
           </div>
           <div className={minorText}>
-          {minor}
+            {minor}
           </div>
         </div>
       </div>

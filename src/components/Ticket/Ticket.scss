@@ -18,10 +18,8 @@ $image-width: 30vw;
   flex: 1;
   display: flex;
   flex-direction: row;
-  background: $light-grey;
-  box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.8);
-  margin: 1.5vw;
-  border-radius: 1vw;
+  background: white;
+  margin-top: 1.5vw;
   height: 20vw;
   font-size: 3vw;
   overflow: hidden;
@@ -54,36 +52,46 @@ $image-width: 30vw;
     }
   }
 
-  .textContent {
+  .content {
     flex: 2;
     display: flex;
     flex-direction: column;
-    padding: 1vw 1.5vw;
-    
+    padding: 2px 1.5vw;
+    position: relative;
+  }
+
+  .textContent {
+    flex: 1;
+    overflow: hidden;
+
     .titleText {
       flex: 1;
       overflow: hidden;
       position: relative;
-      font-weight: 'bold';
+      font-weight: bold;
       font-size: 1.1em;
-      top: 0.5vw;
-      
-      .fadeOut {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 5vw;
-        background: linear-gradient(transparent, $light-grey 90%, $light-grey 100%);
-      }
+      top: 0.5vw; 
     }
 
-    .minorText {
-      color: #444;
-      text-align: right;
-      font-size: 0.8em;
-      border-top: 2px solid $light-grey;
-      background: $light-grey;
+    .fadeOut {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 5em;
+      background: linear-gradient(transparent, white 80%, white 100%);
     }
+  }
+
+
+  .minorText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #444;
+    text-align: left;
+    font-size: 0.8em;
+    border-top: 2px solid white;
+    background: white;
   }
 }
