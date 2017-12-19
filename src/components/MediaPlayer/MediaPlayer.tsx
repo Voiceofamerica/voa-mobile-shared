@@ -9,6 +9,7 @@ import { mediaPlayer } from './MediaPlayer.scss'
 export interface Props {
   src: string
   className?: string
+  onTogglePlay?: (playing: boolean) => void
   style?: React.CSSProperties
   onLoadDone?: () => void
   playbackRate?: number
@@ -25,13 +26,11 @@ class MediaPlayer extends React.Component<Props> {
     }
   }
 
-  setPlayer = (player: HTMLVideoElement) => {
-    const { playbackRate = 1 } = this.props
-
-    this.player = player
-
-    if (player) {
-      player.playbackRate = playbackRate
+  togglePlay (play: boolean = this.player.paused) {
+    if (play) {
+      this.player.play()
+    } else {
+      this.player.pause()
     }
   }
 
@@ -50,8 +49,26 @@ class MediaPlayer extends React.Component<Props> {
         controls
         src={src}
         autoPlay={autoPlay}
+        onPlay={() => this.triggerTogglePlay(true)}
+        onPause={() => this.triggerTogglePlay(false)}
       />
     )
+  }
+
+  private triggerTogglePlay = (playing: boolean) => {
+    const { onTogglePlay = () => null } = this.props
+
+    onTogglePlay(playing)
+  }
+
+  private setPlayer = (player: HTMLVideoElement) => {
+    const { playbackRate = 1 } = this.props
+
+    this.player = player
+
+    if (player) {
+      player.playbackRate = playbackRate
+    }
   }
 }
 
