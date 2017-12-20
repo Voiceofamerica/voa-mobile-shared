@@ -14,11 +14,15 @@
   background: white;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   height: $menu-height;
-  overflow-x: scroll;
   font-size: $menu-font-size;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  .itemContainer {
+    margin-left: 10vw;
+    overflow-x: scroll;
   }
 
   .topNavItem {

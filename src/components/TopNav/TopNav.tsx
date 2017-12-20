@@ -1,7 +1,7 @@
 
 import * as React from 'react'
 
-import { topNav, fadeout } from './TopNav.scss'
+import { topNav, itemContainer, fadeout } from './TopNav.scss'
 
 export interface Props extends React.Props<any> {
 }
@@ -11,8 +11,10 @@ function TopNav (props: Props) {
 
   return (
     <div className={topNav}>
-      {children}
-      <div className={fadeout} />
+      <div className={itemContainer}>
+        {children}
+        <div className={fadeout} />
+      </div>
     </div>
   )
 }
