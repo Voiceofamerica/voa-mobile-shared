@@ -21,7 +21,7 @@
     flex-direction: row;
     align-content: stretch;
     flex-wrap: nowrap;
-    margin-left: 10vw;
+    margin-left: $menu-height;
     overflow-x: scroll;
   }
 
@@ -51,7 +51,7 @@
     }
 
     &:last-of-type {
-      min-width: 90vw;
+      min-width: calc(98vw - 35px);
     }
   }
   
