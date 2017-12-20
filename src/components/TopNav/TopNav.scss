@@ -11,12 +11,14 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   height: $menu-height;
   font-size: $menu-font-size;
+  display: flex;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
   .itemContainer {
+    flex: 1;
     display: flex;
     flex-direction: row;
     align-content: stretch;
