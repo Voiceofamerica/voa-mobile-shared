@@ -3,10 +3,6 @@
 
 .topNav {
   position: fixed;
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  flex-wrap: nowrap;
   z-index: $menu-z;
   top: 0;
   left: 0;
@@ -21,6 +17,10 @@
   }
 
   .itemContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: nowrap;
     margin-left: 10vw;
     overflow-x: scroll;
   }
