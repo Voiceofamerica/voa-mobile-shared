@@ -8,6 +8,8 @@
 
     &.containImage {
       object-fit: contain;
+      height: auto;
+      max-height: 100%;
     }
   }
 
