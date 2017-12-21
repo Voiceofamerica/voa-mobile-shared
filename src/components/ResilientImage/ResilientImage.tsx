@@ -33,6 +33,7 @@ class ReilientImage extends React.Component<Props, State> {
   mounted: boolean = false
 
   componentWillMount () {
+    this.mounted = true
     const shouldRender = navigator.onLine || this.props.alwaysShow
     this.setState({
       shouldRender,
@@ -41,18 +42,22 @@ class ReilientImage extends React.Component<Props, State> {
     if (shouldRender) {
       this.tryFetchImage()
     }
-
-    this.mounted = true
   }
 
   componentWillUnmount () {
     this.mounted = false
   }
 
+  componentWillReceiveProps (nextProps: Props) {
+    if (nextProps.src !== this.props.src) {
+      this.setImageStatus('loading')
+    }
+  }
+
   tryFetchImage = () => {
     const { src } = this.props
 
-    if (!src) {
+    if (!src || !this.mounted) {
       return
     }
 
