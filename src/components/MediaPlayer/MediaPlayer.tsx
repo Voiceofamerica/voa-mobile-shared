@@ -14,6 +14,7 @@ export interface Props {
   onLoadDone?: () => void
   playbackRate?: number
   autoPlay?: boolean
+  controls?: boolean
 }
 
 class MediaPlayer extends React.Component<Props> {
@@ -40,13 +41,14 @@ class MediaPlayer extends React.Component<Props> {
       style,
       src,
       autoPlay,
+      controls,
     } = this.props
 
     return (
       <video
         className={className}
         ref={this.setPlayer}
-        controls
+        controls={controls}
         src={src}
         autoPlay={autoPlay}
         onPlay={() => this.triggerTogglePlay(true)}
