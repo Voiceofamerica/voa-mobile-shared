@@ -51,6 +51,15 @@ class ReilientImage extends React.Component<Props, State> {
   componentWillReceiveProps (nextProps: Props) {
     if (nextProps.src !== this.props.src) {
       this.setImageStatus('loading')
+
+      const shouldRender = navigator.onLine || this.props.alwaysShow
+      this.setState({
+        shouldRender,
+      })
+
+      if (shouldRender) {
+        this.tryFetchImage()
+      }
     }
   }
 
