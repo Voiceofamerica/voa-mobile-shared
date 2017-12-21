@@ -17,8 +17,8 @@ export interface State {
   animationCycle: number
 }
 
-const SPIN_RATE = 1 / 70
-const CYCLE_RATE = 1 / 127
+const SPIN_RATE = 1 / 50
+const CYCLE_RATE = 1 / 140
 export default class Spinner extends React.Component<Props, State> {
   state: State = {
     startAngle: 0,
