@@ -4,7 +4,9 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { waitUntilOnline } from '../../helpers/resilience'
 
-import { resilientImage, imageContent, childrenArea, containImage } from './ResilientImage.scss'
+import Spinner from '../Spinner'
+
+import { resilientImage, imageContent, childrenArea, containImage, spinner } from './ResilientImage.scss'
 
 export interface Props {
   src: string | null
@@ -107,13 +109,30 @@ class ReilientImage extends React.Component<Props, State> {
     const { imageStaus } = this.state
     const { src, defaultSrc = require('./imagedefault.gif'), contain } = this.props
 
-    const srcToUse = imageStaus === 'loaded'
+    const isLoaded = imageStaus === 'loaded'
+    const srcToUse = isLoaded
                    ? src
                    : defaultSrc
 
     const className = contain ? `${imageContent} ${containImage}` : imageContent
 
     return (<img src={srcToUse} className={className} />)
+  }
+
+  renderSpinner = () => {
+    const { imageStaus } = this.state
+
+    const isLoaded = imageStaus === 'loaded'
+
+    if (isLoaded) {
+      return null
+    }
+
+    return (
+      <div className={childrenArea}>
+        <Spinner className={spinner} />
+      </div>
+    )
   }
 
   renderChildren = () => {
@@ -139,6 +158,7 @@ class ReilientImage extends React.Component<Props, State> {
       return (
         <div className={`${resilientImage} ${className}`} style={style}>
           { this.renderContent() }
+          { this.renderSpinner() }
           { this.props.children ? this.renderChildren() : null }
         </div>
       )

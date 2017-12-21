@@ -1,5 +1,8 @@
 
+@import '../../commonStyles/index.scss';
+
 .resilientImage {
+  position: relative;
 
   .imageContent {
     object-fit: cover;
@@ -22,5 +25,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .spinner {
+    color: $voa-blue;
+    width: 50%;
+    height: 80%;
   }
 }
