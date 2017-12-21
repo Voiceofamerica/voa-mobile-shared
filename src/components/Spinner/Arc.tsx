@@ -10,6 +10,7 @@ export interface Props extends React.Props<SVGPathElement> {
   color?: string
   stroke?: string
   strokeWidth?: number
+  strokeLinecap?: 'butt'|'round'|'square'|'inherit'
   className?: string
   style?: React.CSSProperties
 }
@@ -22,32 +23,14 @@ export default (props: Props) => {
     radius,
     startAngle,
     endAngle,
-    color,
-    stroke,
-    strokeWidth,
+    color = 'none',
+    stroke = 'currentColor',
+    strokeWidth = 1,
+    strokeLinecap = 'round',
     className,
     style,
   } = props
 
-  // const wide = endAngle < startAngle ? endAngle - startAngle <= Math.PI : startAngle - endAngle <= Math.PI
-// 
-  // const actualStart = wide ? endAngle : startAngle
-  // const actualEnd = wide ? startAngle : endAngle
-// 
-  // const startX = x + Math.cos(actualStart) * radius
-  // const startY = y - (Math.sin(actualStart) * radius)
-// 
-  // const endX = x + Math.cos(actualEnd) * radius
-  // const endY = y - (Math.sin(actualEnd) * radius)
-// 
-  // const sweep = wide ? 0 : 1
-// 
-  // const fixedStart = endAngle < startAngle ? startAngle - Math.PI * 2 : startAngle
-// 
-  // const wideVal = endAngle - fixedStart <= Math.PI ? 1 : 0
-// 
-  // const move = `M ${startX} ${startY}`
-  // const arc = `A ${radius} ${radius} 0 ${wideVal} ${sweep} ${endX} ${endY}`
   const wide = startAngle < endAngle ? startAngle - endAngle <= Math.PI : endAngle - startAngle <= Math.PI
 
   const actualStart = wide ? startAngle : endAngle
@@ -75,6 +58,7 @@ export default (props: Props) => {
       fill={color}
       stroke={stroke}
       strokeWidth={strokeWidth}
+      strokeLinecap={strokeLinecap}
       className={className}
       style={style}
     />

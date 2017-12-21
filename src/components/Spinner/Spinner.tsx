@@ -17,26 +17,26 @@ export interface State {
   animationCycle: number
 }
 
-const SPIN_RATE = 1 / 50
-const CYCLE_RATE = 1 / 140
+const SPIN_RATE = 1 / 45
+const CYCLE_RATE = 1 / 150
+const ANIMATION_INTERVAL = 15
 export default class Spinner extends React.Component<Props, State> {
   state: State = {
     startAngle: 0,
     animationCycle: 0,
   }
 
-  private animationFrame: any
+  private interval: any
 
   componentDidMount () {
-    this.stepAnimation()
+    this.interval = setInterval(this.stepAnimation, ANIMATION_INTERVAL)
   }
 
   componentWillUnmount () {
-    cancelAnimationFrame(this.animationFrame)
+    clearInterval(this.interval)
   }
 
   stepAnimation = () => {
-    this.animationFrame = requestAnimationFrame(this.stepAnimation)
     this.setState(prev => {
       const { startAngle, animationCycle } = prev
 
@@ -48,8 +48,8 @@ export default class Spinner extends React.Component<Props, State> {
   }
 
   getWidth () {
-    const MIN = Math.PI / 8
-    const MAX = Math.PI * 2 - Math.PI / 3
+    const MIN = Math.PI / 16
+    const MAX = Math.PI * 2 - Math.PI / 2
     const { startAngle, animationCycle } = this.state
     return DEFAULT_EASING(animationCycle * 2, MIN, MAX)
   }
@@ -70,8 +70,6 @@ export default class Spinner extends React.Component<Props, State> {
           radius={45}
           startAngle={startAngle}
           endAngle={endAngle}
-          color='none'
-          stroke='currentColor'
           strokeWidth={10}
         />
       </svg>
