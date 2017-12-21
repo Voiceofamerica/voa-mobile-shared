@@ -1,77 +1,20 @@
 
 import * as React from 'react'
 
-import Arc from './Arc'
-
-const DEFAULT_EASING = (time: number, start: number, end: number) => {
-  return start + ((Math.sin(time * Math.PI) + 1) / 2 * (end - start))
-}
+import { spinner, path } from './Spinner.scss'
 
 export interface Props {
   className?: string
   style?: React.CSSProperties
 }
 
-export interface State {
-  startAngle: number
-  animationCycle: number
-}
-
-const SPIN_RATE = 1 / 45
-const CYCLE_RATE = 1 / 150
-const ANIMATION_INTERVAL = 15
-export default class Spinner extends React.Component<Props, State> {
-  state: State = {
-    startAngle: 0,
-    animationCycle: 0,
-  }
-
-  private interval: any
-
-  componentDidMount () {
-    this.interval = setInterval(this.stepAnimation, ANIMATION_INTERVAL)
-  }
-
-  componentWillUnmount () {
-    clearInterval(this.interval)
-  }
-
-  stepAnimation = () => {
-    this.setState(prev => {
-      const { startAngle, animationCycle } = prev
-
-      return {
-        startAngle: (startAngle + Math.PI * 2 * SPIN_RATE) % (Math.PI * 2),
-        animationCycle: (animationCycle + CYCLE_RATE) % 1,
-      }
-    })
-  }
-
-  getWidth () {
-    const MIN = Math.PI / 16
-    const MAX = Math.PI * 2 - Math.PI / 2
-    const { startAngle, animationCycle } = this.state
-    return DEFAULT_EASING(animationCycle * 2, MIN, MAX)
-  }
-
+export default class Spinner extends React.Component<Props> {
   render () {
-    const { className, style } = this.props
-    const { startAngle } = this.state
-
-    const width = this.getWidth()
-    const realStart = (startAngle - width + Math.PI * 2) % (Math.PI * 2)
-    const endAngle = (startAngle + width + Math.PI * 2) % (Math.PI * 2)
+    const { className = '', style } = this.props
 
     return (
-      <svg className={className} style={style} viewBox='0 0 100 100'>
-        <Arc
-          x={50}
-          y={50}
-          radius={45}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          strokeWidth={10}
-        />
+      <svg className={`${spinner} ${className}`} viewBox='0 0 66 66' xmlns='http://www.w3.org/2000/svg'>
+        <circle className={path} fill='none' strokeWidth={6} strokeLinecap='round' cx={33} cy={33} r={30} />>
       </svg>
     )
   }
