@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { waitUntilOnline } from '../../helpers/resilience'
 
-import { resilientImage, imageContent, childrenArea } from './ResilientImage.scss'
+import { resilientImage, imageContent, childrenArea, containImage } from './ResilientImage.scss'
 
 export interface Props {
   src: string | null
@@ -13,6 +13,7 @@ export interface Props {
   style?: React.CSSProperties
   defaultSrc?: string
   onLoadDone?: () => void
+  contain?: boolean
 }
 
 export type ImageStatus = 'loading' | 'loaded' | 'error'
@@ -104,13 +105,15 @@ class ReilientImage extends React.Component<Props, State> {
 
   renderContent = () => {
     const { imageStaus } = this.state
-    const { src, defaultSrc = require('./imagedefault.gif') } = this.props
+    const { src, defaultSrc = require('./imagedefault.gif'), contain } = this.props
 
     const srcToUse = imageStaus === 'loaded'
                    ? src
                    : defaultSrc
 
-    return (<img src={srcToUse} className={imageContent} />)
+    const className = contain ? `${imageContent} ${containImage}` : imageContent
+
+    return (<img src={srcToUse} className={className} />)
   }
 
   renderChildren = () => {
