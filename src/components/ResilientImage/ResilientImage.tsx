@@ -15,6 +15,7 @@ export interface Props {
   style?: React.CSSProperties
   defaultSrc?: string
   onLoadDone?: () => void
+  onClick?: () => void
   contain?: boolean
 }
 
@@ -153,10 +154,11 @@ class ReilientImage extends React.Component<Props, State> {
       const {
         className = '',
         style,
+        onClick = () => null,
       } = this.props
 
       return (
-        <div className={`${resilientImage} ${className}`} style={style}>
+        <div className={`${resilientImage} ${className}`} style={style} onClick={ev => onClick()}>
           { this.renderContent() }
           { this.renderSpinner() }
           { this.props.children ? this.renderChildren() : null }
