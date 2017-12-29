@@ -24,6 +24,7 @@ class MediaPlayer extends React.Component<Props> {
     if (this.player) {
       const { playbackRate = 1 } = nextProps
       this.player.playbackRate = playbackRate
+      this.player.defaultPlaybackRate = playbackRate
     }
   }
 
