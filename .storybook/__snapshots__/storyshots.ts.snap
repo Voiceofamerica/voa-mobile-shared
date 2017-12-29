@@ -1,5 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots BottomNav with active item 1`] = `
+<div
+  className="bottomNav "
+  style={undefined}
+>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    AB
+  </button>
+  <button
+    className="iconItem activeItem"
+    onClick={[Function]}
+  >
+    CD
+  </button>
+  <button
+    className="roundItem "
+    onClick={[Function]}
+    style={undefined}
+  >
+    EF
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    GH
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    IJ
+  </button>
+</div>
+`;
+
+exports[`Storyshots BottomNav with active round item 1`] = `
+<div
+  className="bottomNav "
+  style={undefined}
+>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    AB
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    CD
+  </button>
+  <button
+    className="roundItem activeItem "
+    onClick={[Function]}
+    style={undefined}
+  >
+    EF
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    GH
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    IJ
+  </button>
+</div>
+`;
+
+exports[`Storyshots BottomNav with round item 1`] = `
+<div
+  className="bottomNav "
+  style={undefined}
+>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    AB
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    CD
+  </button>
+  <button
+    className="roundItem "
+    onClick={[Function]}
+    style={undefined}
+  >
+    EF
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    GH
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    IJ
+  </button>
+</div>
+`;
+
+exports[`Storyshots BottomNav without round item 1`] = `
+<div
+  className="bottomNav "
+  style={undefined}
+>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    AB
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    CD
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    EF
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    GH
+  </button>
+  <button
+    className="iconItem"
+    onClick={[Function]}
+  >
+    IJ
+  </button>
+</div>
+`;
+
 exports[`Storyshots Card display 1`] = `
 <div
   style={
@@ -10,7 +165,7 @@ exports[`Storyshots Card display 1`] = `
   }
 >
   <div
-    className="card"
+    className="card undefined"
     onClick={[Function]}
     style={
       Object {
@@ -20,6 +175,7 @@ exports[`Storyshots Card display 1`] = `
   >
     <div
       className="resilientImage imageContainer"
+      onClick={[Function]}
       style={undefined}
     >
       <img
@@ -65,7 +221,7 @@ exports[`Storyshots Card display two 1`] = `
   }
 >
   <div
-    className="card"
+    className="card undefined"
     onClick={[Function]}
     style={
       Object {
@@ -75,6 +231,7 @@ exports[`Storyshots Card display two 1`] = `
   >
     <div
       className="resilientImage imageContainer"
+      onClick={[Function]}
       style={undefined}
     >
       <img
@@ -108,7 +265,7 @@ exports[`Storyshots Card display two 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="card undefined"
     onClick={[Function]}
     style={
       Object {
@@ -118,6 +275,7 @@ exports[`Storyshots Card display two 1`] = `
   >
     <div
       className="resilientImage imageContainer"
+      onClick={[Function]}
       style={undefined}
     >
       <img
@@ -135,9 +293,7 @@ exports[`Storyshots Card display two 1`] = `
             "fontSize": 23.90360662192994,
           }
         }
-      >
-        21:55
-      </div>
+      />
       <div
         className="titleText"
         style={
@@ -147,6 +303,475 @@ exports[`Storyshots Card display two 1`] = `
         }
       >
         At least seven people were killed in a police vehicle in Balochistan, Pakistan
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card display with icon 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="card undefined"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 768,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+    </div>
+    <div
+      className="gradient"
+    >
+      <div
+        className="minorText"
+        style={
+          Object {
+            "fontSize": 33.96787751983093,
+          }
+        }
+      >
+        15:08
+      </div>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "fontSize": 50.951816279746396,
+          }
+        }
+      >
+        <span>
+          <img
+            src="Some File"
+          />
+          President Trump: From North Korea to Iran, we confront dangerous governments
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots MediaPlayer display video 1`] = `
+<video
+  autoPlay={undefined}
+  className=""
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
+/>
+`;
+
+exports[`Storyshots MediaPlayer play audio 1`] = `
+<video
+  autoPlay={undefined}
+  className=""
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
+/>
+`;
+
+exports[`Storyshots ResilientImage display 1`] = `
+<div
+  className="resilientImage "
+  onClick={[Function]}
+  style={undefined}
+>
+  <img
+    className="imageContent"
+    src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+  />
+</div>
+`;
+
+exports[`Storyshots ResilientImage display without image 1`] = `
+<div
+  className="resilientImage "
+  onClick={[Function]}
+  style={undefined}
+>
+  <img
+    className="imageContent"
+    src="asdf"
+  />
+</div>
+`;
+
+exports[`Storyshots SecondaryCard display two 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="card"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 409.6,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+    </div>
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 35.85540993289491,
+        }
+      }
+    >
+      President Trump: From North Korea to Iran, we confront dangerous governments
+    </div>
+  </div>
+  <div
+    className="card"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 409.6,
+      }
+    }
+  >
+    <div
+      className="resilientImage imageContainer"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/01D5530E-3642-4CBF-957E-AE990ABE9167_cx0_cy14_cw0_w650_r1.jpg"
+      />
+    </div>
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 35.85540993289491,
+        }
+      }
+    >
+      At least seven people were killed in a police vehicle in Balochistan, Pakistan
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Spinner display 1`] = `
+<svg
+  className="spinner "
+  style={undefined}
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    className="path"
+    cx={50}
+    cy={50}
+    fill="none"
+    r={45}
+    strokeLinecap="round"
+    strokeWidth={10}
+  />
+</svg>
+`;
+
+exports[`Storyshots Ticket display 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="ticket"
+    onClick={[Function]}
+  >
+    <div
+      className="resilientImage imageArea show"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="textContent"
+      >
+        <div
+          className="titleText"
+        >
+          President Trump: From North Korea to Iran, we confront dangerous governments
+        </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis, turpis at blandit consectetur, tellus nibh dictum nulla, in porttitor neque purus in massa. Quisque auctor dictum maximus. In neque augue, semper non suscipit ut, dictum at ligula. Praesent venenatis ipsum orci, sodales venenatis arcu ornare in. Quisque ac eros at velit egestas varius. Donec ultrices aliquet risus vitae commodo. Sed tempor est dui, ut tristique libero feugiat quis. In pharetra, lorem at commodo pretium, sem est fermentum dolor, eget porttitor enim lectus eu lacus. Vestibulum vestibulum ante turpis, vitae vehicula lorem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <div
+          className="fadeOut"
+        />
+      </div>
+      <div
+        className="minorText"
+      >
+        15:08
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Ticket display with icon 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div
+    className="ticket"
+    onClick={[Function]}
+  >
+    <div
+      className="resilientImage imageArea show"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        className="imageContent"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+      />
+      <div
+        className="childrenArea"
+      >
+        <img
+          src="Some File"
+        />
+      </div>
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="textContent"
+      >
+        <div
+          className="titleText"
+        >
+          President Trump: From North Korea to Iran, we confront dangerous governments
+        </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis, turpis at blandit consectetur, tellus nibh dictum nulla, in porttitor neque purus in massa. Quisque auctor dictum maximus. In neque augue, semper non suscipit ut, dictum at ligula. Praesent venenatis ipsum orci, sodales venenatis arcu ornare in. Quisque ac eros at velit egestas varius. Donec ultrices aliquet risus vitae commodo. Sed tempor est dui, ut tristique libero feugiat quis. In pharetra, lorem at commodo pretium, sem est fermentum dolor, eget porttitor enim lectus eu lacus. Vestibulum vestibulum ante turpis, vitae vehicula lorem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <div
+          className="fadeOut"
+        />
+      </div>
+      <div
+        className="minorText"
+      >
+        15:08
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Ticket multiple display 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+    >
+      <div
+        className="resilientImage imageArea show"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <img
+          className="imageContent"
+          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        />
+        <div
+          className="childrenArea"
+        >
+          <img
+            src="Some File"
+          />
+        </div>
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis, turpis at blandit consectetur, tellus nibh dictum nulla, in porttitor neque purus in massa. Quisque auctor dictum maximus. In neque augue, semper non suscipit ut, dictum at ligula. Praesent venenatis ipsum orci, sodales venenatis arcu ornare in. Quisque ac eros at velit egestas varius. Donec ultrices aliquet risus vitae commodo. Sed tempor est dui, ut tristique libero feugiat quis. In pharetra, lorem at commodo pretium, sem est fermentum dolor, eget porttitor enim lectus eu lacus. Vestibulum vestibulum ante turpis, vitae vehicula lorem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <div
+            className="fadeOut"
+          />
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+    >
+      <div
+        className="resilientImage imageArea show"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <img
+          className="imageContent"
+          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        />
+        <div
+          className="childrenArea"
+        >
+          <img
+            src="Some File"
+          />
+        </div>
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis, turpis at blandit consectetur, tellus nibh dictum nulla, in porttitor neque purus in massa. Quisque auctor dictum maximus. In neque augue, semper non suscipit ut, dictum at ligula. Praesent venenatis ipsum orci, sodales venenatis arcu ornare in. Quisque ac eros at velit egestas varius. Donec ultrices aliquet risus vitae commodo. Sed tempor est dui, ut tristique libero feugiat quis. In pharetra, lorem at commodo pretium, sem est fermentum dolor, eget porttitor enim lectus eu lacus. Vestibulum vestibulum ante turpis, vitae vehicula lorem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <div
+            className="fadeOut"
+          />
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+    >
+      <div
+        className="resilientImage imageArea show"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <img
+          className="imageContent"
+          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        />
+        <div
+          className="childrenArea"
+        >
+          <img
+            src="Some File"
+          />
+        </div>
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis, turpis at blandit consectetur, tellus nibh dictum nulla, in porttitor neque purus in massa. Quisque auctor dictum maximus. In neque augue, semper non suscipit ut, dictum at ligula. Praesent venenatis ipsum orci, sodales venenatis arcu ornare in. Quisque ac eros at velit egestas varius. Donec ultrices aliquet risus vitae commodo. Sed tempor est dui, ut tristique libero feugiat quis. In pharetra, lorem at commodo pretium, sem est fermentum dolor, eget porttitor enim lectus eu lacus. Vestibulum vestibulum ante turpis, vitae vehicula lorem rutrum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <div
+            className="fadeOut"
+          />
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
       </div>
     </div>
   </div>
