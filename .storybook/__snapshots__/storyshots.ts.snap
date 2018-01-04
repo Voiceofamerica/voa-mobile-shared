@@ -378,6 +378,7 @@ exports[`Storyshots MediaPlayer display video 1`] = `
   onPause={[Function]}
   onPlay={[Function]}
   src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
+  style={undefined}
 />
 `;
 
@@ -389,6 +390,7 @@ exports[`Storyshots MediaPlayer play audio 1`] = `
   onPause={[Function]}
   onPlay={[Function]}
   src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
+  style={undefined}
 />
 `;
 
@@ -428,7 +430,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
   }
 >
   <div
-    className="card"
+    className="card undefined"
     onClick={[Function]}
     style={
       Object {
@@ -458,7 +460,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="card undefined"
     onClick={[Function]}
     style={
       Object {
