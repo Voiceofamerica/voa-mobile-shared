@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: "node:8.9.4"
+    steps:
+      - checkout
+      - restore_cache: &cacheKey
+          key: v1-voa-shared-npm-{{ checksum "package-lock.json" }}
+      - run: yarn global add npm@5
+      - run: npm install --unsafe-perm
+      - save_cache:
+          <<: *cacheKey
+          paths:
+            - "~/.npm"
+            - "node_modules"
+      - run: npm run check
+
+workflows:
+  version: 2
+  test_and_build:
+    jobs:
+      - test
