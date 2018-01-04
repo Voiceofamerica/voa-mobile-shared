@@ -8,7 +8,7 @@ jobs:
       - restore_cache: &cacheKey
           key: v1-voa-shared-npm-{{ checksum "package-lock.json" }}
       - run: apt update
-      - run: apt install rsync
+      - run: apt install -y rsync
       - run: yarn global add npm@5
       - run: npm install --unsafe-perm
       - save_cache:
