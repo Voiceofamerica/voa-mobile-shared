@@ -1,4 +1,5 @@
 {
+  "setupTestFrameworkScriptFile": "<rootDir>/.jest/setupTests.js",
   "transform": {
     "\\.(ts|tsx)$": "ts-jest/preprocessor.js",
     "\\.(js|jsx)$": "babel-jest"

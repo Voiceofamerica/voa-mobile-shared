@@ -9,8 +9,8 @@ import ResilientImage from '../ResilientImage'
 import { card, imageContainer, gradient, minorText, titleText } from './Card.scss'
 
 export interface Props {
-  onPress: () => void
   title: JSX.Element|string
+  onPress?: () => void
   imageUrl?: string
   minorText?: JSX.Element|string
   factor?: number
@@ -33,8 +33,8 @@ class Card extends React.Component<Props, State> {
     windowWidth: window.innerWidth,
   }
 
-  private _self: HTMLDivElement
-  private _resizeSub: Subscription
+  _self: HTMLDivElement
+  _resizeSub: Subscription
 
   componentDidMount () {
     this._resizeSub = resize()
@@ -44,6 +44,7 @@ class Card extends React.Component<Props, State> {
 
   componentWillUnmount () {
     this._resizeSub.unsubscribe()
+    this._resizeSub = null
   }
 
   render () {

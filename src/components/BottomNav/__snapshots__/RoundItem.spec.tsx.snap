@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoundItem /> shapshots should render active if prop set to true 1`] = `
+<button
+  className="roundItem activeItem "
+  onClick={[Function]}
+  style={undefined}
+/>
+`;
+
+exports[`<RoundItem /> shapshots should render empty 1`] = `
+<button
+  className="roundItem "
+  onClick={[Function]}
+  style={undefined}
+/>
+`;
+
+exports[`<RoundItem /> shapshots should render with the given children 1`] = `
+<button
+  className="roundItem "
+  onClick={[Function]}
+  style={undefined}
+>
+  <div>
+    child1
+  </div>
+  <div>
+    child2
+  </div>
+</button>
+`;
+
+exports[`<RoundItem /> shapshots should render with the given className 1`] = `
+<button
+  className="roundItem myClass"
+  onClick={[Function]}
+  style={undefined}
+/>
+`;
+
+exports[`<RoundItem /> shapshots should render with the given style 1`] = `
+<button
+  className="roundItem "
+  onClick={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+/>
+`;

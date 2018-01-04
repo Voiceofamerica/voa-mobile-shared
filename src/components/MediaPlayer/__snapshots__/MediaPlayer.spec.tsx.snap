@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MediaPlayer /> shapshots should render with autoplay if prop is set to true 1`] = `
+<video
+  autoPlay={true}
+  className=""
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="mySrc"
+  style={undefined}
+/>
+`;
+
+exports[`<MediaPlayer /> shapshots should render with controls if prop is set to true 1`] = `
+<video
+  autoPlay={undefined}
+  className=""
+  controls={true}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="mySrc"
+  style={undefined}
+/>
+`;
+
+exports[`<MediaPlayer /> shapshots should render with the given className 1`] = `
+<video
+  autoPlay={undefined}
+  className="myClass"
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="mySrc"
+  style={undefined}
+/>
+`;
+
+exports[`<MediaPlayer /> shapshots should render with the given src 1`] = `
+<video
+  autoPlay={undefined}
+  className=""
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="mySrc"
+  style={undefined}
+/>
+`;
+
+exports[`<MediaPlayer /> shapshots should render with the given style 1`] = `
+<video
+  autoPlay={undefined}
+  className=""
+  controls={undefined}
+  onPause={[Function]}
+  onPlay={[Function]}
+  src="mySrc"
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+/>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Backdrop /> shapshots should blur if prop is set to true 1`] = `
+<div
+  className="backdrop blurred"
+>
+  <img
+    className="image"
+    src="blurry"
+  />
+  <div
+    className="lightbox"
+  />
+</div>
+`;
+
+exports[`<Backdrop /> shapshots should render with the given imgSrc (src1) 1`] = `
+<div
+  className="backdrop"
+>
+  <img
+    className="image"
+    src="src1"
+  />
+  <div
+    className="lightbox"
+  />
+</div>
+`;
+
+exports[`<Backdrop /> shapshots should render with the given imgSrc (src2) 1`] = `
+<div
+  className="backdrop"
+>
+  <img
+    className="image"
+    src="src2"
+  />
+  <div
+    className="lightbox"
+  />
+</div>
+`;
+
+exports[`<Backdrop /> shapshots should render with the given imgSrc (src3) 1`] = `
+<div
+  className="backdrop"
+>
+  <img
+    className="image"
+    src="src3"
+  />
+  <div
+    className="lightbox"
+  />
+</div>
+`;

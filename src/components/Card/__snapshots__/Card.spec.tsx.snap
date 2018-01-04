@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> shapshots should render with the a height determined by its factor 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 125,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 9.346202568200738,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 14.019303852301109,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given className 1`] = `
+<div
+  className="card myClass"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 375,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given icon shown 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 375,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  >
+    <i
+      className="mdi mdi-monitor"
+    />
+  </div>
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given image 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 375,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src="myImage"
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given minor text 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 375,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    >
+      This is some minor text
+    </div>
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given style 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "bottom": 0,
+      "height": 375,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given title 1`] = `
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
+    Object {
+      "height": 375,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="gradient"
+  >
+    <div
+      className="minorText"
+      style={
+        Object {
+          "fontSize": 16.50245904961124,
+        }
+      }
+    />
+    <div
+      className="titleText"
+      style={
+        Object {
+          "fontSize": 24.753688574416856,
+        }
+      }
+    >
+      myTitle
+    </div>
+  </div>
+</div>
+`;

@@ -4,12 +4,11 @@ import * as React from 'react'
 export interface Props {
   src: string
   className?: string
-  onTogglePlay?: (playing: boolean) => void
   style?: React.CSSProperties
-  onLoadDone?: () => void
-  playbackRate?: number
   autoPlay?: boolean
   controls?: boolean
+  playbackRate?: number
+  onTogglePlay?: (playing: boolean) => void
 }
 
 class MediaPlayer extends React.Component<Props> {
@@ -23,11 +22,13 @@ class MediaPlayer extends React.Component<Props> {
     }
   }
 
-  togglePlay (play: boolean = this.player.paused) {
-    if (play) {
-      this.player.play().catch(console.error)
-    } else {
-      this.player.pause()
+  togglePlay (play: boolean = this.player && this.player.paused) {
+    if (this.player) {
+      if (play) {
+        this.player.play().catch(console.error)
+      } else {
+        this.player.pause()
+      }
     }
   }
 
