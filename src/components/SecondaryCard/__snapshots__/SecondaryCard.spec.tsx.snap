@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SecondaryCard /> shapshots should render with the a height determined by its factor 1`] = `
+<div
+  className="card undefined"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 133.33333333333334,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="titleText"
+    style={
+      Object {
+        "fontSize": 14.019303852301109,
+      }
+    }
+  >
+    myTitle
+  </div>
+</div>
+`;
+
+exports[`<SecondaryCard /> shapshots should render with the given className 1`] = `
+<div
+  className="card myClass"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 200,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="titleText"
+    style={
+      Object {
+        "fontSize": 17.33438113203841,
+      }
+    }
+  >
+    myTitle
+  </div>
+</div>
+`;
+
+exports[`<SecondaryCard /> shapshots should render with the given image 1`] = `
+<div
+  className="card undefined"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 200,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src="myImage"
+  />
+  <div
+    className="titleText"
+    style={
+      Object {
+        "fontSize": 17.33438113203841,
+      }
+    }
+  >
+    myTitle
+  </div>
+</div>
+`;
+
+exports[`<SecondaryCard /> shapshots should render with the given style 1`] = `
+<div
+  className="card undefined"
+  onClick={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "height": 200,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="titleText"
+    style={
+      Object {
+        "fontSize": 17.33438113203841,
+      }
+    }
+  >
+    myTitle
+  </div>
+</div>
+`;
+
+exports[`<SecondaryCard /> shapshots should render with the given title 1`] = `
+<div
+  className="card undefined"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": 200,
+    }
+  }
+>
+  <div
+    alwaysShow={true}
+    className="imageContainer"
+    src={undefined}
+  />
+  <div
+    className="titleText"
+    style={
+      Object {
+        "fontSize": 17.33438113203841,
+      }
+    }
+  >
+    myTitle
+  </div>
+</div>
+`;
