@@ -1,10 +1,5 @@
 
 import * as React from 'react'
-import { Subscription } from 'rxjs/Subscription'
-
-import { waitUntilOnline } from '../../helpers/resilience'
-
-import { mediaPlayer } from './MediaPlayer.scss'
 
 export interface Props {
   src: string
@@ -30,7 +25,7 @@ class MediaPlayer extends React.Component<Props> {
 
   togglePlay (play: boolean = this.player.paused) {
     if (play) {
-      this.player.play()
+      this.player.play().catch(console.error)
     } else {
       this.player.pause()
     }
@@ -54,6 +49,7 @@ class MediaPlayer extends React.Component<Props> {
         autoPlay={autoPlay}
         onPlay={() => this.triggerTogglePlay(true)}
         onPause={() => this.triggerTogglePlay(false)}
+        style={style}
       />
     )
   }

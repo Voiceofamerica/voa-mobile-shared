@@ -1,14 +1,12 @@
 
 import * as React from 'react'
-import * as moment from 'moment'
 import { Subscription } from 'rxjs/Subscription'
 
 import { resize } from '../../helpers/windowHelper'
 
 import ResilientImage from '../ResilientImage'
-import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { card, imageStyle, imageContainer, gradient, minorText, titleText } from './Card.scss'
+import { card, imageContainer, gradient, minorText, titleText } from './Card.scss'
 
 export interface Props {
   onPress: () => void

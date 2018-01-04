@@ -1,6 +1,5 @@
 
 import * as React from 'react'
-import { Subscription } from 'rxjs/Subscription'
 
 import { iconItem, activeItem } from './BottomNav.scss'
 

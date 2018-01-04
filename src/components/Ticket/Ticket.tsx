@@ -1,14 +1,9 @@
 
 import * as React from 'react'
-import * as moment from 'moment'
-import { Subscription } from 'rxjs/Subscription'
-
-import { resize } from '../../helpers/windowHelper'
 
 import ResilientImage from '../ResilientImage'
-import ArticleBlurb from '../../types/ArticleBlurb'
 
-import { ticket, imageArea, show, iconOverlay, content, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
+import { ticket, imageArea, show, content, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 
 export interface Props {
   onPress: () => void

@@ -9,7 +9,6 @@ export function onConnectOnce (callback: () => void) {
   callbacks.push(callback)
 }
 
-
 export function waitUntilOnline (): Promise<void> {
   if (navigator.onLine) {
     return Promise.resolve()

@@ -1,6 +1,5 @@
 
 import * as React from 'react'
-import { Subscription } from 'rxjs/Subscription'
 
 import { bottomNav } from './BottomNav.scss'
 
