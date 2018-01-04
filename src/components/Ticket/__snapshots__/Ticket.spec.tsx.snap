@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> shapshots should render with the given icon shown 1`] = `
+<div
+  className="ticket"
+  onClick={undefined}
+>
+  <div
+    alwaysShow={true}
+    className="imageArea"
+    onLoadDone={[Function]}
+    src={undefined}
+  >
+    <i
+      className="mdi mdi-monitor"
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="textContent"
+    >
+      <div
+        className="titleText"
+      >
+        myTitle
+      </div>
+      <div
+        className="fadeOut"
+      />
+    </div>
+    <div
+      className="minorText"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given image 1`] = `
+<div
+  className="ticket"
+  onClick={undefined}
+>
+  <div
+    alwaysShow={true}
+    className="imageArea"
+    onLoadDone={[Function]}
+    src="myImage"
+  />
+  <div
+    className="content"
+  >
+    <div
+      className="textContent"
+    >
+      <div
+        className="titleText"
+      >
+        myTitle
+      </div>
+      <div
+        className="fadeOut"
+      />
+    </div>
+    <div
+      className="minorText"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given minor text 1`] = `
+<div
+  className="ticket"
+  onClick={undefined}
+>
+  <div
+    alwaysShow={true}
+    className="imageArea"
+    onLoadDone={[Function]}
+    src={undefined}
+  />
+  <div
+    className="content"
+  >
+    <div
+      className="textContent"
+    >
+      <div
+        className="titleText"
+      >
+        myTitle
+      </div>
+      <div
+        className="fadeOut"
+      />
+    </div>
+    <div
+      className="minorText"
+    >
+      This is some minor text
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> shapshots should render with the given title 1`] = `
+<div
+  className="ticket"
+  onClick={undefined}
+>
+  <div
+    alwaysShow={true}
+    className="imageArea"
+    onLoadDone={[Function]}
+    src={undefined}
+  />
+  <div
+    className="content"
+  >
+    <div
+      className="textContent"
+    >
+      <div
+        className="titleText"
+      >
+        myTitle
+      </div>
+      <div
+        className="fadeOut"
+      />
+    </div>
+    <div
+      className="minorText"
+    />
+  </div>
+</div>
+`;

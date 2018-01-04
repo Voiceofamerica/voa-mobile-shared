@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconItem /> shapshots should render empty 1`] = `
+<button
+  className="topNavItem"
+  onClick={[Function]}
+/>
+`;
+
+exports[`<IconItem /> shapshots should render selected if prop set to true 1`] = `
+<button
+  className="topNavItem selectedItem"
+  onClick={[Function]}
+/>
+`;
+
+exports[`<IconItem /> shapshots should render with the given children 1`] = `
+<button
+  className="topNavItem"
+  onClick={[Function]}
+>
+  <div>
+    child1
+  </div>
+  <div>
+    child2
+  </div>
+</button>
+`;

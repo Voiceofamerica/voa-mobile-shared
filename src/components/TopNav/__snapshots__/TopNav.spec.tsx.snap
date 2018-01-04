@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopNav /> shapshots should render empty 1`] = `
+<div
+  className="topNav"
+>
+  <div
+    className="itemContainer"
+  >
+    <div
+      className="fadeout"
+    />
+  </div>
+</div>
+`;
+
+exports[`<TopNav /> shapshots should render with the given children 1`] = `
+<div
+  className="topNav"
+>
+  <div
+    className="itemContainer"
+  >
+    <div>
+      child1
+    </div>
+    <div>
+      child2
+    </div>
+    <div
+      className="fadeout"
+    />
+  </div>
+</div>
+`;

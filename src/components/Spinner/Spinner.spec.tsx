@@ -5,9 +5,6 @@ import { shallow } from 'enzyme'
 
 import Spinner from './Spinner'
 
-jest.mock('../../helpers/windowHelper')
-jest.mock('../ResilientImage')
-
 describe('<Spinner />', () => {
   describe('shapshots', () => {
     it('should render', () => {

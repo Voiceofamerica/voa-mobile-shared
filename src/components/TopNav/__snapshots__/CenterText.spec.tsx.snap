@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CenterText /> shapshots should render empty 1`] = `
+<div
+  className="centerText"
+/>
+`;
+
+exports[`<CenterText /> shapshots should render with the given children 1`] = `
+<div
+  className="centerText"
+>
+  <div>
+    child1
+  </div>
+  <div>
+    child2
+  </div>
+</div>
+`;

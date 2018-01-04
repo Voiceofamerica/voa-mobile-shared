@@ -6,8 +6,8 @@ import ResilientImage from '../ResilientImage'
 import { ticket, imageArea, show, content, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
 
 export interface Props {
-  onPress: () => void
   title: JSX.Element|string
+  onPress?: () => void
   description?: string
   imageUrl?: string
   minorText?: JSX.Element|string

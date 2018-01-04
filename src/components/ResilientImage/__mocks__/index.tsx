@@ -1,4 +1,11 @@
 
 import * as React from 'react'
 
-export default jest.fn(({ children, ...props}) => (<div {...props}>{children}</div>))
+export default class ResilientImage extends React.Component {
+  render () {
+    const { children, ...props } = this.props
+    return (
+      <div {...props}>{children}</div>
+    )
+  }
+}
