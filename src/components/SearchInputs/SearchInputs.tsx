@@ -6,6 +6,7 @@ import { inputsPill, dropdownPill, dropdown, dropdownArrow, searchInputContainer
 export interface Props {
   zoneId: number
   query: string
+  empty: string
   onZoneIdChange: (newZoneId: number) => void
   onQueryChange: (newQuery: string) => void
   categories: { id: string, name: string }[]
@@ -13,7 +14,7 @@ export interface Props {
 
 export default class SearchInputs extends React.Component<Props> {
   render () {
-    const { zoneId, query, onZoneIdChange, onQueryChange, categories } = this.props
+    const { zoneId, query, onZoneIdChange, onQueryChange, categories, empty } = this.props
 
     return (
       <div className={inputsPill}>
@@ -29,7 +30,7 @@ export default class SearchInputs extends React.Component<Props> {
         </div>
         <div className={searchInputContainer}>
           <input autoFocus className={searchInput} value={query} onChange={ev => onQueryChange(ev.currentTarget.value)} />
-          { query.length === 0 ? <div className={emptyText}>搜索</div> : null }
+          { query.length === 0 ? <div className={emptyText}>{empty}</div> : null }
         </div>
       </div>
     )

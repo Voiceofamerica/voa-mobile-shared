@@ -38,6 +38,12 @@
       font-size: 1.5em;
       width: 2em;
       background: linear-gradient(90deg, rgba($border-grey, 0), $border-grey 50%, $border-grey);
+
+      [dir="rtl"] & {
+        left: 0;
+        right: auto;
+        background: linear-gradient(-90deg, rgba($border-grey, 0), $border-grey 50%, $border-grey);
+      }
     }
   }
 
