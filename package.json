@@ -10,7 +10,7 @@
     "test:unit": "jest --config jest.json",
     "test:storyshots": "jest --config jest.storybook.js",
     "lint": "tslint --project .",
-    "check": "run-s -c test lint postinstall",
+    "check": "run-s -c test lint prepare",
     "clean": "git clean -X -f",
     "deploy": "np",
     "files:copy": "cd src && rsync -Rr * --filter='+ *.scss' --filter='+ *.d.ts' --filter='+ *.gif' --filter='- *.tsx' --filter='- *.ts'  ..",
