@@ -511,6 +511,42 @@ exports[`Storyshots Spinner display 1`] = `
 </svg>
 `;
 
+exports[`Storyshots Switch display off 1`] = `
+<div
+  className="innerSwitch "
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
+exports[`Storyshots Switch display on 1`] = `
+<div
+  className="innerSwitch on "
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
+exports[`Storyshots Switch interactible 1`] = `
+<div
+  className="innerSwitch "
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
 exports[`Storyshots Ticket display 1`] = `
 <div
   style={

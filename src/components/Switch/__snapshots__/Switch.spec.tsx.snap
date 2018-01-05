@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> shapshots should render toggled off 1`] = `
+<div
+  className="innerSwitch "
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
+exports[`<Switch /> shapshots should render toggled on 1`] = `
+<div
+  className="innerSwitch on "
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
+exports[`<Switch /> shapshots should render with the given className 1`] = `
+<div
+  className="innerSwitch myClass"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
+
+exports[`<Switch /> shapshots should render with the given style 1`] = `
+<div
+  className="innerSwitch "
+  onClick={[Function]}
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    className="toggle"
+  />
+</div>
+`;
