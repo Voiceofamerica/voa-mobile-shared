@@ -33,32 +33,30 @@ const OFFLINE: OnlineStatus = {
   status: 'offline',
 }
 
-export function onlineStatusObservable (): Observable<OnlineStatus> {
-  return new Observable((subscriber) => {
-    const onlineHandler = () => {
-      subscriber.next(ONLINE)
-    }
-    const offlineHandler = () => {
-      subscriber.next(OFFLINE)
-    }
+export const onlineStatusObservable: Observable<OnlineStatus> = new Observable((subscriber) => {
+  const onlineHandler = () => {
+    subscriber.next(ONLINE)
+  }
+  const offlineHandler = () => {
+    subscriber.next(OFFLINE)
+  }
 
-    window.addEventListener('online', onlineHandler)
-    document.addEventListener(CUSTOM_ONLINE, onlineHandler)
+  window.addEventListener('online', onlineHandler)
+  document.addEventListener(CUSTOM_ONLINE, onlineHandler)
 
-    window.addEventListener('offline', offlineHandler)
-    document.addEventListener(CUSTOM_OFFLINE, offlineHandler)
+  window.addEventListener('offline', offlineHandler)
+  document.addEventListener(CUSTOM_OFFLINE, offlineHandler)
 
-    return () => {
-      window.removeEventListener('online', onlineHandler)
-      document.removeEventListener(CUSTOM_ONLINE, onlineHandler)
+  return () => {
+    window.removeEventListener('online', onlineHandler)
+    document.removeEventListener(CUSTOM_ONLINE, onlineHandler)
 
-      window.removeEventListener('offline', offlineHandler)
-      document.removeEventListener(CUSTOM_OFFLINE, offlineHandler)
-    }
-  })
-}
+    window.removeEventListener('offline', offlineHandler)
+    document.removeEventListener(CUSTOM_OFFLINE, offlineHandler)
+  }
+})
 
-onlineStatusObservable().subscribe(({ online }) => {
+onlineStatusObservable.subscribe(({ online }) => {
   if (online) {
     callbacks.forEach(cb => {
       setTimeout(cb)
