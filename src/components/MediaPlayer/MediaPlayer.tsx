@@ -68,6 +68,7 @@ class MediaPlayer extends React.Component<Props> {
     this.player = player
 
     if (player) {
+      (player as any).playsInline = true
       player.playbackRate = playbackRate
     }
   }
