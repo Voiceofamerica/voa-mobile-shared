@@ -59,6 +59,10 @@ $image-width: 30vw;
     padding: 0 0 1px 1.5vw;
     position: relative;
     margin-top: -2px;
+
+    [dir="rtl"] & {
+      padding: 0 1.5vw 1px 0;
+    }
   }
 
   .textContent {
@@ -94,5 +98,10 @@ $image-width: 30vw;
     font-size: 0.8em;
     border-top: 2px solid white;
     background: white;
+
+    [dir="rtl"] & {
+      left: auto;
+      right: 1.5vw;
+    }
   }
 }

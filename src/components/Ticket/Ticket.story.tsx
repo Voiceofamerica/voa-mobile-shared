@@ -14,12 +14,6 @@ const testArticle = {
   title: 'President Trump: From North Korea to Iran, we confront dangerous governments',
 }
 
-const testArticle2 = {
-  imageUrl: 'https://gdb.voanews.com/01D5530E-3642-4CBF-957E-AE990ABE9167_cx0_cy14_cw0_w650_r1.jpg',
-  pubDate: '21:55',
-  title: 'At least seven people were killed in a police vehicle in Balochistan, Pakistan',
-}
-
 storiesOf('Ticket', module)
   .add('display', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -35,28 +29,17 @@ storiesOf('Ticket', module)
       />
     </div>
   ))
-  .add('multiple display', () => (
-    <div>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <Ticket
-          onPress={action('Card.onPress')}
-          { ...testArticle }
-          icon={<img src={require('./headphones.svg')} />}
-        />
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <Ticket
-          onPress={action('Card.onPress')}
-          { ...testArticle }
-          icon={<img src={require('./headphones.svg')} />}
-        />
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <Ticket
-          onPress={action('Card.onPress')}
-          { ...testArticle }
-          icon={<img src={require('./headphones.svg')} />}
-        />
-      </div>
+  .add('rtl display', () => (
+    <div style={{ display: 'flex', flexDirection: 'row' }} dir='rtl'>
+      <Ticket onPress={action('Card.onPress')} { ...testArticle } />
+    </div>
+  ))
+  .add('rtl display with icon', () => (
+    <div style={{ display: 'flex', flexDirection: 'row' }} dir='rtl'>
+      <Ticket
+        onPress={action('Card.onPress')}
+        { ...testArticle }
+        icon={<img src={require('./headphones.svg')} />}
+      />
     </div>
   ))
