@@ -5,13 +5,14 @@ import { errorBoundary, content, retryButton } from './ErrorBoundary.scss'
 export interface Props {
   error: string | JSX.Element
   retry: string | JSX.Element
+  debug?: boolean
 }
 
 export interface State {
   hasError: boolean
 }
 
-export default class ErrorBoundary extends React.Component<Props, State> {
+export default class ErrorBoundary extends React.PureComponent<Props, State> {
   state: State = {
     hasError: false,
   }
@@ -19,8 +20,12 @@ export default class ErrorBoundary extends React.Component<Props, State> {
   componentDidCatch (error) {
     // Display fallback UI
     this.setState({ hasError: true })
-    console.error(error)
+    if (this.props.debug) {
+      console.error(error)
+    }
   }
+
+  onRetry = () => this.setState({ hasError: false })
 
   render () {
     const { children } = this.props
@@ -31,7 +36,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
           <div className={content}>
             {this.props.error}
           </div>
-          <div className={retryButton} onClick={() => this.setState({ hasError: false })}>
+          <div className={retryButton} onClick={this.onRetry}>
             {this.props.retry}
           </div>
         </div>

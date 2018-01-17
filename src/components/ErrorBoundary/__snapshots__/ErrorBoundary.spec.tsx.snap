@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary /> shapshots should render only children if no error 1`] = `"This should show up"`;
+
+exports[`<ErrorBoundary /> shapshots should render with an error 1`] = `
+<div
+  className="errorBoundary"
+>
+  <div
+    className="content"
+  >
+    An Error Occurred
+  </div>
+  <div
+    className="retryButton"
+    onClick={[Function]}
+  >
+    Retry
+  </div>
+</div>
+`;
