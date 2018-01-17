@@ -9,14 +9,12 @@ export interface Props {
   style?: React.CSSProperties
 }
 
-export default class SvgIcon extends React.PureComponent<Props> {
-  render () {
-    const { src, className = '', style = {} } = this.props
+export default (props: Props) => {
+  const { src, className = '', style = {} } = props
 
-    const webkitMaskImage = `url(${src})`
+  const webkitMaskImage = `url(${src})`
 
-    return (
-      <div className={`${icon} ${className}`} style={{ ...style, webkitMaskImage }} />
-    )
-  }
+  return (
+    <div className={`${icon} ${className}`} style={{ ...style, webkitMaskImage }} />
+  )
 }

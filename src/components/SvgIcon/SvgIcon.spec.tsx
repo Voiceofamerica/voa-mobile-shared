@@ -14,5 +14,12 @@ describe('<Spinner />', () => {
 
       expect(element).toMatchSnapshot()
     })
+    it('should render with the given classname and style', () => {
+      const element = create((
+        <SvgIcon src='https://some.url/something.svg' className='myClass' style={{ color: 'blue' }} />
+      ))
+
+      expect(element).toMatchSnapshot()
+    })
   })
 })

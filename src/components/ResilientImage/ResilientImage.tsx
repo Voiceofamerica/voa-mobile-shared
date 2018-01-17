@@ -146,7 +146,7 @@ class ReilientImage extends React.Component<Props, State> {
   }
 
   render () {
-    const { shouldRender = navigator.onLine } = this.state
+    const { shouldRender = navigator.onLine || this.props.alwaysShow } = this.state
     if (!shouldRender) {
       return this.renderOffline()
     } else {

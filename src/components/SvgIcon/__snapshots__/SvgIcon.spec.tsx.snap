@@ -10,3 +10,15 @@ exports[`<Spinner /> shapshots should render 1`] = `
   }
 />
 `;
+
+exports[`<Spinner /> shapshots should render with the given classname and style 1`] = `
+<div
+  className="icon myClass"
+  style={
+    Object {
+      "color": "blue",
+      "webkitMaskImage": "url(https://some.url/something.svg)",
+    }
+  }
+/>
+`;
