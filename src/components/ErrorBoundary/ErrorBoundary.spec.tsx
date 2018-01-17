@@ -21,6 +21,7 @@ describe('<ErrorBoundary />', () => {
     })
 
     it('should render with an error', () => {
+      spyOn(console, 'error')
       const element = create((
         <ErrorBoundary error='An Error Occurred' retry='Retry'>
           <ErrorComponent />
