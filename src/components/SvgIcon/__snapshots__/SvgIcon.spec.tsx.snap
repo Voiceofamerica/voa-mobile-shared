@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> shapshots should render 1`] = `
+<div
+  className="icon "
+  style={
+    Object {
+      "webkitMaskImage": "url(https://some.url/something.svg)",
+    }
+  }
+/>
+`;
