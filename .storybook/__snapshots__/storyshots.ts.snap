@@ -586,6 +586,19 @@ exports[`Storyshots Spinner display 1`] = `
 </svg>
 `;
 
+exports[`Storyshots SvgIcon display 1`] = `
+<div
+  className="icon "
+  style={
+    Object {
+      "color": "#53A68E",
+      "fontSize": 100,
+      "webkitMaskImage": "url(Some File)",
+    }
+  }
+/>
+`;
+
 exports[`Storyshots Switch display off 1`] = `
 <div
   className="innerSwitch "
