@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> shapshots should render only children without an error and not loading 1`] = `"This should show up"`;
+
+exports[`<Loader /> shapshots should render the error text and retry button when an error has occurred 1`] = `
+<div
+  className="loader "
+  style={undefined}
+>
+  An Error Occurred
+  <button
+    className="reloadButton"
+    onClick={[Function]}
+  >
+    Retry
+  </button>
+</div>
+`;
+
+exports[`<Loader /> shapshots should render the spinner and background image when loading 1`] = `
+<div
+  className="loader "
+  style={undefined}
+>
+  <div
+    className="backdrop"
+    src="some.png"
+  >
+    <div
+      className="fader"
+    />
+  </div>
+</div>
+`;
