@@ -51,7 +51,7 @@ class MediaPlayer extends React.Component<Props> {
         onPlay={() => this.triggerTogglePlay(true)}
         onPause={() => this.triggerTogglePlay(false)}
         style={style}
-        playsinline
+        playsInline
       />
     )
   }

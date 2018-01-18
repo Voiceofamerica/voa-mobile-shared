@@ -7,7 +7,7 @@ exports[`<MediaPlayer /> shapshots should render with autoplay if prop is set to
   controls={undefined}
   onPause={[Function]}
   onPlay={[Function]}
-  playsinline={true}
+  playsInline={true}
   src="mySrc"
   style={undefined}
 />
@@ -20,7 +20,7 @@ exports[`<MediaPlayer /> shapshots should render with controls if prop is set to
   controls={true}
   onPause={[Function]}
   onPlay={[Function]}
-  playsinline={true}
+  playsInline={true}
   src="mySrc"
   style={undefined}
 />
@@ -33,7 +33,7 @@ exports[`<MediaPlayer /> shapshots should render with the given className 1`] = 
   controls={undefined}
   onPause={[Function]}
   onPlay={[Function]}
-  playsinline={true}
+  playsInline={true}
   src="mySrc"
   style={undefined}
 />
@@ -46,7 +46,7 @@ exports[`<MediaPlayer /> shapshots should render with the given src 1`] = `
   controls={undefined}
   onPause={[Function]}
   onPlay={[Function]}
-  playsinline={true}
+  playsInline={true}
   src="mySrc"
   style={undefined}
 />
@@ -59,7 +59,7 @@ exports[`<MediaPlayer /> shapshots should render with the given style 1`] = `
   controls={undefined}
   onPause={[Function]}
   onPlay={[Function]}
-  playsinline={true}
+  playsInline={true}
   src="mySrc"
   style={
     Object {

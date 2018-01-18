@@ -9,6 +9,7 @@ import { resilientImage, imageContent, childrenArea, containImage, spinner } fro
 
 export interface Props {
   src: string | null
+  showSpinner?: boolean
   className?: string
   alwaysShow?: boolean
   style?: React.CSSProperties
@@ -120,11 +121,12 @@ class ReilientImage extends React.Component<Props, State> {
   }
 
   renderSpinner = () => {
+    const { showSpinner } = this.props
     const { imageStaus } = this.state
 
     const isLoaded = imageStaus === 'loaded'
 
-    if (isLoaded) {
+    if (isLoaded || !showSpinner) {
       return null
     }
 
