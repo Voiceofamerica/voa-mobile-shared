@@ -13,6 +13,7 @@ exports[`<Card /> shapshots should render with the a height determined by its fa
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   />
   <div
@@ -53,6 +54,7 @@ exports[`<Card /> shapshots should render with the given className 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   />
   <div
@@ -93,6 +95,7 @@ exports[`<Card /> shapshots should render with the given icon shown 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   >
     <i
@@ -137,6 +140,7 @@ exports[`<Card /> shapshots should render with the given image 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src="myImage"
   />
   <div
@@ -177,6 +181,7 @@ exports[`<Card /> shapshots should render with the given minor text 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   />
   <div
@@ -223,6 +228,7 @@ exports[`<Card /> shapshots should render with the given style 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   />
   <div
@@ -263,6 +269,7 @@ exports[`<Card /> shapshots should render with the given title 1`] = `
   <div
     alwaysShow={true}
     className="imageContainer"
+    showSpinner={true}
     src={undefined}
   />
   <div
