@@ -7,7 +7,7 @@
   "setupFiles": [
     "<rootDir>/.jest/rAF.js"
   ],
-  "testRegex": "src\\\\.*\\.spec\\.(ts|tsx)$",
+  "testRegex": "src/.*\\.spec\\.(ts|tsx)$",
   "moduleFileExtensions": [
     "ts",
     "tsx",
