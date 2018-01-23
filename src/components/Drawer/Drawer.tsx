@@ -5,7 +5,7 @@ import {
   drawer,
   drawerOpen,
   content,
-  closePlayer,
+  closeDrawer,
   overlay,
 } from './Drawer.scss'
 
@@ -23,10 +23,10 @@ class Drawer extends React.Component<Props> {
     const fullClassName = open ? `${drawer} ${drawerOpen}` : drawer
 
     return (
-      <div>
+      <div className={open ? drawerOpen : ''}>
         <div className={overlay} onClick={() => onClose()} />
-        <div className={className}>
-          <div className={closePlayer} onClick={() => onClose()}>
+        <div className={`${drawer} ${className}`}>
+          <div className={closeDrawer} onClick={() => onClose()}>
             <i className='mdi mdi-chevron-down' />
           </div>
           <div className={content}>
