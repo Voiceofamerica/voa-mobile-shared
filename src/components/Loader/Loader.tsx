@@ -32,7 +32,7 @@ export default ({ loading, error, refetch, errorText, retryText, backgroundImage
   } else if (loading && !hasContent) {
     return (
       <div className={fullClassName} style={style}>
-        <ResilientImage className={backdrop} src={backgroundImage}>
+        <ResilientImage className={backdrop} src={backgroundImage} defaultSrc={backgroundImage}>
           <div className={fader} />
         </ResilientImage>
         <Spinner style={{ height: '20vw', width: '20vw' }} />
