@@ -24,6 +24,7 @@ exports[`<Loader /> shapshots should render the spinner and background image whe
 >
   <div
     className="backdrop"
+    defaultSrc="some.png"
     src="some.png"
   >
     <div
