@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Drawer /> shapshots should render closed 1`] = `
+<div>
+  <div
+    className="overlay"
+    onClick={[Function]}
+  />
+  <div
+    className=""
+  >
+    <div
+      className="closePlayer"
+      onClick={[Function]}
+    >
+      <i
+        className="mdi mdi-chevron-down"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      This should show up
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Drawer /> shapshots should render open 1`] = `
+<div>
+  <div
+    className="overlay"
+    onClick={[Function]}
+  />
+  <div
+    className=""
+  >
+    <div
+      className="closePlayer"
+      onClick={[Function]}
+    >
+      <i
+        className="mdi mdi-chevron-down"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      This should show up
+    </div>
+  </div>
+</div>
+`;
