@@ -83,13 +83,11 @@ class ReilientImage extends React.Component<Props, State> {
     const img = new Image()
 
     img.addEventListener('error', () => {
-      if (!this.mounted) { return }
       this.setImageStatus('error')
       setTimeout(this.tryFetchImage, IMAGE_FETCH_RETRY_RATE)
     })
 
     img.addEventListener('load', () => {
-      if (!this.mounted) { return }
       this.setImageStatus('loaded')
       onLoadDone()
     })
@@ -97,10 +95,15 @@ class ReilientImage extends React.Component<Props, State> {
     img.src = src
   }
 
-  setImageStatus = (imageStaus: ImageStatus) =>
+  setImageStatus = (imageStaus: ImageStatus) => {
+    if (!this.mounted) {
+      return
+    }
+
     this.setState({
       imageStaus,
     })
+  }
 
   renderOffline = () => (
     <div style={{ width: 0, height: 0 }} />

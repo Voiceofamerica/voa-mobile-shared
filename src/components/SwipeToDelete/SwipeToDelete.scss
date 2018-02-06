@@ -1,0 +1,8 @@
+
+.swipeToDelete {
+  position: relative;
+
+  &.animated {
+    transition: right 0.3s, opacity 0.3s;
+  }
+}

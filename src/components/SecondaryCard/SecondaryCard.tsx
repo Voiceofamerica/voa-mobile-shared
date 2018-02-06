@@ -25,7 +25,7 @@ const HEIGHT_RATIO = 4 / 5
 const TITLE_RATIO = 1 / 20
 const TEXT_POWER = 1 / 2
 
-class Card extends React.Component<Props, State> {
+class SecondaryCard extends React.Component<Props, State> {
   state = {
     windowWidth: window.innerWidth,
   }
@@ -46,9 +46,11 @@ class Card extends React.Component<Props, State> {
 
   setSelf = (el) => {
     this._self = el
-    setTimeout(() => {
-      this.forceUpdate()
-    }, 50)
+    if (el) {
+      setTimeout(() => {
+        this.forceUpdate()
+      }, 50)
+    }
   }
 
   render () {
@@ -76,4 +78,4 @@ class Card extends React.Component<Props, State> {
   }
 }
 
-export default Card
+export default SecondaryCard
