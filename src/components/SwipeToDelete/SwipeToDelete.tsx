@@ -17,9 +17,9 @@ const SWIPE_DISTANCE = 100
 class SwipeToDelete extends React.Component<Props, State> {
   state: State = {
     offset: 0,
-    touching: false
+    touching: false,
   }
-  
+
   setTouch = (offset: number, touching: boolean) =>
     this.setState({ offset, touching })
 
