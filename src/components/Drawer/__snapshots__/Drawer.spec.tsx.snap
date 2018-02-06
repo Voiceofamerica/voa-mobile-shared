@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Drawer /> shapshots should render closed 1`] = `
-<div>
+<div
+  className=""
+>
   <div
     className="overlay"
     onClick={[Function]}
   />
   <div
-    className=""
+    className="drawer "
   >
     <div
-      className="closePlayer"
+      className="closeDrawer"
       onClick={[Function]}
     >
       <i
@@ -27,16 +29,18 @@ exports[`<Drawer /> shapshots should render closed 1`] = `
 `;
 
 exports[`<Drawer /> shapshots should render open 1`] = `
-<div>
+<div
+  className="drawerOpen"
+>
   <div
     className="overlay"
     onClick={[Function]}
   />
   <div
-    className=""
+    className="drawer "
   >
     <div
-      className="closePlayer"
+      className="closeDrawer"
       onClick={[Function]}
     >
       <i

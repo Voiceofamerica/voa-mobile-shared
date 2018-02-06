@@ -599,6 +599,32 @@ exports[`Storyshots SvgIcon display 1`] = `
 />
 `;
 
+exports[`Storyshots SwipeToDelete display 1`] = `
+<div
+  className="swipeToDelete animated"
+  onMouseDown={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+      "right": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "background": "#888",
+      }
+    }
+  >
+    Hello
+  </div>
+</div>
+`;
+
 exports[`Storyshots Switch display off 1`] = `
 <div
   className="innerSwitch "

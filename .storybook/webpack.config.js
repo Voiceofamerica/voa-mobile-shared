@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const FixDefaultImportPlugin = require('webpack-fix-default-import-plugin')
 
 const ENV_PROD = 'production'
 const ENV_DEV = 'development'
@@ -57,5 +58,6 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(env),
       '__DEV__': JSON.stringify(env !== ENV_PROD)
     }),
+    new FixDefaultImportPlugin(),
   ]
 }

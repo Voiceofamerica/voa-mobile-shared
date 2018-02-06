@@ -1,6 +1,6 @@
 
 import * as React from 'react'
-import * as Swipeable from 'react-swipeable'
+import Swipeable from 'react-swipeable'
 
 import { swipeToDelete, animated } from './SwipeToDelete.scss'
 

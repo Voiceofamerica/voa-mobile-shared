@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
 import Drawer from './Drawer'
-import { closePlayer, overlay } from './Drawer.scss'
+import { closeDrawer, overlay } from './Drawer.scss'
 
 jest.mock('../ResilientImage')
 jest.mock('../Spinner')
@@ -41,7 +41,7 @@ describe('<Drawer />', () => {
         </Drawer>
       ))
 
-      wrapper.find(`.${closePlayer}`).simulate('click')
+      wrapper.find(`.${closeDrawer}`).simulate('click')
 
       expect(onClose).toHaveBeenCalledTimes(1)
     })
