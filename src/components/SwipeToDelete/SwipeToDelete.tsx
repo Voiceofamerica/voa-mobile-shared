@@ -1,8 +1,9 @@
 
 import * as React from 'react'
 import * as ReactSwipeable from 'react-swipeable'
-const RS = ReactSwipeable as any
-const Swipeable = (RS.default ? RS.default : RS) as typeof ReactSwipeable
+
+import { fixDefault } from 'helpers/fixDefault'
+const Swipeable = fixDefault<typeof ReactSwipeable>(ReactSwipeable)
 
 import { swipeToDelete, animated } from './SwipeToDelete.scss'
 
