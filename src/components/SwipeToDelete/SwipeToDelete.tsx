@@ -2,7 +2,7 @@
 import * as React from 'react'
 import * as ReactSwipeable from 'react-swipeable'
 
-import { fixDefault } from 'helpers/fixDefault'
+import { fixDefault } from '../../helpers/fixDefault'
 const Swipeable = fixDefault<typeof ReactSwipeable>(ReactSwipeable)
 
 import { swipeToDelete, animated } from './SwipeToDelete.scss'

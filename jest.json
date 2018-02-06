@@ -22,9 +22,6 @@
     }
   },
   "moduleNameMapper": {
-    "^components/(.*)$": "<rootDir>/src/components/$1/index.ts",
-    "^helpers/(.*)$": "<rootDir>/src/helpers/$1.ts",
-    "^types/(.*)$": "<rootDir>/src/types/$1.d.ts",
     "\\.s?css$": "identity-obj-proxy",
     "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js"
   },
