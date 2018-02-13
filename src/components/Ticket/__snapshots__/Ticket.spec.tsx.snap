@@ -26,9 +26,6 @@ exports[`<Card /> shapshots should render with the given icon shown 1`] = `
       >
         myTitle
       </div>
-      <div
-        className="fadeOut"
-      />
     </div>
     <div
       className="minorText"
@@ -59,9 +56,6 @@ exports[`<Card /> shapshots should render with the given image 1`] = `
       >
         myTitle
       </div>
-      <div
-        className="fadeOut"
-      />
     </div>
     <div
       className="minorText"
@@ -92,9 +86,6 @@ exports[`<Card /> shapshots should render with the given minor text 1`] = `
       >
         myTitle
       </div>
-      <div
-        className="fadeOut"
-      />
     </div>
     <div
       className="minorText"
@@ -127,9 +118,6 @@ exports[`<Card /> shapshots should render with the given title 1`] = `
       >
         myTitle
       </div>
-      <div
-        className="fadeOut"
-      />
     </div>
     <div
       className="minorText"
