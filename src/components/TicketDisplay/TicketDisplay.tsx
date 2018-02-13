@@ -12,7 +12,6 @@ export interface MediaSource {
 export interface Article {
   id: number
   title: string
-  introduction: string
   pubDate: string
   image?: MediaSource
 }
@@ -32,11 +31,10 @@ class TicketDisplay extends React.Component<Props> {
     return (
       <div className={`${ticketDisplay} ${className}`} style={style}>
         {
-          articles.map(({ id, title, introduction, pubDate, image: { url } }) => (
+          articles.map(({ id, title, pubDate, image: { url } }) => (
             <Ticket
               key={id}
               title={title}
-              description={introduction}
               minorText={dateFormat(pubDate)}
               imageUrl={url}
               onPress={() => onTicketClick(id)}

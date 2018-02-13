@@ -3,12 +3,11 @@ import * as React from 'react'
 
 import ResilientImage from '../ResilientImage'
 
-import { ticket, imageArea, show, content, textContent, minorText, titleText, fadeOut } from './Ticket.scss'
+import { ticket, imageArea, show, content, textContent, minorText, titleText } from './Ticket.scss'
 
 export interface Props {
   title: JSX.Element|string
   onPress?: () => void
-  description?: string
   imageUrl?: string
   minorText?: JSX.Element|string
   icon?: JSX.Element
@@ -29,7 +28,7 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, imageUrl, title, description, minorText: minor, icon } = this.props
+    const { onPress, imageUrl, title, minorText: minor, icon } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -46,8 +45,6 @@ class Ticket extends React.Component<Props, State> {
             <div className={titleText}>
               {title}
             </div>
-            {description}
-            <div className={fadeOut}/>
           </div>
           <div className={minorText}>
             {minor}
