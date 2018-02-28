@@ -20,10 +20,9 @@ class Drawer extends React.Component<Props> {
 
   render () {
     const { open, onClose, className = '', style = {}, children } = this.props
-    const fullClassName = open ? `${drawer} ${drawerOpen}` : drawer
 
     return (
-      <div className={open ? drawerOpen : ''}>
+      <div className={open ? drawerOpen : ''} style={style}>
         <div className={overlay} onClick={() => onClose()} />
         <div className={`${drawer} ${className}`}>
           <div className={closeDrawer} onClick={() => onClose()}>
