@@ -1,20 +1,36 @@
 
+/* Primary Colors */
+$voa-red: #D41010;
+$voa-blue: #0061B0;
+
+/* Secondary Colors */
+$white: #FFFFFF;
+$black: #000000;
+$dark-grey: #333333;
+$mid-grey: #B4BCC2;
+$voa-light-grey: #EEEEEE;
+$voa-grey: $mid-grey;
+
+/* Accent Colors */
+$accent-blue: #2083C6;
+$accent-green: #1AB088;
+$accent-grey: #8E8E93;
+$accent-yellow: #FAD245;
+
+$offline-red: #820;
+$online-green: #062;
+
+/* Sizing / Spacing */
 $menu-height: calc(2vh + 35px);
 $menu-font-size: calc(1.3vh + 25px);
 $menu-border-size: calc(0.65vh + 5px);
 $offline-offset: calc(2vh + 54px);
 
+$menu-z: 10;
+$menu-z-max: 13;
+
+/* Legacy */
 $light-grey: #F2F2F2;
 $border-grey: #D5D5D5;
 
-$offline-red: #820;
-$online-green: #062;
 
-$voa-red: #ED4048;
-$voa-blue: #0162B1;
-$voa-light-blue: #E1EBF5;
-$voa-grey: #9B9B9B;
-$voa-green: #1CAC2E;
-
-$menu-z: 10;
-$menu-z-max: 13;
