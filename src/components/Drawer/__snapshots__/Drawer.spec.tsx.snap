@@ -3,6 +3,7 @@
 exports[`<Drawer /> shapshots should render closed 1`] = `
 <div
   className=""
+  style={Object {}}
 >
   <div
     className="overlay"
@@ -31,6 +32,7 @@ exports[`<Drawer /> shapshots should render closed 1`] = `
 exports[`<Drawer /> shapshots should render open 1`] = `
 <div
   className="drawerOpen"
+  style={Object {}}
 >
   <div
     className="overlay"
