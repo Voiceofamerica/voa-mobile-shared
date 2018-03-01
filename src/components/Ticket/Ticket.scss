@@ -19,7 +19,8 @@ $image-width: 30vw;
   display: flex;
   flex-direction: row;
   background: white;
-  margin-top: 1.5vw;
+  border-top: 1px solid $mid-grey;
+  padding: 12px;
   height: 20vw;
   font-size: 3vw;
   overflow: hidden;
@@ -68,14 +69,15 @@ $image-width: 30vw;
   .textContent {
     flex: 1;
     overflow: hidden;
+    padding-left: 12px;
 
     .titleText {
       flex: 1;
       overflow: hidden;
       position: relative;
       font-weight: bold;
-      font-size: 1.4em;
-      top: 0.5vw; 
+      font-size: 14px;
+      padding-top: 6px;
     }
   }
 
@@ -83,11 +85,14 @@ $image-width: 30vw;
   .minorText {
     position: absolute;
     bottom: 0;
+    padding-bottom: 6px;
+    padding-left: 12px;
     left: 1.5vw;
     color: #444;
     text-align: left;
-    font-size: 0.9em;
+    font-size: 11px;
     border-top: 2px solid white;
+    color: $voa-blue;
     background: white;
 
     [dir="rtl"] & {
