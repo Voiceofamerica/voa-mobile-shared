@@ -46,12 +46,8 @@ class Card extends React.Component<Props, State> {
 
   render () {
     const { windowWidth } = this.state
-    const { onPress, factor = 1, icon, imageUrl, className, style } = this.props
+    const { onPress, factor = 1, icon, title, imageUrl, className, style } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
-    var {title} = this.props
-    if (title.length > 16) {
-        title = title.slice(0,14) + "……" 
-    }
 
     const height = width * HEIGHT_RATIO
 
