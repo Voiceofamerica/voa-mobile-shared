@@ -35,9 +35,8 @@ storiesOf('Card', module)
       <Card
         onPress={action('Card.onPress')}
         { ...testArticle }
-        title={(
-          <span><img src={require('./headphones.svg')} />{testArticle.title}</span>
-        )}
+        icon={<img src={require('./headphones.svg')} />}
+        title={(testArticle.title)}
       />
     </div>
   ))
