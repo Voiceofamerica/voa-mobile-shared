@@ -10,6 +10,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   transform: translateY(100vh);
   transition: transform 0.3s;
   background: white;
@@ -39,6 +40,7 @@
 
   .content {
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: 40px 0;
     display: flex;
   }

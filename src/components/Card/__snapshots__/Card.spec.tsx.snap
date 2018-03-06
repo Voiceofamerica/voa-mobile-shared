@@ -20,22 +20,12 @@ exports[`<Card /> shapshots should render with the a height determined by its fa
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 9.346202568200738,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 14.019303852301109,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -61,22 +51,12 @@ exports[`<Card /> shapshots should render with the given className 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -106,22 +86,15 @@ exports[`<Card /> shapshots should render with the given icon shown 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+        <i
+          className="mdi mdi-monitor"
+        />
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -147,22 +120,12 @@ exports[`<Card /> shapshots should render with the given image 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -188,24 +151,12 @@ exports[`<Card /> shapshots should render with the given minor text 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    >
-      This is some minor text
-    </div>
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -235,22 +186,12 @@ exports[`<Card /> shapshots should render with the given style 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>
@@ -276,22 +217,12 @@ exports[`<Card /> shapshots should render with the given title 1`] = `
     className="gradient"
   >
     <div
-      className="minorText"
-      style={
-        Object {
-          "fontSize": 16.50245904961124,
-        }
-      }
-    />
-    <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 24.753688574416856,
-        }
-      }
     >
-      myTitle
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
 </div>

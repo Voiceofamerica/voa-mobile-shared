@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   user-select: none;
 
   .imageContainer {
@@ -19,7 +20,9 @@
   .titleText {
     height: 30%;
     overflow: hidden;
-    font-weight: bold;
+    padding: 2vw 3vw;
+    color: $dark-grey;
+    font-size: 14px;
   }
 
   & + .card {
