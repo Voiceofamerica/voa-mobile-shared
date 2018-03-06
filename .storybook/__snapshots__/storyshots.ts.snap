@@ -411,11 +411,6 @@ exports[`Storyshots SecondaryCard display two 1`] = `
     </div>
     <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 35.85540993289491,
-        }
-      }
     >
       President Trump: From North Korea to Iran, we confront dangerous governments
     </div>
@@ -441,11 +436,6 @@ exports[`Storyshots SecondaryCard display two 1`] = `
     </div>
     <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 35.85540993289491,
-        }
-      }
     >
       At least seven people were killed in a police vehicle in Balochistan, Pakistan
     </div>
@@ -484,11 +474,6 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
     </div>
     <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 35.85540993289491,
-        }
-      }
     >
       President Trump: From North Korea to Iran, we confront dangerous governments
     </div>
@@ -514,11 +499,6 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
     </div>
     <div
       className="titleText"
-      style={
-        Object {
-          "fontSize": 35.85540993289491,
-        }
-      }
     >
       At least seven people were killed in a police vehicle in Balochistan, Pakistan
     </div>
