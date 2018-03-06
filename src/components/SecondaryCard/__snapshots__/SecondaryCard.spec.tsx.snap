@@ -17,11 +17,6 @@ exports[`<SecondaryCard /> shapshots should render with the a height determined 
   />
   <div
     className="titleText"
-    style={
-      Object {
-        "fontSize": 14.019303852301109,
-      }
-    }
   >
     myTitle
   </div>
@@ -45,11 +40,6 @@ exports[`<SecondaryCard /> shapshots should render with the given className 1`] 
   />
   <div
     className="titleText"
-    style={
-      Object {
-        "fontSize": 17.33438113203841,
-      }
-    }
   >
     myTitle
   </div>
@@ -73,11 +63,6 @@ exports[`<SecondaryCard /> shapshots should render with the given image 1`] = `
   />
   <div
     className="titleText"
-    style={
-      Object {
-        "fontSize": 17.33438113203841,
-      }
-    }
   >
     myTitle
   </div>
@@ -105,11 +90,6 @@ exports[`<SecondaryCard /> shapshots should render with the given style 1`] = `
   />
   <div
     className="titleText"
-    style={
-      Object {
-        "fontSize": 17.33438113203841,
-      }
-    }
   >
     myTitle
   </div>
@@ -133,11 +113,6 @@ exports[`<SecondaryCard /> shapshots should render with the given title 1`] = `
   />
   <div
     className="titleText"
-    style={
-      Object {
-        "fontSize": 17.33438113203841,
-      }
-    }
   >
     myTitle
   </div>
