@@ -6,10 +6,10 @@ import { resize } from '../../helpers/windowHelper'
 
 import ResilientImage from '../ResilientImage'
 
-import { card, imageContainer, gradient, minorText, titleText } from './Card.scss'
+import { card, imageContainer, gradient, titleText } from './Card.scss'
 
 export interface Props {
-  title: JSX.Element|string
+  title: string
   onPress?: () => void
   imageUrl?: string
   minorText?: JSX.Element|string
@@ -24,9 +24,6 @@ export interface State {
 }
 
 const HEIGHT_RATIO = 3 / 4
-const TITLE_RATIO = 1 / 20
-const MINOR_RATIO = 1 / 30
-const TEXT_POWER = 1 / 2
 
 class Card extends React.Component<Props, State> {
   state = {
@@ -49,14 +46,10 @@ class Card extends React.Component<Props, State> {
 
   render () {
     const { windowWidth } = this.state
-    const { onPress, factor = 1, icon, title, imageUrl, minorText: minor, className, style } = this.props
+    const { onPress, factor = 1, icon, title, imageUrl, className, style } = this.props
     const width = this._self ? this._self.clientWidth : windowWidth / factor
 
     const height = width * HEIGHT_RATIO
-
-    const textRatio = Math.pow(windowWidth / (width + 10), TEXT_POWER)
-    const titleSize = width * TITLE_RATIO * textRatio
-    const minorSize = width * MINOR_RATIO * textRatio
 
     return (
       <div
@@ -68,11 +61,8 @@ class Card extends React.Component<Props, State> {
           {icon}
         </ResilientImage>
         <div className={gradient}>
-          <div className={minorText} style={{ fontSize: minorSize }}>
-            {minor}
-          </div>
-          <div className={titleText} style={{ fontSize: titleSize }}>
-            {title}
+          <div className={titleText}>
+            <span>{icon} {title}</span>
           </div>
         </div>
       </div>

@@ -12,7 +12,9 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   user-select: none;
+  border-bottom: 1vw solid $voa-red;
 
   .imageContainer {
     position: absolute;
@@ -36,13 +38,12 @@
     z-index: 1;
   }
 
-  .minorText {
-    color: white;
-    padding-bottom: 1vw;
-  }
-
   .titleText {
     color: white;
+    text-shadow: 0.5vh 0.5vw 0.5vw $accent-grey;
     font-weight: bold;
+    width: 50%;
+    padding: 0 0 2.5vh 5vw;
+    font-size: 20px;
   }
 }
