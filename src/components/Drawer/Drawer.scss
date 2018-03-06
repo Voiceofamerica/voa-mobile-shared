@@ -10,6 +10,7 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   transform: translateY(100vh);
   transition: transform 0.3s;
   background: white;
