@@ -4,6 +4,10 @@
   width: 1em;
   height: 1em;
   background: currentColor;
-  mask-size: cover;
-  -webkit-mask-size: cover;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
 }
