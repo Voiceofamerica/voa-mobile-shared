@@ -57,9 +57,7 @@ class Card extends React.Component<Props, State> {
         className={`${card} ${className}`}
         style={{ height, ...style }}
         onClick={onPress}>
-        <ResilientImage className={imageContainer} src={imageUrl} alwaysShow showSpinner>
-          {icon}
-        </ResilientImage>
+        <ResilientImage className={imageContainer} src={imageUrl} alwaysShow showSpinner />
         <div className={gradient}>
           <div className={titleText}>
             <span>{icon} {title}</span>
