@@ -2,21 +2,21 @@
 
 exports[`<IconItem /> shapshots should render active if prop set to true 1`] = `
 <button
-  className="iconItem activeItem"
+  className="iconItem  activeItem"
   onClick={[Function]}
 />
 `;
 
 exports[`<IconItem /> shapshots should render empty 1`] = `
 <button
-  className="iconItem"
+  className="iconItem "
   onClick={[Function]}
 />
 `;
 
 exports[`<IconItem /> shapshots should render with the given children 1`] = `
 <button
-  className="iconItem"
+  className="iconItem "
   onClick={[Function]}
 >
   <div>

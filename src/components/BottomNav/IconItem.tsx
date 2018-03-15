@@ -5,16 +5,17 @@ import { iconItem, activeItem } from './BottomNav.scss'
 
 export type Props = React.Props<any> & {
   onClick?: () => void,
+  className?: string,
   active?: boolean,
 }
 
-function IconItem ({ children, onClick = () => null, active = false }: Props) {
-  const className = active
-    ? `${iconItem} ${activeItem}`
-    : iconItem
+function IconItem ({ children, onClick = () => null, active = false, className = '' }: Props) {
+  const iconClass = active
+    ? `${iconItem} ${className} ${activeItem}`
+    : `${iconItem} ${className}`
 
   return (
-    <button className={className} onClick={() => onClick()}>
+    <button className={iconClass} onClick={() => onClick()}>
       {
         children
       }
