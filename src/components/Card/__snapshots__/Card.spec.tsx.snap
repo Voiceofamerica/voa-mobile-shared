@@ -77,11 +77,7 @@ exports[`<Card /> shapshots should render with the given icon shown 1`] = `
     className="imageContainer"
     showSpinner={true}
     src={undefined}
-  >
-    <i
-      className="mdi mdi-monitor"
-    />
-  </div>
+  />
   <div
     className="gradient"
   >

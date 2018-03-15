@@ -6,13 +6,13 @@ exports[`Storyshots BottomNav with active item 1`] = `
   style={undefined}
 >
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     AB
   </button>
   <button
-    className="iconItem activeItem"
+    className="iconItem  activeItem"
     onClick={[Function]}
   >
     CD
@@ -25,13 +25,13 @@ exports[`Storyshots BottomNav with active item 1`] = `
     EF
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     GH
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     IJ
@@ -45,13 +45,13 @@ exports[`Storyshots BottomNav with active round item 1`] = `
   style={undefined}
 >
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     AB
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     CD
@@ -64,13 +64,13 @@ exports[`Storyshots BottomNav with active round item 1`] = `
     EF
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     GH
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     IJ
@@ -84,13 +84,13 @@ exports[`Storyshots BottomNav with round item 1`] = `
   style={undefined}
 >
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     AB
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     CD
@@ -103,13 +103,13 @@ exports[`Storyshots BottomNav with round item 1`] = `
     EF
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     GH
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     IJ
@@ -123,31 +123,31 @@ exports[`Storyshots BottomNav without round item 1`] = `
   style={undefined}
 >
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     AB
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     CD
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     EF
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     GH
   </button>
   <button
-    className="iconItem"
+    className="iconItem "
     onClick={[Function]}
   >
     IJ
@@ -302,13 +302,6 @@ exports[`Storyshots Card display with icon 1`] = `
         className="imageContent"
         src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
       />
-      <div
-        className="childrenArea"
-      >
-        <img
-          src="Some File"
-        />
-      </div>
     </div>
     <div
       className="gradient"
