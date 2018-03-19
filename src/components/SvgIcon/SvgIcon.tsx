@@ -12,9 +12,9 @@ export interface Props {
 export default (props: Props) => {
   const { src, className = '', style = {} } = props
 
-  const webkitMaskImage = `url(${src})`
+  style.webkitMaskImage = `url(${src})`
 
   return (
-    <div className={`${icon} ${className}`} style={{ ...style, webkitMaskImage }} />
+    <div className={`${icon} ${className}`} style={style} />
   )
 }

@@ -167,11 +167,7 @@ exports[`Storyshots Card display 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={
-      Object {
-        "height": 768,
-      }
-    }
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -211,11 +207,7 @@ exports[`Storyshots Card display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={
-      Object {
-        "height": 384,
-      }
-    }
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -243,11 +235,7 @@ exports[`Storyshots Card display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={
-      Object {
-        "height": 384,
-      }
-    }
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -287,11 +275,7 @@ exports[`Storyshots Card display with icon 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={
-      Object {
-        "height": 768,
-      }
-    }
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -386,7 +370,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={Object {}}
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -407,7 +391,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={Object {}}
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -441,7 +425,7 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={Object {}}
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"
@@ -462,7 +446,7 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
   <div
     className="card undefined"
     onClick={[Function]}
-    style={Object {}}
+    style={undefined}
   >
     <div
       className="resilientImage imageContainer"

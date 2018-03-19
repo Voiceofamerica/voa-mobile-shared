@@ -21,13 +21,13 @@ const testArticle2 = {
 storiesOf('SecondaryCard', module)
   .add('display two', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } factor={2} />
-      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } factor={2} />
+      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } />
+      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } />
     </div>
   ))
   .add('rtl display two', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }} dir='rtl'>
-      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } factor={2} />
-      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } factor={2} />
+      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } />
+      <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } />
     </div>
   ))

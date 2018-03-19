@@ -1,29 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SecondaryCard /> shapshots should render with the a height determined by its factor 1`] = `
-<div
-  className="card undefined"
-  onClick={[Function]}
-  style={Object {}}
->
-  <div
-    alwaysShow={true}
-    className="imageContainer"
-    src={undefined}
-  />
-  <div
-    className="titleText"
-  >
-    myTitle
-  </div>
-</div>
-`;
-
 exports[`<SecondaryCard /> shapshots should render with the given className 1`] = `
 <div
   className="card myClass"
   onClick={[Function]}
-  style={Object {}}
+  style={undefined}
 >
   <div
     alwaysShow={true}
@@ -42,7 +23,7 @@ exports[`<SecondaryCard /> shapshots should render with the given image 1`] = `
 <div
   className="card undefined"
   onClick={[Function]}
-  style={Object {}}
+  style={undefined}
 >
   <div
     alwaysShow={true}
@@ -87,7 +68,7 @@ exports[`<SecondaryCard /> shapshots should render with the given title 1`] = `
 <div
   className="card undefined"
   onClick={[Function]}
-  style={Object {}}
+  style={undefined}
 >
   <div
     alwaysShow={true}

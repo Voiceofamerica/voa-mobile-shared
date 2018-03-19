@@ -5,7 +5,6 @@ import { shallow } from 'enzyme'
 
 import MediaPlayer, { Props } from './MediaPlayer'
 
-jest.mock('../../helpers/windowHelper')
 jest.mock('../ResilientImage')
 
 describe('<MediaPlayer />', () => {

@@ -5,7 +5,6 @@ import { shallow } from 'enzyme'
 
 import SecondaryCard from './SecondaryCard'
 
-jest.mock('../../helpers/windowHelper')
 jest.mock('../ResilientImage')
 
 describe('<SecondaryCard />', () => {
@@ -21,14 +20,6 @@ describe('<SecondaryCard />', () => {
     it('should render with the given image', () => {
       const element = create((
         <SecondaryCard title='myTitle' imageUrl='myImage' />
-      ))
-
-      expect(element).toMatchSnapshot()
-    })
-
-    it('should render with the a height determined by its factor', () => {
-      const element = create((
-        <SecondaryCard title='myTitle' factor={3} />
       ))
 
       expect(element).toMatchSnapshot()
@@ -70,39 +61,6 @@ describe('<SecondaryCard />', () => {
       ))
 
       item.simulate('click')
-    })
-  })
-
-  describe('resize', () => {
-    it('should change height when window is resized', () => {
-      const windowHelper = require('../../helpers/windowHelper')
-
-      const item = shallow((
-        <SecondaryCard title='myTitle' />
-      ))
-
-      const originalWidth = item.state().windowWidth
-      const expected = originalWidth + 400
-      windowHelper.setWindowWidth(expected)
-      const actual = item.state().windowWidth
-
-      expect(actual).not.toEqual(originalWidth)
-      expect(expected).toEqual(actual)
-    })
-
-    it('should null its subscription upon unmount', () => {
-      const windowHelper = require('../../helpers/windowHelper')
-
-      const item = shallow((
-        <SecondaryCard title='myTitle' />
-      ))
-
-      const card = item.instance() as SecondaryCard
-      expect(card._resizeSub).not.toBeNull()
-
-      item.unmount()
-
-      expect(card._resizeSub).toBeNull()
     })
   })
 })
