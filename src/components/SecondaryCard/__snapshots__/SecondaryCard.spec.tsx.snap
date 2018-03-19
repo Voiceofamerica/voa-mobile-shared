@@ -4,11 +4,7 @@ exports[`<SecondaryCard /> shapshots should render with the a height determined 
 <div
   className="card undefined"
   onClick={[Function]}
-  style={
-    Object {
-      "height": 133.33333333333334,
-    }
-  }
+  style={Object {}}
 >
   <div
     alwaysShow={true}
@@ -27,11 +23,7 @@ exports[`<SecondaryCard /> shapshots should render with the given className 1`] 
 <div
   className="card myClass"
   onClick={[Function]}
-  style={
-    Object {
-      "height": 200,
-    }
-  }
+  style={Object {}}
 >
   <div
     alwaysShow={true}
@@ -50,11 +42,7 @@ exports[`<SecondaryCard /> shapshots should render with the given image 1`] = `
 <div
   className="card undefined"
   onClick={[Function]}
-  style={
-    Object {
-      "height": 200,
-    }
-  }
+  style={Object {}}
 >
   <div
     alwaysShow={true}
@@ -76,7 +64,6 @@ exports[`<SecondaryCard /> shapshots should render with the given style 1`] = `
   style={
     Object {
       "bottom": 0,
-      "height": 200,
       "left": 0,
       "right": 0,
       "top": 0,
@@ -100,11 +87,7 @@ exports[`<SecondaryCard /> shapshots should render with the given title 1`] = `
 <div
   className="card undefined"
   onClick={[Function]}
-  style={
-    Object {
-      "height": 200,
-    }
-  }
+  style={Object {}}
 >
   <div
     alwaysShow={true}
