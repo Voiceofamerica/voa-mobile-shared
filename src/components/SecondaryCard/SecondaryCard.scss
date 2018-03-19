@@ -14,15 +14,16 @@
   user-select: none;
 
   .imageContainer {
-    height: 70%;
+    width: 100%;
   }
 
   .titleText {
-    height: 30%;
     overflow: hidden;
     padding: 2vw 3vw;
     color: $dark-grey;
     font-size: 14px;
+    line-height: 18px;
+    height: 50px;
   }
 
   & + .card {

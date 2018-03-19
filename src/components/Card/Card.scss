@@ -34,15 +34,14 @@
   .gradient {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     padding: 1.5vw;
-    padding-top: 30%;
     z-index: 1;
   }
 
   .titleText {
     color: white;
-    text-shadow: 0.5vh 0.5vw 0.5vw $accent-grey;
+    text-shadow: 0.5vh 0.5vw 0.5vw rgba($accent-grey, 0.5);
     font-weight: bold;
-    width: 50%;
+    width: 60%;
     padding: 0 0 2.5vh 5vw;
     font-size: 20px;
   }

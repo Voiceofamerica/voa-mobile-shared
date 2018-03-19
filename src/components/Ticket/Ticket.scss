@@ -75,9 +75,10 @@ $image-width: 30vw;
       flex: 1;
       overflow: hidden;
       position: relative;
-      font-weight: bold;
       font-size: 14px;
       padding-top: 6px;
+      line-height: 20px;
+      height: 40px;
     }
   }
 
@@ -93,7 +94,6 @@ $image-width: 30vw;
     font-size: 11px;
     border-top: 2px solid white;
     color: $voa-blue;
-    background: white;
 
     [dir="rtl"] & {
       left: auto;

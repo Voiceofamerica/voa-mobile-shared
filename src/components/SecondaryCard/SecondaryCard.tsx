@@ -62,7 +62,7 @@ class SecondaryCard extends React.Component<Props, State> {
       <div
         ref={this.setSelf}
         className={`${card} ${className}`}
-        style={{ height, ...style }}
+        style={{ ...style }}
         onClick={onPress}>
         <ResilientImage className={imageContainer} src={imageUrl} alwaysShow />
         <div className={titleText}>
