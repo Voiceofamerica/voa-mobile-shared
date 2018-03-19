@@ -15,6 +15,7 @@
   -webkit-overflow-scrolling: touch;
   user-select: none;
   border-bottom: 1vw solid $voa-red;
+  height: (100vw * 9 / 16);
 
   .imageContainer {
     position: absolute;

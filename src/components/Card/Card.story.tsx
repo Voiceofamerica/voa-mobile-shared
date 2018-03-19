@@ -24,12 +24,6 @@ storiesOf('Card', module)
       <Card onPress={action('Card.onPress')} { ...testArticle } />
     </div>
   ))
-  .add('display two', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Card onPress={action('Card.onPress')} { ...testArticle } factor={2} />
-      <Card onPress={action('Card.onPress')} { ...testArticle2 } factor={2} />
-    </div>
-  ))
   .add('display with icon', () => (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <Card
