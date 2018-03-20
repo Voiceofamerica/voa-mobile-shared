@@ -15,6 +15,8 @@ $round-item-size: calc(#{$menu-height} - 10px);
   flex-direction: row;
   font-size: $menu-font-size;
   overflow-y: show;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.5);
+  z-index: $menu-z;
 
   .iconItem {
     flex: 1;
