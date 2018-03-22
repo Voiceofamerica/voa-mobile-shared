@@ -2,10 +2,9 @@
 @import '../../commonStyles/index.scss';
 
 .topNav {
-  /*
   top: 0;
   left: 0;
-  right: 0;*/
+  right: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   background: $voa-light-grey;
   display: flex;
@@ -94,7 +93,6 @@
     color: $dark-grey;
     background: $voa-light-grey;
     height: $menu-height;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     z-index: $menu-z + 2;
   }
 }
