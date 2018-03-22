@@ -239,29 +239,53 @@ exports[`Storyshots Card display with icon 1`] = `
 `;
 
 exports[`Storyshots MediaPlayer display video 1`] = `
-<video
-  autoPlay={undefined}
-  className=""
-  controls={true}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
+<div
+  className="mediaPlayer "
   style={undefined}
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={false}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`Storyshots MediaPlayer play audio 1`] = `
-<video
-  autoPlay={undefined}
-  className=""
-  controls={true}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
+<div
+  className="mediaPlayer "
   style={undefined}
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={false}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`Storyshots ResilientImage display 1`] = `

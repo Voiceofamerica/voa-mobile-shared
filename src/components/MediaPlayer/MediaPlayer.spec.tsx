@@ -59,7 +59,7 @@ describe('<MediaPlayer />', () => {
         <MediaPlayer src='mySrc' onTogglePlay={onTogglePlay} />
       ))
 
-      item.find('video').simulate('play')
+      item.find('video').simulate('playing')
 
       expect(onTogglePlay).toHaveBeenCalledTimes(1)
       expect(onTogglePlay).toHaveBeenCalledWith(expected)
@@ -101,7 +101,7 @@ describe('<MediaPlayer />', () => {
       const video = item.find('video')
 
       for (let i = 0; i < playCount; i++) {
-        video.simulate('play')
+        video.simulate('playing')
       }
       for (let i = 0; i < pauseCount; i++) {
         video.simulate('pause')

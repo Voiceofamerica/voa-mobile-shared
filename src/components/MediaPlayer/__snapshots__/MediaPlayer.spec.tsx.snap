@@ -1,66 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MediaPlayer /> shapshots should render with autoplay if prop is set to true 1`] = `
-<video
-  autoPlay={true}
-  className=""
-  controls={undefined}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="mySrc"
+<div
+  className="mediaPlayer "
   style={undefined}
-/>
+>
+  <video
+    autoPlay={true}
+    className="videoElement"
+    controls={undefined}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`<MediaPlayer /> shapshots should render with controls if prop is set to true 1`] = `
-<video
-  autoPlay={undefined}
-  className=""
-  controls={true}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="mySrc"
+<div
+  className="mediaPlayer "
   style={undefined}
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={false}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`<MediaPlayer /> shapshots should render with the given className 1`] = `
-<video
-  autoPlay={undefined}
-  className="myClass"
-  controls={undefined}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="mySrc"
+<div
+  className="mediaPlayer myClass"
   style={undefined}
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={undefined}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`<MediaPlayer /> shapshots should render with the given src 1`] = `
-<video
-  autoPlay={undefined}
-  className=""
-  controls={undefined}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="mySrc"
+<div
+  className="mediaPlayer "
   style={undefined}
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={undefined}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;
 
 exports[`<MediaPlayer /> shapshots should render with the given style 1`] = `
-<video
-  autoPlay={undefined}
-  className=""
-  controls={undefined}
-  onPause={[Function]}
-  onPlay={[Function]}
-  playsInline={true}
-  src="mySrc"
+<div
+  className="mediaPlayer "
   style={
     Object {
       "bottom": 0,
@@ -69,5 +111,23 @@ exports[`<MediaPlayer /> shapshots should render with the given style 1`] = `
       "top": 0,
     }
   }
-/>
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={undefined}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    onWaiting={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
 `;

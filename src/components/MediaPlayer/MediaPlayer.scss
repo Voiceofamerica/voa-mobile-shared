@@ -1,8 +1,30 @@
 
+@import "../../commonStyles/index.scss";
+
 .mediaPlayer {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-content: stretch;
   align-items: stretch;
   flex: 1;
+
+  .loadingBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $voa-light-grey;
+    color: black;
+    font-size: 40px;
+    opacity: 0.8;
+  }
+
+  .videoElement {
+    flex: 1;
+  }
 }
