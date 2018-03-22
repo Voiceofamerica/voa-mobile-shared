@@ -17,7 +17,7 @@
     "check": "run-s -c test lint prepare",
     "prepublish": "run-s test lint prepare",
     "clean": "git clean -X -f",
-    "deploy": "np --no-yarn",
+    "deploy": "rm -rf node_modules && np --no-yarn",
     "files:copy": "cd src && rsync -Rr * --filter='+ *.scss' --filter='+ *.d.ts' --filter='+ *.gif' --filter='- *.tsx' --filter='- *.ts' --filter='- *.snap' ..",
     "scss:types": "tcm -p './src/**/*.scss'",
     "scss:types:watch": "npm run scss:types -- -w",
