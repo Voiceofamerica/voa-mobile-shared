@@ -251,7 +251,6 @@ exports[`Storyshots MediaPlayer display video 1`] = `
     onLoadStart={[Function]}
     onPause={[Function]}
     onPlaying={[Function]}
-    onWaiting={[Function]}
     playsInline={true}
     src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
   />
@@ -276,7 +275,6 @@ exports[`Storyshots MediaPlayer play audio 1`] = `
     onLoadStart={[Function]}
     onPause={[Function]}
     onPlaying={[Function]}
-    onWaiting={[Function]}
     playsInline={true}
     src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
   />
