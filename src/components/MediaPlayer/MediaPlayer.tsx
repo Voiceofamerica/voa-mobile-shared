@@ -67,11 +67,7 @@ class MediaPlayer extends React.Component<Props, State> {
           this.triggerTogglePlay(true)
         }}
         onLoadStart={() => this.triggerCanPlay(false)}
-        onWaiting={() => this.triggerCanPlay(false)}
-        onPause={() => {
-          this.triggerTogglePlay(false)
-          this.triggerCanPlay(true)
-        }}
+        onPause={() => this.triggerTogglePlay(false)}
         playsInline
         controlsList='nodownload'
       />
