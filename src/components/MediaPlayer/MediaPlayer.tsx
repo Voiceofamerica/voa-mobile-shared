@@ -102,10 +102,6 @@ class MediaPlayer extends React.Component<Props, State> {
     const {
       className = '',
       style,
-      src,
-      autoPlay,
-      controls,
-      loadingText = 'Loading...',
     } = this.props
 
     return (
