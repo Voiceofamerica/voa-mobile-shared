@@ -24,6 +24,10 @@ export interface State {
 }
 
 export default class Loader extends React.PureComponent<Props, State> {
+  state: State = {
+    forceLoader: false,
+  }
+
   componentWillReceiveProps (newProps: Props) {
     if (newProps.networkStatus !== this.props.networkStatus) {
       this.toggleForceLoader(false)

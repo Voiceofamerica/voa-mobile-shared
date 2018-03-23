@@ -3,7 +3,9 @@ import * as React from 'react'
 import { create } from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
-import Loader from './Loader'
+import ResilientImage from '../ResilientImage'
+import { reloadButton } from './Loader.scss'
+import Loader, { State } from './Loader'
 
 jest.mock('../ResilientImage')
 jest.mock('../Spinner')
@@ -15,6 +17,7 @@ describe('<Loader />', () => {
         <Loader
           loading={false}
           error={null}
+          networkStatus={1}
           refetch={jest.fn()}
           errorText='An Error Occurred'
           retryText='Retry'
@@ -31,6 +34,7 @@ describe('<Loader />', () => {
         <Loader
           loading={true}
           error={null}
+          networkStatus={1}
           refetch={jest.fn()}
           errorText='An Error Occurred'
           retryText='Retry'
@@ -47,6 +51,7 @@ describe('<Loader />', () => {
         <Loader
           loading={false}
           error='This is an error!'
+          networkStatus={1}
           refetch={jest.fn()}
           errorText='An Error Occurred'
           retryText='Retry'
@@ -57,6 +62,53 @@ describe('<Loader />', () => {
       ))
 
       expect(element).toMatchSnapshot()
+    })
+  })
+
+  describe('refetch', () => {
+    it('should be called whenever the retry button is pressed', () => {
+      const refetch = jest.fn()
+      const element = shallow((
+        <Loader
+          loading={false}
+          error='This is an error!'
+          networkStatus={1}
+          refetch={refetch}
+          errorText='An Error Occurred'
+          retryText='Retry'
+          backgroundImage='some.png'
+          >
+            Content
+          </Loader>
+      ))
+
+      element.find(`.${reloadButton}`).simulate('click')
+      expect(refetch).toHaveBeenCalledTimes(1)
+    })
+    it('should force the loader to be shown', () => {
+      const refetch = jest.fn()
+      const element = shallow((
+        <Loader
+          loading={false}
+          error='This is an error!'
+          networkStatus={1}
+          refetch={refetch}
+          errorText='An Error Occurred'
+          retryText='Retry'
+          backgroundImage='some.png'
+          >
+            Content
+          </Loader>
+      ))
+
+      let state: State = element.state()
+      expect(state.forceLoader).toBe(false)
+      expect(element.find(ResilientImage)).toHaveLength(0)
+
+      element.find(`.${reloadButton}`).simulate('click')
+      state = element.state()
+      expect(state.forceLoader).toBe(true)
+      expect(element.find(ResilientImage)).toHaveLength(1)
     })
   })
 })
