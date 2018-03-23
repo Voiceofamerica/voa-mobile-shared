@@ -26,7 +26,7 @@ class MediaPlayer extends React.Component<Props, State> {
   }
 
   player: HTMLVideoElement
-  hls: Hls
+  private hls: Hls
 
   componentWillUpdate (nextProps: Props) {
     if (this.player) {
