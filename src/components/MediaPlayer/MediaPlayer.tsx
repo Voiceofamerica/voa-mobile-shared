@@ -1,5 +1,6 @@
 
 import * as React from 'react'
+import * as Hls from 'hls.js'
 
 import { mediaPlayer, loadingBox, videoElement } from './MediaPlayer.scss'
 
@@ -25,12 +26,34 @@ class MediaPlayer extends React.Component<Props, State> {
   }
 
   player: HTMLVideoElement
+  hls: Hls
 
   componentWillUpdate (nextProps: Props) {
     if (this.player) {
-      const { playbackRate = 1 } = nextProps
+      const { playbackRate = 1, src } = nextProps
       this.player.playbackRate = playbackRate
       this.player.defaultPlaybackRate = playbackRate
+    }
+  }
+
+  componentDidMount () {
+    const { src } = this.props
+    if (this.player) {
+      if (src.endsWith('m3u8')) {
+        this.playM3U8(src)
+      }
+    }
+  }
+
+  componentWillReceiveProps (nextProps: Props) {
+    const { src } = nextProps
+    if (this.player) {
+      if (this.props.src !== src) {
+        if (this.hls) {
+          this.hls.destroy()
+          delete this.hls
+        }
+      }
     }
   }
 
@@ -55,12 +78,15 @@ class MediaPlayer extends React.Component<Props, State> {
       showLoading,
     } = this.state
 
+    const trueSrc = src.endsWith('m3u8') ? undefined : src
+
     return (
       <video
+        key={src}
         className={videoElement}
         ref={this.setPlayer}
         controls={controls && !showLoading}
-        src={src}
+        src={trueSrc}
         autoPlay={autoPlay}
         onPlaying={() => {
           this.triggerCanPlay(true)
@@ -129,7 +155,18 @@ class MediaPlayer extends React.Component<Props, State> {
     if (player) {
       (player as any).playsInline = true
       player.playbackRate = playbackRate
+
+      const { src } = this.props
+      if (src.endsWith('m3u8')) {
+        this.playM3U8(src)
+      }
     }
+  }
+
+  private playM3U8 (src: string) {
+    this.hls = new Hls()
+    this.hls.loadSource(src)
+    this.hls.attachMedia(this.player)
   }
 }
 
