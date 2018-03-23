@@ -30,7 +30,7 @@ class MediaPlayer extends React.Component<Props, State> {
 
   componentWillUpdate (nextProps: Props) {
     if (this.player) {
-      const { playbackRate = 1, src } = nextProps
+      const { playbackRate = 1 } = nextProps
       this.player.playbackRate = playbackRate
       this.player.defaultPlaybackRate = playbackRate
     }
