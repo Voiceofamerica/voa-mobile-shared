@@ -29,9 +29,7 @@ export default class Loader extends React.PureComponent<Props, State> {
   }
 
   componentWillReceiveProps (newProps: Props) {
-    if (newProps.networkStatus !== this.props.networkStatus) {
-      this.toggleForceLoader(false)
-    }
+    this.toggleForceLoader(false)
   }
 
   toggleForceLoader = (forceLoader: boolean = !this.state.forceLoader) =>
