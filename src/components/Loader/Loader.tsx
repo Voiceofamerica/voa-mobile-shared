@@ -10,6 +10,7 @@ export interface Props extends React.Props<HTMLDivElement> {
   loading: boolean
   error: any
   refetch: () => void
+  networkStatus: number
   errorText: string | JSX.Element
   retryText: string | JSX.Element
   backgroundImage: string
@@ -18,27 +19,48 @@ export interface Props extends React.Props<HTMLDivElement> {
   style?: React.CSSProperties
 }
 
-export default ({ loading, error, refetch, errorText, retryText, backgroundImage, children, className = '', style, hasContent = false }: Props) => {
+export interface State {
+  forceLoader: boolean
+}
 
-  const fullClassName = `${loader} ${className}`
+export default class Loader extends React.PureComponent<Props, State> {
+  componentWillReceiveProps (newProps: Props) {
+    if (newProps.networkStatus !== this.props.networkStatus) {
+      this.toggleForceLoader(false)
+    }
+  }
 
-  if (error && !hasContent) {
-    return (
-      <div className={fullClassName} style={style}>
-        {errorText}
-        <button className={reloadButton} onClick={() => refetch()}>{retryText}</button>
-      </div>
-    )
-  } else if (loading && !hasContent) {
-    return (
-      <div className={fullClassName} style={style}>
-        <ResilientImage className={backdrop} src={backgroundImage} defaultSrc={backgroundImage}>
-          <div className={fader} />
-        </ResilientImage>
-        <Spinner style={{ height: '20vw', width: '20vw' }} />
-      </div>
-    )
-  } else {
-    return children as JSX.Element
+  toggleForceLoader = (forceLoader: boolean = !this.state.forceLoader) =>
+    this.setState({ forceLoader })
+
+  render () {
+    const { loading, error, errorText, retryText, backgroundImage, children, className = '', style, hasContent = false } = this.props
+
+    const fullClassName = `${loader} ${className}`
+
+    if (loading && !hasContent || this.state.forceLoader) {
+      return (
+        <div className={fullClassName} style={style}>
+          <ResilientImage className={backdrop} src={backgroundImage} defaultSrc={backgroundImage}>
+            <div className={fader} />
+          </ResilientImage>
+          <Spinner style={{ height: '20vw', width: '20vw' }} />
+        </div>
+      )
+    } else if (error && !hasContent) {
+      return (
+        <div className={fullClassName} style={style}>
+          {errorText}
+          <button className={reloadButton} onClick={this.retry}>{retryText}</button>
+        </div>
+      )
+    } else {
+      return children as JSX.Element
+    }
+  }
+
+  private retry = () => {
+    this.props.refetch()
+    this.toggleForceLoader(true)
   }
 }
