@@ -523,6 +523,7 @@ exports[`Storyshots Ticket Display display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -556,6 +557,7 @@ exports[`Storyshots Ticket Display display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -589,6 +591,7 @@ exports[`Storyshots Ticket Display display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -622,6 +625,7 @@ exports[`Storyshots Ticket Display display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -666,6 +670,7 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
     <div
       className="ticket"
       onClick={[Function]}
+      style={undefined}
     >
       <div
         className="resilientImage imageArea show"
@@ -699,6 +704,7 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
     <div
       className="ticket"
       onClick={[Function]}
+      style={undefined}
     >
       <div
         className="resilientImage imageArea show"
@@ -732,6 +738,7 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
     <div
       className="ticket"
       onClick={[Function]}
+      style={undefined}
     >
       <div
         className="resilientImage imageArea show"
@@ -765,6 +772,7 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
     <div
       className="ticket"
       onClick={[Function]}
+      style={undefined}
     >
       <div
         className="resilientImage imageArea show"
@@ -811,6 +819,7 @@ exports[`Storyshots Ticket display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -856,6 +865,7 @@ exports[`Storyshots Ticket display with icon 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -909,6 +919,7 @@ exports[`Storyshots Ticket rtl display 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"
@@ -955,6 +966,7 @@ exports[`Storyshots Ticket rtl display with icon 1`] = `
   <div
     className="ticket"
     onClick={[Function]}
+    style={undefined}
   >
     <div
       className="resilientImage imageArea show"

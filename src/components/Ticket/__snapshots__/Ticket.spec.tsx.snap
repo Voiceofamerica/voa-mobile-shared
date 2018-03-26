@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> shapshots should render with the given icon shown 1`] = `
+exports[`<Ticket /> shapshots should render with the given icon shown 1`] = `
 <div
   className="ticket"
   onClick={undefined}
+  style={undefined}
 >
   <div
     alwaysShow={true}
@@ -34,10 +35,11 @@ exports[`<Card /> shapshots should render with the given icon shown 1`] = `
 </div>
 `;
 
-exports[`<Card /> shapshots should render with the given image 1`] = `
+exports[`<Ticket /> shapshots should render with the given image 1`] = `
 <div
   className="ticket"
   onClick={undefined}
+  style={undefined}
 >
   <div
     alwaysShow={true}
@@ -64,10 +66,11 @@ exports[`<Card /> shapshots should render with the given image 1`] = `
 </div>
 `;
 
-exports[`<Card /> shapshots should render with the given minor text 1`] = `
+exports[`<Ticket /> shapshots should render with the given minor text 1`] = `
 <div
   className="ticket"
   onClick={undefined}
+  style={undefined}
 >
   <div
     alwaysShow={true}
@@ -96,10 +99,11 @@ exports[`<Card /> shapshots should render with the given minor text 1`] = `
 </div>
 `;
 
-exports[`<Card /> shapshots should render with the given title 1`] = `
+exports[`<Ticket /> shapshots should render with the given title 1`] = `
 <div
   className="ticket"
   onClick={undefined}
+  style={undefined}
 >
   <div
     alwaysShow={true}

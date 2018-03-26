@@ -8,7 +8,7 @@ import ResilientImage from '../ResilientImage'
 
 jest.mock('../ResilientImage')
 
-describe('<Card />', () => {
+describe('<Ticket />', () => {
   describe('shapshots', () => {
     it('should render with the given title', () => {
       const element = create((
