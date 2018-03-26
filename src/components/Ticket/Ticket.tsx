@@ -11,6 +11,8 @@ export interface Props {
   imageUrl?: string
   minorText?: JSX.Element|string
   icon?: JSX.Element
+  style?: React.CSSProperties
+  suppressImage?: boolean
 }
 
 export interface State {
@@ -22,13 +24,19 @@ class Ticket extends React.Component<Props, State> {
     showImage: false,
   }
 
+  componentWillReceiveProps (newProps: Props) {
+    if (!newProps.imageUrl) {
+      this.setState({ showImage: false })
+    }
+  }
+
   onImageLoaded = () =>
     this.setState({
       showImage: true,
     })
 
   render () {
-    const { onPress, imageUrl, title, minorText: minor, icon } = this.props
+    const { onPress, imageUrl, title, minorText: minor, icon, style, suppressImage } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
@@ -36,10 +44,14 @@ class Ticket extends React.Component<Props, State> {
                      : imageArea
 
     return (
-      <div className={ticket} onClick={onPress}>
-        <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
-          {icon}
-        </ResilientImage>
+      <div className={ticket} onClick={onPress} style={style}>
+        {
+          showImage || !suppressImage
+          ? <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
+              {icon}
+            </ResilientImage>
+          : null
+        }
         <div className={content}>
           <div className={textContent}>
             <div className={titleText}>
