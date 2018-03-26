@@ -42,12 +42,13 @@
     "@types/hls.js": "^0.8.1",
     "@types/jest": "^21.1.4",
     "@types/moment": "^2.13.0",
-    "@types/react": "^16.0.36",
+    "@types/react": "^16.0.41",
     "@types/react-swipeable": "^4.2.0",
     "@types/react-test-renderer": "^16.0.0",
     "@types/storybook__addon-actions": "^3.0.1",
     "@types/storybook__addon-knobs": "^3.2.1",
     "@types/storybook__react": "^3.0.5",
+    "@types/uuid": "^3.4.3",
     "@types/webpack": "^3.8.1",
     "@types/webpack-env": "^1.13.2",
     "awesome-typescript-loader": "^3.3.0",
@@ -63,7 +64,7 @@
     "node-sass": "^4.6.1",
     "np": "^2.18.3",
     "opn-cli": "^3.1.0",
-    "react": "^16.0.0",
+    "react": "^16.2.0",
     "react-dom": "^16.0.0",
     "react-test-renderer": "16.0.0-beta.5",
     "resolve-url-loader": "^2.2.0",
@@ -82,11 +83,12 @@
     "npm-run-all": "^4.1.1",
     "react-swipeable": "^4.2.0",
     "typed-css-modules": "^0.3.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "uuid": "^3.2.1"
   },
   "peerDependencies": {
     "moment": "^2.19.2",
-    "react": "^16.0.0",
+    "react": "^16.2.0",
     "rxjs": "^5.5.2"
   }
 }
