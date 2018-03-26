@@ -41,12 +41,9 @@ function TopNav ({ children, rtl }: Props) {
                                    } else {
                                      const props = child.props as TopNavItemProps
                                      const { key } = child
-                                     console.log('props', props)
-
                                      if (!props.selected) {
                                        return child
                                      } else {
-                                       console.log('got here')
                                        return <TopNavItem key={key} {...props} style={{ ...props.style, color: selectedColor, background: selectedBackground }} />
                                      }
                                    }
