@@ -3,12 +3,26 @@
 exports[`<TopNav /> shapshots should render empty 1`] = `
 <div
   className="topNav"
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "color": "#333333",
+    }
+  }
 >
   <div
     className="itemContainer"
   >
     <div
+      className="innerContainer"
+    />
+    <div
       className="fadeout"
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, transparent, rgba(238, 238, 238, 0.9) 90%)",
+        }
+      }
     />
   </div>
 </div>
@@ -17,18 +31,26 @@ exports[`<TopNav /> shapshots should render empty 1`] = `
 exports[`<TopNav /> shapshots should render with the given children 1`] = `
 <div
   className="topNav"
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "color": "#333333",
+    }
+  }
 >
   <div
     className="itemContainer"
   >
-    <div>
-      child1
-    </div>
-    <div>
-      child2
-    </div>
+    <div
+      className="innerContainer"
+    />
     <div
       className="fadeout"
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(90deg, transparent, rgba(238, 238, 238, 0.9) 90%)",
+        }
+      }
     />
   </div>
 </div>
