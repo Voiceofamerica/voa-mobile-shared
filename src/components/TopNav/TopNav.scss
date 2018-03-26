@@ -6,7 +6,6 @@
   left: 0;
   right: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  background: $voa-light-grey;
   display: flex;
   font-size: $menu-font-size;
   position: fixed;
@@ -15,13 +14,32 @@
 
   .itemContainer {
     flex: 1;
+    position: relative;
+
+    .innerContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      display: flex;
+      flex-direction: row;
+      align-content: stretch;
+    }
+  }
+
+  .staticItem {
     display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    margin-left: $menu-height;
-    margin-right: $menu-height;
-    overflow-x: scroll;
+    align-items: center;
+    justify-content: center;
+    width: $menu-height;
+    font-size: calc(#{$menu-font-size} * 2.5);
+    box-shadow: 0 -2px 5px 2px rgba(51, 51, 51, 0.5);
+    z-index: $menu-z + 1;
+    border: none;
+    background: transparent;
   }
 
   .topNavItem {
@@ -36,48 +54,23 @@
     border: none;
     border-radius: 0;
     font-size: 1em;
-    color: $dark-grey;
     box-sizing: border-box;
-
-    &.selectedItem {
-      background-color: $voa-red;
-      color: $white;
-    }
-
-    &:last-of-type {
-      position: fixed;
-      z-index: 100;
-      top: 0px;
-      right: 0px;
-      height: $menu-height;
-      width: $menu-height;
-      justify-content: center;
-      color: $mid-grey;
-      font-size: calc(#{$menu-font-size} * 2.5);
-      box-shadow: -2px 0 5px -2px rgba(51, 51, 51, 0.5);
-
-      [dir="rtl"] & {
-        right: auto;
-        left: 0px;
-        box-shadow: 2px 0 5px -2px rgba(51, 51, 51, 0.5);
-      }
-    }
+    background: transparent;
+    color: inherit;
   }
   
   .fadeout {
-    position: fixed;
+    position: absolute;
     pointer-events: none;
-    background: linear-gradient(90deg, rgba(256, 256, 256, 0), $voa-light-grey 90%, $voa-light-grey);
     top: 0;
     right: 0;
     height: $menu-height;
-    width: 30vw;
+    width: 20vw;
     z-index: $menu-z + 1;
 
     [dir="rtl"] & {
       right: auto;
       left: 0;
-      background: linear-gradient(-90deg, rgba(256, 256, 256, 0), $voa-light-grey 90%, $voa-light-grey);
     }
   }
 
@@ -90,8 +83,6 @@
     align-items: center;
     font-weight: bold;
     justify-content: center;
-    color: $dark-grey;
-    background: $voa-light-grey;
     height: $menu-height;
     z-index: $menu-z + 2;
   }
