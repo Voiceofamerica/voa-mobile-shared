@@ -30,7 +30,8 @@
     "**/*.{ts,tsx}",
     "!**/index.{ts,tsx}",
     "!**/*.story.tsx",
-    "!**/*.d.ts"
+    "!**/*.d.ts",
+    "!**/ThemeProvider/*"
   ],
   "coverageThreshold": {
     "global": {

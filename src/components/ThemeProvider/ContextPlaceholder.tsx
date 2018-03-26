@@ -1,7 +1,9 @@
 
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import * as uuid from 'uuid/v4'
+import * as tuuid from 'uuid/v4'
+
+const uuid = (tuuid as any).default || tuuid as typeof tuuid
 
 export interface ProviderProps<T> {
   value: T

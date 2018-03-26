@@ -4,6 +4,9 @@
     "trailing-comma": {
       "options": [{ "multiline": "always", "singleline": "never" }],
       "severity": "default"
+    },
+    "no-unused-variable": {
+      "options": [{ "ignore-pattern": "React|ProviderProps|ConsumerProps|Theme|Context" }]
     }
   }
 }

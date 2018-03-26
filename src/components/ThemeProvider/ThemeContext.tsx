@@ -1,5 +1,5 @@
 
-import createContext, { Context, Provider } from './ContextPlaceholder'
+import createContext, { Context } from './ContextPlaceholder'
 
 export interface Theme {
   mainBackground: string
