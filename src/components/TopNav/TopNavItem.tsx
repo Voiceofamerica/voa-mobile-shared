@@ -10,7 +10,7 @@ export interface Props extends React.Props<any> {
 }
 
 function TopNavItem (props: Props) {
-  const { children, selected, onClick = () => null, style } = props
+  const { children, onClick = () => null, style } = props
 
   return (
     <button className={topNavItem} onClick={() => onClick()} style={style}>
