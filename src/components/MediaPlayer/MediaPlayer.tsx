@@ -14,6 +14,7 @@ export interface Props {
   playbackRate?: number
   onTogglePlay?: (playing: boolean) => void
   onCanPlay?: (canPlay: boolean) => void
+  audio?: boolean
 }
 
 export interface State {
@@ -25,7 +26,7 @@ class MediaPlayer extends React.Component<Props, State> {
     showLoading: true,
   }
 
-  player: HTMLVideoElement
+  player: HTMLVideoElement | HTMLAudioElement
   private hls: Hls
 
   componentWillUpdate (nextProps: Props) {
@@ -72,6 +73,7 @@ class MediaPlayer extends React.Component<Props, State> {
       src,
       autoPlay,
       controls,
+      audio,
     } = this.props
 
     const {
@@ -80,24 +82,32 @@ class MediaPlayer extends React.Component<Props, State> {
 
     const trueSrc = src.endsWith('m3u8') ? undefined : src
 
-    return (
-      <video
-        key={src}
-        className={videoElement}
-        ref={this.setPlayer}
-        controls={controls && !showLoading}
-        src={trueSrc}
-        autoPlay={autoPlay}
-        onPlaying={() => {
-          this.triggerCanPlay(true)
-          this.triggerTogglePlay(true)
-        }}
-        onLoadStart={() => this.triggerCanPlay(false)}
-        onPause={() => this.triggerTogglePlay(false)}
-        playsInline
-        controlsList='nodownload'
-      />
-    )
+    const elementProps = {
+      key: src,
+      className: videoElement,
+      ref: this.setPlayer,
+      controls: controls && !showLoading,
+      src: trueSrc,
+      autoPlay,
+      onPlaying: () => {
+        this.triggerCanPlay(true)
+        this.triggerTogglePlay(true)
+      },
+      onLoadStart: () => this.triggerCanPlay(false),
+      onPause: () => this.triggerTogglePlay(false),
+      playsInline: true,
+      controlsList: 'nodownload',
+    }
+
+    if (audio) {
+      return (
+        <audio {...elementProps} />
+      )
+    } else {
+      return (
+        <video {...elementProps} />
+      )
+    }
   }
 
   renderLoading () {
@@ -147,7 +157,7 @@ class MediaPlayer extends React.Component<Props, State> {
     onCanPlay(canPlay)
   }
 
-  private setPlayer = (player: HTMLVideoElement) => {
+  private setPlayer = (player: HTMLVideoElement | HTMLAudioElement) => {
     const { playbackRate = 1 } = this.props
 
     this.player = player
@@ -166,7 +176,7 @@ class MediaPlayer extends React.Component<Props, State> {
   private playM3U8 (src: string) {
     this.hls = new Hls()
     this.hls.loadSource(src)
-    this.hls.attachMedia(this.player)
+    this.hls.attachMedia(this.player as HTMLVideoElement)
   }
 }
 
