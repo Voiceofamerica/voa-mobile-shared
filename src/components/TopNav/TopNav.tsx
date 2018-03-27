@@ -55,8 +55,8 @@ function TopNav ({ children, rtl }: Props) {
 
           const rgb = toRGB(mainBackground)
           const fadeoutBackground = rtl
-                                  ? `linear-gradient(-90deg, transparent, rgba(${rgb}, 0.9) 90%)`
-                                  : `linear-gradient(90deg, transparent, rgba(${rgb}, 0.9) 90%)`
+                                  ? `linear-gradient(-90deg, rgba(${rgb}, 0), rgba(${rgb}, 0.9) 90%)`
+                                  : `linear-gradient(90deg, rgba(${rgb}, 0), rgba(${rgb}, 0.9) 90%)`
           return (
             <div className={topNav} style={{ background: mainBackground, color: mainColor }}>
               {statics[0]}
