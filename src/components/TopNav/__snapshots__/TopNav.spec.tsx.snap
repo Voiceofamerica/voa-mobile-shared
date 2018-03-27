@@ -20,7 +20,7 @@ exports[`<TopNav /> shapshots should render empty 1`] = `
       className="fadeout"
       style={
         Object {
-          "backgroundImage": "linear-gradient(90deg, transparent, rgba(238, 238, 238, 0.9) 90%)",
+          "backgroundImage": "linear-gradient(90deg, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9) 90%)",
         }
       }
     />
@@ -48,7 +48,7 @@ exports[`<TopNav /> shapshots should render with the given children 1`] = `
       className="fadeout"
       style={
         Object {
-          "backgroundImage": "linear-gradient(90deg, transparent, rgba(238, 238, 238, 0.9) 90%)",
+          "backgroundImage": "linear-gradient(90deg, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9) 90%)",
         }
       }
     />
