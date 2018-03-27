@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<MediaPlayer /> shapshots should render with an audio element if audio prop is set to true 1`] = `
+<div
+  className="mediaPlayer "
+  style={undefined}
+>
+  <audio
+    autoPlay={undefined}
+    className="videoElement"
+    controls={undefined}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    playsInline={true}
+    src="mySrc"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
+`;
+
 exports[`<MediaPlayer /> shapshots should render with autoplay if prop is set to true 1`] = `
 <div
   className="mediaPlayer "

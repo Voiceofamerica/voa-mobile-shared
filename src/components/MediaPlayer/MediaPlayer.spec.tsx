@@ -48,6 +48,14 @@ describe('<MediaPlayer />', () => {
 
       expect(element).toMatchSnapshot()
     })
+
+    it('should render with an audio element if audio prop is set to true', () => {
+      const element = create((
+        <MediaPlayer src='mySrc' audio />
+      ))
+
+      expect(element).toMatchSnapshot()
+    })
   })
 
   describe('onTogglePlay', () => {
