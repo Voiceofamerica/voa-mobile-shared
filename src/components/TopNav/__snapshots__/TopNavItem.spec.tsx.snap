@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IconItem /> shapshots should render empty 1`] = `
+exports[`<TopNavItem /> shapshots should render empty 1`] = `
 <button
   className="topNavItem"
   onClick={[Function]}
@@ -8,7 +8,7 @@ exports[`<IconItem /> shapshots should render empty 1`] = `
 />
 `;
 
-exports[`<IconItem /> shapshots should render selected if prop set to true 1`] = `
+exports[`<TopNavItem /> shapshots should render selected if prop set to true 1`] = `
 <button
   className="topNavItem"
   onClick={[Function]}
@@ -16,7 +16,7 @@ exports[`<IconItem /> shapshots should render selected if prop set to true 1`] =
 />
 `;
 
-exports[`<IconItem /> shapshots should render with the given children 1`] = `
+exports[`<TopNavItem /> shapshots should render with the given children 1`] = `
 <button
   className="topNavItem"
   onClick={[Function]}
@@ -29,4 +29,16 @@ exports[`<IconItem /> shapshots should render with the given children 1`] = `
     child2
   </div>
 </button>
+`;
+
+exports[`<TopNavItem /> shapshots should render with the specified style 1`] = `
+<button
+  className="topNavItem"
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "3px solid #FFFFFF",
+    }
+  }
+/>
 `;

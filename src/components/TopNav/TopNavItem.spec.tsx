@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import TopNavItem from './TopNavItem'
 
-describe('<IconItem />', () => {
+describe('<TopNavItem />', () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((
@@ -29,6 +29,14 @@ describe('<IconItem />', () => {
     it('should render selected if prop set to true', () => {
       const element = create((
         <TopNavItem selected />
+      ))
+
+      expect(element).toMatchSnapshot()
+    })
+
+    it('should render with the specified style', () => {
+      const element = create((
+        <TopNavItem style={{ border: '3px solid #FFFFFF' }} />
       ))
 
       expect(element).toMatchSnapshot()
