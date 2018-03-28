@@ -64,6 +64,7 @@ function TopNav ({ children, rtl, style }: Props) {
               <div className={itemContainer}>
                 <div className={innerContainer}>
                   {items}
+                  <div>&nbsp;</div>
                 </div>
                 <div className={fadeout} style={{ backgroundImage: fadeoutBackground }} />
               </div>

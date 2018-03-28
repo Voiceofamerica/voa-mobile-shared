@@ -15,7 +15,11 @@ exports[`<TopNav /> shapshots should render empty 1`] = `
   >
     <div
       className="innerContainer"
-    />
+    >
+      <div>
+         
+      </div>
+    </div>
     <div
       className="fadeout"
       style={
@@ -43,7 +47,11 @@ exports[`<TopNav /> shapshots should render with the given children 1`] = `
   >
     <div
       className="innerContainer"
-    />
+    >
+      <div>
+         
+      </div>
+    </div>
     <div
       className="fadeout"
       style={
