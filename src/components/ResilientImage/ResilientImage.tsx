@@ -18,6 +18,7 @@ export interface Props {
   onLoadDone?: () => void
   onClick?: () => void
   contain?: boolean
+  maxRetries?: number
 }
 
 export type ImageStatus = 'loading' | 'loaded' | 'error'
@@ -26,6 +27,7 @@ export interface State {
   shouldRender?: boolean
   imgUrl?: string
   imageStaus: ImageStatus
+  retryCount: number
 }
 
 const noop = () => null
@@ -34,6 +36,7 @@ const IMAGE_FETCH_RETRY_RATE = 2000
 class ReilientImage extends React.Component<Props, State> {
   state: State = {
     imageStaus: 'loading',
+    retryCount: 0,
   }
 
   mounted: boolean = false
@@ -79,9 +82,9 @@ class ReilientImage extends React.Component<Props, State> {
   }
 
   tryFetchImage = async () => {
-    const { src } = this.props
+    const { src, maxRetries = 3 } = this.props
 
-    if (!src || !this.mounted) {
+    if (!src || !this.mounted || this.state.retryCount >= maxRetries) {
       return
     }
 
@@ -95,6 +98,7 @@ class ReilientImage extends React.Component<Props, State> {
       const blobUrl = await fetch(src, {
           method: 'GET',
           signal: this.abortController.signal,
+          mode: 'no-cors',
         })
         .then(res => res.blob())
         .then(blob => URL.createObjectURL(blob))
@@ -114,10 +118,11 @@ class ReilientImage extends React.Component<Props, State> {
       return
     }
 
-    this.setState({
+    this.setState(({ retryCount }) => ({
       imageStaus,
       imgUrl,
-    })
+      retryCount: imageStaus === 'error' ? retryCount + 1 : retryCount,
+    }))
   }
 
   renderOffline = () => (
