@@ -25,7 +25,6 @@ export type ImageStatus = 'loading' | 'loaded' | 'error'
 
 export interface State {
   shouldRender?: boolean
-  imgUrl?: string
   imageStaus: ImageStatus
   retryCount: number
 }
@@ -103,7 +102,6 @@ class ReilientImage extends React.Component<Props, State> {
         .then(res => res.blob())
         .then(blob => URL.createObjectURL(blob))
 
-      console.error('loaded', src, blobUrl)
       this.setImageStatus('loaded', blobUrl)
       onLoadDone()
 
@@ -130,12 +128,12 @@ class ReilientImage extends React.Component<Props, State> {
   )
 
   renderContent = () => {
-    const { imageStaus, imgUrl } = this.state
-    const { defaultSrc = require('./imagedefault.gif'), contain } = this.props
+    const { imageStaus } = this.state
+    const { src, defaultSrc = require('./imagedefault.gif'), contain } = this.props
 
     const isLoaded = imageStaus === 'loaded'
-    const srcToUse = isLoaded && imgUrl
-                   ? imgUrl
+    const srcToUse = isLoaded && src
+                   ? src
                    : defaultSrc
 
     const className = contain ? `${imageContent} ${containImage}` : imageContent
