@@ -27,19 +27,26 @@ export interface State {
   shouldRender?: boolean
   imageStaus: ImageStatus
   retryCount: number
+  imgUrl?: string
+  corsFailed?: boolean
 }
+
+const DEFAULT_SRC = require('./imagedefault.gif')
+const RETRY_IMMEDIATELY = 'retry immediately'
 
 const noop = () => null
 const IMAGE_FETCH_RETRY_RATE = 2000
+const CORS_CUTOFF = 20
 
-class ReilientImage extends React.Component<Props, State> {
+class ResilientImage extends React.Component<Props, State> {
+  static totalCorsErrors = 0
+
   state: State = {
     imageStaus: 'loading',
     retryCount: 0,
   }
 
   mounted: boolean = false
-
   readonly abortController = new AbortController()
 
   componentDidMount () {
@@ -51,9 +58,9 @@ class ReilientImage extends React.Component<Props, State> {
 
     if (shouldRender) {
       this.tryFetchImage()
-      .catch(err => {
-        console.warn(`Something went wrong loading ${this.props.src}`, err)
-      })
+        .catch(err => {
+          console.warn(`Something went wrong loading ${this.props.src}`, err)
+        })
     }
   }
 
@@ -80,6 +87,40 @@ class ReilientImage extends React.Component<Props, State> {
     }
   }
 
+  tryFetchWithCors = () => {
+    const { defaultSrc = DEFAULT_SRC, src = defaultSrc } = this.props
+    return new Promise<string>((resolve, reject) => {
+      const img = new Image()
+
+      img.src = src
+      img.addEventListener('error', (err) => {
+        if (this.state.corsFailed) {
+          ResilientImage.totalCorsErrors--
+        }
+        reject(err)
+      })
+      img.addEventListener('load', () => {
+        resolve(src)
+      })
+    })
+  }
+
+  tryFetchNoCors = () => {
+    const { src } = this.props
+    const response = fetch(src, {
+        method: 'GET',
+        signal: this.abortController.signal,
+      })
+      .then(res => res.blob())
+      .then(blob => URL.createObjectURL(blob))
+      .catch(() => {
+        ResilientImage.totalCorsErrors++
+        return Promise.reject(RETRY_IMMEDIATELY)
+      })
+
+    return response
+  }
+
   tryFetchImage = async () => {
     const { src, maxRetries = 3 } = this.props
 
@@ -94,20 +135,25 @@ class ReilientImage extends React.Component<Props, State> {
     const { onLoadDone = noop } = this.props
 
     try {
-      const blobUrl = await fetch(src, {
-          method: 'GET',
-          signal: this.abortController.signal,
-          mode: 'no-cors',
-        })
-        .then(res => res.blob())
-        .then(blob => URL.createObjectURL(blob))
-
-      this.setImageStatus('loaded', blobUrl)
-      onLoadDone()
-
+      if (this.state.retryCount > 0 || ResilientImage.totalCorsErrors >= CORS_CUTOFF) {
+        const imgUrl = await this.tryFetchWithCors()
+        this.setImageStatus('loaded', imgUrl)
+      } else {
+        const imgUrl = await this.tryFetchNoCors()
+        this.setImageStatus('loaded', imgUrl)
+      }
+      if (this.mounted) {
+        onLoadDone()
+      }
     } catch (err) {
-      this.setImageStatus('error')
-      setTimeout(this.tryFetchImage, IMAGE_FETCH_RETRY_RATE)
+      if (err === RETRY_IMMEDIATELY) {
+        this.setState({ retryCount: this.state.retryCount + 1, corsFailed: true }, () => {
+          this.tryFetchImage()
+        })
+      } else {
+        this.setImageStatus('error')
+        setTimeout(this.tryFetchImage, IMAGE_FETCH_RETRY_RATE)
+      }
     }
   }
 
@@ -128,12 +174,12 @@ class ReilientImage extends React.Component<Props, State> {
   )
 
   renderContent = () => {
-    const { imageStaus } = this.state
-    const { src, defaultSrc = require('./imagedefault.gif'), contain } = this.props
+    const { imageStaus, imgUrl } = this.state
+    const { defaultSrc = DEFAULT_SRC, contain } = this.props
 
     const isLoaded = imageStaus === 'loaded'
-    const srcToUse = isLoaded && src
-                   ? src
+    const srcToUse = isLoaded && imgUrl
+                   ? imgUrl
                    : defaultSrc
 
     const className = contain ? `${imageContent} ${containImage}` : imageContent
@@ -190,4 +236,4 @@ class ReilientImage extends React.Component<Props, State> {
   }
 }
 
-export default ReilientImage
+export default ResilientImage
