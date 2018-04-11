@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ReilientImage /> shapshots should render a zero-size div if offline 1`] = `
+exports[`<ResilientImage /> shapshots should render a zero-size div if offline 1`] = `
 <div
   style={
     Object {
@@ -11,7 +11,7 @@ exports[`<ReilientImage /> shapshots should render a zero-size div if offline 1`
 />
 `;
 
-exports[`<ReilientImage /> shapshots should render the default image if alwaysShow is true 1`] = `
+exports[`<ResilientImage /> shapshots should render the default image if alwaysShow is true 1`] = `
 <div
   className="resilientImage "
   onClick={[Function]}
