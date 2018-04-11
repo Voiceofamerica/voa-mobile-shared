@@ -15,6 +15,7 @@ export interface Props {
   onTogglePlay?: (playing: boolean) => void
   onCanPlay?: (canPlay: boolean) => void
   audio?: boolean
+  defaultTime?: number
 }
 
 export interface State {
@@ -34,6 +35,9 @@ class MediaPlayer extends React.Component<Props, State> {
       const { playbackRate = 1 } = nextProps
       this.player.playbackRate = playbackRate
       this.player.defaultPlaybackRate = playbackRate
+      if (nextProps.defaultTime !== this.props.defaultTime) {
+        this.player.currentTime = nextProps.defaultTime
+      }
     }
   }
 
@@ -68,7 +72,25 @@ class MediaPlayer extends React.Component<Props, State> {
     }
   }
 
-  renderVideo () {
+  getTime () {
+    return this.player && this.player.currentTime
+  }
+
+  render () {
+    const {
+      className = '',
+      style,
+    } = this.props
+
+    return (
+      <div className={`${mediaPlayer} ${className}`} style={style}>
+        {this.renderVideo()}
+        {this.renderLoading()}
+      </div>
+    )
+  }
+
+  private renderVideo () {
     const {
       src,
       autoPlay,
@@ -110,7 +132,7 @@ class MediaPlayer extends React.Component<Props, State> {
     }
   }
 
-  renderLoading () {
+  private renderLoading () {
     const {
       loadingText = 'Loading...',
     } = this.props
@@ -126,20 +148,6 @@ class MediaPlayer extends React.Component<Props, State> {
     return (
       <div className={loadingBox}>
         {loadingText}
-      </div>
-    )
-  }
-
-  render () {
-    const {
-      className = '',
-      style,
-    } = this.props
-
-    return (
-      <div className={`${mediaPlayer} ${className}`} style={style}>
-        {this.renderVideo()}
-        {this.renderLoading()}
       </div>
     )
   }
@@ -165,6 +173,9 @@ class MediaPlayer extends React.Component<Props, State> {
     if (player) {
       (player as any).playsInline = true
       player.playbackRate = playbackRate
+      if (this.props.defaultTime !== undefined) {
+        player.currentTime = this.props.defaultTime
+      }
 
       const { src } = this.props
       if (src.endsWith('m3u8')) {
