@@ -16,6 +16,8 @@
     "lintfix": "npm run lint -- --fix",
     "check": "run-s -c test lint prepare",
     "clean": "git clean -X -f",
+    "predeploy": "run-s test lint prepare",
+    "deploy": "npm version minor && npm publish",
     "files:copy": "cd src && rsync -Rr * --filter='+ *.scss' --filter='+ *.d.ts' --filter='+ *.gif' --filter='- *.tsx' --filter='- *.ts' --filter='- *.snap' ..",
     "scss:types": "tcm -p './src/**/*.scss'",
     "scss:types:watch": "npm run scss:types -- -w",
