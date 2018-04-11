@@ -148,7 +148,7 @@ class ResilientImage extends React.Component<Props, State> {
     } catch (err) {
       if (err === RETRY_IMMEDIATELY) {
         this.setState({ retryCount: this.state.retryCount + 1, corsFailed: true }, () => {
-          this.tryFetchImage()
+          setTimeout(this.tryFetchImage, 0)
         })
       } else {
         this.setImageStatus('error')
