@@ -1,5 +1,7 @@
 
 import { Observable } from 'rxjs/Observable'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject'
+export { Subscription } from 'rxjs/Subscription'
 
 const CUSTOM_ONLINE = 'ONL'
 const CUSTOM_OFFLINE = 'OFFL'
@@ -33,7 +35,9 @@ const OFFLINE: OnlineStatus = {
   status: 'offline',
 }
 
-export const onlineStatusObservable: Observable<OnlineStatus> = new Observable((subscriber) => {
+const nativeSupport = ('online' in window && 'offline' in window)
+
+const baseObservable = new Observable<OnlineStatus>((subscriber) => {
   const onlineHandler = () => {
     subscriber.next(ONLINE)
   }
@@ -41,20 +45,27 @@ export const onlineStatusObservable: Observable<OnlineStatus> = new Observable((
     subscriber.next(OFFLINE)
   }
 
-  window.addEventListener('online', onlineHandler)
-  document.addEventListener(CUSTOM_ONLINE, onlineHandler)
-
-  window.addEventListener('offline', offlineHandler)
-  document.addEventListener(CUSTOM_OFFLINE, offlineHandler)
+  if (nativeSupport) {
+    window.addEventListener('online', onlineHandler)
+    window.addEventListener('offline', offlineHandler)
+  } else {
+    document.addEventListener(CUSTOM_ONLINE, onlineHandler)
+    document.addEventListener(CUSTOM_OFFLINE, offlineHandler)
+  }
 
   return () => {
-    window.removeEventListener('online', onlineHandler)
-    document.removeEventListener(CUSTOM_ONLINE, onlineHandler)
-
-    window.removeEventListener('offline', offlineHandler)
-    document.removeEventListener(CUSTOM_OFFLINE, offlineHandler)
+    if (nativeSupport) {
+      window.removeEventListener('online', onlineHandler)
+      window.removeEventListener('offline', offlineHandler)
+    } else {
+      document.removeEventListener(CUSTOM_ONLINE, onlineHandler)
+      document.removeEventListener(CUSTOM_OFFLINE, offlineHandler)
+    }
   }
 })
+
+export const onlineStatusObservable = new BehaviorSubject<OnlineStatus>(navigator.onLine ? ONLINE : OFFLINE)
+baseObservable.subscribe(onlineStatusObservable)
 
 onlineStatusObservable.subscribe(({ online }) => {
   if (online) {
@@ -65,12 +76,14 @@ onlineStatusObservable.subscribe(({ online }) => {
   }
 })
 
-let previousOnlineState = navigator.onLine
-setInterval(() => {
-  if (navigator.onLine !== previousOnlineState) {
-    previousOnlineState = navigator.onLine
+if (!nativeSupport) {
+  let previousOnlineState = navigator.onLine
+  setInterval(() => {
+    if (navigator.onLine !== previousOnlineState) {
+      previousOnlineState = navigator.onLine
 
-    const ev = new CustomEvent(navigator.onLine ? CUSTOM_ONLINE : CUSTOM_OFFLINE)
-    document.dispatchEvent(ev)
-  }
-}, 300)
+      const ev = new CustomEvent(navigator.onLine ? CUSTOM_ONLINE : CUSTOM_OFFLINE)
+      document.dispatchEvent(ev)
+    }
+  }, 300)
+}

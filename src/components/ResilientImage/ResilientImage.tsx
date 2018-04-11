@@ -23,6 +23,7 @@ export type ImageStatus = 'loading' | 'loaded' | 'error'
 
 export interface State {
   shouldRender?: boolean
+  imgUrl?: string
   imageStaus: ImageStatus
 }
 
@@ -35,6 +36,8 @@ class ReilientImage extends React.Component<Props, State> {
   }
 
   mounted: boolean = false
+
+  readonly abortController = new AbortController()
 
   componentWillMount () {
     this.mounted = true
@@ -50,6 +53,7 @@ class ReilientImage extends React.Component<Props, State> {
 
   componentWillUnmount () {
     this.mounted = false
+    this.abortController.abort()
   }
 
   componentWillReceiveProps (nextProps: Props) {
@@ -63,11 +67,14 @@ class ReilientImage extends React.Component<Props, State> {
 
       if (shouldRender) {
         this.tryFetchImage()
+          .catch(err => {
+            console.warn(`Something went wrong loading ${nextProps.src}`, err)
+          })
       }
     }
   }
 
-  tryFetchImage = () => {
+  tryFetchImage = async () => {
     const { src } = this.props
 
     if (!src || !this.mounted) {
@@ -75,33 +82,37 @@ class ReilientImage extends React.Component<Props, State> {
     }
 
     if (!navigator.onLine) {
-      return waitUntilOnline().then(() => this.mounted && this.tryFetchImage())
+      waitUntilOnline().then(() => this.mounted && this.tryFetchImage())
+      return
     }
 
     const { onLoadDone = noop } = this.props
 
-    const img = new Image()
+    try {
+      const blobUrl = await fetch(src, {
+          method: 'GET',
+          signal: this.abortController.signal,
+        })
+        .then(res => res.blob())
+        .then(blob => URL.createObjectURL(blob))
 
-    img.addEventListener('error', () => {
+      this.setImageStatus('loaded', blobUrl)
+      onLoadDone()
+
+    } catch (err) {
       this.setImageStatus('error')
       setTimeout(this.tryFetchImage, IMAGE_FETCH_RETRY_RATE)
-    })
-
-    img.addEventListener('load', () => {
-      this.setImageStatus('loaded')
-      onLoadDone()
-    })
-
-    img.src = src
+    }
   }
 
-  setImageStatus = (imageStaus: ImageStatus) => {
+  setImageStatus = (imageStaus: ImageStatus, imgUrl?: string) => {
     if (!this.mounted) {
       return
     }
 
     this.setState({
       imageStaus,
+      imgUrl,
     })
   }
 
@@ -110,12 +121,12 @@ class ReilientImage extends React.Component<Props, State> {
   )
 
   renderContent = () => {
-    const { imageStaus } = this.state
-    const { src, defaultSrc = require('./imagedefault.gif'), contain } = this.props
+    const { imageStaus, imgUrl } = this.state
+    const { defaultSrc = require('./imagedefault.gif'), contain } = this.props
 
     const isLoaded = imageStaus === 'loaded'
-    const srcToUse = isLoaded
-                   ? src
+    const srcToUse = isLoaded && imgUrl
+                   ? imgUrl
                    : defaultSrc
 
     const className = contain ? `${imageContent} ${containImage}` : imageContent
