@@ -8,7 +8,7 @@ import Spinner from '../Spinner'
 import { resilientImage, imageContent, childrenArea, containImage, spinner } from './ResilientImage.scss'
 
 export interface Props {
-  src: string | null
+  src?: string
   showSpinner?: boolean
   className?: string
   alwaysShow?: boolean

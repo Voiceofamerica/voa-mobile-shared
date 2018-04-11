@@ -27,7 +27,7 @@ class MediaPlayer extends React.Component<Props, State> {
     showLoading: true,
   }
 
-  player: HTMLVideoElement | HTMLAudioElement
+  player: HTMLVideoElement | HTMLAudioElement | null = null
   private hls: Hls
 
   componentWillUpdate (nextProps: Props) {
@@ -35,7 +35,7 @@ class MediaPlayer extends React.Component<Props, State> {
       const { playbackRate = 1 } = nextProps
       this.player.playbackRate = playbackRate
       this.player.defaultPlaybackRate = playbackRate
-      if (nextProps.defaultTime !== this.props.defaultTime) {
+      if (nextProps.defaultTime && nextProps.defaultTime !== this.props.defaultTime) {
         this.player.currentTime = nextProps.defaultTime
       }
     }
@@ -62,7 +62,7 @@ class MediaPlayer extends React.Component<Props, State> {
     }
   }
 
-  togglePlay (playing: boolean = this.player && this.player.paused) {
+  togglePlay (playing: boolean = this.player && this.player.paused || false) {
     if (this.player) {
       if (playing) {
         this.player.play().catch(console.error)
@@ -165,7 +165,7 @@ class MediaPlayer extends React.Component<Props, State> {
     onCanPlay(canPlay)
   }
 
-  private setPlayer = (player: HTMLVideoElement | HTMLAudioElement) => {
+  private setPlayer = (player: HTMLVideoElement | HTMLAudioElement | null) => {
     const { playbackRate = 1 } = this.props
 
     this.player = player

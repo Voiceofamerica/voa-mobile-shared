@@ -45,7 +45,7 @@ function TopNav ({ children, rtl, style }: Props) {
                                      if (!props.selected) {
                                        return child
                                      } else {
-                                       return <TopNavItem key={key} {...props} style={{ ...props.style, color: selectedColor, background: selectedBackground }} />
+                                       return <TopNavItem {...props} key={key || undefined} style={{ ...props.style, color: selectedColor, background: selectedBackground }} />
                                      }
                                    }
                                  })

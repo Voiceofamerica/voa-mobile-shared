@@ -8,7 +8,7 @@ const Swipeable = fixDefault<typeof ReactSwipeable>(ReactSwipeable)
 import { swipeToDelete, animated } from './SwipeToDelete.scss'
 
 export interface Props {
-  onSwipe?: () => void
+  onSwipe: () => void
 }
 
 export interface State {
@@ -31,11 +31,12 @@ class SwipeToDelete extends React.Component<Props, State> {
   }
 
   swiped = (e, deltaX, deltaY, isFlick) => {
+    const { onSwipe = () => null } = this.props
     const isSwipe = Math.abs(deltaX) > SWIPE_DISTANCE
 
     this.setTouch(0, false)
     if (isFlick || isSwipe) {
-      this.props.onSwipe()
+      onSwipe()
     }
   }
 

@@ -31,7 +31,7 @@ class TicketDisplay extends React.Component<Props> {
     return (
       <div className={`${ticketDisplay} ${className}`} style={style}>
         {
-          articles.map(({ id, title, pubDate, image: { url } }) => (
+          articles.map(({ id, title, pubDate, image: { url } = { url: undefined } }) => (
             <Ticket
               key={id}
               title={title}
