@@ -48,6 +48,9 @@ class ReilientImage extends React.Component<Props, State> {
 
     if (shouldRender) {
       this.tryFetchImage()
+      .catch(err => {
+        console.warn(`Something went wrong loading ${this.props.src}`, err)
+      })
     }
   }
 
