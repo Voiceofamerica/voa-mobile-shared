@@ -39,7 +39,7 @@ class ReilientImage extends React.Component<Props, State> {
 
   readonly abortController = new AbortController()
 
-  componentWillMount () {
+  componentDidMount () {
     this.mounted = true
     const shouldRender = navigator.onLine || this.props.alwaysShow
     this.setState({
@@ -82,8 +82,7 @@ class ReilientImage extends React.Component<Props, State> {
     }
 
     if (!navigator.onLine) {
-      waitUntilOnline().then(() => this.mounted && this.tryFetchImage())
-      return
+      await waitUntilOnline()
     }
 
     const { onLoadDone = noop } = this.props
@@ -96,6 +95,7 @@ class ReilientImage extends React.Component<Props, State> {
         .then(res => res.blob())
         .then(blob => URL.createObjectURL(blob))
 
+      console.error('loaded', src, blobUrl)
       this.setImageStatus('loaded', blobUrl)
       onLoadDone()
 

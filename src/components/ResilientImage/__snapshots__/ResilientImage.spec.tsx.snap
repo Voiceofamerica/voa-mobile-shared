@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Spinner /> shapshots should render 1`] = `
-<div
-  className="resilientImage "
-  onClick={[Function]}
-  style={undefined}
->
-  <img
-    className="imageContent"
-    src="https://some.url/something.png"
-  />
-</div>
-`;
-
-exports[`<Spinner /> shapshots should render a zero-size div if offline 1`] = `
+exports[`<ReilientImage /> shapshots should render a zero-size div if offline 1`] = `
 <div
   style={
     Object {
@@ -22,4 +9,17 @@ exports[`<Spinner /> shapshots should render a zero-size div if offline 1`] = `
     }
   }
 />
+`;
+
+exports[`<ReilientImage /> shapshots should render the default image if alwaysShow is true 1`] = `
+<div
+  className="resilientImage "
+  onClick={[Function]}
+  style={undefined}
+>
+  <img
+    className="imageContent"
+    src="Some File"
+  />
+</div>
 `;

@@ -5,7 +5,8 @@
     "\\.(js|jsx)$": "babel-jest"
   },
   "setupFiles": [
-    "<rootDir>/.jest/rAF.js"
+    "<rootDir>/.jest/rAF.js",
+    "<rootDir>/node_modules/abortcontroller-polyfill/dist/abortcontroller-polyfill-only"
   ],
   "testRegex": "src/.*\\.spec\\.(ts|tsx)$",
   "moduleFileExtensions": [

@@ -5,12 +5,12 @@ import { shallow } from 'enzyme'
 
 import ResilientImage from './ResilientImage'
 
-describe('<Spinner />', () => {
+describe(`<${ResilientImage.name} />`, () => {
   afterAll(() => {
     Object.defineProperty(window.navigator, 'onLine', { value: true })
   })
   describe('shapshots', () => {
-    it('should render', () => {
+    it('should render the default image if alwaysShow is true', () => {
       const element = create((
         <ResilientImage src='https://some.url/something.png' alwaysShow />
       ))

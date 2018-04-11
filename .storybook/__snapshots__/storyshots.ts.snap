@@ -176,8 +176,28 @@ exports[`Storyshots Card display 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
+      <div
+        className="childrenArea"
+      >
+        <svg
+          className="spinner spinner"
+          style={undefined}
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            className="path"
+            cx={50}
+            cy={50}
+            fill="none"
+            r={45}
+            strokeLinecap="round"
+            strokeWidth={10}
+          />
+        </svg>
+      </div>
     </div>
     <div
       className="gradient"
@@ -216,8 +236,28 @@ exports[`Storyshots Card display with icon 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
+      <div
+        className="childrenArea"
+      >
+        <svg
+          className="spinner spinner"
+          style={undefined}
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            className="path"
+            cx={50}
+            cy={50}
+            fill="none"
+            r={45}
+            strokeLinecap="round"
+            strokeWidth={10}
+          />
+        </svg>
+      </div>
     </div>
     <div
       className="gradient"
@@ -294,7 +334,7 @@ exports[`Storyshots ResilientImage display 1`] = `
 >
   <img
     className="imageContent"
-    src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+    src="Some File"
   />
 </div>
 `;
@@ -307,7 +347,7 @@ exports[`Storyshots ResilientImage display without image 1`] = `
 >
   <img
     className="imageContent"
-    src="asdf"
+    src="Some File"
   />
 </div>
 `;
@@ -333,7 +373,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -354,7 +394,7 @@ exports[`Storyshots SecondaryCard display two 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/01D5530E-3642-4CBF-957E-AE990ABE9167_cx0_cy14_cw0_w650_r1.jpg"
+        src="Some File"
       />
     </div>
     <div
@@ -388,7 +428,7 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -409,7 +449,7 @@ exports[`Storyshots SecondaryCard rtl display two 1`] = `
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/01D5530E-3642-4CBF-957E-AE990ABE9167_cx0_cy14_cw0_w650_r1.jpg"
+        src="Some File"
       />
     </div>
     <div
@@ -526,13 +566,13 @@ exports[`Storyshots Ticket Display display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -560,13 +600,13 @@ exports[`Storyshots Ticket Display display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -594,13 +634,13 @@ exports[`Storyshots Ticket Display display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -628,13 +668,13 @@ exports[`Storyshots Ticket Display display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -673,13 +713,13 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
       style={undefined}
     >
       <div
-        className="resilientImage imageArea show"
+        className="resilientImage imageArea"
         onClick={[Function]}
         style={undefined}
       >
         <img
           className="imageContent"
-          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+          src="Some File"
         />
       </div>
       <div
@@ -707,13 +747,13 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
       style={undefined}
     >
       <div
-        className="resilientImage imageArea show"
+        className="resilientImage imageArea"
         onClick={[Function]}
         style={undefined}
       >
         <img
           className="imageContent"
-          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+          src="Some File"
         />
       </div>
       <div
@@ -741,13 +781,13 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
       style={undefined}
     >
       <div
-        className="resilientImage imageArea show"
+        className="resilientImage imageArea"
         onClick={[Function]}
         style={undefined}
       >
         <img
           className="imageContent"
-          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+          src="Some File"
         />
       </div>
       <div
@@ -775,13 +815,13 @@ exports[`Storyshots Ticket Display rtl display 1`] = `
       style={undefined}
     >
       <div
-        className="resilientImage imageArea show"
+        className="resilientImage imageArea"
         onClick={[Function]}
         style={undefined}
       >
         <img
           className="imageContent"
-          src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+          src="Some File"
         />
       </div>
       <div
@@ -822,13 +862,13 @@ exports[`Storyshots Ticket display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -868,13 +908,13 @@ exports[`Storyshots Ticket display with icon 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
       <div
         className="childrenArea"
@@ -922,13 +962,13 @@ exports[`Storyshots Ticket rtl display 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
     </div>
     <div
@@ -969,13 +1009,13 @@ exports[`Storyshots Ticket rtl display with icon 1`] = `
     style={undefined}
   >
     <div
-      className="resilientImage imageArea show"
+      className="resilientImage imageArea"
       onClick={[Function]}
       style={undefined}
     >
       <img
         className="imageContent"
-        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w650_r1.png"
+        src="Some File"
       />
       <div
         className="childrenArea"
