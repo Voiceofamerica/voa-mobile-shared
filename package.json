@@ -55,7 +55,6 @@
     "@types/uuid": "^3.4.3",
     "@types/webpack": "^3.8.1",
     "@types/webpack-env": "^1.13.2",
-    "abortcontroller-polyfill": "^1.1.8",
     "awesome-typescript-loader": "^3.3.0",
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
@@ -85,6 +84,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "abortcontroller-polyfill": "^1.1.8",
     "hls.js": "^0.9.0",
     "react-swipeable": "^4.2.0",
     "typescript": "^2.8.1",
