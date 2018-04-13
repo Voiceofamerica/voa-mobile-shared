@@ -15,11 +15,11 @@ function RoundItem ({ className = '', style, children, onClick = () => null, act
     ? `${roundItem} ${activeItem} ${className}`
     : `${roundItem} ${className}`
   return (
-    <button className={fullClassName} style={style} onClick={() => onClick()}>
+    <div className={fullClassName} style={style} onClick={() => onClick()}>
       {
         children
       }
-    </button>
+    </div>
   )
 }
 

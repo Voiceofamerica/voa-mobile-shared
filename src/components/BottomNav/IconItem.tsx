@@ -15,11 +15,11 @@ function IconItem ({ children, onClick = () => null, active = false, className =
     : `${iconItem} ${className}`
 
   return (
-    <button className={iconClass} onClick={() => onClick()}>
+    <div className={iconClass} onClick={() => onClick()}>
       {
         children
       }
-    </button>
+    </div>
   )
 }
 

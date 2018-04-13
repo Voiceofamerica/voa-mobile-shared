@@ -10,7 +10,7 @@ $fadeWidth: 20vw;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   display: flex;
   font-size: $menu-font-size;
-  position: fixed;
+  position: absolute;
   height: $menu-height;
   z-index: $menu-z;
 
@@ -34,6 +34,7 @@ $fadeWidth: 20vw;
 
   .staticItem {
     display: flex;
+    align-content: center;
     align-items: center;
     justify-content: center;
     width: $menu-height;
@@ -70,7 +71,7 @@ $fadeWidth: 20vw;
       }
     }
   }
-  
+
   .fadeout {
     position: absolute;
     pointer-events: none;
@@ -88,7 +89,7 @@ $fadeWidth: 20vw;
 
   .centerText {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;

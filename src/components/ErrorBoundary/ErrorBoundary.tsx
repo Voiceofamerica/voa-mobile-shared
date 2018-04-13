@@ -17,11 +17,18 @@ export default class ErrorBoundary extends React.PureComponent<Props, State> {
     hasError: false,
   }
 
-  componentDidCatch (error) {
+  componentDidMount () {
+    if (this.props.debug) {
+      console.info('ErrorBoundary regiseterd in debug mode')
+    }
+  }
+
+  componentDidCatch (error: Error) {
     // Display fallback UI
     this.setState({ hasError: true })
     if (this.props.debug) {
-      console.error(error)
+      console.error('ErrorBoundary caught the following error:', error.message)
+      console.error(error.stack)
     }
   }
 

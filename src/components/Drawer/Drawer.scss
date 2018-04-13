@@ -3,7 +3,7 @@
 
 .drawer {
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   top: $menu-height;
   left: 0;
@@ -52,7 +52,7 @@
   transition: 0.3s background;
 
   .drawerOpen & {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;

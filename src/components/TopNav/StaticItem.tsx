@@ -12,9 +12,9 @@ function StaticItem (props: Props) {
   const { children, onClick = () => null, style } = props
 
   return (
-    <button className={staticItem} onClick={() => onClick()} style={style}>
+    <div className={staticItem} onClick={() => onClick()} style={style}>
       {children}
-    </button>
+    </div>
   )
 }
 

@@ -13,9 +13,9 @@ function TopNavItem (props: Props) {
   const { children, onClick = () => null, style } = props
 
   return (
-    <button className={topNavItem} onClick={() => onClick()} style={style}>
+    <div className={topNavItem} onClick={() => onClick()} style={style}>
       {children}
-    </button>
+    </div>
   )
 }
 

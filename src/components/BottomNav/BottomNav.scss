@@ -6,7 +6,7 @@ $round-item-size: calc(#{$menu-height} - 10px);
 
 .bottomNav {
   height: $menu-height;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -62,7 +62,7 @@ $round-item-size: calc(#{$menu-height} - 10px);
     background: $mid-grey;
     font-size: 1em;
     padding: 0;
-    
+
     &.activeItem {
       color: $voa-blue;
     }
