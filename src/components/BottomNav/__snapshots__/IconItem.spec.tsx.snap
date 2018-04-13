@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IconItem /> shapshots should render active if prop set to true 1`] = `
-<button
+<div
   className="iconItem  activeItem"
   onClick={[Function]}
 />
 `;
 
 exports[`<IconItem /> shapshots should render empty 1`] = `
-<button
+<div
   className="iconItem "
   onClick={[Function]}
 />
 `;
 
 exports[`<IconItem /> shapshots should render with the given children 1`] = `
-<button
+<div
   className="iconItem "
   onClick={[Function]}
 >
@@ -25,5 +25,5 @@ exports[`<IconItem /> shapshots should render with the given children 1`] = `
   <div>
     child2
   </div>
-</button>
+</div>
 `;

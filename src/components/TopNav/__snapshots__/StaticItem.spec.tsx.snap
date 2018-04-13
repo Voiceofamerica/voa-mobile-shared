@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StaticItem /> shapshots should render empty 1`] = `
-<button
+<div
   className="staticItem"
   onClick={[Function]}
   style={undefined}
@@ -9,7 +9,7 @@ exports[`<StaticItem /> shapshots should render empty 1`] = `
 `;
 
 exports[`<StaticItem /> shapshots should render with the given children 1`] = `
-<button
+<div
   className="staticItem"
   onClick={[Function]}
   style={undefined}
@@ -20,5 +20,5 @@ exports[`<StaticItem /> shapshots should render with the given children 1`] = `
   <div>
     child2
   </div>
-</button>
+</div>
 `;

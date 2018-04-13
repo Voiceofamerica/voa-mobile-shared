@@ -5,37 +5,37 @@ exports[`Storyshots BottomNav with active item 1`] = `
   className="bottomNav "
   style={undefined}
 >
-  <button
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     AB
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem  activeItem"
     onClick={[Function]}
   >
     CD
-  </button>
-  <button
+  </div>
+  <div
     className="roundItem "
     onClick={[Function]}
     style={undefined}
   >
     EF
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     GH
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     IJ
-  </button>
+  </div>
 </div>
 `;
 
@@ -44,37 +44,37 @@ exports[`Storyshots BottomNav with active round item 1`] = `
   className="bottomNav "
   style={undefined}
 >
-  <button
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     AB
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     CD
-  </button>
-  <button
+  </div>
+  <div
     className="roundItem activeItem "
     onClick={[Function]}
     style={undefined}
   >
     EF
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     GH
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     IJ
-  </button>
+  </div>
 </div>
 `;
 
@@ -83,37 +83,37 @@ exports[`Storyshots BottomNav with round item 1`] = `
   className="bottomNav "
   style={undefined}
 >
-  <button
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     AB
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     CD
-  </button>
-  <button
+  </div>
+  <div
     className="roundItem "
     onClick={[Function]}
     style={undefined}
   >
     EF
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     GH
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     IJ
-  </button>
+  </div>
 </div>
 `;
 
@@ -122,36 +122,36 @@ exports[`Storyshots BottomNav without round item 1`] = `
   className="bottomNav "
   style={undefined}
 >
-  <button
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     AB
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     CD
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     EF
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     GH
-  </button>
-  <button
+  </div>
+  <div
     className="iconItem "
     onClick={[Function]}
   >
     IJ
-  </button>
+  </div>
 </div>
 `;
 
