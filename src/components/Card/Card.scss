@@ -14,8 +14,9 @@
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   user-select: none;
-  border-bottom: 1vw solid $voa-red;
-  height: (100vw * 9 / 16);
+  border-bottom: 4px solid $voa-red;
+  max-height: (100vw * 9 / 16);
+  margin-bottom: $card-spacing;
 
   .imageContainer {
     position: absolute;

@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StaticMixedList /> shapshots should render all of the items 1`] = `
+<div
+  className="mixedList "
+  style={undefined}
+>
+  <div
+    className="fixed row"
+  >
+    <div
+      className="card undefined"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <div
+        alwaysShow={true}
+        className="imageContainer"
+        showSpinner={true}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w500_r1.png"
+      />
+      <div
+        className="gradient"
+      >
+        <div
+          className="titleText"
+        >
+          <span>
+             
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="secondaryCard undefined"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <div
+        alwaysShow={true}
+        className="imageContainer"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w250_r1.png"
+      />
+      <div
+        className="titleText"
+      >
+        President Trump: From North Korea to Iran, we confront dangerous governments
+      </div>
+    </div>
+    <div
+      className="secondaryCard undefined"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <div
+        alwaysShow={true}
+        className="imageContainer"
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w250_r1.png"
+      />
+      <div
+        className="titleText"
+      >
+        President Trump: From North Korea to Iran, we confront dangerous governments
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ticketRow"
+  >
+    <div
+      className="ticket"
+      onClick={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "padding": 12,
+        }
+      }
+    >
+      <div
+        alwaysShow={true}
+        className="imageArea"
+        onLoadDone={[Function]}
+        src="https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_cx3_cy0_cw97_w125_r1.png"
+      />
+      <div
+        className="content"
+      >
+        <div
+          className="textContent"
+        >
+          <div
+            className="titleText"
+          >
+            President Trump: From North Korea to Iran, we confront dangerous governments
+          </div>
+        </div>
+        <div
+          className="minorText"
+        >
+          15:08
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<StaticMixedList /> shapshots should render nothing if no items 1`] = `
+<div
+  className="mixedList "
+  style={undefined}
+>
+  
+</div>
+`;

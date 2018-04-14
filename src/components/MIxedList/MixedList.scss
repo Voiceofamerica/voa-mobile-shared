@@ -1,0 +1,24 @@
+
+@import '../../commonStyles/index.scss';
+
+.mixedList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    &.fixed {
+      height: calc(100vw * 9 / 16 + 11px);
+    }
+  }
+
+  .ticketRow {
+    border-top: 1px solid $mid-grey;
+  }
+}

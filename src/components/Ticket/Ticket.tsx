@@ -19,6 +19,11 @@ export interface State {
   showImage: boolean
 }
 
+const HEIGHT = 80
+const PADDING = 12
+
+export const TICKET_HEIGHT = HEIGHT + (2 * PADDING)
+
 class Ticket extends React.Component<Props, State> {
   state = {
     showImage: false,
@@ -36,15 +41,21 @@ class Ticket extends React.Component<Props, State> {
     })
 
   render () {
-    const { onPress, imageUrl, title, minorText: minor, icon, style, suppressImage } = this.props
+    const { onPress, imageUrl, title, minorText: minor, icon, style = {}, suppressImage } = this.props
     const { showImage } = this.state
 
     const imageClass = showImage
                      ? `${imageArea} ${show}`
                      : imageArea
 
+    const fullStyle = {
+      height: HEIGHT,
+      padding: PADDING,
+      ...style,
+    }
+
     return (
-      <div className={ticket} onClick={onPress} style={style}>
+      <div className={ticket} onClick={onPress} style={fullStyle}>
         {
           showImage || !suppressImage
           ? <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>

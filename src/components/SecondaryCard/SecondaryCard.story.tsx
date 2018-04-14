@@ -18,15 +18,28 @@ const testArticle2 = {
   title: 'At least seven people were killed in a police vehicle in Balochistan, Pakistan',
 }
 
+const rowStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  //   (9/16 image ratio)
+  // / (2 cards in row)
+  // * (98.5vw -- don't count the spacing)
+  // + (60px of text content + 20px of vertical margins)
+  height: 'calc(27.7vw + 80px)',
+}
+
 storiesOf('SecondaryCard', module)
   .add('display two', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={rowStyle}>
+      <style>{'body { margin: 0; }'}</style>
       <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } />
       <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } />
     </div>
   ))
   .add('rtl display two', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }} dir='rtl'>
+    <div style={rowStyle} dir='rtl'>
+      <style>body {'{'} margin: 0; {'}'}</style>
       <SecondaryCard onPress={action('Card.onPress')} { ...testArticle } />
       <SecondaryCard onPress={action('Card.onPress')} { ...testArticle2 } />
     </div>

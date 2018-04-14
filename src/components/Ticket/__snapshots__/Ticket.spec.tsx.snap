@@ -4,7 +4,12 @@ exports[`<Ticket /> shapshots should render with the given icon shown 1`] = `
 <div
   className="ticket"
   onClick={undefined}
-  style={undefined}
+  style={
+    Object {
+      "height": 80,
+      "padding": 12,
+    }
+  }
 >
   <div
     alwaysShow={true}
@@ -39,7 +44,12 @@ exports[`<Ticket /> shapshots should render with the given image 1`] = `
 <div
   className="ticket"
   onClick={undefined}
-  style={undefined}
+  style={
+    Object {
+      "height": 80,
+      "padding": 12,
+    }
+  }
 >
   <div
     alwaysShow={true}
@@ -70,7 +80,12 @@ exports[`<Ticket /> shapshots should render with the given minor text 1`] = `
 <div
   className="ticket"
   onClick={undefined}
-  style={undefined}
+  style={
+    Object {
+      "height": 80,
+      "padding": 12,
+    }
+  }
 >
   <div
     alwaysShow={true}
@@ -103,7 +118,12 @@ exports[`<Ticket /> shapshots should render with the given title 1`] = `
 <div
   className="ticket"
   onClick={undefined}
-  style={undefined}
+  style={
+    Object {
+      "height": 80,
+      "padding": 12,
+    }
+  }
 >
   <div
     alwaysShow={true}
