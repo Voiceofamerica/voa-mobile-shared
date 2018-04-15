@@ -3,7 +3,7 @@ import * as React from 'react'
 import { List, ListRowProps } from 'react-virtualized'
 import { Subscription } from 'rxjs/Subscription'
 
-import { resizeObservable } from '../../helpers/window'
+import { resizeObservable } from '../../helpers/windowHelper'
 import { TextDirection, directionObservable } from '../../helpers/text'
 import Card, { getHeight, CARD_PADDING } from '../Card'
 

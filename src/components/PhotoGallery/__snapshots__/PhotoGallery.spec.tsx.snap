@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhotoGallery /> shapshots should render 1`] = `
+<div>
+  <Gallery
+    onClick={[Function]}
+    photos={
+      Array [
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+      ]
+    }
+  />
+  <Lightbox
+    currentImage={undefined}
+    images={
+      Array [
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+        Object {
+          "src": "http://some.url/some.jpg",
+        },
+      ]
+    }
+    isOpen={false}
+    onClickNext={[Function]}
+    onClickPrev={[Function]}
+    onClose={[Function]}
+  />
+</div>
+`;
+
+exports[`<PhotoGallery /> shapshots should render empty if gallery is undefined 1`] = `<div />`;
+
+exports[`<PhotoGallery /> shapshots should render empty if gallery.photo has length of 0 1`] = `<div />`;
+
+exports[`<PhotoGallery /> shapshots should render empty if gallery.photo is null 1`] = `<div />`;

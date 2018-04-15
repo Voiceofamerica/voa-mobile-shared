@@ -13797,6 +13797,76 @@ exports[`Storyshots MediaPlayer play audio 1`] = `
 </div>
 `;
 
+exports[`Storyshots PhotoGallery display 1`] = `
+<div>
+  <Lightbox
+    currentImage={undefined}
+    images={
+      Array [
+        Object {
+          "src": "https://gdb.rferl.org/CEF12CF9-ED1F-4980-B2CD-2B836D007D72.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/0D122943-46E6-4B7D-B4C2-46C4030A6208.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/64F85359-9549-4389-9251-40509B298899.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/2837BFAD-73D5-414F-B545-D18375CA1D53.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/ED71B8E8-7926-45C3-B923-98D5F185091E.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/11E01F2D-2215-4767-A3BE-5F2A0DAAFE6E.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/9E08AB59-85A0-4EB4-A274-A0735A15B086.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/376C7B42-431D-4C5B-BD51-F35BEDA04B64.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/0575F2B5-00BE-4C8A-A50F-073F53AC3188.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/2578C086-9C94-47B2-8020-5C5BD969CBE5.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/C69610DE-C580-40BE-83DB-4C6A97612220.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/6BA9DB56-A9C4-4615-BFF1-C26EBCB00510.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/EADFE595-7AE5-4D9A-9A3A-D70933774568.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/6EC36604-31DF-412C-AC2E-61FC40AD9332.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/FEF11F04-2E4A-4A92-827E-B1EA8DA06F4B.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/564FF8A4-7686-4C51-A7B0-D7EB14B22A24.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/CB60FD90-FD93-4050-9263-A50C2B308C41.jpg",
+        },
+        Object {
+          "src": "https://gdb.rferl.org/47DA6459-CDD1-40B2-8415-831118D22910.jpg",
+        },
+      ]
+    }
+    isOpen={false}
+    onClickNext={[Function]}
+    onClickPrev={[Function]}
+    onClose={[Function]}
+  />
+</div>
+`;
+
 exports[`Storyshots ResilientImage display 1`] = `
 <div
   className="resilientImage "
