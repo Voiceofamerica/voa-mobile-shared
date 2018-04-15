@@ -207,7 +207,7 @@ export const fromVideoArticle = (
   }
 }
 
-export const fromVideoList = (
+export const fromVideoArticleList = (
   articles: VideoArticle[] | undefined = [],
   dateSerializer = defaultDateSerializer,
   programType?: ProgramType,
@@ -252,4 +252,42 @@ export const fromPhotoGalleryArticleList = (
   articles
     .filter(article => article.photoGallery)
     .map(article => fromPhotoGalleryArticle(article, dateSerializer))
+)
+
+export interface RelatedArticle {
+  id: number
+  storyTitle: string
+  pubDate?: string | null
+  thumbnailTiny?: string | null
+  thumbnailThumb?: string | null
+  thumbnailHero?: string | null
+}
+
+export const fromRelatedArticle = (
+  article: RelatedArticle | undefined,
+  dateSerializer = defaultDateSerializer,
+): ListItem => {
+  if (article === undefined) {
+    return defaultItem
+  }
+
+  const { id, storyTitle, pubDate, thumbnailTiny, thumbnailThumb, thumbnailHero } = article
+
+  return {
+    id,
+    title: storyTitle,
+    image: {
+      tiny: thumbnailTiny || undefined,
+      thumb: thumbnailThumb || undefined,
+      hero: thumbnailHero || undefined,
+    },
+    minorText: dateSerializer(pubDate),
+  }
+}
+
+export const fromRelatedArticleList = (
+  articles: RelatedArticle[] | undefined = [],
+  dateSerializer = defaultDateSerializer,
+): ListItem[] => (
+  articles.map(article => fromRelatedArticle(article, dateSerializer))
 )
