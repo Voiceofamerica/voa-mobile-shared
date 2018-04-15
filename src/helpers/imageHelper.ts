@@ -78,8 +78,8 @@ export const loadImage = async (src: string, retryCount = 3): Promise<HTMLImageE
 export const getImageSize = async (src: string, retryCount?: number): Promise<ImageSize> => {
   const image = await loadImage(src, retryCount)
   return {
-    width: image.clientWidth,
-    height: image.clientHeight,
+    width: image.width,
+    height: image.height,
   }
 }
 

@@ -3,13 +3,13 @@ import * as React from 'react'
 import Gallery from 'react-photo-gallery'
 import Lightbox from 'react-images'
 
-import { getImageSizes } from '../../helpers/imageHelper'
+import { getImageSizes, simplifySize } from '../../helpers/imageHelper'
 
 export interface PhotoData {
   id?: number
   photoTitle: string | null
-  photoDescription: string | null
-  url: string
+  tiny: string
+  hero: string
   order: number
 }
 
@@ -28,10 +28,11 @@ export interface State {
   imageSizes?: { width: number, height: number }[]
 }
 
-type SizeType = 'tiny' | 'thumb' | 'hero'
+type SizeType = 'tiny' | 'hero'
 
 interface RenderableImage {
   src: string
+  caption?: string
   width?: number
   height?: number
 }
@@ -50,12 +51,12 @@ export default class PhotoGallery extends React.Component<Props, State> {
       return
     }
 
-    const sources = gallery.photo.map(img => img.url)
+    const sources = gallery.photo.map(img => img.tiny)
     getImageSizes(sources).then(imageSizes => {
       if (!this.mounted) {
         return
       }
-      this.setState({ imageSizes })
+      this.setState({ imageSizes: imageSizes.map(simplifySize) })
     }).catch()
   }
 
@@ -68,33 +69,45 @@ export default class PhotoGallery extends React.Component<Props, State> {
       this.setState({ imageSizes: undefined })
 
       if (nextProps.gallery && nextProps.gallery.photo) {
-        getImageSizes(nextProps.gallery.photo.map(img => img.url)).then(imageSizes => {
+        getImageSizes(nextProps.gallery.photo.map(img => img.tiny)).then(imageSizes => {
           if (!this.mounted) {
             return
           }
-          this.setState({ imageSizes })
+          this.setState({ imageSizes: imageSizes.map(simplifySize) })
         }).catch()
       }
     }
   }
 
   render () {
-    const { currentImage, lightboxIsOpen } = this.state
-    const { gallery } = this.props
+    const { currentImage, lightboxIsOpen, imageSizes } = this.state
+    const { gallery, noWait } = this.props
     if (!gallery || !gallery.photo || !gallery.photo.length) {
       return <div />
+    }
+
+    if (!noWait && (imageSizes === undefined || imageSizes.length !== gallery.photo.length)) {
+      return this.renderLoading()
     }
 
     return (
       <div>
         {this.renderGallery()}
-        <Lightbox images={this.getPhotos('hero')}
+        <Lightbox images={this.getPhotos(true)}
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
           currentImage={currentImage}
           isOpen={lightboxIsOpen}
         />
+      </div>
+    )
+  }
+
+  private renderLoading = () => {
+    return (
+      <div>
+        Loading...
       </div>
     )
   }
@@ -108,11 +121,11 @@ export default class PhotoGallery extends React.Component<Props, State> {
     }
 
     return (
-      <Gallery photos={this.getPhotos('tiny')} onClick={this.openLightbox} />
+      <Gallery photos={this.getPhotos()} onClick={this.openLightbox} />
     )
   }
 
-  private getPhotos = (size: SizeType): RenderableImage[] => {
+  private getPhotos = (hero?: boolean): RenderableImage[] => {
     const { imageSizes } = this.state
     const { gallery } = this.props
 
@@ -121,13 +134,17 @@ export default class PhotoGallery extends React.Component<Props, State> {
     }
 
     if (!imageSizes || imageSizes.length !== gallery.photo.length) {
-      return gallery.photo.map(img => ({ src: img.url }))
+      return gallery.photo.map(img => ({
+        src: hero ? img.hero : img.tiny,
+        caption: img.photoTitle || '',
+      }))
     }
 
     return gallery.photo.map((img, index) => {
       const { width, height } = imageSizes[index]
       return {
-        src: img.url,
+        src: hero ? img.hero : img.tiny,
+        caption: img.photoTitle || '',
         width,
         height,
       }
