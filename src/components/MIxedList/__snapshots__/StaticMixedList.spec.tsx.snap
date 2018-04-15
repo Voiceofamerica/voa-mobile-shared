@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<StaticMixedList /> shapshots should not throw if items is undefined 1`] = `
+<div
+  className="mixedList "
+  style={undefined}
+>
+  
+</div>
+`;
+
 exports[`<StaticMixedList /> shapshots should render all of the items 1`] = `
 <div
   className="mixedList "

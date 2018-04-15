@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TicketList /> shapshots should not throw if items is undefined 1`] = `
+<div
+  className="ticketList"
+>
+  
+</div>
+`;
+
 exports[`<TicketList /> shapshots should render only the necessary items 1`] = `
 <div
   className="ticketList"

@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<StaticCardList /> shapshots should not throw if items is undefined 1`] = `
+<div
+  className="cardList"
+>
+  
+</div>
+`;
+
 exports[`<StaticCardList /> shapshots should render all of the items 1`] = `
 <div
   className="cardList"

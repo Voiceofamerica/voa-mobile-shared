@@ -119,15 +119,17 @@ class MixedList extends React.PureComponent<Props, State> {
   }
 
   private renderVirtualContent = () => {
-    const { items } = this.props
+    const { items = [] } = this.props
     const { renderHeight, renderWidth } = this.state
+
+    const count = items.length <= 2 ? items.length : items.length - 1
 
     return (
       <List
         ref={this.setVirtualList}
         height={renderHeight}
         rowHeight={this.getHeight}
-        rowCount={items.length - 1}
+        rowCount={count}
         width={renderWidth}
         rowRenderer={this.renderRow}
       />
@@ -158,7 +160,7 @@ class MixedList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title, icon } = items[0]
+    const { id, image, title, icon } = items![0]
 
     return (
       <div key={key} className={row} style={style} dir={dir}>
@@ -186,7 +188,7 @@ class MixedList extends React.PureComponent<Props, State> {
   private renderSecondaryCard = (index: number) => {
     const { items, onItemClick } = this.props
 
-    const item = items[index]
+    const item = items![index]
 
     if (!item) {
       return <div style={{ flex: 1 }} />
@@ -208,7 +210,7 @@ class MixedList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title, minorText, icon } = items[index + 1]
+    const { id, image, title, minorText, icon } = items![index + 1]
 
     return (
       <div key={key} className={ticketRow} style={style} dir={dir}>

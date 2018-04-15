@@ -102,7 +102,7 @@ class TicketList extends React.PureComponent<Props, State> {
   }
 
   private renderVirtualContent = () => {
-    const { items } = this.props
+    const { items = [] } = this.props
     const { renderHeight, renderWidth } = this.state
 
     return (
@@ -120,7 +120,7 @@ class TicketList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title, minorText, icon } = items[index]
+    const { id, image, title, minorText, icon } = items![index]
 
     return (
       <div key={key} className={row} style={style} dir={dir}>

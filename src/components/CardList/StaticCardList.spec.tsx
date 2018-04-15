@@ -46,5 +46,12 @@ describe(`<${StaticCardList.name} />`, () => {
 
       expect(element).toMatchSnapshot()
     })
+    it('should not throw if items is undefined', () => {
+      const element = create((
+        <StaticCardList items={undefined} onItemClick={jest.fn()} />
+      ))
+
+      expect(element).toMatchSnapshot()
+    })
   })
 })
