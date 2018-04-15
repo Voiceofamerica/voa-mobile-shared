@@ -158,7 +158,7 @@ class MixedList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title } = items[0]
+    const { id, image, title, icon } = items[0]
 
     return (
       <div key={key} className={row} style={style} dir={dir}>
@@ -166,6 +166,7 @@ class MixedList extends React.PureComponent<Props, State> {
           onPress={() => onItemClick(id)}
           title={title}
           imageUrl={image && image.hero}
+          icon={icon}
         />
       </div>
     )
@@ -191,13 +192,14 @@ class MixedList extends React.PureComponent<Props, State> {
       return <div style={{ flex: 1 }} />
     }
 
-    const { id, image, title } = item
+    const { id, image, title, icon } = item
 
     return (
       <SecondaryCard
         onPress={() => onItemClick(id)}
         title={title}
         imageUrl={image && image.thumb}
+        icon={icon}
       />
     )
   }
@@ -206,7 +208,7 @@ class MixedList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title, minorText } = items[index + 1]
+    const { id, image, title, minorText, icon } = items[index + 1]
 
     return (
       <div key={key} className={ticketRow} style={style} dir={dir}>
@@ -215,6 +217,7 @@ class MixedList extends React.PureComponent<Props, State> {
           title={title}
           imageUrl={image && image.tiny}
           minorText={minorText}
+          icon={icon}
           suppressImage={isScrolling}
         />
       </div>

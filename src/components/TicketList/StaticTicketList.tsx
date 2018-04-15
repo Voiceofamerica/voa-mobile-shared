@@ -27,13 +27,14 @@ class StaticTicketList extends React.Component<Props> {
   private renderContent = () => {
     const { items, onItemClick } = this.props
 
-    return items.map(({ id, image, title, minorText }) => (
+    return items.map(({ id, image, title, minorText, icon }) => (
       <div key={id} className={row}>
         <Ticket
           onPress={() => onItemClick(id)}
           title={title}
           imageUrl={image && image.tiny}
           minorText={minorText}
+          icon={icon}
         />
       </div>
     ))

@@ -120,7 +120,7 @@ class TicketList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title, minorText } = items[index]
+    const { id, image, title, minorText, icon } = items[index]
 
     return (
       <div key={key} className={row} style={style} dir={dir}>
@@ -129,6 +129,7 @@ class TicketList extends React.PureComponent<Props, State> {
           title={title}
           imageUrl={image && image.tiny}
           minorText={minorText}
+          icon={icon}
           suppressImage={isScrolling}
         />
       </div>

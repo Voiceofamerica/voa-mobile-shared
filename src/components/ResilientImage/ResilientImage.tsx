@@ -9,7 +9,7 @@ import Spinner from '../Spinner'
 import { resilientImage, imageContent, childrenArea, containImage, spinner } from './ResilientImage.scss'
 
 export interface Props {
-  src?: string
+  src?: string | null
   showSpinner?: boolean
   className?: string
   alwaysShow?: boolean
@@ -31,7 +31,7 @@ export interface State {
   corsFailed?: boolean
 }
 
-const DEFAULT_SRC = require('./imagedefault.gif')
+const DEFAULT_SRC: string = require('./imagedefault.gif')
 const RETRY_IMMEDIATELY = 'retry immediately'
 
 const noop = () => null
@@ -88,11 +88,13 @@ class ResilientImage extends React.Component<Props, State> {
   }
 
   tryFetchWithCors = () => {
-    const { defaultSrc = DEFAULT_SRC, src = defaultSrc } = this.props
+    const { defaultSrc = DEFAULT_SRC, src } = this.props
+
     return new Promise<string>((resolve, reject) => {
       const img = new Image()
+      const usedSrc = src ? src : defaultSrc
 
-      img.src = src
+      img.src = src ? src : defaultSrc
       img.addEventListener('error', (err) => {
         if (this.state.corsFailed) {
           ResilientImage.totalCorsErrors--
@@ -100,14 +102,16 @@ class ResilientImage extends React.Component<Props, State> {
         reject(err)
       })
       img.addEventListener('load', () => {
-        resolve(src)
+        resolve(usedSrc)
       })
     })
   }
 
   tryFetchNoCors = () => {
-    const { src } = this.props
-    const response = fetch(src, {
+    const { defaultSrc = DEFAULT_SRC, src } = this.props
+    const usedSrc = src ? src : defaultSrc
+
+    const response = fetch(usedSrc, {
         method: 'GET',
         signal: this.abortController.signal,
       })

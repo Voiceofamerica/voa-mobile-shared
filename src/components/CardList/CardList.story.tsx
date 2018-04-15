@@ -18,12 +18,26 @@ const testItem: ListItem = {
   title: 'President Trump: From North Korea to Iran, we confront dangerous governments',
 }
 
+const getIcon = (idx: number) => {
+  idx = idx % 4
+  if (idx === 0) {
+    return 'video'
+  } else if (idx === 1) {
+    return 'audio'
+  } else if (idx === 2) {
+    return 'photoGallery'
+  } else {
+    return undefined
+  }
+}
+
 const createList = (count: number) => {
   const output: ListItem[] = []
   for (let i = 0; i < count; i++) {
     output.push({
       ...testItem,
       id: i,
+      icon: getIcon(i),
     })
   }
   return output

@@ -2,13 +2,15 @@
 import * as React from 'react'
 
 import ResilientImage from '../ResilientImage'
+import SvgIcon from '../SvgIcon'
 
 import { secondaryCard, imageContainer, titleText } from './SecondaryCard.scss'
 
 export interface Props {
   title: JSX.Element|string
   onPress?: () => void
-  imageUrl?: string
+  imageUrl?: string | null
+  icon?: JSX.Element | string
   className?: string
   style?: React.CSSProperties
 }
@@ -35,7 +37,11 @@ class SecondaryCard extends React.Component<Props> {
   }
 
   render () {
-    const { onPress = () => null, title, imageUrl, className, style } = this.props
+    const { onPress = () => null, title, imageUrl, className, style, icon } = this.props
+
+    const hydratedIcon = typeof icon === 'string'
+                       ? <SvgIcon src={icon} />
+                       : icon
 
     return (
       <div
@@ -45,7 +51,7 @@ class SecondaryCard extends React.Component<Props> {
         onClick={onPress}>
         <ResilientImage className={imageContainer} src={imageUrl} alwaysShow />
         <div className={titleText}>
-          {title}
+          {hydratedIcon} {title}
         </div>
       </div>
     )

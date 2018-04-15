@@ -27,12 +27,13 @@ class StaticCardList extends React.Component<Props> {
   private renderContent = () => {
     const { items, onItemClick } = this.props
 
-    return items.map(({ id, image, title, minorText }) => (
+    return items.map(({ id, image, title, icon }) => (
       <div key={id} className={`${fixed} ${row}`}>
         <Card
           onPress={() => onItemClick(id)}
           title={title}
           imageUrl={image && image.hero}
+          icon={icon}
         />
       </div>
     ))

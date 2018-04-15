@@ -2,14 +2,15 @@
 import * as React from 'react'
 
 import ResilientImage from '../ResilientImage'
+import SvgIcon from '../SvgIcon'
 
 import { card, imageContainer, gradient, titleText } from './Card.scss'
 
 export interface Props {
   title: string
   onPress?: () => void
-  imageUrl?: string
-  icon?: JSX.Element
+  imageUrl?: string | null
+  icon?: JSX.Element | string
   className?: string
   style?: React.CSSProperties
 }
@@ -26,6 +27,11 @@ export const CARD_PADDING = 11
 class Card extends React.Component<Props> {
   render () {
     const { onPress, icon, title, imageUrl, className, style } = this.props
+
+    const hydratedIcon = typeof icon === 'string'
+                       ? <SvgIcon src={icon} />
+                       : icon
+
     return (
       <div
         className={`${card} ${className}`}
@@ -34,7 +40,7 @@ class Card extends React.Component<Props> {
         <ResilientImage className={imageContainer} src={imageUrl} alwaysShow showSpinner />
         <div className={gradient}>
           <div className={titleText}>
-            <span>{icon} {title}</span>
+            <span>{hydratedIcon} {title}</span>
           </div>
         </div>
       </div>

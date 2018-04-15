@@ -51,7 +51,7 @@ class StaticMixedList extends React.PureComponent<Props> {
   private renderCardRow = () => {
     const { items, onItemClick } = this.props
 
-    const { id, image, title } = items[0]
+    const { id, image, title, icon } = items[0]
 
     return (
       <div key={id} className={`${fixed} ${row}`}>
@@ -59,6 +59,7 @@ class StaticMixedList extends React.PureComponent<Props> {
           onPress={() => onItemClick(id)}
           title={title}
           imageUrl={image && image.hero}
+          icon={icon}
         />
       </div>
     )
@@ -82,13 +83,14 @@ class StaticMixedList extends React.PureComponent<Props> {
       return <div style={{ flex: 1 }} />
     }
 
-    const { id, image, title } = item
+    const { id, image, title, icon } = item
 
     return (
       <SecondaryCard
         onPress={() => onItemClick(id)}
         title={title}
         imageUrl={image && image.thumb}
+        icon={icon}
       />
     )
   }
@@ -96,7 +98,7 @@ class StaticMixedList extends React.PureComponent<Props> {
   private renderTicketRow = (row: number) => {
     const { items, onItemClick } = this.props
 
-    const { id, image, title, minorText } = items[row + 1]
+    const { id, image, title, minorText, icon } = items[row + 1]
 
     return (
       <div key={id} className={ticketRow}>
@@ -105,6 +107,7 @@ class StaticMixedList extends React.PureComponent<Props> {
           title={title}
           imageUrl={image && image.tiny}
           minorText={minorText}
+          icon={icon}
         />
       </div>
     )

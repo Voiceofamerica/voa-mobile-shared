@@ -2,15 +2,16 @@
 import * as React from 'react'
 
 import ResilientImage from '../ResilientImage'
+import SvgIcon from '../SvgIcon'
 
-import { ticket, imageArea, show, content, textContent, minorText, titleText } from './Ticket.scss'
+import { ticket, imageArea, show, content, textContent, minorText, titleText, iconCircle } from './Ticket.scss'
 
 export interface Props {
-  title: JSX.Element|string
+  title: JSX.Element | string
   onPress?: () => void
-  imageUrl?: string
-  minorText?: JSX.Element|string
-  icon?: JSX.Element
+  imageUrl?: string | null
+  minorText?: JSX.Element | string
+  icon?: JSX.Element | string
   style?: React.CSSProperties
   suppressImage?: boolean
 }
@@ -54,12 +55,16 @@ class Ticket extends React.Component<Props, State> {
       ...style,
     }
 
+    const hydratedIcon = typeof icon === 'string'
+                       ? <div className={iconCircle}><SvgIcon src={icon} /></div>
+                       : icon
+
     return (
       <div className={ticket} onClick={onPress} style={fullStyle}>
         {
           showImage || !suppressImage
           ? <ResilientImage src={imageUrl} alwaysShow className={imageClass} onLoadDone={this.onImageLoaded}>
-              {icon}
+              {hydratedIcon}
             </ResilientImage>
           : null
         }

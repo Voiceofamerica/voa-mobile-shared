@@ -123,7 +123,7 @@ class CardList extends React.PureComponent<Props, State> {
     const { dir } = this.state
     const { items, onItemClick } = this.props
 
-    const { id, image, title } = items[index]
+    const { id, image, title, icon } = items[index]
 
     return (
       <div key={key} className={row} style={style} dir={dir}>
@@ -131,6 +131,7 @@ class CardList extends React.PureComponent<Props, State> {
           onPress={() => onItemClick(id)}
           title={title}
           imageUrl={image && image.hero}
+          icon={icon}
         />
       </div>
     )
