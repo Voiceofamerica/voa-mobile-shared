@@ -6,18 +6,18 @@ import Card from '../Card'
 import SecondaryCard from '../SecondaryCard'
 import Ticket from '../Ticket'
 
-import { BaseProps } from './MixedListTypes'
-import { mixedList, row, ticketRow, fixed } from './MixedList.scss'
+import { BaseProps } from './DefaultListTypes'
+import { defaultList, row, ticketRow, fixed } from './DefaultList.scss'
 
 export interface Props extends BaseProps {
 }
 
-class StaticMixedList extends React.PureComponent<Props> {
+class StaticDefaultList extends React.PureComponent<Props> {
   render () {
     const { items = [], className = '', style } = this.props
 
     return (
-      <div className={`${mixedList} ${className}`} style={style}>
+      <div className={`${defaultList} ${className}`} style={style}>
         {
           items.length > 0
           ? this.renderContent()
@@ -114,4 +114,4 @@ class StaticMixedList extends React.PureComponent<Props> {
   }
 }
 
-export default StaticMixedList
+export default StaticDefaultList

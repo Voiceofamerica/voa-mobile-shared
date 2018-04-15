@@ -9,9 +9,9 @@ import Card, { getHeight as getCardHeight } from '../Card'
 import SecondaryCard, { getHeight as getSecondaryCardHeight } from '../SecondaryCard'
 import Ticket, { TICKET_HEIGHT } from '../Ticket'
 
-import StaticMixedList from './StaticMixedList'
-import { BaseProps } from './MixedListTypes'
-import { mixedList, row, ticketRow } from './MixedList.scss'
+import StaticDefaultList from './StaticDefaultList'
+import { BaseProps } from './DefaultListTypes'
+import { defaultList, row, ticketRow } from './DefaultList.scss'
 
 export interface Props extends BaseProps {
   emptyContent?: string | JSX.Element
@@ -33,8 +33,8 @@ const BORDER_SIZE = 1
 // 4px border-bottom + 7px margin-bottom
 const CARD_MARGIN = 11
 
-class MixedList extends React.PureComponent<Props, State> {
-  static Static = StaticMixedList
+class DefaultList extends React.PureComponent<Props, State> {
+  static Static = StaticDefaultList
 
   state: State = {
     renderHeight: window.innerHeight - MENU_HEIGHT,
@@ -88,7 +88,7 @@ class MixedList extends React.PureComponent<Props, State> {
     const { items = [], emptyContent = '', className = '', style } = this.props
 
     return (
-      <div ref={this.setContainer} className={`${mixedList} ${className}`} style={style}>
+      <div ref={this.setContainer} className={`${defaultList} ${className}`} style={style}>
         {
           items.length > 0
           ? this.renderVirtualContent()
@@ -240,4 +240,4 @@ class MixedList extends React.PureComponent<Props, State> {
   }
 }
 
-export default MixedList
+export default DefaultList

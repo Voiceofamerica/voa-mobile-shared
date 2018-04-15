@@ -3,9 +3,9 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import StaticMixedList from './StaticMixedList'
-import MixedList from './MixedList'
-import { ListItem } from './MixedListTypes'
+import StaticDefaultList from './StaticDefaultList'
+import DefaultList from './DefaultList'
+import { ListItem } from './DefaultListTypes'
 
 const testItem: ListItem = {
   id: 1,
@@ -52,11 +52,11 @@ const containerStyle: React.CSSProperties = {
   flexDirection: 'column',
 }
 
-storiesOf(MixedList.name, module)
+storiesOf(DefaultList.name, module)
   .add('display', () => (
     <div style={containerStyle}>
       <style>{'body { margin: 0; }'}</style>
-      <MixedList
+      <DefaultList
         items={list}
         onItemClick={action('onItemClick')}
       />
@@ -65,7 +65,7 @@ storiesOf(MixedList.name, module)
   .add('rtl display', () => (
     <div>
       <style>{'body { margin: 0; }'}</style>
-      <MixedList
+      <DefaultList
         items={list}
         onItemClick={action('onItemClick')}
         dir='rtl'
@@ -75,7 +75,7 @@ storiesOf(MixedList.name, module)
   .add('static height display', () => (
     <div>
       <style>{'body { margin: 0; }'}</style>
-      <MixedList
+      <DefaultList
         items={list}
         onItemClick={action('onItemClick')}
         height={200}
@@ -85,18 +85,18 @@ storiesOf(MixedList.name, module)
   .add('contained height display', () => (
     <div style={{height: 300, display: 'flex'}}>
       <style>{'body { margin: 0; }'}</style>
-      <MixedList
+      <DefaultList
         items={list}
         onItemClick={action('onItemClick')}
       />
     </div>
   ))
 
-storiesOf(`${MixedList.name}.Static`, module)
+storiesOf(`${DefaultList.name}.Static`, module)
   .add('display', () => (
     <div>
       <style>{'body { margin: 0; }'}</style>
-      <StaticMixedList
+      <StaticDefaultList
         items={shortList}
         onItemClick={action('onItemClick')}
       />
@@ -105,7 +105,7 @@ storiesOf(`${MixedList.name}.Static`, module)
   .add('rtl display', () => (
     <div dir='rtl'>
       <style>{'body { margin: 0; }'}</style>
-      <StaticMixedList
+      <StaticDefaultList
         items={shortList}
         onItemClick={action('onItemClick')}
       />

@@ -7213,55 +7213,7 @@ exports[`Storyshots CardList.Static rtl display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MediaPlayer display video 1`] = `
-<div
-  className="mediaPlayer "
-  style={undefined}
->
-  <video
-    autoPlay={undefined}
-    className="videoElement"
-    controls={false}
-    controlsList="nodownload"
-    onLoadStart={[Function]}
-    onPause={[Function]}
-    onPlaying={[Function]}
-    playsInline={true}
-    src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
-  />
-  <div
-    className="loadingBox"
-  >
-    Loading...
-  </div>
-</div>
-`;
-
-exports[`Storyshots MediaPlayer play audio 1`] = `
-<div
-  className="mediaPlayer "
-  style={undefined}
->
-  <video
-    autoPlay={undefined}
-    className="videoElement"
-    controls={false}
-    controlsList="nodownload"
-    onLoadStart={[Function]}
-    onPause={[Function]}
-    onPlaying={[Function]}
-    playsInline={true}
-    src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
-  />
-  <div
-    className="loadingBox"
-  >
-    Loading...
-  </div>
-</div>
-`;
-
-exports[`Storyshots MixedList contained height display 1`] = `
+exports[`Storyshots DefaultList contained height display 1`] = `
 <div
   style={
     Object {
@@ -7274,7 +7226,7 @@ exports[`Storyshots MixedList contained height display 1`] = `
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -8106,7 +8058,7 @@ exports[`Storyshots MixedList contained height display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MixedList display 1`] = `
+exports[`Storyshots DefaultList display 1`] = `
 <div
   style={
     Object {
@@ -8120,7 +8072,7 @@ exports[`Storyshots MixedList display 1`] = `
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -8952,13 +8904,13 @@ exports[`Storyshots MixedList display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MixedList rtl display 1`] = `
+exports[`Storyshots DefaultList rtl display 1`] = `
 <div>
   <style>
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -9790,13 +9742,13 @@ exports[`Storyshots MixedList rtl display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MixedList static height display 1`] = `
+exports[`Storyshots DefaultList static height display 1`] = `
 <div>
   <style>
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -10559,13 +10511,13 @@ exports[`Storyshots MixedList static height display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MixedList.Static display 1`] = `
+exports[`Storyshots DefaultList.Static display 1`] = `
 <div>
   <style>
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -12177,7 +12129,7 @@ exports[`Storyshots MixedList.Static display 1`] = `
 </div>
 `;
 
-exports[`Storyshots MixedList.Static rtl display 1`] = `
+exports[`Storyshots DefaultList.Static rtl display 1`] = `
 <div
   dir="rtl"
 >
@@ -12185,7 +12137,7 @@ exports[`Storyshots MixedList.Static rtl display 1`] = `
     body { margin: 0; }
   </style>
   <div
-    className="mixedList "
+    className="defaultList "
     style={undefined}
   >
     <div
@@ -13793,6 +13745,54 @@ exports[`Storyshots MixedList.Static rtl display 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots MediaPlayer display video 1`] = `
+<div
+  className="mediaPlayer "
+  style={undefined}
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={false}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    playsInline={true}
+    src="https://av.voanews.com/Videoroot/Pangeavideo/2017/12/1/14/146a3e25-ebcf-444e-b1dd-133cf64a46e4_mobile.mp4"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`Storyshots MediaPlayer play audio 1`] = `
+<div
+  className="mediaPlayer "
+  style={undefined}
+>
+  <video
+    autoPlay={undefined}
+    className="videoElement"
+    controls={false}
+    controlsList="nodownload"
+    onLoadStart={[Function]}
+    onPause={[Function]}
+    onPlaying={[Function]}
+    playsInline={true}
+    src="https://av.voanews.com/clips/VCH/2017/12/06/39923226-d756-47fd-bdf4-b5b6523d9c1f.mp3"
+  />
+  <div
+    className="loadingBox"
+  >
+    Loading...
   </div>
 </div>
 `;

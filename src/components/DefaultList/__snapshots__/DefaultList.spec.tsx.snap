@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MixedList /> shapshots should not throw if items is undefined 1`] = `
+exports[`<DefaultList /> shapshots should not throw if items is undefined 1`] = `
 <div
-  className="mixedList "
+  className="defaultList "
   style={undefined}
 >
   
 </div>
 `;
 
-exports[`<MixedList /> shapshots should render all of the items 1`] = `
+exports[`<DefaultList /> shapshots should render all of the items 1`] = `
 <div
-  className="mixedList "
+  className="defaultList "
   style={undefined}
 >
   <div
@@ -485,9 +485,9 @@ exports[`<MixedList /> shapshots should render all of the items 1`] = `
 </div>
 `;
 
-exports[`<MixedList /> shapshots should render nothing if no items 1`] = `
+exports[`<DefaultList /> shapshots should render nothing if no items 1`] = `
 <div
-  className="mixedList "
+  className="defaultList "
   style={undefined}
 >
   

@@ -3,8 +3,8 @@ import * as React from 'react'
 import { create } from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
-import { ListItem } from './MixedListTypes'
-import MixedList from './MixedList'
+import { ListItem } from './DefaultListTypes'
+import StaticDefaultList from './StaticDefaultList'
 import ResilientImage from '../ResilientImage'
 
 jest.mock('../ResilientImage')
@@ -32,25 +32,25 @@ const createList = (count: number) => {
 
 const list = createList(10)
 
-describe(`<${MixedList.name} />`, () => {
+describe(`<${StaticDefaultList.name} />`, () => {
   describe('shapshots', () => {
     it('should render all of the items', () => {
       const element = create((
-        <MixedList items={list} onItemClick={jest.fn()} />
+        <StaticDefaultList items={list} onItemClick={jest.fn()} />
       ))
 
       expect(element).toMatchSnapshot()
     })
     it('should render nothing if no items', () => {
       const element = create((
-        <MixedList items={[]} onItemClick={jest.fn()} />
+        <StaticDefaultList items={[]} onItemClick={jest.fn()} />
       ))
 
       expect(element).toMatchSnapshot()
     })
     it('should not throw if items is undefined', () => {
       const element = create((
-        <MixedList items={undefined} onItemClick={jest.fn()} />
+        <StaticDefaultList items={undefined} onItemClick={jest.fn()} />
       ))
 
       expect(element).toMatchSnapshot()
