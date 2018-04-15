@@ -28,8 +28,6 @@ export interface State {
   imageSizes?: { width: number, height: number }[]
 }
 
-type SizeType = 'tiny' | 'hero'
-
 interface RenderableImage {
   src: string
   caption?: string
