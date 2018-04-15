@@ -134,3 +134,122 @@ export const fromProgramList = (
 ): ListItem[] => (
   programs.map(program => fromProgram(program, dateSerializer, programType))
 )
+
+export interface AudioArticle {
+  id: number
+  pubDate?: string | null
+  image: ImageSource | null
+  audio: MediaSource & {
+    audioTitle: string,
+  }
+}
+
+export const fromAudioArticle = (
+  article: AudioArticle | undefined,
+  dateSerializer = defaultDateSerializer,
+): ListItem => {
+  if (article === undefined) {
+    return defaultItem
+  }
+
+  const { id, pubDate, image, audio } = article
+
+  return {
+    id,
+    title: audio.audioTitle,
+    image: image || undefined,
+    minorText: dateSerializer(pubDate),
+    icon: 'audio',
+  }
+}
+
+export const fromAudioArticleList = (
+  articles: AudioArticle[] | undefined = [],
+  dateSerializer = defaultDateSerializer,
+  programType?: ProgramType,
+): ListItem[] => (
+  articles
+    .filter(article => article.audio)
+    .map(article => fromAudioArticle(article, dateSerializer))
+)
+
+export interface VideoArticle {
+  id: number
+  pubDate?: string | null
+  video: MediaSource & {
+    videoTitle: string,
+    thumbnailTiny?: string | null,
+    thumbnailThumb?: string | null,
+    thumbnailHero?: string | null,
+  }
+}
+
+export const fromVideoArticle = (
+  article: VideoArticle | undefined,
+  dateSerializer = defaultDateSerializer,
+): ListItem => {
+  if (article === undefined) {
+    return defaultItem
+  }
+
+  const { id, pubDate, video } = article
+
+  return {
+    id,
+    title: video.videoTitle,
+    image: {
+      tiny: video.thumbnailTiny || undefined,
+      thumb: video.thumbnailThumb || undefined,
+      hero: video.thumbnailHero || undefined,
+    },
+    minorText: dateSerializer(pubDate),
+    icon: 'video',
+  }
+}
+
+export const fromVideoList = (
+  articles: VideoArticle[] | undefined = [],
+  dateSerializer = defaultDateSerializer,
+  programType?: ProgramType,
+): ListItem[] => (
+  articles
+    .filter(article => article.video)
+    .map(article => fromVideoArticle(article, dateSerializer))
+)
+
+export interface PhotoGalleryArticle {
+  id: number
+  title: string
+  pubDate?: string | null
+  image: ImageSource | null
+  photoGallery: PhotoGallery[] | null
+}
+
+export const fromPhotoGalleryArticle = (
+  article: PhotoGalleryArticle | undefined,
+  dateSerializer = defaultDateSerializer,
+): ListItem => {
+  if (article === undefined) {
+    return defaultItem
+  }
+
+  const { id, title, pubDate, image } = article
+
+  return {
+    id,
+    title,
+    image,
+    minorText: dateSerializer(pubDate),
+    icon: 'photoGallery',
+  }
+}
+
+export const fromPhotoGalleryArticleList = (
+  articles: PhotoGalleryArticle[] | undefined = [],
+  dateSerializer = defaultDateSerializer,
+  programType?: ProgramType,
+): ListItem[] => (
+  articles
+    .filter(article => article.photoGallery)
+    .map(article => fromPhotoGalleryArticle(article, dateSerializer))
+)
