@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Spinner /> shapshots should render 1`] = `
+exports[`< /> shapshots should render 1`] = `
 <div
   className="icon "
   style={
@@ -11,13 +11,24 @@ exports[`<Spinner /> shapshots should render 1`] = `
 />
 `;
 
-exports[`<Spinner /> shapshots should render with the given classname and style 1`] = `
+exports[`< /> shapshots should render with the given classname and style 1`] = `
 <div
   className="icon myClass"
   style={
     Object {
       "color": "blue",
       "webkitMaskImage": "url(https://some.url/something.svg)",
+    }
+  }
+/>
+`;
+
+exports[`< /> shapshots should render with the shipped svg 1`] = `
+<div
+  className="icon "
+  style={
+    Object {
+      "webkitMaskImage": "url(Some File)",
     }
   }
 />

@@ -49,6 +49,7 @@ exports[`<StaticMixedList /> shapshots should render all of the items 1`] = `
       <div
         className="titleText"
       >
+         
         President Trump: From North Korea to Iran, we confront dangerous governments
       </div>
     </div>
@@ -65,6 +66,7 @@ exports[`<StaticMixedList /> shapshots should render all of the items 1`] = `
       <div
         className="titleText"
       >
+         
         President Trump: From North Korea to Iran, we confront dangerous governments
       </div>
     </div>

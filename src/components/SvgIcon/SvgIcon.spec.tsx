@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import SvgIcon from './SvgIcon'
 
-describe('<Spinner />', () => {
+describe(`<${SvgIcon.name} />`, () => {
   describe('shapshots', () => {
     it('should render', () => {
       const element = create((
@@ -17,6 +17,13 @@ describe('<Spinner />', () => {
     it('should render with the given classname and style', () => {
       const element = create((
         <SvgIcon src='https://some.url/something.svg' className='myClass' style={{ color: 'blue' }} />
+      ))
+
+      expect(element).toMatchSnapshot()
+    })
+    it('should render with the shipped svg', () => {
+      const element = create((
+        <SvgIcon src='audio' />
       ))
 
       expect(element).toMatchSnapshot()

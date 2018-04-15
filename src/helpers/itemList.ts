@@ -44,6 +44,18 @@ export interface Article {
   photoGallery?: PhotoGallery[] | null
 }
 
+export const getIconName = (video, audio, photoGallery): IconType | undefined => {
+  if (video) {
+    return 'video'
+  } else if (audio) {
+    return 'audio'
+  } else if (photoGallery) {
+    return 'photoGallery'
+  } else {
+    return undefined
+  }
+}
+
 export const fromArticle = (
   article: Article,
   dateSerializer = defaultDateSerializer,
@@ -109,15 +121,3 @@ export const fromProgramList = (
 ): ListItem[] => (
   programs.map(program => fromProgram(program, dateSerializer, programType))
 )
-
-export const getIconName = (video, audio, photoGallery): IconType | undefined => {
-  if (video) {
-    return 'video'
-  } else if (audio) {
-    return 'audio'
-  } else if (photoGallery) {
-    return 'photoGallery'
-  } else {
-    return undefined
-  }
-}
