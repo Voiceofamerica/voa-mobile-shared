@@ -7,9 +7,9 @@ import PhotoGallery, { PhotoData, PhotoGalleryData } from './PhotoGallery'
 
 const defaultPhoto: PhotoData = {
   id: 0,
-  photoTitle: 'Some photo',
-  photoDescription: 'Some description',
-  url: 'http://some.url/some.jpg',
+  photoTitle: 'Some title',
+  tiny: 'http://some.url/tiny.jpg',
+  hero: 'http://some.url/hero.jpg',
   order: 0,
 }
 

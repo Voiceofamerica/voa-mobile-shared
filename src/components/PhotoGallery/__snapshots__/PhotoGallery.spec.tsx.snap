@@ -7,34 +7,44 @@ exports[`<PhotoGallery /> shapshots should render 1`] = `
     photos={
       Array [
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/tiny.jpg",
         },
       ]
     }
@@ -44,34 +54,44 @@ exports[`<PhotoGallery /> shapshots should render 1`] = `
     images={
       Array [
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
         Object {
-          "src": "http://some.url/some.jpg",
+          "caption": "Some title",
+          "src": "http://some.url/hero.jpg",
         },
       ]
     }
