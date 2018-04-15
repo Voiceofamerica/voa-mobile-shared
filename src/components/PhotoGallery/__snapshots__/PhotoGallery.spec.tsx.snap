@@ -50,6 +50,7 @@ exports[`<PhotoGallery /> shapshots should render 1`] = `
     }
   />
   <Lightbox
+    backdropClosesModal={true}
     currentImage={undefined}
     images={
       Array [
