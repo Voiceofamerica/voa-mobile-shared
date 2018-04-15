@@ -100,6 +100,7 @@ export default class PhotoGallery extends React.Component<Props, State> {
           onClickNext={this.gotoNext}
           currentImage={currentImage}
           isOpen={lightboxIsOpen}
+          backdropClosesModal
         />
       </div>
     )
