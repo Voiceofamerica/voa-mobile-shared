@@ -27,6 +27,11 @@ export interface ListItem {
   icon?: IconType
 }
 
+const defaultItem: ListItem = {
+  id: -1,
+  title: '',
+}
+
 export interface DateSerializer {
   (date?: string | null): string | undefined
 }
@@ -57,9 +62,13 @@ export const getIconName = (video, audio, photoGallery): IconType | undefined =>
 }
 
 export const fromArticle = (
-  article: Article,
+  article: Article | undefined,
   dateSerializer = defaultDateSerializer,
 ): ListItem => {
+  if (article === undefined) {
+    return defaultItem
+  }
+
   const { id, title, pubDate, image, video, audio, photoGallery } = article
   const hasPhotoGallery = Boolean(photoGallery && photoGallery.some(gallery => {
     return Boolean(gallery.photo && gallery.photo.length > 0)
@@ -81,7 +90,7 @@ export const fromArticle = (
 }
 
 export const fromArticleList = (
-  articles: Article[],
+  articles: Article[] | undefined = [],
   dateSerializer = defaultDateSerializer,
 ): ListItem[] => (
   articles.map(article => fromArticle(article, dateSerializer))
@@ -99,10 +108,14 @@ export interface Program {
 }
 
 export const fromProgram = (
-  program: Program,
+  program: Program | undefined,
   dateSerializer = defaultDateSerializer,
-  programType: ProgramType | undefined = program.type,
+  programType: ProgramType | undefined = program && program.type,
 ): ListItem => {
+  if (program === undefined) {
+    return defaultItem
+  }
+
   const { id, programTitle, date, image } = program
 
   return {
@@ -115,7 +128,7 @@ export const fromProgram = (
 }
 
 export const fromProgramList = (
-  programs: Program[],
+  programs: Program[] | undefined = [],
   dateSerializer = defaultDateSerializer,
   programType?: ProgramType,
 ): ListItem[] => (
