@@ -13798,7 +13798,9 @@ exports[`Storyshots MediaPlayer play audio 1`] = `
 `;
 
 exports[`Storyshots PhotoGallery display 1`] = `
-<div>
+<div
+  className="loadingArea"
+>
   Loading...
 </div>
 `;
