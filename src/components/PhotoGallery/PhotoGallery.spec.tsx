@@ -39,28 +39,28 @@ describe(`<${PhotoGallery.name} />`, () => {
   describe('shapshots', () => {
     it('should render', () => {
       const element = create((
-        <PhotoGallery gallery={createGallery(10)} noWait />
+        <PhotoGallery gallery={createGallery(10)} noWait loadingText='Loading...' />
       ))
 
       expect(element).toMatchSnapshot()
     })
     it('should render empty if gallery is undefined', () => {
       const element = create((
-        <PhotoGallery gallery={undefined} noWait />
+        <PhotoGallery gallery={undefined} noWait loadingText='Loading...' />
       ))
 
       expect(element).toMatchSnapshot()
     })
     it('should render empty if gallery.photo is null', () => {
       const element = create((
-        <PhotoGallery gallery={{ ...defaultGallery, photo: null }} noWait />
+        <PhotoGallery gallery={{ ...defaultGallery, photo: null }} noWait loadingText='Loading...' />
       ))
 
       expect(element).toMatchSnapshot()
     })
     it('should render empty if gallery.photo has length of 0', () => {
       const element = create((
-        <PhotoGallery gallery={createGallery(0)} noWait />
+        <PhotoGallery gallery={createGallery(0)} noWait loadingText='Loading...' />
       ))
 
       expect(element).toMatchSnapshot()

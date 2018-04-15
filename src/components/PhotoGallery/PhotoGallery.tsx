@@ -5,6 +5,8 @@ import Lightbox from 'react-images'
 
 import { getImageSizes, simplifySize } from '../../helpers/imageHelper'
 
+import { loadingArea } from './PhotoGallery.scss'
+
 export interface PhotoData {
   id?: number
   photoTitle: string | null
@@ -19,6 +21,7 @@ export interface PhotoGalleryData {
 
 export interface Props {
   gallery: PhotoGalleryData | null | undefined
+  loadingText: string
   noWait?: boolean
 }
 
@@ -103,9 +106,11 @@ export default class PhotoGallery extends React.Component<Props, State> {
   }
 
   private renderLoading = () => {
+    const { loadingText } = this.props
+
     return (
-      <div>
-        Loading...
+      <div className={loadingArea}>
+        {loadingText}
       </div>
     )
   }

@@ -9,7 +9,7 @@ const imageUrl = 'https://gdb.voanews.com/3E1C440D-1C78-4B88-84F7-ECB12FB5B874_c
 
 storiesOf(PhotoGallery.name, module)
   .add('display', () => (
-    <PhotoGallery gallery={getGallery()} />
+    <PhotoGallery gallery={getGallery()} loadingText='Loading...' />
   ))
 
 function getGallery () {
