@@ -8,7 +8,7 @@ function LargeCardList (props) {
 }
 
 namespace LargeCardList {
-  const Static = (props) => (
+  export const Static = (props) => (
     React.createElement('static-large-card-list', { props }, props.children)
   )
 }

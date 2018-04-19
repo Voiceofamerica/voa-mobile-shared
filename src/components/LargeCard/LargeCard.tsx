@@ -47,7 +47,6 @@ export const getHeight = (renderWidth = window.innerWidth, imageRatio = IMAGE_RA
 // 40px under height + 4px border-bottom + 7px margin-bottom
 export const CARD_PADDING = 51
 
-const noop = () => null
 class LargeCard extends React.Component<Props, State> {
   state: State = {
     iconButtonsLoading: [],
@@ -120,7 +119,6 @@ class LargeCard extends React.Component<Props, State> {
       largeCardUnderColor: color,
       largeCardIconColor,
     } = theme
-    const { iconButtonsLoading } = this.state
     const { minorText, iconButtons = [] } = this.props
 
     return (

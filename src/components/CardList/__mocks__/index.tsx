@@ -8,7 +8,7 @@ function CardList (props) {
 }
 
 namespace CardList {
-  const Static = (props) => (
+  export const Static = (props) => (
     React.createElement('static-card-list', { props }, props.children)
   )
 }

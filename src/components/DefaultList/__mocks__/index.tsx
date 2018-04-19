@@ -8,7 +8,7 @@ function DefaultList (props) {
 }
 
 namespace DefaultList {
-  const Static = (props) => (
+  export const Static = (props) => (
     React.createElement('static-default-list', { props }, props.children)
   )
 }

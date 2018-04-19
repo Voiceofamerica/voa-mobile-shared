@@ -8,7 +8,7 @@ function TicketList (props) {
 }
 
 namespace TicketList {
-  const Static = (props) => (
+  export const Static = (props) => (
     React.createElement('static-ticket-list', { props }, props.children)
   )
 }

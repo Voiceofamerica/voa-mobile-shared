@@ -9,8 +9,6 @@ import { cardList, row, fixed } from './LargeCardList.scss'
 export interface Props extends BaseProps {
 }
 
-const noop = () => undefined
-
 class StaticCardList extends React.Component<Props> {
   render () {
     const { items = [] } = this.props
