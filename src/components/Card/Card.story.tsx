@@ -3,6 +3,8 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import ThemeProvider, { BaseTheme, CardTheme } from '../ThemeProvider'
+
 import Card from './Card'
 
 const testArticle = {
@@ -17,19 +19,62 @@ const testArticle2 = {
   title: 'At least seven people were killed in a police vehicle in Balochistan, Pakistan',
 }
 
+const rowStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'row',
+  //   (9/16 image ratio)
+  height: '56.25vw',
+}
+
+const testBaseTheme: BaseTheme = {
+  primaryColor: '#35A527',
+  white: '#DDDDFF',
+  black: '#000044',
+}
+
+const testLocalTheme: CardTheme = {
+  cardGradientColor: '#003300',
+  cardTitleColor: '#DDFFDD',
+  cardBorderColor: '#3527A5',
+}
+
 storiesOf('Card', module)
   .add('display', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={rowStyle}>
       <Card onPress={action('Card.onPress')} { ...testArticle } />
     </div>
   ))
   .add('display with icon', () => (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={rowStyle}>
       <Card
         onPress={action('Card.onPress')}
         { ...testArticle }
-        icon={<img src={require('./headphones.svg')} />}
+        icon='audio'
         title={(testArticle.title)}
       />
     </div>
+  ))
+  .add('base themed display', () => (
+    <ThemeProvider value={testBaseTheme}>
+      <div style={rowStyle}>
+        <Card
+          onPress={action('Card.onPress')}
+          { ...testArticle }
+          icon='video'
+          title={(testArticle.title)}
+        />
+      </div>
+    </ThemeProvider>
+  ))
+  .add('local themed display', () => (
+    <ThemeProvider value={testLocalTheme}>
+      <div style={rowStyle}>
+        <Card
+          onPress={action('Card.onPress')}
+          { ...testArticle }
+          icon='video'
+          title={(testArticle.title)}
+        />
+      </div>
+    </ThemeProvider>
   ))

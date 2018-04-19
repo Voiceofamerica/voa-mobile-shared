@@ -11,16 +11,23 @@ exports[`<Ticket /> shapshots should render with the given icon shown 1`] = `
     }
   }
 >
-  <div
-    alwaysShow={true}
-    className="imageArea"
-    onLoadDone={[Function]}
-    src={undefined}
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "children": <i
+          className="mdi mdi-monitor"
+        />,
+        "className": "imageArea",
+        "onLoadDone": [Function],
+        "src": undefined,
+      }
+    }
   >
     <i
       className="mdi mdi-monitor"
     />
-  </div>
+  </resilient-image>
   <div
     className="content"
   >
@@ -51,11 +58,16 @@ exports[`<Ticket /> shapshots should render with the given image 1`] = `
     }
   }
 >
-  <div
-    alwaysShow={true}
-    className="imageArea"
-    onLoadDone={[Function]}
-    src="myImage"
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "children": undefined,
+        "className": "imageArea",
+        "onLoadDone": [Function],
+        "src": "myImage",
+      }
+    }
   />
   <div
     className="content"
@@ -87,11 +99,16 @@ exports[`<Ticket /> shapshots should render with the given minor text 1`] = `
     }
   }
 >
-  <div
-    alwaysShow={true}
-    className="imageArea"
-    onLoadDone={[Function]}
-    src={undefined}
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "children": undefined,
+        "className": "imageArea",
+        "onLoadDone": [Function],
+        "src": undefined,
+      }
+    }
   />
   <div
     className="content"
@@ -125,11 +142,16 @@ exports[`<Ticket /> shapshots should render with the given title 1`] = `
     }
   }
 >
-  <div
-    alwaysShow={true}
-    className="imageArea"
-    onLoadDone={[Function]}
-    src={undefined}
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "children": undefined,
+        "className": "imageArea",
+        "onLoadDone": [Function],
+        "src": undefined,
+      }
+    }
   />
   <div
     className="content"

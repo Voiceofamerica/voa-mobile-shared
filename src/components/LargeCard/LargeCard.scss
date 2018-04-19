@@ -1,0 +1,91 @@
+
+@import '../../commonStyles/index.scss';
+
+.card {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+  border-bottom: 4px solid;
+  margin-bottom: $card-spacing;
+
+  .overText {
+    @include touchable();
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-end;
+    max-height: (100vw * 9 / 16);
+
+    .imageContainer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .imageStyle {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gradient {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5vw 3.5vw 2vh;
+      height: 90px;
+      z-index: 1;
+    }
+
+    .titleText {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  $underTextHeight: 40px;
+  $iconButtonSize: $underTextHeight - 12px;
+
+  .underText {
+    display: flex;
+    flex-direction: row;
+    height: $underTextHeight;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.5vw;
+
+    .minorTextArea {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .iconButton {
+      @include touchable();
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $underTextHeight;
+      height: $underTextHeight;
+      font-size: $iconButtonSize;
+    }
+  }
+
+  .spinner {
+    width: 1em;
+    height: 1em;
+  }
+}

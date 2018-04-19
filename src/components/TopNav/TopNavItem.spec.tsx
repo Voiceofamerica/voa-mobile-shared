@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import TopNavItem from './TopNavItem'
 
-describe('<TopNavItem />', () => {
+describe(`<${TopNavItem.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

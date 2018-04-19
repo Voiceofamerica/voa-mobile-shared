@@ -1,13 +1,16 @@
 
 import * as React from 'react'
 import { create } from 'react-test-renderer'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import Card from './Card'
+import { card } from './Card.scss'
 
+jest.mock('../ThemeProvider')
 jest.mock('../ResilientImage')
+jest.mock('../SvgIcon')
 
-describe('<Card />', () => {
+describe(`<${Card.name} />`, () => {
   describe('shapshots', () => {
     it('should render with the given title', () => {
       const element = create((
@@ -20,14 +23,6 @@ describe('<Card />', () => {
     it('should render with the given image', () => {
       const element = create((
         <Card title='myTitle' imageUrl='myImage' />
-      ))
-
-      expect(element).toMatchSnapshot()
-    })
-
-    it('should render with the given minor text', () => {
-      const element = create((
-        <Card title='myTitle' minorText='This is some minor text' />
       ))
 
       expect(element).toMatchSnapshot()
@@ -62,21 +57,21 @@ describe('<Card />', () => {
     it('should be called whenever the element is clicked', () => {
       const onPress = jest.fn()
 
-      const item = shallow((
+      const item = mount((
         <Card title='myTitle' onPress={onPress} />
       ))
 
-      item.simulate('click')
+      item.find(`.${card}`).simulate('click')
 
       expect(onPress).toHaveBeenCalledTimes(1)
     })
 
     it('should not throw an error if not provided and the element is clicked', () => {
-      const item = shallow((
+      const item = mount((
         <Card title='myTitle' />
       ))
 
-      item.simulate('click')
+      item.find(`.${card}`).simulate('click')
     })
   })
 })

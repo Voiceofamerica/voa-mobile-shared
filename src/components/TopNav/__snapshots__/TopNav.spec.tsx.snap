@@ -1,65 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TopNav /> shapshots should render empty 1`] = `
-<div
-  className="topNav"
-  style={
+<theme-consumer
+  props={
     Object {
-      "background": "#EEEEEE",
-      "color": "#333333",
+      "children": [Function],
     }
   }
 >
   <div
-    className="itemContainer"
+    className="topNav"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
   >
     <div
-      className="innerContainer"
+      className="itemContainer"
     >
-      <div>
-         
+      <div
+        className="innerContainer"
+      >
+        <div>
+           
+        </div>
       </div>
-    </div>
-    <div
-      className="fadeout"
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9) 90%)",
+      <div
+        className="fadeout"
+        style={
+          Object {
+            "backgroundImage": "linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 90%)",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
-</div>
+</theme-consumer>
 `;
 
 exports[`<TopNav /> shapshots should render with the given children 1`] = `
-<div
-  className="topNav"
-  style={
+<theme-consumer
+  props={
     Object {
-      "background": "#EEEEEE",
-      "color": "#333333",
+      "children": [Function],
     }
   }
 >
   <div
-    className="itemContainer"
+    className="topNav"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
   >
     <div
-      className="innerContainer"
+      className="itemContainer"
     >
-      <div>
-         
+      <div
+        className="innerContainer"
+      >
+        <div>
+           
+        </div>
       </div>
-    </div>
-    <div
-      className="fadeout"
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(90deg, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9) 90%)",
+      <div
+        className="fadeout"
+        style={
+          Object {
+            "backgroundImage": "linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 90%)",
+          }
         }
-      }
-    />
+      />
+    </div>
   </div>
-</div>
+</theme-consumer>
 `;

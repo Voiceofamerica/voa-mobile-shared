@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer'
 
 import CenterText from './CenterText'
 
-describe('<CenterText />', () => {
+describe(`<${CenterText.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

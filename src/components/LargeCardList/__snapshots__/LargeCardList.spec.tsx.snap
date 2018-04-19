@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LargeCardList /> shapshots should not throw if items is undefined 1`] = `
+<div
+  className="cardList"
+>
+  
+</div>
+`;
+
+exports[`<LargeCardList /> shapshots should render only the necessary items 1`] = `
+<div
+  className="cardList"
+>
+  <react-virtualized-list
+    height={618}
+    rowCount={1000}
+    rowHeight={NaN}
+    rowRenderer={[Function]}
+    width={1024}
+  >
+    <div
+      className="row"
+      dir="ltr"
+      style={Object {}}
+    />
+    <div
+      className="row"
+      dir="ltr"
+      style={Object {}}
+    />
+    <div
+      className="row"
+      dir="ltr"
+      style={Object {}}
+    />
+    <div
+      className="row"
+      dir="ltr"
+      style={Object {}}
+    />
+    <div
+      className="row"
+      dir="ltr"
+      style={Object {}}
+    />
+  </react-virtualized-list>
+</div>
+`;
+
+exports[`<LargeCardList /> shapshots should render the empty content if no items 1`] = `
+<div
+  className="cardList"
+>
+  I am empty
+</div>
+`;

@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer'
 
 import StaticItem from './StaticItem'
 
-describe('<StaticItem />', () => {
+describe(`<${StaticItem.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

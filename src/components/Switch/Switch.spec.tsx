@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import Switch from './Switch'
 
-describe('<Switch />', () => {
+describe(`<${Switch.name} />`, () => {
   describe('shapshots', () => {
     it('should render toggled off', () => {
       const element = create((

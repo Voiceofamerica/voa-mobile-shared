@@ -30,9 +30,15 @@ $fadeWidth: 20vw;
       display: flex;
       flex-direction: row;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .staticItem {
+    @include touchable();
+
     display: flex;
     align-content: center;
     align-items: center;

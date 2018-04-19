@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import RoundItem from './RoundItem'
 
-describe('<RoundItem />', () => {
+describe(`<${RoundItem.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

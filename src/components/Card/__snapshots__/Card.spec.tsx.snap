@@ -1,173 +1,273 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Card /> shapshots should render with the given className 1`] = `
-<div
-  className="card myClass"
-  onClick={undefined}
-  style={undefined}
->
-  <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src={undefined}
-  />
-  <div
-    className="gradient"
-  >
-    <div
-      className="titleText"
-    >
-      <span>
-         
-        myTitle
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Card /> shapshots should render with the given icon shown 1`] = `
-<div
-  className="card undefined"
-  onClick={undefined}
-  style={undefined}
->
-  <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src={undefined}
-  />
-  <div
-    className="gradient"
-  >
-    <div
-      className="titleText"
-    >
-      <span>
-        <i
-          className="mdi mdi-monitor"
-        />
-         
-        myTitle
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Card /> shapshots should render with the given image 1`] = `
-<div
-  className="card undefined"
-  onClick={undefined}
-  style={undefined}
->
-  <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src="myImage"
-  />
-  <div
-    className="gradient"
-  >
-    <div
-      className="titleText"
-    >
-      <span>
-         
-        myTitle
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Card /> shapshots should render with the given minor text 1`] = `
-<div
-  className="card undefined"
-  onClick={undefined}
-  style={undefined}
->
-  <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src={undefined}
-  />
-  <div
-    className="gradient"
-  >
-    <div
-      className="titleText"
-    >
-      <span>
-         
-        myTitle
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Card /> shapshots should render with the given style 1`] = `
-<div
-  className="card undefined"
-  onClick={undefined}
-  style={
+<theme-consumer
+  props={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "right": 0,
-      "top": 0,
+      "children": [Function],
     }
   }
 >
   <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src={undefined}
-  />
-  <div
-    className="gradient"
+    className="card myClass"
+    onClick={undefined}
+    style={
+      Object {
+        "borderBottomColor": "#000000",
+      }
+    }
   >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
+        }
+      }
+    />
     <div
-      className="titleText"
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
     >
-      <span>
-         
-        myTitle
-      </span>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</div>
+</theme-consumer>
+`;
+
+exports[`<Card /> shapshots should render with the given icon shown 1`] = `
+<theme-consumer
+  props={
+    Object {
+      "children": [Function],
+    }
+  }
+>
+  <div
+    className="card undefined"
+    onClick={undefined}
+    style={
+      Object {
+        "borderBottomColor": "#000000",
+      }
+    }
+  >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
+        }
+      }
+    />
+    <div
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
+    >
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+          <i
+            className="mdi mdi-monitor"
+          />
+           
+          myTitle
+        </span>
+      </div>
+    </div>
+  </div>
+</theme-consumer>
+`;
+
+exports[`<Card /> shapshots should render with the given image 1`] = `
+<theme-consumer
+  props={
+    Object {
+      "children": [Function],
+    }
+  }
+>
+  <div
+    className="card undefined"
+    onClick={undefined}
+    style={
+      Object {
+        "borderBottomColor": "#000000",
+      }
+    }
+  >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": "myImage",
+        }
+      }
+    />
+    <div
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
+    >
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
+    </div>
+  </div>
+</theme-consumer>
+`;
+
+exports[`<Card /> shapshots should render with the given style 1`] = `
+<theme-consumer
+  props={
+    Object {
+      "children": [Function],
+    }
+  }
+>
+  <div
+    className="card undefined"
+    onClick={undefined}
+    style={
+      Object {
+        "borderBottomColor": "#000000",
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
+        }
+      }
+    />
+    <div
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
+    >
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
+    </div>
+  </div>
+</theme-consumer>
 `;
 
 exports[`<Card /> shapshots should render with the given title 1`] = `
-<div
-  className="card undefined"
-  onClick={undefined}
-  style={undefined}
+<theme-consumer
+  props={
+    Object {
+      "children": [Function],
+    }
+  }
 >
   <div
-    alwaysShow={true}
-    className="imageContainer"
-    showSpinner={true}
-    src={undefined}
-  />
-  <div
-    className="gradient"
+    className="card undefined"
+    onClick={undefined}
+    style={
+      Object {
+        "borderBottomColor": "#000000",
+      }
+    }
   >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
+        }
+      }
+    />
     <div
-      className="titleText"
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
     >
-      <span>
-         
-        myTitle
-      </span>
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</div>
+</theme-consumer>
 `;

@@ -22,14 +22,21 @@ exports[`<Loader /> shapshots should render the spinner and background image whe
   className="loader "
   style={undefined}
 >
-  <div
-    className="backdrop"
-    defaultSrc="some.png"
-    src="some.png"
+  <resilient-image
+    props={
+      Object {
+        "children": <div
+          className="fader"
+        />,
+        "className": "backdrop",
+        "defaultSrc": "some.png",
+        "src": "some.png",
+      }
+    }
   >
     <div
       className="fader"
     />
-  </div>
+  </resilient-image>
 </div>
 `;

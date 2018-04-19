@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import Spinner from './Spinner'
 
-describe('<Spinner />', () => {
+describe(`<${Spinner.name} />`, () => {
   describe('shapshots', () => {
     it('should render', () => {
       const element = create((

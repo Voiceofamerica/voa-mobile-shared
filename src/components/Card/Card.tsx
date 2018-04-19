@@ -1,6 +1,9 @@
 
 import * as React from 'react'
 
+import { toRGBAstring } from '../../helpers/colorHelper'
+
+import { ThemeConsumer } from '../ThemeProvider'
 import ResilientImage from '../ResilientImage'
 import SvgIcon from '../SvgIcon'
 
@@ -33,17 +36,36 @@ class Card extends React.Component<Props> {
                        : icon
 
     return (
-      <div
-        className={`${card} ${className}`}
-        style={style}
-        onClick={onPress}>
-        <ResilientImage className={imageContainer} src={imageUrl} alwaysShow showSpinner />
-        <div className={gradient}>
-          <div className={titleText}>
-            <span>{hydratedIcon} {title}</span>
-          </div>
-        </div>
-      </div>
+      <ThemeConsumer>
+        {
+          (theme) => {
+            const {
+              cardGradientColor,
+              cardTitleColor,
+              cardBorderColor,
+            } = theme
+
+            const gradientEnd = toRGBAstring(cardGradientColor, 0.9)
+            const gradientBackground = `linear-gradient(transparent, ${gradientEnd})`
+            return (
+              <div
+                className={`${card} ${className}`}
+                style={{
+                  ...style,
+                  borderBottomColor: cardBorderColor,
+                }}
+                onClick={onPress}>
+                <ResilientImage className={imageContainer} src={imageUrl} alwaysShow showSpinner />
+                <div className={gradient} style={{ background: gradientBackground }}>
+                  <div className={titleText} style={{ color: cardTitleColor }}>
+                    <span>{hydratedIcon} {title}</span>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        }
+      </ThemeConsumer>
     )
   }
 }

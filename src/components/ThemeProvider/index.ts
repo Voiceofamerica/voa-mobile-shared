@@ -1,8 +1,10 @@
 
 import * as React from 'react'
 import { ProviderProps, ConsumerProps } from './ContextPlaceholder'
-import ThemeContext, { Theme } from './ThemeContext'
+import ThemeContext, { HydrationProvider } from './ThemeContext'
+import * as Theme from './themeTypes'
 
-export { Theme } from './ThemeContext'
+export * from './themeTypes'
 export const ThemeConsumer = ThemeContext.Consumer
-export default ThemeContext.Provider
+export default HydrationProvider
+export { DEFAULT_THEME } from './themeHydrators'

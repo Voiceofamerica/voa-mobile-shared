@@ -1,6 +1,8 @@
 
 import * as React from 'react'
 
+import { toRGBAstring } from '../../helpers/colorHelper'
+
 import { ThemeConsumer } from '../ThemeProvider'
 
 import StaticItem from './StaticItem'
@@ -13,25 +15,17 @@ export interface Props extends React.Props<any> {
   style?: React.CSSProperties
 }
 
-function toRGB (color: string) {
-  const r = parseInt(color.substring(1, 3), 16)
-  const g = parseInt(color.substring(3, 5), 16)
-  const b = parseInt(color.substring(5, 7), 16)
-
-  return `${r}, ${g}, ${b}`
-}
-
 function TopNav ({ children, rtl, style }: Props) {
   return (
     <ThemeConsumer>
       {
         (theme) => {
           const {
-            mainBackground,
-            mainColor,
-            staticColor,
-            selectedBackground,
-            selectedColor,
+            topNavBackground,
+            topNavColor,
+            topNavStaticColor,
+            topNavSelectedBackground,
+            topNavSelectedColor,
           } = theme
 
           const rChildren = React.Children.toArray(children) as React.ReactElement<any>[]
@@ -45,22 +39,39 @@ function TopNav ({ children, rtl, style }: Props) {
                                      if (!props.selected) {
                                        return child
                                      } else {
-                                       return <TopNavItem {...props} key={key || undefined} style={{ ...props.style, color: selectedColor, background: selectedBackground }} />
+                                       return <TopNavItem {...props} key={key || undefined} style={{ ...props.style, color: topNavSelectedColor, background: topNavSelectedBackground }} />
                                      }
                                    }
                                  })
-          const statics = rChildren.filter(child => child.type === StaticItem)
-                                   .map(({ key, props }) => (
-                                     <StaticItem key={key} {...props} style={{ ...props.style, color: staticColor }} />
-                                   ))
+          const preStatics = rChildren.filter(child => child.type === StaticItem)
+          const statics = preStatics.map(({ key, props }) => (
+            <StaticItem key={key} {...props} style={{ ...props.style, color: topNavStaticColor }} />
+          ))
 
-          const rgb = toRGB(mainBackground)
+          const rgbStart = toRGBAstring(topNavBackground, 0)
+          const rgbEnd = toRGBAstring(topNavBackground, 0.9)
           const fadeoutBackground = rtl
-                                  ? `linear-gradient(-90deg, rgba(${rgb}, 0), rgba(${rgb}, 0.9) 90%)`
-                                  : `linear-gradient(90deg, rgba(${rgb}, 0), rgba(${rgb}, 0.9) 90%)`
+                                  ? `linear-gradient(-90deg, ${rgbStart}, ${rgbEnd} 90%)`
+                                  : `linear-gradient(90deg, ${rgbStart}, ${rgbEnd} 90%)`
+
+          let startStatic: any = null
+          let endStatic: any = null
+
+          if (statics.length > 1) {
+            startStatic = statics[0]
+            endStatic = statics[1]
+          } else if (statics[0]) {
+            console.log('index', rChildren.indexOf(preStatics[0]))
+            if (rChildren.indexOf(preStatics[0]) === (rChildren.length - 1)) {
+              endStatic = statics[0]
+            } else {
+              startStatic = statics[0]
+            }
+          }
+
           return (
-            <div className={topNav} style={{ ...style, background: mainBackground, color: mainColor }}>
-              {statics[0]}
+            <div className={topNav} style={{ ...style, background: topNavBackground, color: topNavColor }}>
+              {startStatic}
               <div className={itemContainer}>
                 <div className={innerContainer}>
                   {items}
@@ -68,7 +79,7 @@ function TopNav ({ children, rtl, style }: Props) {
                 </div>
                 <div className={fadeout} style={{ backgroundImage: fadeoutBackground }} />
               </div>
-              {statics[1]}
+              {endStatic}
             </div>
           )
         }

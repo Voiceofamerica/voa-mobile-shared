@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer'
 
 import BottomNav from './BottomNav'
 
-describe('<BottomNav />', () => {
+describe(`<${BottomNav.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

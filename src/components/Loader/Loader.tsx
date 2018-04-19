@@ -1,8 +1,8 @@
 
 import * as React from 'react'
 
-import Spinner from '../Spinner'
 import ResilientImage from '../ResilientImage'
+import Spinner from '../Spinner'
 
 import { loader, backdrop, fader, reloadButton } from './Loader.scss'
 

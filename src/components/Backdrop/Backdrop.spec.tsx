@@ -3,7 +3,7 @@ import * as React from 'react'
 import { create } from 'react-test-renderer'
 import Backdrop from './Backdrop'
 
-describe('<Backdrop />', () => {
+describe(`<${Backdrop.name} />`, () => {
   describe('shapshots', () => {
     const sources = [
       'src1',

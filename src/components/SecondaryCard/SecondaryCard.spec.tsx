@@ -6,8 +6,9 @@ import { shallow } from 'enzyme'
 import SecondaryCard from './SecondaryCard'
 
 jest.mock('../ResilientImage')
+jest.mock('../SvgIcon')
 
-describe('<SecondaryCard />', () => {
+describe(`<${SecondaryCard.name} />`, () => {
   describe('shapshots', () => {
     it('should render with the given title', () => {
       const element = create((

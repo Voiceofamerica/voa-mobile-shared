@@ -6,10 +6,7 @@ import { shallow } from 'enzyme'
 import Drawer from './Drawer'
 import { closeDrawer, overlay } from './Drawer.scss'
 
-jest.mock('../ResilientImage')
-jest.mock('../Spinner')
-
-describe('<Drawer />', () => {
+describe(`<${Drawer.name} />`, () => {
   describe('shapshots', () => {
     it('should render closed', () => {
       const element = create((

@@ -5,9 +5,7 @@ import { shallow } from 'enzyme'
 
 import MediaPlayer, { Props } from './MediaPlayer'
 
-jest.mock('../ResilientImage')
-
-describe('<MediaPlayer />', () => {
+describe(`<${MediaPlayer.name} />`, () => {
   describe('shapshots', () => {
     it('should render with the given src', () => {
       const element = create((

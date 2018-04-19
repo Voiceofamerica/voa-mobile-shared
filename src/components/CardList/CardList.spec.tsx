@@ -5,9 +5,10 @@ import { shallow } from 'enzyme'
 
 import { ListItem } from './CardListTypes'
 import CardList, { Props, State } from './CardList'
-import ResilientImage from '../ResilientImage'
 
-jest.mock('../ResilientImage')
+jest.mock('react-virtualized')
+jest.mock('../Card')
+
 const testItem: ListItem = {
   id: 1,
   image: {

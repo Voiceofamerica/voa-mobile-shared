@@ -4,7 +4,9 @@ import { create } from 'react-test-renderer'
 
 import TopNav from './TopNav'
 
-describe('<TopNav />', () => {
+jest.mock('../ThemeProvider')
+
+describe(`<${TopNav.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((

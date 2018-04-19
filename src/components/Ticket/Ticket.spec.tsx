@@ -7,8 +7,9 @@ import Ticket, { Props, State } from './Ticket'
 import ResilientImage from '../ResilientImage'
 
 jest.mock('../ResilientImage')
+jest.mock('../SvgIcon')
 
-describe('<Ticket />', () => {
+describe(`<${Ticket.name} />`, () => {
   describe('shapshots', () => {
     it('should render with the given title', () => {
       const element = create((

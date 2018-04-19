@@ -23,7 +23,7 @@ storiesOf('Ticket', module)
       <Ticket
         onPress={action('Card.onPress')}
         { ...testArticle }
-        icon={<img src={require('./headphones.svg')} />}
+        icon='audio'
       />
     </div>
   ))
@@ -37,7 +37,7 @@ storiesOf('Ticket', module)
       <Ticket
         onPress={action('Card.onPress')}
         { ...testArticle }
-        icon={<img src={require('./headphones.svg')} />}
+        icon='video'
       />
     </div>
   ))

@@ -12,6 +12,7 @@ export interface Props {
 export const iconMap = {
   audio: require('./icons/audio.svg'),
   back: require('./icons/back.svg'),
+  close: require('./icons/close.svg'),
   download: require('./icons/download.svg'),
   editorsChoice: require('./icons/editorsChoice.svg'),
   favorite: require('./icons/favorite.svg'),

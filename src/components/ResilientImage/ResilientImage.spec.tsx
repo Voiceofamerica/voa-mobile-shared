@@ -5,6 +5,8 @@ import { shallow } from 'enzyme'
 
 import ResilientImage from './ResilientImage'
 
+jest.mock('../Spinner')
+
 describe(`<${ResilientImage.name} />`, () => {
   afterAll(() => {
     Object.defineProperty(window.navigator, 'onLine', { value: true })

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Switch /> shapshots should render toggled off 1`] = `
+exports[`<Ticket /> shapshots should render toggled off 1`] = `
 <div
   className="innerSwitch "
   onClick={[Function]}
@@ -12,7 +12,7 @@ exports[`<Switch /> shapshots should render toggled off 1`] = `
 </div>
 `;
 
-exports[`<Switch /> shapshots should render toggled on 1`] = `
+exports[`<Ticket /> shapshots should render toggled on 1`] = `
 <div
   className="innerSwitch on "
   onClick={[Function]}
@@ -24,7 +24,7 @@ exports[`<Switch /> shapshots should render toggled on 1`] = `
 </div>
 `;
 
-exports[`<Switch /> shapshots should render with the given className 1`] = `
+exports[`<Ticket /> shapshots should render with the given className 1`] = `
 <div
   className="innerSwitch myClass"
   onClick={[Function]}
@@ -36,7 +36,7 @@ exports[`<Switch /> shapshots should render with the given className 1`] = `
 </div>
 `;
 
-exports[`<Switch /> shapshots should render with the given style 1`] = `
+exports[`<Ticket /> shapshots should render with the given style 1`] = `
 <div
   className="innerSwitch "
   onClick={[Function]}

@@ -8,7 +8,7 @@ import { retryButton } from './ErrorBoundary.scss'
 
 const ErrorComponent = () => { throw new Error() }
 
-describe('<ErrorBoundary />', () => {
+describe(`<${ErrorBoundary.name} />`, () => {
   describe('shapshots', () => {
     it('should render only children if no error', () => {
       const element = create((

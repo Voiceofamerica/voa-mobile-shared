@@ -10,7 +10,7 @@ import Loader, { State } from './Loader'
 jest.mock('../ResilientImage')
 jest.mock('../Spinner')
 
-describe('<Loader />', () => {
+describe(`<${Loader.name} />`, () => {
   describe('shapshots', () => {
     it('should render only children without an error and not loading', () => {
       const element = create((

@@ -5,9 +5,9 @@ import { shallow } from 'enzyme'
 
 import { ListItem } from './CardListTypes'
 import StaticCardList from './StaticCardList'
-import ResilientImage from '../ResilientImage'
 
-jest.mock('../ResilientImage')
+jest.mock('../Card')
+
 const testItem: ListItem = {
   id: 1,
   image: {

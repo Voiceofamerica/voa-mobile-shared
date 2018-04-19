@@ -20,7 +20,7 @@ const zones: Props['categories'] = [
   },
 ]
 
-describe('<SearchInputs />', () => {
+describe(`<${SearchInputs.name} />`, () => {
   describe('shapshots', () => {
     it('should render with empty text', () => {
       const element = create((

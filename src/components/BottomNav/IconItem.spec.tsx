@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 
 import IconItem from './IconItem'
 
-describe('<IconItem />', () => {
+describe(`<${IconItem.name} />`, () => {
   describe('shapshots', () => {
     it('should render empty', () => {
       const element = create((
