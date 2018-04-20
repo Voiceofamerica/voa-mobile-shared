@@ -26,13 +26,13 @@ const rowStyle: React.CSSProperties = {
   height: '56.25vw',
 }
 
-const testBaseTheme: BaseTheme = {
+const testBaseTheme: Partial<BaseTheme> = {
   primaryColor: '#35A527',
   white: '#DDDDFF',
   black: '#000044',
 }
 
-const testLocalTheme: CardTheme = {
+const testLocalTheme: Partial<CardTheme> = {
   cardGradientColor: '#003300',
   cardTitleColor: '#DDFFDD',
   cardBorderColor: '#3527A5',

@@ -2,7 +2,7 @@
 import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only'
 import * as React from 'react'
 
-import { waitUntilOnline } from '../../helpers/resilience'
+import { waitUntilOnline } from '../../helpers/networkHelper'
 
 import Spinner from '../Spinner'
 

@@ -36,7 +36,7 @@ interface SelectableTopNavItemsState {
   selectedIndex: number
 }
 
-const testBaseTheme: BaseTheme = {
+const testBaseTheme: Partial<BaseTheme> = {
   primaryColor: '#35A527',
   grey: '#666666',
   lightGrey: '#AAAAAA',
@@ -44,7 +44,7 @@ const testBaseTheme: BaseTheme = {
   darkGrey: '#333366',
 }
 
-const testLocalTheme: TopNavTheme = {
+const testLocalTheme: Partial<TopNavTheme> = {
   topNavBackground: '#ffaabb',
   topNavStaticColor: '#993246',
   topNavColor: '#333333',

@@ -4,7 +4,7 @@ import { List, ListRowProps, Index } from 'react-virtualized'
 import { Subscription } from 'rxjs/Subscription'
 
 import { resizeObservable } from '../../helpers/windowHelper'
-import { TextDirection, directionObservable } from '../../helpers/text'
+import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
 import Card, { getHeight as getCardHeight } from '../Card'
 import SecondaryCard, { getHeight as getSecondaryCardHeight } from '../SecondaryCard'
 import Ticket, { TICKET_HEIGHT } from '../Ticket'

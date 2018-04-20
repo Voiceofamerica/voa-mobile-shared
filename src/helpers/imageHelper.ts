@@ -1,5 +1,5 @@
 
-import { waitUntilOnline } from './resilience'
+import { waitUntilOnline } from './networkHelper'
 
 export interface ImageSize {
   width: number

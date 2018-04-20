@@ -1,34 +1,53 @@
 
 import * as React from 'react'
 
-let ADB: AdbInterface | undefined
+export let ADB: AdbInterface
 
-if (typeof (cordova as any) !== 'undefined') {
+if (typeof cordova !== 'undefined') {
   ADB = require('adobe-mobile-services/sdks/Cordova/ADBMobile/Shared/ADB_Helper')
 }
 
-const PROXY_ON: 'on' = 'on'
+export interface AppAnalyticsOptions {
+  getPsiphonState: () => boolean
+  language: string
+}
+
+let analyticsOptions: AppAnalyticsOptions | undefined = undefined
+
+export function setAnalyticsOptions (opts: AppAnalyticsOptions) {
+  analyticsOptions = opts
+}
+
+export type ProxyStatus = 'proxy_on' | 'proxy_off'
+const PROXY_ON: ProxyStatus = 'proxy_on'
+const PROXY_OFF: ProxyStatus = 'proxy_off'
 
 export interface TrackStateOptions {
   language: string
   section: string
   content_type: string
   page_title: string
+  page_name: string
   article_uid?: string
   audio_name?: string
   video_name?: string
-  proxy_status: 'on' | 'off'
+  proxy_status: ProxyStatus
 }
 
 export interface TrackActionOptions {
   language: string
   content_type: string
   page_title: string
+  page_name: string
   section?: string
   category?: string
   headline?: string
   article_uid?: string
-  proxy_status: 'on' | 'off'
+  proxy_status: ProxyStatus
+}
+
+const getProxyStatus = () => {
+  return analyticsOptions!.getPsiphonState() ? PROXY_ON : PROXY_OFF
 }
 
 export interface AdbInterface {
@@ -38,25 +57,27 @@ export interface AdbInterface {
 
 export function favoriteArticle (opts: { id: string, articleTitle: string, authors: string }) {
   ADB && ADB.trackAction('ARTICLE_TO_FAV', {
-    language: 'mandarin',
+    language: analyticsOptions!.language,
     content_type: 'article',
     article_uid: opts.id,
     page_title: opts.articleTitle,
+    page_name: opts.articleTitle,
     headline: opts.articleTitle,
     byline: opts.authors,
-    proxy_status: PROXY_ON,
+    proxy_status: getProxyStatus(),
   })
 }
 
 export function shareArticle (opts: { id: string, articleTitle: string, authors: string }) {
   ADB && ADB.trackAction('ARTICLE_SHARED', {
-    language: 'mandarin',
+    language: analyticsOptions!.language,
     content_type: 'article',
     article_uid: opts.id,
     page_title: opts.articleTitle,
+    page_name: opts.articleTitle,
     headline: opts.articleTitle,
     byline: opts.authors,
-    proxy_status: PROXY_ON,
+    proxy_status: getProxyStatus(),
   })
 }
 
@@ -80,8 +101,10 @@ export interface HOCAnalyticsOptions {
 function getVal<P> (item: HOCAnalyticsOptions | ((props: Readonly<P>, prevProps: Readonly<P>) => HOCAnalyticsOptions), props: P, prevProps: P): HOCAnalyticsOptions {
   if (typeof item === 'object') {
     return item
-  } else {
+  } else if (typeof item === 'function') {
     return item(props, prevProps)
+  } else {
+    throw new Error(`Unexpected value type ${typeof item}`)
   }
 }
 
@@ -102,12 +125,13 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
         }
 
         ADB && ADB.trackState(state, {
-          language: 'mandarin',
+          language: analyticsOptions!.language,
           section: section,
           content_type: type,
           page_title: title,
-          proxy_status: PROXY_ON,
-        } as TrackStateOptions)
+          page_name: title,
+          proxy_status: getProxyStatus(),
+        })
       }
 
       componentWillReceiveProps (nextProps: P) {
@@ -124,12 +148,13 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
         }
 
         ADB && ADB.trackState(state, {
-          language: 'mandarin',
+          language: analyticsOptions!.language,
           section: section,
           content_type: type,
           page_title: title,
-          proxy_status: PROXY_ON,
-        } as TrackStateOptions)
+          page_name: title,
+          proxy_status: getProxyStatus(),
+        })
       }
 
       render () {

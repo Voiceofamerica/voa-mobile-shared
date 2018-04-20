@@ -3,7 +3,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { sleep } from '../../helpers/timingHelpers'
+import { sleep } from '../../helpers/timingHelper'
 import StaticLargeCardList from './StaticLargeCardList'
 import LargeCardList from './LargeCardList'
 import { ListItem, IconDefinition } from './LargeCardListTypes'

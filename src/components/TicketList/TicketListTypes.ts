@@ -1,5 +1,5 @@
 
-import { ListItem } from '../../helpers/itemList'
+import { ListItem } from '../../helpers/itemListHelper'
 
 export { ListItem }
 

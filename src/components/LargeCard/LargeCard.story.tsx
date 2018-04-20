@@ -3,7 +3,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { sleep } from '../../helpers/timingHelpers'
+import { sleep } from '../../helpers/timingHelper'
 import ThemeProvider, { BaseTheme, LargeCardTheme } from '../ThemeProvider'
 import Spinner from '../Spinner'
 
@@ -53,7 +53,7 @@ const icons = [
   },
 ]
 
-const testBaseTheme: BaseTheme = {
+const testBaseTheme: Partial<BaseTheme> = {
   primaryColor: '#35A527',
   white: '#DDDDFF',
   black: '#000044',
@@ -62,7 +62,7 @@ const testBaseTheme: BaseTheme = {
   accentGrey: '#DDDDDD',
 }
 
-const testLocalTheme: LargeCardTheme = {
+const testLocalTheme: Partial<LargeCardTheme> = {
   cardGradientColor: '#330000',
   cardTitleColor: '#FFDDDD',
   cardBorderColor: '#3527A5',

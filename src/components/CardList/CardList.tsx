@@ -4,7 +4,7 @@ import { List, ListRowProps } from 'react-virtualized'
 import { Subscription } from 'rxjs/Subscription'
 
 import { resizeObservable } from '../../helpers/windowHelper'
-import { TextDirection, directionObservable } from '../../helpers/text'
+import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
 import Card, { getHeight, CARD_PADDING } from '../Card'
 
 import StaticCardList from './StaticCardList'

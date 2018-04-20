@@ -1,7 +1,7 @@
 
 import * as React from 'react'
 
-import { TextDirection, directionObservable } from '../../helpers/text'
+import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
 import Card from '../Card'
 import SecondaryCard from '../SecondaryCard'
 import Ticket from '../Ticket'

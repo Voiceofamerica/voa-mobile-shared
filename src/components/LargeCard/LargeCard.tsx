@@ -1,7 +1,7 @@
 
 import * as React from 'react'
 
-import { sleep } from '../../helpers/timingHelpers'
+import { sleep } from '../../helpers/timingHelper'
 import { toRGBAstring } from '../../helpers/colorHelper'
 
 import { ThemeConsumer, LargeCardTheme } from '../ThemeProvider'
