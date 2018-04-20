@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export let ADB: AdbInterface
 
-if (typeof cordova !== 'undefined') {
+if (typeof (cordova as any) !== 'undefined') {
   ADB = require('adobe-mobile-services/sdks/Cordova/ADBMobile/Shared/ADB_Helper')
 }
 
@@ -101,7 +101,7 @@ export interface HOCAnalyticsOptions {
 function getVal<P> (item: HOCAnalyticsOptions | ((props: Readonly<P>, prevProps: Readonly<P>) => HOCAnalyticsOptions), props: P, prevProps: P): HOCAnalyticsOptions {
   if (typeof item === 'object') {
     return item
-  } else if (typeof item === 'function') {
+  } else if (typeof (item as any) === 'function') {
     return item(props, prevProps)
   } else {
     throw new Error(`Unexpected value type ${typeof item}`)
