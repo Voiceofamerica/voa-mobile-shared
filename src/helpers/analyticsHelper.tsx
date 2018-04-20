@@ -108,9 +108,9 @@ function getVal<P> (item: HOCAnalyticsOptions | ((props: Readonly<P>, prevProps:
   }
 }
 
-export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((props: P, newProps: P) => HOCAnalyticsOptions)) {
+export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((props: P & Partial<AnalyticsProps>, newProps: P & Partial<AnalyticsProps>) => HOCAnalyticsOptions)) {
   return function (Component: React.ComponentType<P & AnalyticsProps>): React.ComponentType<P> {
-    return class AnalyticsComponent extends React.Component<P> {
+    return class AnalyticsComponent extends React.Component<P & Partial<AnalyticsProps>> {
       componentDidMount () {
         const {
           state,
@@ -134,7 +134,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
         })
       }
 
-      componentWillReceiveProps (nextProps: P) {
+      componentWillReceiveProps (nextProps: Readonly<P & Partial<AnalyticsProps>>) {
         const {
           state,
           title,
@@ -142,7 +142,6 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           type = 'index',
           skip = false,
         } = getVal(options, nextProps, this.props)
-
         if (skip) {
           return
         }
@@ -159,7 +158,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
 
       render () {
         return (
-          <Component { ...this.props } analytics={analyticsHelper}>
+          <Component analytics={analyticsHelper} { ...this.props }>
             {this.props.children}
           </Component>
         )
