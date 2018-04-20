@@ -1,6 +1,6 @@
 {
   "name": "@voiceofamerica/voa-shared",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Shared code and components",
   "main": "index.js",
   "scripts": {
