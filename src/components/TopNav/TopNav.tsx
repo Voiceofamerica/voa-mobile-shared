@@ -61,7 +61,6 @@ function TopNav ({ children, rtl, style }: Props) {
             startStatic = statics[0]
             endStatic = statics[1]
           } else if (statics[0]) {
-            console.log('index', rChildren.indexOf(preStatics[0]))
             if (rChildren.indexOf(preStatics[0]) === (rChildren.length - 1)) {
               endStatic = statics[0]
             } else {
