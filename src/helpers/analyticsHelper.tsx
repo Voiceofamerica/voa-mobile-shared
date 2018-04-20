@@ -1,6 +1,8 @@
 
 import * as React from 'react'
 
+import { startObservable } from './psiphonHelper'
+
 export let ADB: AdbInterface
 
 if (typeof (cordova as any) !== 'undefined') {
@@ -8,7 +10,6 @@ if (typeof (cordova as any) !== 'undefined') {
 }
 
 export interface AppAnalyticsOptions {
-  getPsiphonState: () => boolean
   language: string
 }
 
@@ -47,7 +48,7 @@ export interface TrackActionOptions {
 }
 
 const getProxyStatus = () => {
-  return analyticsOptions!.getPsiphonState() ? PROXY_ON : PROXY_OFF
+  return startObservable.getValue() ? PROXY_ON : PROXY_OFF
 }
 
 export interface AdbInterface {
