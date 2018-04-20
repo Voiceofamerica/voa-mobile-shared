@@ -1,5 +1,5 @@
 
-import { deviceIsReady, __HOST__, hostReady } from './cordovaHelper'
+import { deviceIsReady, hostReady } from './cordovaHelper'
 
 export function isAndroid (): boolean {
   if (isWeb()) {
@@ -23,7 +23,7 @@ export function isWeb (): boolean {
 
 hostReady.then(() => {
   document.body.classList.add('ready', 'web')
-})
+}).catch()
 
 deviceIsReady.then(() => {
   if (isIos()) {

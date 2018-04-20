@@ -5,18 +5,18 @@ import { Subject } from 'rxjs/Subject'
 
 export let __HOST__: boolean = false
 
+let hostResolve: (val?: any) => void
+
+export const hostReady = new Promise<void>(resolve => {
+  hostResolve = resolve
+})
+
 export function isWebHost (webHost: boolean) {
   __HOST__ = webHost
   if (webHost) {
     hostResolve()
   }
 }
-
-let hostResolve: (val?: any) => void
-
-export const hostReady = new Promise<void>(resolve => {
-  hostResolve = resolve
-})
 
 export const deviceIsReady = new Promise<Event>(resolve => {
   document.addEventListener('deviceready', (ev) => {
