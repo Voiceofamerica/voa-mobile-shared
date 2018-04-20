@@ -2,7 +2,6 @@
   "name": "@voiceofamerica/voa-shared",
   "version": "2.1.12",
   "description": "Shared code and components",
-  "main": "index.js",
   "scripts": {
     "clean": "rm -rf commonStyles components coverage helpers jestCache",
     "prepare": "run-s clean scss:types compile files:copy",
@@ -58,6 +57,7 @@
     "@types/uuid": "^3.4.3",
     "@types/webpack": "^3.8.1",
     "@types/webpack-env": "^1.13.2",
+    "@voiceofamerica/cordova-plugin-music-controls": "^3.0.5",
     "awesome-typescript-loader": "^3.3.0",
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
@@ -98,6 +98,7 @@
     "uuid": "^3.2.1"
   },
   "peerDependencies": {
+    "@voiceofamerica/cordova-plugin-music-controls": "^3.0.5",
     "cordova-plugin-device": "^2.0.2",
     "moment": "^2.19.2",
     "psiphon-cordova-plugin": "^0.8.0",
