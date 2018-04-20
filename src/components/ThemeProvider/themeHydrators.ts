@@ -1,7 +1,7 @@
 
 import * as Types from './ThemeTypes'
 
-export const BASE_DEFAULT_THEME: Types.BaseTheme = {
+export const BASE_DEFAULT_THEME: Required<Types.BaseTheme> = {
   primaryColor: '#D41010',
   secondaryColor: '#0061B0',
   red: '#D41010',
@@ -17,12 +17,12 @@ export const BASE_DEFAULT_THEME: Types.BaseTheme = {
   accentYellow: '#FAD245',
 }
 
-export const hydrateBase = (theme: Partial<Types.BaseTheme>): Types.BaseTheme => ({
+export const hydrateBase = (theme: Types.BaseTheme): Required<Types.BaseTheme> => ({
   ...BASE_DEFAULT_THEME,
   ...theme,
 })
 
-export const hydrateTopNav = (theme: Types.BaseTheme): Types.TopNavTheme => ({
+export const hydrateTopNav = (theme: Required<Types.BaseTheme> & Types.TopNavTheme): Required<Types.BaseTheme & Types.TopNavTheme> => ({
   topNavBackground: theme.lightGrey,
   topNavColor: theme.darkGrey,
   topNavStaticColor: theme.grey,
@@ -31,14 +31,14 @@ export const hydrateTopNav = (theme: Types.BaseTheme): Types.TopNavTheme => ({
   ...theme,
 })
 
-export const hydrateCard = (theme: Types.BaseTheme): Types.CardTheme => ({
+export const hydrateCard = (theme: Required<Types.BaseTheme> & Types.CardTheme): Required<Types.BaseTheme & Types.CardTheme> => ({
   cardGradientColor: theme.black,
   cardTitleColor: theme.white,
   cardBorderColor: theme.primaryColor,
   ...theme,
 })
 
-export const hydrateLargeCard = (theme: Types.BaseTheme): Types.LargeCardTheme => ({
+export const hydrateLargeCard = (theme: Required<Types.BaseTheme> & Types.LargeCardTheme): Required<Types.BaseTheme & Types.LargeCardTheme> => ({
   ...hydrateCard(theme),
   largeCardUnderBackground: theme.lightGrey,
   largeCardUnderColor: theme.accentGrey,
@@ -47,12 +47,12 @@ export const hydrateLargeCard = (theme: Types.BaseTheme): Types.LargeCardTheme =
   ...theme,
 })
 
-export const hydrateFull = (theme: Partial<Types.FullTheme>): Types.FullTheme => {
-  let fullTheme: Types.FullTheme = hydrateBase(theme) as Types.FullTheme
-  fullTheme = hydrateBase(fullTheme) as Types.FullTheme
-  fullTheme = hydrateTopNav(fullTheme) as Types.FullTheme
-  fullTheme = hydrateCard(fullTheme) as Types.FullTheme
-  fullTheme = hydrateLargeCard(fullTheme) as Types.FullTheme
+export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> => {
+  let fullTheme: Required<Types.FullTheme> = hydrateBase(theme) as Required<Types.FullTheme>
+  fullTheme = hydrateBase(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateTopNav(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateCard(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateLargeCard(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

@@ -4,7 +4,7 @@ import createContext, { Context, ProviderProps } from './ContextPlaceholder'
 import { FullTheme } from './themeTypes'
 import { hydrateFull, DEFAULT_THEME } from './themeHydrators'
 
-const ThemeContext = createContext<FullTheme>(DEFAULT_THEME)
+const ThemeContext = createContext<Required<FullTheme>>(DEFAULT_THEME)
 
 export default ThemeContext
 
