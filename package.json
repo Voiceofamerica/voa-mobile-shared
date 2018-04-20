@@ -42,6 +42,7 @@
     "@storybook/addon-storyshots": "^3.4.2",
     "@storybook/react": "^3.2.17",
     "@types/cordova": "0.0.34",
+    "@types/cordova-plugin-device": "^1.1.5",
     "@types/enzyme": "^3.1.0",
     "@types/enzyme-adapter-react-16": "^1.0.0",
     "@types/hls.js": "^0.8.1",
@@ -97,6 +98,7 @@
     "uuid": "^3.2.1"
   },
   "peerDependencies": {
+    "cordova-plugin-device": "^2.0.2",
     "moment": "^2.19.2",
     "psiphon-cordova-plugin": "^0.8.0",
     "react": "^16.2.0",

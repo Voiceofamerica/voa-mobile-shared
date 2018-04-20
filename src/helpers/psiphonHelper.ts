@@ -9,17 +9,12 @@ import 'rxjs/add/operator/distinctUntilChanged'
 
 import * as psiphon from 'psiphon-cordova-plugin/www/psiphon'
 
-import { deviceIsReady, appResumeObservable } from './cordovaHelper'
+import { deviceIsReady, appResumeObservable, __HOST__ } from './cordovaHelper'
 
 let psiphonConfig: any
-let __HOST__: boolean = false
 
 export function setPsiphonConfig (config: any) {
   psiphonConfig = config
-}
-
-export function isWebHost (webHost: boolean) {
-  __HOST__ = webHost
 }
 
 const configPromise = deviceIsReady

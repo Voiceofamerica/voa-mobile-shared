@@ -3,6 +3,21 @@ import { errorObservable } from './errorHandler'
 import { Observable } from 'rxjs/Observable'
 import { Subject } from 'rxjs/Subject'
 
+export let __HOST__: boolean = false
+
+export function isWebHost (webHost: boolean) {
+  __HOST__ = webHost
+  if (webHost) {
+    hostResolve()
+  }
+}
+
+let hostResolve: (val?: any) => void
+
+export const hostReady = new Promise<void>(resolve => {
+  hostResolve = resolve
+})
+
 export const deviceIsReady = new Promise<Event>(resolve => {
   document.addEventListener('deviceready', (ev) => {
     console.log('device is now ready')
