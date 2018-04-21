@@ -1,5 +1,5 @@
 
-import * as Types from './ThemeTypes'
+import * as Types from './themeTypes'
 
 export const BASE_DEFAULT_THEME: Required<Types.BaseTheme> = {
   primaryColor: '#D41010',
