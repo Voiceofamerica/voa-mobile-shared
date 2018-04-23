@@ -1,6 +1,6 @@
 {
   "name": "@voiceofamerica/voa-shared",
-  "version": "2.1.15",
+  "version": "2.1.16",
   "description": "Shared code and components",
   "scripts": {
     "clean": "rm -rf commonStyles components coverage helpers jestCache",
