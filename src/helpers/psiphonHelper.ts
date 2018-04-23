@@ -12,16 +12,15 @@ import * as psiphon from 'psiphon-cordova-plugin/www/psiphon'
 import { deviceIsReady, appResumeObservable, __HOST__ } from './cordovaHelper'
 
 let psiphonConfig: any
-
+let configPromise: Promise<void>
 export function setPsiphonConfig (config: any) {
   psiphonConfig = config
+  configPromise = deviceIsReady
+    .then(() => new Promise<void>((resolve, reject) => {
+      console.log('configuring psiphon')
+      psiphon.config(psiphonConfig, resolve, reject)
+    }))
 }
-
-const configPromise = deviceIsReady
-  .then(() => new Promise((resolve, reject) => {
-    console.log('configuring psiphon')
-    psiphon.config(psiphonConfig, resolve, reject)
-  }))
 
 const baseStartObservable = new Observable<boolean>((sub) => {
   if (__HOST__) {
@@ -39,6 +38,7 @@ const baseStartObservable = new Observable<boolean>((sub) => {
     psiphon.start(() => sub.next(true), (err) => sub.error(err))
   }).catch((err) => {
     console.error('something went wrong configuring psiphon', err)
+    sub.error(err)
   })
 
   return () => {
@@ -55,17 +55,23 @@ export function start (): Promise<void> {
     return Promise.resolve()
   }
 
-  if (!startSubscription || startSubscription.closed) {
-    startSubscription = baseStartObservable.subscribe(startObservable)
+  if (!psiphonConfig || !configPromise) {
+    return Promise.reject(new Error('You must configure psiphon before you can start it'))
   }
 
-  return new Promise((resolve, reject) => {
-    startObservable
-      .first(started => started)
-      .subscribe(
-        () => resolve(),
-        (err) => reject(err),
-      )
+  return configPromise.then(() => {
+    if (!startSubscription || startSubscription.closed) {
+      startSubscription = baseStartObservable.subscribe(startObservable)
+    }
+
+    return new Promise<void>((resolve, reject) => {
+      startObservable
+        .first(started => started)
+        .subscribe(
+          () => resolve(),
+          (err) => reject(err),
+        )
+    })
   })
 }
 
