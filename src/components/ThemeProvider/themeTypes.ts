@@ -36,8 +36,13 @@ export interface LargeCardTheme extends CardTheme {
   largeCardErrorIconColor?: string // baseTheme.red
 }
 
+export interface LargeCardListTheme extends LargeCardTheme {
+  largeCardListBackground?: string // baseTheme.grey
+}
+
 export type FullTheme =
   & BaseTheme
   & TopNavTheme
   & CardTheme
   & LargeCardTheme
+  & LargeCardListTheme

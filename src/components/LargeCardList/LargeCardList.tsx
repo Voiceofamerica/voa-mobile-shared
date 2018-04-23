@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { resizeObservable } from '../../helpers/windowHelper'
 import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
+import { ThemeConsumer } from '../ThemeProvider'
 import LargeCard, { IconDefinition, getHeight, CARD_PADDING } from '../LargeCard'
 
 import StaticLargeCardList from './StaticLargeCardList'
@@ -74,13 +75,21 @@ class LargeCardList extends React.PureComponent<Props, State> {
     const { items = [], emptyContent = '' } = this.props
 
     return (
-      <div ref={this.setContainer} className={cardList}>
+      <ThemeConsumer>
         {
-          items.length > 0
-          ? this.renderVirtualContent()
-          : emptyContent
+          ({ largeCardListBackground }) => {
+            return (
+              <div ref={this.setContainer} className={cardList} style={{ background: largeCardListBackground }}>
+                {
+                  items.length > 0
+                  ? this.renderVirtualContent()
+                  : emptyContent
+                }
+              </div>
+            )
+          }
         }
-      </div>
+      </ThemeConsumer>
     )
   }
 

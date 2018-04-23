@@ -44,8 +44,8 @@ export const getHeight = (renderWidth = window.innerWidth, imageRatio = IMAGE_RA
   return renderWidth * imageRatio
 }
 
-// 40px under height + 4px border-bottom + 7px margin-bottom
-export const CARD_PADDING = 51
+// 40px under height + 7px margin-bottom
+export const CARD_PADDING = 47
 
 class LargeCard extends React.Component<Props, State> {
   state: State = {
@@ -69,14 +69,10 @@ class LargeCard extends React.Component<Props, State> {
       <ThemeConsumer>
         {
           (theme) => {
-            const {
-              cardBorderColor: borderBottomColor,
-            } = theme
-
             return (
               <div
                 className={`${card} ${className}`}
-                style={{ ...style, borderBottomColor }}
+                style={style}
               >
                 {this.renderOver(theme)}
                 {this.renderUnder(theme)}

@@ -40,10 +40,16 @@ export const hydrateCard = (theme: Required<Types.BaseTheme> & Types.CardTheme):
 
 export const hydrateLargeCard = (theme: Required<Types.BaseTheme> & Types.LargeCardTheme): Required<Types.BaseTheme & Types.LargeCardTheme> => ({
   ...hydrateCard(theme),
-  largeCardUnderBackground: theme.lightGrey,
+  largeCardUnderBackground: theme.white,
   largeCardUnderColor: theme.accentGrey,
   largeCardIconColor: theme.darkGrey,
   largeCardErrorIconColor: theme.red,
+  ...theme,
+})
+
+export const hydrateLargeCardList = (theme: Required<Types.BaseTheme> & Types.LargeCardListTheme): Required<Types.BaseTheme & Types.LargeCardListTheme> => ({
+  ...hydrateLargeCard(theme),
+  largeCardListBackground: theme.grey,
   ...theme,
 })
 
@@ -53,6 +59,7 @@ export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> =
   fullTheme = hydrateTopNav(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateCard(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateLargeCard(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateLargeCardList(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

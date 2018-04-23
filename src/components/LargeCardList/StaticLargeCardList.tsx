@@ -3,6 +3,7 @@ import * as React from 'react'
 
 import LargeCard, { IconDefinition } from '../LargeCard'
 
+import { ThemeConsumer } from '../ThemeProvider'
 import { BaseProps } from './LargeCardListTypes'
 import { cardList, row, fixed } from './LargeCardList.scss'
 
@@ -14,13 +15,21 @@ class StaticCardList extends React.Component<Props> {
     const { items = [] } = this.props
 
     return (
-      <div className={cardList}>
+      <ThemeConsumer>
         {
-          items.length > 0
-          ? this.renderContent()
-          : ''
+          ({ largeCardListBackground }) => {
+            return (
+              <div className={cardList} style={{ background: largeCardListBackground }}>
+                {
+                  items.length > 0
+                  ? this.renderContent()
+                  : ''
+                }
+              </div>
+            )
+          }
         }
-      </div>
+      </ThemeConsumer>
     )
   }
 
