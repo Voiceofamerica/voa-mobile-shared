@@ -3,6 +3,11 @@
 exports[`<StaticCardList /> shapshots should not throw if items is undefined 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   
 </div>
@@ -11,6 +16,11 @@ exports[`<StaticCardList /> shapshots should not throw if items is undefined 1`]
 exports[`<StaticCardList /> shapshots should render all of the items 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   <div
     className="fixed row"
@@ -48,6 +58,11 @@ exports[`<StaticCardList /> shapshots should render all of the items 1`] = `
 exports[`<StaticCardList /> shapshots should render nothing if no items 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   
 </div>
@@ -56,6 +71,11 @@ exports[`<StaticCardList /> shapshots should render nothing if no items 1`] = `
 exports[`<StaticCardList /> shapshots should render with icon buttons 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   <div
     className="fixed row"

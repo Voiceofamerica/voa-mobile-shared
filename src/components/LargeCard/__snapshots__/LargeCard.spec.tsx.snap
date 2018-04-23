@@ -10,11 +10,7 @@ exports[`<LargeCard /> shapshots should render with the given className 1`] = `
 >
   <div
     className="card myClass"
-    style={
-      Object {
-        "borderBottomColor": "#000000",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -80,11 +76,7 @@ exports[`<LargeCard /> shapshots should render with the given icon shown 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#000000",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -153,11 +145,7 @@ exports[`<LargeCard /> shapshots should render with the given image 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#000000",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -223,11 +211,7 @@ exports[`<LargeCard /> shapshots should render with the given minor text 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#000000",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -297,7 +281,6 @@ exports[`<LargeCard /> shapshots should render with the given style 1`] = `
     className="card undefined"
     style={
       Object {
-        "borderBottomColor": "#000000",
         "bottom": 0,
         "left": 0,
         "right": 0,
@@ -369,11 +352,7 @@ exports[`<LargeCard /> shapshots should render with the given title 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#000000",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"

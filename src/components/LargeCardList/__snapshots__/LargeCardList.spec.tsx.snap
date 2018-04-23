@@ -3,6 +3,11 @@
 exports[`<LargeCardList /> shapshots should not throw if items is undefined 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   
 </div>
@@ -11,6 +16,11 @@ exports[`<LargeCardList /> shapshots should not throw if items is undefined 1`] 
 exports[`<LargeCardList /> shapshots should render only the necessary items 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   <react-virtualized-list
     height={618}
@@ -51,6 +61,11 @@ exports[`<LargeCardList /> shapshots should render only the necessary items 1`] 
 exports[`<LargeCardList /> shapshots should render the empty content if no items 1`] = `
 <div
   className="cardList"
+  style={
+    Object {
+      "background": "#B4BCC2",
+    }
+  }
 >
   I am empty
 </div>

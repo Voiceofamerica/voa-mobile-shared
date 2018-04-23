@@ -11029,11 +11029,7 @@ exports[`Storyshots LargeCard base themed display 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#35A527",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11104,7 +11100,7 @@ exports[`Storyshots LargeCard base themed display 1`] = `
       className="underText"
       style={
         Object {
-          "background": "#888888",
+          "background": "#DDDDFF",
           "color": "#DDDDDD",
         }
       }
@@ -11185,11 +11181,7 @@ exports[`Storyshots LargeCard display 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#D41010",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11252,7 +11244,7 @@ exports[`Storyshots LargeCard display 1`] = `
       className="underText"
       style={
         Object {
-          "background": "#EEEEEE",
+          "background": "#FFFFFF",
           "color": "#8E8E93",
         }
       }
@@ -11279,11 +11271,7 @@ exports[`Storyshots LargeCard display with icon 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#D41010",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11354,7 +11342,7 @@ exports[`Storyshots LargeCard display with icon 1`] = `
       className="underText"
       style={
         Object {
-          "background": "#EEEEEE",
+          "background": "#FFFFFF",
           "color": "#8E8E93",
         }
       }
@@ -11381,11 +11369,7 @@ exports[`Storyshots LargeCard display with icon buttons 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#D41010",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11456,7 +11440,7 @@ exports[`Storyshots LargeCard display with icon buttons 1`] = `
       className="underText"
       style={
         Object {
-          "background": "#EEEEEE",
+          "background": "#FFFFFF",
           "color": "#8E8E93",
         }
       }
@@ -11537,11 +11521,7 @@ exports[`Storyshots LargeCard local themed display 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#3527A5",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11694,11 +11674,7 @@ exports[`Storyshots LargeCard rtl display with icon buttons 1`] = `
 >
   <div
     className="card undefined"
-    style={
-      Object {
-        "borderBottomColor": "#D41010",
-      }
-    }
+    style={undefined}
   >
     <div
       className="overText"
@@ -11769,7 +11745,7 @@ exports[`Storyshots LargeCard rtl display with icon buttons 1`] = `
       className="underText"
       style={
         Object {
-          "background": "#EEEEEE",
+          "background": "#FFFFFF",
           "color": "#8E8E93",
         }
       }
@@ -11852,11 +11828,16 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <react-virtualized-list
       height={618}
       rowCount={1000}
-      rowHeight={627}
+      rowHeight={623}
       rowRenderer={[Function]}
       width={1024}
     >
@@ -11867,11 +11848,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -11942,7 +11919,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12016,11 +11993,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12091,7 +12064,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12165,11 +12138,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12240,7 +12209,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12314,11 +12283,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12381,7 +12346,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12455,11 +12420,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12530,7 +12491,7 @@ exports[`Storyshots LargeCardList contained height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12617,11 +12578,16 @@ exports[`Storyshots LargeCardList display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <react-virtualized-list
       height={618}
       rowCount={1000}
-      rowHeight={627}
+      rowHeight={623}
       rowRenderer={[Function]}
       width={1024}
     >
@@ -12632,11 +12598,7 @@ exports[`Storyshots LargeCardList display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12707,7 +12669,7 @@ exports[`Storyshots LargeCardList display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12781,11 +12743,7 @@ exports[`Storyshots LargeCardList display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -12856,7 +12814,7 @@ exports[`Storyshots LargeCardList display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -12930,11 +12888,7 @@ exports[`Storyshots LargeCardList display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13005,7 +12959,7 @@ exports[`Storyshots LargeCardList display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13079,11 +13033,7 @@ exports[`Storyshots LargeCardList display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13146,7 +13096,7 @@ exports[`Storyshots LargeCardList display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13220,11 +13170,7 @@ exports[`Storyshots LargeCardList display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13295,7 +13241,7 @@ exports[`Storyshots LargeCardList display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13374,11 +13320,16 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <react-virtualized-list
       height={618}
       rowCount={1000}
-      rowHeight={627}
+      rowHeight={623}
       rowRenderer={[Function]}
       width={1024}
     >
@@ -13389,11 +13340,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13464,7 +13411,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13538,11 +13485,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13613,7 +13556,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13687,11 +13630,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13762,7 +13701,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13836,11 +13775,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -13903,7 +13838,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -13977,11 +13912,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14052,7 +13983,7 @@ exports[`Storyshots LargeCardList rtl display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -14131,11 +14062,16 @@ exports[`Storyshots LargeCardList static height display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <react-virtualized-list
       height={200}
       rowCount={1000}
-      rowHeight={627}
+      rowHeight={623}
       rowRenderer={[Function]}
       width={1024}
     >
@@ -14146,11 +14082,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14221,7 +14153,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -14295,11 +14227,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14370,7 +14298,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -14444,11 +14372,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14519,7 +14443,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -14593,11 +14517,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14660,7 +14580,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -14734,11 +14654,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
       >
         <div
           className="card undefined"
-          style={
-            Object {
-              "borderBottomColor": "#D41010",
-            }
-          }
+          style={undefined}
         >
           <div
             className="overText"
@@ -14809,7 +14725,7 @@ exports[`Storyshots LargeCardList static height display 1`] = `
             className="underText"
             style={
               Object {
-                "background": "#EEEEEE",
+                "background": "#FFFFFF",
                 "color": "#8E8E93",
               }
             }
@@ -15115,17 +15031,18 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <div
       className="fixed row"
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -15196,7 +15113,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -15266,11 +15183,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -15341,7 +15254,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -15411,11 +15324,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -15486,7 +15395,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -15556,11 +15465,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -15623,7 +15528,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -15693,156 +15598,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                <div
-                  className="icon "
-                  style={
-                    Object {
-                      "webkitMaskImage": "url(Some File)",
-                    }
-                  }
-                />
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -15913,7 +15669,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -15983,11 +15739,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -16058,7 +15810,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -16128,148 +15880,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -16340,7 +15951,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -16410,11 +16021,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -16485,7 +16225,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -16555,11 +16295,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -16630,7 +16366,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -16700,148 +16436,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -16912,7 +16507,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -16982,11 +16577,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -17057,7 +16781,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -17127,11 +16851,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -17202,7 +16922,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -17272,148 +16992,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -17484,7 +17063,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -17554,11 +17133,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -17629,7 +17337,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -17699,11 +17407,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -17774,7 +17478,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -17844,148 +17548,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -18056,7 +17619,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18126,11 +17689,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -18201,7 +17893,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18271,11 +17963,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -18346,7 +18034,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18416,148 +18104,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -18628,7 +18175,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18698,11 +18245,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -18773,7 +18449,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18843,11 +18519,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -18918,7 +18590,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -18988,148 +18660,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -19200,7 +18731,7 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -19270,11 +18801,140 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -19345,7 +19005,148 @@ exports[`Storyshots StaticCardList.Static display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
+          }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                <div
+                  className="icon "
+                  style={
+                    Object {
+                      "webkitMaskImage": "url(Some File)",
+                    }
+                  }
+                />
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -19423,17 +19224,18 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
   </style>
   <div
     className="cardList"
+    style={
+      Object {
+        "background": "#B4BCC2",
+      }
+    }
   >
     <div
       className="fixed row"
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -19504,7 +19306,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -19574,11 +19376,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -19649,7 +19447,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -19719,11 +19517,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -19794,7 +19588,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -19864,11 +19658,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -19931,7 +19721,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -20001,156 +19791,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                <div
-                  className="icon "
-                  style={
-                    Object {
-                      "webkitMaskImage": "url(Some File)",
-                    }
-                  }
-                />
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -20221,7 +19862,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -20291,11 +19932,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -20366,7 +20003,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -20436,148 +20073,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -20648,7 +20144,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -20718,11 +20214,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -20793,7 +20418,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -20863,11 +20488,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -20938,7 +20559,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -21008,148 +20629,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -21220,7 +20700,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -21290,11 +20770,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -21365,7 +20974,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -21435,11 +21044,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -21510,7 +21115,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -21580,148 +21185,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -21792,7 +21256,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -21862,11 +21326,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -21937,7 +21530,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -22007,11 +21600,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -22082,7 +21671,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -22152,148 +21741,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -22364,7 +21812,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -22434,11 +21882,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -22509,7 +22086,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -22579,11 +22156,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -22654,7 +22227,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -22724,148 +22297,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -22936,7 +22368,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -23006,11 +22438,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -23081,7 +22642,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -23151,11 +22712,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -23226,7 +22783,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -23296,148 +22853,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
-      >
-        <div
-          className="overText"
-          onClick={[Function]}
-        >
-          <div
-            className="resilientImage imageContainer"
-            onClick={[Function]}
-            style={undefined}
-          >
-            <img
-              className="imageContent"
-              src="Some File"
-            />
-            <div
-              className="childrenArea"
-            >
-              <svg
-                className="spinner spinner"
-                style={undefined}
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  className="path"
-                  cx={50}
-                  cy={50}
-                  fill="none"
-                  r={45}
-                  strokeLinecap="round"
-                  strokeWidth={10}
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            className="gradient"
-            style={
-              Object {
-                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-              }
-            }
-          >
-            <div
-              className="titleText"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                }
-              }
-            >
-              <span>
-                 
-                President Trump: From North Korea to Iran, we confront dangerous governments
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="underText"
-          style={
-            Object {
-              "background": "#EEEEEE",
-              "color": "#8E8E93",
-            }
-          }
-        >
-          <div
-            className="minorTextArea"
-          />
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-          <div
-            className="iconButton "
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "#333333",
-              }
-            }
-          >
-            <div
-              className="icon "
-              style={
-                Object {
-                  "webkitMaskImage": "url(Some File)",
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fixed row"
-    >
-      <div
-        className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
-          }
-        }
+        style={undefined}
       >
         <div
           className="overText"
@@ -23508,7 +22924,7 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
@@ -23578,11 +22994,140 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
     >
       <div
         className="card undefined"
-        style={
-          Object {
-            "borderBottomColor": "#D41010",
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
           }
-        }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
       >
         <div
           className="overText"
@@ -23653,7 +23198,148 @@ exports[`Storyshots StaticCardList.Static rtl display 1`] = `
           className="underText"
           style={
             Object {
-              "background": "#EEEEEE",
+              "background": "#FFFFFF",
+              "color": "#8E8E93",
+            }
+          }
+        >
+          <div
+            className="minorTextArea"
+          />
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+          <div
+            className="iconButton "
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#333333",
+              }
+            }
+          >
+            <div
+              className="icon "
+              style={
+                Object {
+                  "webkitMaskImage": "url(Some File)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fixed row"
+    >
+      <div
+        className="card undefined"
+        style={undefined}
+      >
+        <div
+          className="overText"
+          onClick={[Function]}
+        >
+          <div
+            className="resilientImage imageContainer"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              className="imageContent"
+              src="Some File"
+            />
+            <div
+              className="childrenArea"
+            >
+              <svg
+                className="spinner spinner"
+                style={undefined}
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  className="path"
+                  cx={50}
+                  cy={50}
+                  fill="none"
+                  r={45}
+                  strokeLinecap="round"
+                  strokeWidth={10}
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="gradient"
+            style={
+              Object {
+                "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+              }
+            }
+          >
+            <div
+              className="titleText"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              <span>
+                <div
+                  className="icon "
+                  style={
+                    Object {
+                      "webkitMaskImage": "url(Some File)",
+                    }
+                  }
+                />
+                 
+                President Trump: From North Korea to Iran, we confront dangerous governments
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="underText"
+          style={
+            Object {
+              "background": "#FFFFFF",
               "color": "#8E8E93",
             }
           }
