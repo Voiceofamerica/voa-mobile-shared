@@ -14845,6 +14845,310 @@ exports[`Storyshots MediaPlayer play audio 1`] = `
 </div>
 `;
 
+exports[`Storyshots Modal base themed display 1`] = `
+<div>
+  <div
+    className="modalContainer"
+    style={Object {}}
+  >
+    <div
+      className="overlay"
+      onClick={undefined}
+      style={
+        Object {
+          "background": "rgba(221, 221, 255, 0.3)",
+        }
+      }
+    />
+    <div
+      className="modal "
+      style={
+        Object {
+          "background": "#666666",
+          "color": "#DDDDFF",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        This is some modal content
+      </div>
+      <div
+        className="buttonList"
+      >
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#AAAAAA",
+              "color": "#75A6D3",
+            }
+          }
+        >
+          Close
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Show modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal default display 1`] = `
+<div>
+  <div
+    className="modalContainer"
+    style={Object {}}
+  >
+    <div
+      className="overlay"
+      onClick={undefined}
+      style={
+        Object {
+          "background": "rgba(0, 0, 0, 0.3)",
+        }
+      }
+    />
+    <div
+      className="modal "
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        This is some modal content
+      </div>
+      <div
+        className="buttonList"
+      >
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#B4BCC2",
+              "color": "#2083C6",
+            }
+          }
+        >
+          Close
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Show modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal default display clickable overlay 1`] = `
+<div>
+  <div
+    className="modalContainer"
+    style={Object {}}
+  >
+    <div
+      className="overlay"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "rgba(0, 0, 0, 0.3)",
+        }
+      }
+    />
+    <div
+      className="modal "
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        Try clicking the backdrop
+      </div>
+      <div
+        className="buttonList"
+      >
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#B4BCC2",
+              "color": "#2083C6",
+            }
+          }
+        >
+          Close
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Show modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal display with custom buttons 1`] = `
+<div>
+  <div
+    className="modalContainer"
+    style={Object {}}
+  >
+    <div
+      className="overlay"
+      onClick={undefined}
+      style={
+        Object {
+          "background": "rgba(0, 0, 0, 0.3)",
+        }
+      }
+    />
+    <div
+      className="modal "
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        This is some modal content
+      </div>
+      <div
+        className="buttonList"
+      >
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#B4BCC2",
+              "color": "#2083C6",
+            }
+          }
+        >
+          One
+        </div>
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#B4BCC2",
+              "color": "#2083C6",
+            }
+          }
+        >
+          Two
+        </div>
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#B4BCC2",
+              "color": "#2083C6",
+            }
+          }
+        >
+          Three
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Show modal
+  </button>
+</div>
+`;
+
+exports[`Storyshots Modal local themed display 1`] = `
+<div>
+  <div
+    className="modalContainer"
+    style={Object {}}
+  >
+    <div
+      className="overlay"
+      onClick={undefined}
+      style={
+        Object {
+          "background": "rgba(21, 37, 64, 0.3)",
+        }
+      }
+    />
+    <div
+      className="modal "
+      style={
+        Object {
+          "background": "#003300",
+          "color": "#DDFFDD",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        This is some modal content
+      </div>
+      <div
+        className="buttonList"
+      >
+        <div
+          className="button "
+          onClick={[Function]}
+          style={
+            Object {
+              "borderColor": "#664499",
+              "color": "#CCCCFF",
+            }
+          }
+        >
+          Close
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Show modal
+  </button>
+</div>
+`;
+
 exports[`Storyshots PhotoGallery display 1`] = `
 <div
   className="loadingArea"

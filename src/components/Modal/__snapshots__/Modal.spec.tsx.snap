@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Drawer /> shapshots should render with a default button with id 'close' 1`] = `
+exports[`<Modal /> shapshots should render with a default button with id 'close' 1`] = `
 <div
   className="modalContainer"
   style={Object {}}
 >
   <div
     className="overlay"
-    onClick={[Function]}
+    onClick={undefined}
     style={
       Object {
         "background": "rgba(0, 0, 0, 0.3)",
@@ -48,14 +48,14 @@ exports[`<Drawer /> shapshots should render with a default button with id 'close
 </div>
 `;
 
-exports[`<Drawer /> shapshots should render with the given buttons 1`] = `
+exports[`<Modal /> shapshots should render with the given buttons 1`] = `
 <div
   className="modalContainer"
   style={Object {}}
 >
   <div
     className="overlay"
-    onClick={[Function]}
+    onClick={undefined}
     style={
       Object {
         "background": "rgba(0, 0, 0, 0.3)",
