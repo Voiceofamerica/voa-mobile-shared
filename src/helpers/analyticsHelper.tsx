@@ -1,6 +1,7 @@
 
 import * as React from 'react'
 
+import { deviceIsReady } from './cordovaHelper'
 import { startObservable } from './psiphonHelper'
 
 export let ADB: AdbInterface
@@ -56,8 +57,20 @@ export interface AdbInterface {
   trackAction<T> (type: string, options: TrackActionOptions & T)
 }
 
+export function trackState<T> (path: string, options: TrackStateOptions & T) {
+  return deviceIsReady.then(() => {
+    ADB && ADB.trackState(path, options)
+  })
+}
+
+export function trackAction<T> (type: string, options: TrackActionOptions & T) {
+  return deviceIsReady.then(() => {
+    ADB && ADB.trackAction(type, options)
+  })
+}
+
 export function favoriteArticle (opts: { id: string, articleTitle: string, authors: string }) {
-  ADB && ADB.trackAction('ARTICLE_TO_FAV', {
+  return trackAction('ARTICLE_TO_FAV', {
     language: analyticsOptions!.language,
     content_type: 'article',
     article_uid: opts.id,
@@ -70,7 +83,7 @@ export function favoriteArticle (opts: { id: string, articleTitle: string, autho
 }
 
 export function shareArticle (opts: { id: string, articleTitle: string, authors: string }) {
-  ADB && ADB.trackAction('ARTICLE_SHARED', {
+  return trackAction('ARTICLE_SHARED', {
     language: analyticsOptions!.language,
     content_type: 'article',
     article_uid: opts.id,
@@ -125,7 +138,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           return
         }
 
-        ADB && ADB.trackState(state, {
+        return trackState(state, {
           language: analyticsOptions!.language,
           section: section,
           content_type: type,
@@ -147,7 +160,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           return
         }
 
-        ADB && ADB.trackState(state, {
+        return trackState(state, {
           language: analyticsOptions!.language,
           section: section,
           content_type: type,
