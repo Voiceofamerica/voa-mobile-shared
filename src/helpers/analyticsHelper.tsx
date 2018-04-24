@@ -135,7 +135,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
         } = getVal(options, this.props, {})
 
         if (skip) {
-          return
+          return Promise.resolve()
         }
 
         return trackState(state, {
@@ -157,7 +157,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           skip = false,
         } = getVal(options, nextProps, this.props)
         if (skip) {
-          return
+          return Promise.resolve()
         }
 
         return trackState(state, {
