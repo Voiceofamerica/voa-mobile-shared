@@ -56,7 +56,6 @@ class Modal extends React.Component<Props, State> {
   render () {
     const { overlayClickable = false, className = '', style = {}, children } = this.props
     const { isOpen } = this.state
-    console.log('renering modal', isOpen)
 
     const rChildren = React.Children.toArray(children)
     const buttons = (rChildren as React.ReactElement<ModalButtonProps>[]).filter(c => c.type === ModalButton)
