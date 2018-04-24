@@ -53,6 +53,15 @@ export const hydrateLargeCardList = (theme: Required<Types.BaseTheme> & Types.La
   ...theme,
 })
 
+export const hydrateModal = (theme: Required<Types.BaseTheme> & Types.ModalTheme): Required<Types.BaseTheme & Types.ModalTheme> => ({
+  modalBackground: theme.lightGrey,
+  modalColor: theme.black,
+  modalButtonBorder: theme.grey,
+  modalButtonColor: theme.accentBlue,
+  modalBackdropColor: theme.black,
+  ...theme,
+})
+
 export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> => {
   let fullTheme: Required<Types.FullTheme> = hydrateBase(theme) as Required<Types.FullTheme>
   fullTheme = hydrateBase(fullTheme) as Required<Types.FullTheme>
@@ -60,6 +69,7 @@ export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> =
   fullTheme = hydrateCard(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateLargeCard(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateLargeCardList(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateModal(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

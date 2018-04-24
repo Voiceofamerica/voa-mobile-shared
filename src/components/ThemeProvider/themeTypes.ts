@@ -40,9 +40,18 @@ export interface LargeCardListTheme extends LargeCardTheme {
   largeCardListBackground?: string // baseTheme.grey
 }
 
+export interface ModalTheme {
+  modalBackground?: string // baseTheme.lightGrey
+  modalColor?: string // baseTheme.black
+  modalButtonBorder?: string // baseTheme.grey
+  modalButtonColor?: string // baseTheme.accentBlue
+  modalBackdropColor?: string // baseTheme.black
+}
+
 export type FullTheme =
   & BaseTheme
   & TopNavTheme
   & CardTheme
   & LargeCardTheme
   & LargeCardListTheme
+  & ModalTheme

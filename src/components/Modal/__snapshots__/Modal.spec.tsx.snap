@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Drawer /> shapshots should render with a default button with id 'close' 1`] = `
+<div
+  className="modalContainer"
+  style={Object {}}
+>
+  <div
+    className="overlay"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "rgba(0, 0, 0, 0.3)",
+      }
+    }
+  />
+  <div
+    className="modal "
+    style={
+      Object {
+        "background": "#EEEEEE",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      This should show up
+    </div>
+    <div
+      className="buttonList"
+    >
+      <div
+        className="button "
+        onClick={[Function]}
+        style={
+          Object {
+            "borderColor": "#B4BCC2",
+            "color": "#2083C6",
+          }
+        }
+      >
+        Close
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Drawer /> shapshots should render with the given buttons 1`] = `
+<div
+  className="modalContainer"
+  style={Object {}}
+>
+  <div
+    className="overlay"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "rgba(0, 0, 0, 0.3)",
+      }
+    }
+  />
+  <div
+    className="modal "
+    style={
+      Object {
+        "background": "#EEEEEE",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      This should show up
+    </div>
+    <div
+      className="buttonList"
+    >
+      <div
+        className="button "
+        onClick={[Function]}
+        style={
+          Object {
+            "borderColor": "#B4BCC2",
+            "color": "#2083C6",
+          }
+        }
+      >
+        One
+      </div>
+      <div
+        className="button "
+        onClick={[Function]}
+        style={
+          Object {
+            "borderColor": "#B4BCC2",
+            "color": "#2083C6",
+          }
+        }
+      >
+        Two
+      </div>
+    </div>
+  </div>
+</div>
+`;

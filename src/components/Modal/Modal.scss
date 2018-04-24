@@ -1,0 +1,76 @@
+
+@import "../../commonStyles/index";
+
+$transition-time: 0.3s;
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: $transition-time opacity;
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+
+    .modal {
+      transform: translateY(0);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .modal {
+    width: 75vw;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: $menu-z-max + 2;
+    transition: $transition-time transform, $transition-time box-shadow;
+    transform: translateY(20px);
+    box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+
+    .content {
+      padding: 10px;
+    }
+
+    .buttonList {
+      display: flex;
+      flex-direction: row;
+
+      .button {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        border: none;
+        border-top: 1px solid;
+        cursor: pointer;
+        user-select: none;
+
+        &:not(:first-of-type) {
+          border-left: 1px solid;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    z-index: $menu-z-max + 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
