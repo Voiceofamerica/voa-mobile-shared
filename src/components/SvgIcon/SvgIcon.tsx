@@ -33,7 +33,7 @@ export default (props: Props) => {
     src = iconMap[src]
   }
 
-  style.webkitMaskImage = `url(${src})`
+  style.WebkitMaskImage = `url(${src})`
 
   return (
     <div className={`${icon} ${className}`} style={style} />
