@@ -53,14 +53,14 @@ const articleToActionOptions = (opts: ArticleActionOpts): ADB.GeneratedTrackActi
   app_events: '???',
 })
 
-export const adbReady = deviceIsReady.then(() => {
-  const ADB: ADB.AdbInterface = require('adobe-mobile-services/sdks/Cordova/ADBMobile/Shared/ADB_Helper')
-  return ADB
-})
-
 let optionsConfigured: () => void
 export const analyticsOptionsReady = new Promise(resolve => {
   optionsConfigured = resolve
+}).then(() => deviceIsReady)
+
+export const adbReady = analyticsOptionsReady.then(() => {
+  const ADB: ADB.AdbInterface = require('adobe-mobile-services/sdks/Cordova/ADBMobile/Shared/ADB_Helper')
+  return ADB
 })
 
 export interface AppAnalyticsOptions {
