@@ -5,7 +5,7 @@ exports[`< /> shapshots should render 1`] = `
   className="icon "
   style={
     Object {
-      "webkitMaskImage": "url(https://some.url/something.svg)",
+      "WebkitMaskImage": "url(https://some.url/something.svg)",
     }
   }
 />
@@ -16,8 +16,8 @@ exports[`< /> shapshots should render with the given classname and style 1`] = `
   className="icon myClass"
   style={
     Object {
+      "WebkitMaskImage": "url(https://some.url/something.svg)",
       "color": "blue",
-      "webkitMaskImage": "url(https://some.url/something.svg)",
     }
   }
 />
@@ -28,7 +28,7 @@ exports[`< /> shapshots should render with the shipped svg 1`] = `
   className="icon "
   style={
     Object {
-      "webkitMaskImage": "url(Some File)",
+      "WebkitMaskImage": "url(Some File)",
     }
   }
 />
