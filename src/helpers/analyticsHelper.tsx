@@ -17,6 +17,8 @@ const getProxyStatus = () => {
   return startObservable.getValue() ? PROXY_ON : PROXY_OFF
 }
 
+let googleAnalyticsId: string | undefined
+
 const baseStateOptions: ADB.BaseTrackStateOptions = {
   language: '', // Set from analytics options
   language_service: '', // Set from analytics options
@@ -71,9 +73,12 @@ export interface AppAnalyticsOptions {
   propertyId: string
   rsidAccount: string
   reportSuite: string
+  googleAnalyticsId?: string
 }
 
 export function setAnalyticsOptions (opts: AppAnalyticsOptions) {
+  googleAnalyticsId = opts.googleAnalyticsId
+
   baseActionOptions.language
   = baseStateOptions.language
   = opts.language
@@ -104,8 +109,14 @@ export function trackState (type: string, options: ADB.GeneratedTrackStateOption
   }
 
   if (dataLayer) {
-    dataLayer.push(fullOptions)
-    dataLayer.push({ appScreenView: type })
+    dataLayer.push({
+      ...fullOptions,
+      GoogleAnalyticsID: googleAnalyticsId,
+    })
+    dataLayer.push({
+      appScreenView: type,
+      GoogleAnalyticsID: googleAnalyticsId,
+    })
   }
 
   return adbReady.then((ADB) => {
@@ -120,8 +131,14 @@ export function trackAction (type: string, options: ADB.GeneratedTrackActionOpti
   }
 
   if (dataLayer) {
-    dataLayer.push(fullOptions)
-    dataLayer.push({ appEvent: type })
+    dataLayer.push({
+      ...fullOptions,
+      GoogleAnalyticsID: googleAnalyticsId,
+    })
+    dataLayer.push({
+      appEvent: type,
+      GoogleAnalyticsID: googleAnalyticsId,
+    })
   }
 
   return adbReady.then((ADB) => {
