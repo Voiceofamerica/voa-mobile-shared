@@ -56,8 +56,15 @@ export function setProxy (opts: SetProxyOpts) {
 }
 
 export const analyticsHelper = {
+  articleDetail,
   favoriteArticle,
   shareArticle,
+  articleAudioStart,
+  articleAudioEnd,
+  articleVideoStart,
+  articleVideoEnd,
+  searched,
+  setProxy,
 }
 
 export interface AnalyticsProps {
