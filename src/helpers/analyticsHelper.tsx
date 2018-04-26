@@ -1,156 +1,23 @@
 
-import '../customTypings/adb'
 import * as React from 'react'
 
-import { deviceIsReady } from './cordovaHelper'
-import { startObservable } from './psiphonHelper'
+import {
+  ArticleActionOpts,
+  articleToActionOptions,
+  ArticleAudioActionOpts,
+  articleAudioToActionOptions,
+  ArticleVideoActionOpts,
+  articleVideoToActionOptions,
+  SearchActionOpts,
+  searchToActionOptions,
+  SetProxyOpts,
+  setProxyToActionOptions,
+  trackAction,
+  trackState,
+} from './analyticsBindings'
 
-const PROXY_ON: ADB.ProxyStatus = 'proxy_on'
-const PROXY_OFF: ADB.ProxyStatus = 'proxy_off'
-
-const mediaNames: ADB.MediaName[] = [
-  'audio',
-  'video',
-]
-
-const getProxyStatus = () => {
-  return startObservable.getValue() ? PROXY_ON : PROXY_OFF
-}
-
-let googleAnalyticsId: string | undefined
-
-const baseStateOptions: ADB.BaseTrackStateOptions = {
-  language: '', // Set from analytics options
-  language_service: '', // Set from analytics options
-  platform: 'news app',
-  entity: 'voa',
-  property_name: '', // Set from analytics options
-  property_id: '', // Set from analytics options
-  app_type: 'hybrid',
-  get proxy_status () { return getProxyStatus() },
-  rsid_acct: '', // Set from analytics options
-}
-
-const baseActionOptions: ADB.BaseTrackActionOptions = {
-  language: '', // Set from analytics options
-  language_service: '', // Set from analytics options
-  platform: 'news app',
-  entity: 'voa',
-  property_name: '', // Set from analytics options
-  property_id: '', // Set from analytics options
-  app_type: 'hybrid',
-  get proxy_status () { return getProxyStatus() },
-  report_suite: '', // Set from analytics options
-}
-
-const articleToActionOptions = (opts: ArticleActionOpts): ADB.GeneratedTrackActionOptions => ({
-  page_name: opts.articleTitle,
-  content_type: 'article',
-  section: '???',
-  category: '???',
-  page_title: opts.articleTitle,
-  headline: opts.articleTitle,
-  byline: opts.authors,
-  pub_date: opts.pubDate,
-  article_uid: opts.id,
-  app_events: '???',
-})
-
-let optionsConfigured: () => void
-export const analyticsOptionsReady = new Promise(resolve => {
-  optionsConfigured = resolve
-}).then(() => deviceIsReady)
-
-export const adbReady = analyticsOptionsReady.then(() => {
-  const ADB: ADB.AdbInterface = require('adobe-mobile-services/sdks/Cordova/ADBMobile/Shared/ADB_Helper')
-  return ADB
-})
-
-export interface AppAnalyticsOptions {
-  language: string
-  languageService: string
-  propertyName: string
-  propertyId: string
-  rsidAccount: string
-  reportSuite: string
-  googleAnalyticsId?: string
-}
-
-export function setAnalyticsOptions (opts: AppAnalyticsOptions) {
-  googleAnalyticsId = opts.googleAnalyticsId
-
-  baseActionOptions.language
-  = baseStateOptions.language
-  = opts.language
-
-  baseActionOptions.language_service
-  = baseStateOptions.language_service
-  = opts.languageService
-
-  baseActionOptions.property_name
-  = baseStateOptions.property_name
-  = opts.propertyName
-
-  baseActionOptions.property_id
-  = baseStateOptions.property_id
-  = opts.propertyId
-
-  baseStateOptions.rsid_acct = opts.rsidAccount
-
-  baseActionOptions.report_suite = opts.reportSuite
-
-  optionsConfigured()
-}
-
-export function trackState (type: string, options: ADB.GeneratedTrackStateOptions) {
-  const fullOptions = {
-    ...baseStateOptions,
-    ...options,
-  }
-
-  if (dataLayer) {
-    dataLayer.push({
-      ...fullOptions,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-    dataLayer.push({
-      appScreenView: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-  }
-
-  return adbReady.then((ADB) => {
-    ADB.trackState(type, fullOptions)
-  })
-}
-
-export function trackAction (type: string, options: ADB.GeneratedTrackActionOptions) {
-  const fullOptions = {
-    ...baseActionOptions,
-    ...options,
-  }
-
-  if (dataLayer) {
-    dataLayer.push({
-      ...fullOptions,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-    dataLayer.push({
-      appEvent: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-  }
-
-  return adbReady.then((ADB) => {
-    ADB.trackAction(type, fullOptions)
-  })
-}
-
-export interface ArticleActionOpts {
-  id: string,
-  articleTitle: string,
-  authors: string,
-  pubDate: string,
+export function articleDetail (opts: ArticleActionOpts) {
+  return trackAction('ARTICLE_DETAIL', articleToActionOptions(opts))
 }
 
 export function favoriteArticle (opts: ArticleActionOpts) {
@@ -164,6 +31,30 @@ export function shareArticle (opts: ArticleActionOpts & { shareType: string }) {
   })
 }
 
+export function articleAudioStart (opts: ArticleAudioActionOpts) {
+  return trackAction('ARTICLE_AUDIO_START', articleAudioToActionOptions(opts))
+}
+
+export function articleAudioEnd (opts: ArticleAudioActionOpts) {
+  return trackAction('ARTICLE_AUDIO_COMPLETE', articleAudioToActionOptions(opts))
+}
+
+export function articleVideoStart (opts: ArticleVideoActionOpts) {
+  return trackAction('ARTICLE_VIDEO_START', articleVideoToActionOptions(opts))
+}
+
+export function articleVideoEnd (opts: ArticleVideoActionOpts) {
+  return trackAction('ARTICLE_VIDEO_COMPLETE', articleVideoToActionOptions(opts))
+}
+
+export function searched (opts: SearchActionOpts) {
+  return trackAction('SEARCH_EXECUTED', searchToActionOptions(opts))
+}
+
+export function setProxy (opts: SetProxyOpts) {
+  return trackAction('SET_PROXY', setProxyToActionOptions(opts))
+}
+
 export const analyticsHelper = {
   favoriteArticle,
   shareArticle,
@@ -173,11 +64,9 @@ export interface AnalyticsProps {
   analytics: typeof analyticsHelper
 }
 
-export type ItemType = 'article' | 'audio' | 'video'
-
 export interface HOCAnalyticsOptions {
   skip?: boolean
-  itemType?: ItemType
+  itemType?: ADB.ItemType
   state: string
   title: string
   contentType?: ADB.StateContentType
@@ -198,6 +87,11 @@ function getVal<P> (item: HOCAnalyticsOptions | ((props: Readonly<P>, prevProps:
     throw new Error(`Unexpected value type ${typeof item}`)
   }
 }
+
+const mediaNames: ADB.MediaName[] = [
+  'audio',
+  'video',
+]
 
 export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((props: P & Partial<AnalyticsProps>, newProps: P & Partial<AnalyticsProps>) => HOCAnalyticsOptions)) {
   return function (Component: React.ComponentType<P & AnalyticsProps>): React.ComponentType<P> {
@@ -252,6 +146,7 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           search_keyword: searchKeyword,
           media_type: mediaType,
           media_name: itemType && (itemType in mediaNames) ? itemType as ADB.MediaName : undefined,
+          item_type: itemType,
         })
       }
     }

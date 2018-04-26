@@ -59,14 +59,18 @@ typings/
 
 # editor
 .vscode
-
 .DS_Store
+
+# build
 components
 commonStyles
 coverage
+customTypings
 helpers
 jestCache
 types
+
+# all of the source should be checked in except scss module definitions
 !src/**/*
 *.scss.d.ts
 

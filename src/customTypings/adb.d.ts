@@ -34,6 +34,11 @@ declare namespace ADB {
     = 'proxy_on'
     | 'proxy_off'
 
+  export type ItemType
+    = 'article'
+    | 'audio'
+    | 'video'
+
   export interface BaseTrackStateOptions {
     language: string
     language_service: string
@@ -63,6 +68,7 @@ declare namespace ADB {
     media_type?: MediaType
     media_name?: MediaName
     app_events?: string // ???
+    item_type?: ItemType // GTM only
   }
 
   export type TrackStateOptions
@@ -98,6 +104,7 @@ declare namespace ADB {
     media_type?: MediaType
     media_name?: MediaName
     app_events: string // ???
+    item_type?: ItemType // GTM only
   }
 
   export type TrackActionOptions

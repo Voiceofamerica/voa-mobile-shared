@@ -3,7 +3,7 @@
   "version": "2.1.22",
   "description": "Shared code and components",
   "scripts": {
-    "clean": "rm -rf commonStyles components coverage helpers jestCache",
+    "clean": "rm -rf commonStyles components coverage customTypings helpers jestCache",
     "prepare": "run-s clean scss:types compile files:copy",
     "compile": "tsc --project ./tsconfig.json",
     "test": "run-s -c test:*",
@@ -58,6 +58,7 @@
     "@types/webpack": "^3.8.1",
     "@types/webpack-env": "^1.13.2",
     "@voiceofamerica/cordova-plugin-music-controls": "^3.0.5",
+    "adobe-mobile-services": "^4.13.1-cor",
     "awesome-typescript-loader": "^3.3.0",
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
