@@ -11,7 +11,7 @@
     "test:storyshots": "jest --config jest.storybook.js",
     "test-ci": "run-s -c test-ci:*",
     "test-ci:unit": "npm run test:unit -- --ci --maxWorkers=1",
-    "test-ci:storybook": "npm run test:storybook -- --ci --maxWorkers=1",
+    "test-ci:storyshots": "npm run test:storyshots -- --ci --maxWorkers=1",
     "testfix": "run-s -c testfix:*",
     "testfix:unit": "npm run test:unit -- -u",
     "testfix:storyshots": "npm run test:storyshots -- -u",
