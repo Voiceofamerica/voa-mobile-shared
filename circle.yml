@@ -16,7 +16,7 @@ jobs:
           paths:
             - "~/.npm"
             - "node_modules"
-      - run: npm run check
+      - run: npm run check-ci
 
 workflows:
   version: 2
