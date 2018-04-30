@@ -69,12 +69,9 @@ $fadeWidth: 20vw;
     color: inherit;
 
     &:last-of-type {
-      margin-right: $fadeWidth;
-
-      [dir="rtl"] & {
-        margin-right: 0;
-        margin-left: $fadeWidth;
-      }
+      padding: 0;
+      flex-shrink: 0;
+      width: $fadeWidth;
     }
   }
 

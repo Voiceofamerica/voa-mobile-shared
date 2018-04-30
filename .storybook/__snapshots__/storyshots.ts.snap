@@ -28741,7 +28741,9 @@ exports[`Storyshots TopNav base themed display 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -28880,7 +28882,9 @@ exports[`Storyshots TopNav display 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -29019,7 +29023,9 @@ exports[`Storyshots TopNav display with both static elements 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -29169,7 +29175,9 @@ exports[`Storyshots TopNav display with static prefix 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -29297,7 +29305,9 @@ exports[`Storyshots TopNav display with static suffix 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -29447,7 +29457,9 @@ exports[`Storyshots TopNav local themed display 1`] = `
       >
         Russia Relations
       </div>
-      <div>
+      <div
+        className="topNavItem"
+      >
          
       </div>
     </div>
@@ -29589,7 +29601,9 @@ exports[`Storyshots TopNav rtl display 1`] = `
         >
           Russia Relations
         </div>
-        <div>
+        <div
+          className="topNavItem"
+        >
            
         </div>
       </div>
@@ -29732,7 +29746,9 @@ exports[`Storyshots TopNav rtl display with both static elements 1`] = `
         >
           Russia Relations
         </div>
-        <div>
+        <div
+          className="topNavItem"
+        >
            
         </div>
       </div>

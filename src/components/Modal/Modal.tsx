@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import { toRGBAstring } from '../../helpers/colorHelper'
 
-import { ThemeConsumer } from '../ThemeProvider'
+import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 
 import ModalButton, { Props as ModalButtonProps } from './ModalButton'
 import {
@@ -15,7 +15,7 @@ import {
   buttonList,
 } from './Modal.scss'
 
-export interface Props {
+export interface Props extends ThemeProps {
   overlayClickable?: boolean
   className?: string
   style?: React.CSSProperties
@@ -27,6 +27,7 @@ export interface State {
 
 export const CLOSE = 'close'
 
+@themed
 class Modal extends React.Component<Props, State> {
   state: State = {
     isOpen: false,
@@ -54,8 +55,13 @@ class Modal extends React.Component<Props, State> {
   }
 
   render () {
-    const { overlayClickable = false, className = '', style = {}, children } = this.props
+    const { overlayClickable = false, className = '', style = {}, theme = DEFAULT_THEME, children } = this.props
     const { isOpen } = this.state
+    const {
+      modalBackground: background,
+      modalColor: color,
+      modalBackdropColor,
+    } = theme
 
     const rChildren = React.Children.toArray(children)
     const buttons = (rChildren as React.ReactElement<ModalButtonProps>[]).filter(c => c.type === ModalButton)
@@ -66,31 +72,21 @@ class Modal extends React.Component<Props, State> {
                         : [<ModalButton key={CLOSE} id={CLOSE} onClick={this.mapClick()}>Close</ModalButton>]
 
     return (
-      <ThemeConsumer>
-        {
-          ({
-            modalBackground: background,
-            modalColor: color,
-            modalBackdropColor,
-          }) => (
-            <div className={isOpen ? `${modalContainer} ${show}` : modalContainer} style={style}>
-              <div
-                className={overlay}
-                onClick={overlayClickable ? () => this.mapClick()(CLOSE) : undefined}
-                style={{ background: toRGBAstring(modalBackdropColor, 0.3) }}
-              />
-              <div className={`${modal} ${className}`} style={{ background, color }}>
-                <div className={content}>
-                  {modalContent}
-                </div>
-                <div className={buttonList}>
-                  {actualButtons}
-                </div>
-              </div>
-            </div>
-          )
-        }
-      </ThemeConsumer>
+      <div className={isOpen ? `${modalContainer} ${show}` : modalContainer} style={style}>
+        <div
+          className={overlay}
+          onClick={overlayClickable ? () => this.mapClick()(CLOSE) : undefined}
+          style={{ background: toRGBAstring(modalBackdropColor, 0.3) }}
+        />
+        <div className={`${modal} ${className}`} style={{ background, color }}>
+          <div className={content}>
+            {modalContent}
+          </div>
+          <div className={buttonList}>
+            {actualButtons}
+          </div>
+        </div>
+      </div>
     )
   }
 

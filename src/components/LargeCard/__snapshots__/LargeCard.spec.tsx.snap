@@ -1,409 +1,361 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LargeCard /> shapshots should render with the given className 1`] = `
-<theme-consumer
-  props={
-    Object {
-      "children": [Function],
-    }
-  }
+<div
+  className="card myClass"
+  style={undefined}
 >
   <div
-    className="card myClass"
-    style={undefined}
+    className="overText"
+    onClick={undefined}
   >
-    <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": undefined,
-          }
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
         }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
+      }
+    />
     <div
-      className="underText"
+      className="gradient"
       style={
         Object {
-          "background": "#000000",
-          "color": "#000000",
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
         }
       }
     >
       <div
-        className="minorTextArea"
-      />
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</theme-consumer>
+  <div
+    className="underText"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="minorTextArea"
+    />
+  </div>
+</div>
 `;
 
 exports[`<LargeCard /> shapshots should render with the given icon shown 1`] = `
-<theme-consumer
-  props={
-    Object {
-      "children": [Function],
-    }
-  }
+<div
+  className="card undefined"
+  style={undefined}
 >
   <div
-    className="card undefined"
-    style={undefined}
+    className="overText"
+    onClick={undefined}
   >
-    <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": undefined,
-          }
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
         }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-            <i
-              className="mdi mdi-monitor"
-            />
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
+      }
+    />
     <div
-      className="underText"
+      className="gradient"
       style={
         Object {
-          "background": "#000000",
-          "color": "#000000",
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
         }
       }
     >
       <div
-        className="minorTextArea"
-      />
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+          <i
+            className="mdi mdi-monitor"
+          />
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</theme-consumer>
+  <div
+    className="underText"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="minorTextArea"
+    />
+  </div>
+</div>
 `;
 
 exports[`<LargeCard /> shapshots should render with the given image 1`] = `
-<theme-consumer
-  props={
-    Object {
-      "children": [Function],
-    }
-  }
+<div
+  className="card undefined"
+  style={undefined}
 >
   <div
-    className="card undefined"
-    style={undefined}
+    className="overText"
+    onClick={undefined}
   >
-    <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": "myImage",
-          }
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": "myImage",
         }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
+      }
+    />
     <div
-      className="underText"
+      className="gradient"
       style={
         Object {
-          "background": "#000000",
-          "color": "#000000",
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
         }
       }
     >
       <div
-        className="minorTextArea"
-      />
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</theme-consumer>
+  <div
+    className="underText"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="minorTextArea"
+    />
+  </div>
+</div>
 `;
 
 exports[`<LargeCard /> shapshots should render with the given minor text 1`] = `
-<theme-consumer
-  props={
-    Object {
-      "children": [Function],
-    }
-  }
+<div
+  className="card undefined"
+  style={undefined}
 >
   <div
-    className="card undefined"
-    style={undefined}
+    className="overText"
+    onClick={undefined}
   >
-    <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": undefined,
-          }
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
         }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
+      }
+    />
     <div
-      className="underText"
+      className="gradient"
       style={
         Object {
-          "background": "#000000",
-          "color": "#000000",
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
         }
       }
     >
       <div
-        className="minorTextArea"
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
       >
-        This is some minor text
+        <span>
+           
+          myTitle
+        </span>
       </div>
     </div>
   </div>
-</theme-consumer>
+  <div
+    className="underText"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="minorTextArea"
+    >
+      This is some minor text
+    </div>
+  </div>
+</div>
 `;
 
 exports[`<LargeCard /> shapshots should render with the given style 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card undefined"
+  style={
     Object {
-      "children": [Function],
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
     }
   }
 >
   <div
-    className="card undefined"
+    className="overText"
+    onClick={undefined}
+  >
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
+        }
+      }
+    />
+    <div
+      className="gradient"
+      style={
+        Object {
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+        }
+      }
+    >
+      <div
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="underText"
     style={
       Object {
-        "bottom": 0,
-        "left": 0,
-        "right": 0,
-        "top": 0,
+        "background": "#000000",
+        "color": "#000000",
       }
     }
   >
     <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": undefined,
-          }
-        }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      className="underText"
-      style={
-        Object {
-          "background": "#000000",
-          "color": "#000000",
-        }
-      }
-    >
-      <div
-        className="minorTextArea"
-      />
-    </div>
+      className="minorTextArea"
+    />
   </div>
-</theme-consumer>
+</div>
 `;
 
 exports[`<LargeCard /> shapshots should render with the given title 1`] = `
-<theme-consumer
-  props={
-    Object {
-      "children": [Function],
-    }
-  }
+<div
+  className="card undefined"
+  style={undefined}
 >
   <div
-    className="card undefined"
-    style={undefined}
+    className="overText"
+    onClick={undefined}
   >
-    <div
-      className="overText"
-      onClick={undefined}
-    >
-      <resilient-image
-        props={
-          Object {
-            "alwaysShow": true,
-            "className": "imageContainer",
-            "showSpinner": true,
-            "src": undefined,
-          }
+    <resilient-image
+      props={
+        Object {
+          "alwaysShow": true,
+          "className": "imageContainer",
+          "showSpinner": true,
+          "src": undefined,
         }
-      />
-      <div
-        className="gradient"
-        style={
-          Object {
-            "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
-          }
-        }
-      >
-        <div
-          className="titleText"
-          style={
-            Object {
-              "color": "#000000",
-            }
-          }
-        >
-          <span>
-             
-            myTitle
-          </span>
-        </div>
-      </div>
-    </div>
+      }
+    />
     <div
-      className="underText"
+      className="gradient"
       style={
         Object {
-          "background": "#000000",
-          "color": "#000000",
+          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
         }
       }
     >
       <div
-        className="minorTextArea"
-      />
+        className="titleText"
+        style={
+          Object {
+            "color": "#000000",
+          }
+        }
+      >
+        <span>
+           
+          myTitle
+        </span>
+      </div>
     </div>
   </div>
-</theme-consumer>
+  <div
+    className="underText"
+    style={
+      Object {
+        "background": "#000000",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="minorTextArea"
+    />
+  </div>
+</div>
 `;

@@ -1,273 +1,233 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Card /> shapshots should render with the given className 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card myClass"
+  onClick={undefined}
+  style={
     Object {
-      "children": [Function],
+      "borderBottomColor": "#000000",
     }
   }
 >
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "className": "imageContainer",
+        "showSpinner": true,
+        "src": undefined,
+      }
+    }
+  />
   <div
-    className="card myClass"
-    onClick={undefined}
+    className="gradient"
     style={
       Object {
-        "borderBottomColor": "#000000",
+        "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
       }
     }
   >
-    <resilient-image
-      props={
-        Object {
-          "alwaysShow": true,
-          "className": "imageContainer",
-          "showSpinner": true,
-          "src": undefined,
-        }
-      }
-    />
     <div
-      className="gradient"
+      className="titleText"
       style={
         Object {
-          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+          "color": "#000000",
         }
       }
     >
-      <div
-        className="titleText"
-        style={
-          Object {
-            "color": "#000000",
-          }
-        }
-      >
-        <span>
-           
-          myTitle
-        </span>
-      </div>
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
-</theme-consumer>
+</div>
 `;
 
 exports[`<Card /> shapshots should render with the given icon shown 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
     Object {
-      "children": [Function],
+      "borderBottomColor": "#000000",
     }
   }
 >
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "className": "imageContainer",
+        "showSpinner": true,
+        "src": undefined,
+      }
+    }
+  />
   <div
-    className="card undefined"
-    onClick={undefined}
+    className="gradient"
     style={
       Object {
-        "borderBottomColor": "#000000",
+        "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
       }
     }
   >
-    <resilient-image
-      props={
-        Object {
-          "alwaysShow": true,
-          "className": "imageContainer",
-          "showSpinner": true,
-          "src": undefined,
-        }
-      }
-    />
     <div
-      className="gradient"
+      className="titleText"
       style={
         Object {
-          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+          "color": "#000000",
         }
       }
     >
-      <div
-        className="titleText"
-        style={
-          Object {
-            "color": "#000000",
-          }
-        }
-      >
-        <span>
-          <i
-            className="mdi mdi-monitor"
-          />
-           
-          myTitle
-        </span>
-      </div>
+      <span>
+        <i
+          className="mdi mdi-monitor"
+        />
+         
+        myTitle
+      </span>
     </div>
   </div>
-</theme-consumer>
+</div>
 `;
 
 exports[`<Card /> shapshots should render with the given image 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
     Object {
-      "children": [Function],
+      "borderBottomColor": "#000000",
     }
   }
 >
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "className": "imageContainer",
+        "showSpinner": true,
+        "src": "myImage",
+      }
+    }
+  />
   <div
-    className="card undefined"
-    onClick={undefined}
+    className="gradient"
     style={
       Object {
-        "borderBottomColor": "#000000",
+        "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
       }
     }
   >
-    <resilient-image
-      props={
-        Object {
-          "alwaysShow": true,
-          "className": "imageContainer",
-          "showSpinner": true,
-          "src": "myImage",
-        }
-      }
-    />
     <div
-      className="gradient"
+      className="titleText"
       style={
         Object {
-          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+          "color": "#000000",
         }
       }
     >
-      <div
-        className="titleText"
-        style={
-          Object {
-            "color": "#000000",
-          }
-        }
-      >
-        <span>
-           
-          myTitle
-        </span>
-      </div>
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
-</theme-consumer>
+</div>
 `;
 
 exports[`<Card /> shapshots should render with the given style 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
     Object {
-      "children": [Function],
+      "borderBottomColor": "#000000",
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
     }
   }
 >
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "className": "imageContainer",
+        "showSpinner": true,
+        "src": undefined,
+      }
+    }
+  />
   <div
-    className="card undefined"
-    onClick={undefined}
+    className="gradient"
     style={
       Object {
-        "borderBottomColor": "#000000",
-        "bottom": 0,
-        "left": 0,
-        "right": 0,
-        "top": 0,
+        "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
       }
     }
   >
-    <resilient-image
-      props={
-        Object {
-          "alwaysShow": true,
-          "className": "imageContainer",
-          "showSpinner": true,
-          "src": undefined,
-        }
-      }
-    />
     <div
-      className="gradient"
+      className="titleText"
       style={
         Object {
-          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+          "color": "#000000",
         }
       }
     >
-      <div
-        className="titleText"
-        style={
-          Object {
-            "color": "#000000",
-          }
-        }
-      >
-        <span>
-           
-          myTitle
-        </span>
-      </div>
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
-</theme-consumer>
+</div>
 `;
 
 exports[`<Card /> shapshots should render with the given title 1`] = `
-<theme-consumer
-  props={
+<div
+  className="card undefined"
+  onClick={undefined}
+  style={
     Object {
-      "children": [Function],
+      "borderBottomColor": "#000000",
     }
   }
 >
+  <resilient-image
+    props={
+      Object {
+        "alwaysShow": true,
+        "className": "imageContainer",
+        "showSpinner": true,
+        "src": undefined,
+      }
+    }
+  />
   <div
-    className="card undefined"
-    onClick={undefined}
+    className="gradient"
     style={
       Object {
-        "borderBottomColor": "#000000",
+        "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
       }
     }
   >
-    <resilient-image
-      props={
-        Object {
-          "alwaysShow": true,
-          "className": "imageContainer",
-          "showSpinner": true,
-          "src": undefined,
-        }
-      }
-    />
     <div
-      className="gradient"
+      className="titleText"
       style={
         Object {
-          "background": "linear-gradient(transparent, rgba(0, 0, 0, 0.9))",
+          "color": "#000000",
         }
       }
     >
-      <div
-        className="titleText"
-        style={
-          Object {
-            "color": "#000000",
-          }
-        }
-      >
-        <span>
-           
-          myTitle
-        </span>
-      </div>
+      <span>
+         
+        myTitle
+      </span>
     </div>
   </div>
-</theme-consumer>
+</div>
 `;

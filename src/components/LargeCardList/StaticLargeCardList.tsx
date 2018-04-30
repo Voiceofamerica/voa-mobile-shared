@@ -3,33 +3,29 @@ import * as React from 'react'
 
 import LargeCard, { IconDefinition } from '../LargeCard'
 
-import { ThemeConsumer } from '../ThemeProvider'
+import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 import { BaseProps } from './LargeCardListTypes'
 import { cardList, row, fixed } from './LargeCardList.scss'
 
-export interface Props extends BaseProps {
+export interface Props extends BaseProps, ThemeProps {
 }
 
+@themed
 class StaticCardList extends React.Component<Props> {
   render () {
-    const { items = [] } = this.props
+    const { items = [], theme = DEFAULT_THEME } = this.props
+    const {
+      largeCardListBackground,
+    } = theme
 
     return (
-      <ThemeConsumer>
+      <div className={cardList} style={{ background: largeCardListBackground }}>
         {
-          ({ largeCardListBackground }) => {
-            return (
-              <div className={cardList} style={{ background: largeCardListBackground }}>
-                {
-                  items.length > 0
-                  ? this.renderContent()
-                  : ''
-                }
-              </div>
-            )
-          }
+          items.length > 0
+          ? this.renderContent()
+          : ''
         }
-      </ThemeConsumer>
+      </div>
     )
   }
 

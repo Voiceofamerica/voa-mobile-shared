@@ -5,14 +5,14 @@ import { Subscription } from 'rxjs/Subscription'
 
 import { resizeObservable } from '../../helpers/windowHelper'
 import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
-import { ThemeConsumer } from '../ThemeProvider'
+import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 import LargeCard, { IconDefinition, getHeight, CARD_PADDING } from '../LargeCard'
 
 import StaticLargeCardList from './StaticLargeCardList'
 import { BaseProps } from './LargeCardListTypes'
 import { cardList, row } from './LargeCardList.scss'
 
-export interface Props extends BaseProps {
+export interface Props extends BaseProps, ThemeProps {
   emptyContent?: string | JSX.Element
   height?: number
   width?: number
@@ -72,24 +72,19 @@ class LargeCardList extends React.PureComponent<Props, State> {
   }
 
   render () {
-    const { items = [], emptyContent = '' } = this.props
+    const { items = [], emptyContent = '', theme = DEFAULT_THEME } = this.props
+    const {
+      largeCardListBackground,
+    } = theme
 
     return (
-      <ThemeConsumer>
+      <div ref={this.setContainer} className={cardList} style={{ background: largeCardListBackground }}>
         {
-          ({ largeCardListBackground }) => {
-            return (
-              <div ref={this.setContainer} className={cardList} style={{ background: largeCardListBackground }}>
-                {
-                  items.length > 0
-                  ? this.renderVirtualContent()
-                  : emptyContent
-                }
-              </div>
-            )
-          }
+          items.length > 0
+          ? this.renderVirtualContent()
+          : emptyContent
         }
-      </ThemeConsumer>
+      </div>
     )
   }
 

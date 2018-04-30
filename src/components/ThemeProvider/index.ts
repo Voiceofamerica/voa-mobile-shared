@@ -8,3 +8,5 @@ export * from './themeTypes'
 export const ThemeConsumer = ThemeContext.Consumer
 export default HydrationProvider
 export { DEFAULT_THEME } from './themeHydrators'
+
+export { themed, ThemeProps } from './themedHoc'

@@ -4,7 +4,7 @@ import * as React from 'react'
 import { sleep } from '../../helpers/timingHelper'
 import { toRGBAstring } from '../../helpers/colorHelper'
 
-import { ThemeConsumer, LargeCardTheme } from '../ThemeProvider'
+import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 import ResilientImage from '../ResilientImage'
 import Spinner from '../Spinner'
 import SvgIcon from '../SvgIcon'
@@ -18,7 +18,7 @@ export interface IconDefinition {
   getStyle?: () => React.CSSProperties
 }
 
-export interface Props {
+export interface Props extends ThemeProps {
   title: string
   minorText?: string
   onPress?: () => void
@@ -47,6 +47,7 @@ export const getHeight = (renderWidth = window.innerWidth, imageRatio = IMAGE_RA
 // 40px under height + 7px margin-bottom
 export const CARD_PADDING = 47
 
+@themed
 class LargeCard extends React.Component<Props, State> {
   state: State = {
     iconButtonsLoading: [],
@@ -66,26 +67,18 @@ class LargeCard extends React.Component<Props, State> {
     const { className, style } = this.props
 
     return (
-      <ThemeConsumer>
-        {
-          (theme) => {
-            return (
-              <div
-                className={`${card} ${className}`}
-                style={style}
-              >
-                {this.renderOver(theme)}
-                {this.renderUnder(theme)}
-              </div>
-            )
-          }
-        }
-      </ThemeConsumer>
+      <div
+        className={`${card} ${className}`}
+        style={style}
+      >
+        {this.renderOver()}
+        {this.renderUnder()}
+      </div>
     )
   }
 
-  private renderOver = (theme: LargeCardTheme) => {
-    const { title, onPress, imageUrl, titleIcon } = this.props
+  private renderOver = () => {
+    const { title, onPress, imageUrl, titleIcon, theme = DEFAULT_THEME } = this.props
 
     const hydratedIcon = titleIcon && this.mapIcon(titleIcon)
 
@@ -109,13 +102,13 @@ class LargeCard extends React.Component<Props, State> {
     )
   }
 
-  private renderUnder = (theme: LargeCardTheme) => {
+  private renderUnder = () => {
+    const { minorText, iconButtons = [], theme = DEFAULT_THEME } = this.props
     const {
       largeCardUnderBackground: background,
       largeCardUnderColor: color,
       largeCardIconColor,
     } = theme
-    const { minorText, iconButtons = [] } = this.props
 
     return (
       <div className={underText} style={{ background, color }}>
@@ -124,7 +117,7 @@ class LargeCard extends React.Component<Props, State> {
           iconButtons.map(({ icon, onPress, getClassName = () => '', getStyle = () => ({}) }, idx) => {
             return (
               <div key={idx} className={`${iconButton} ${getClassName()}`} onClick={this.clickHandler(idx, onPress)} style={{ color: largeCardIconColor, ...getStyle() }}>
-                {this.mapIconButton(idx, icon, theme)}
+                {this.mapIconButton(idx, icon)}
               </div>
             )
           })
@@ -139,7 +132,8 @@ class LargeCard extends React.Component<Props, State> {
     : icon
   }
 
-  private mapIconButton = (idx: number, icon: string | JSX.Element, theme: LargeCardTheme): JSX.Element => {
+  private mapIconButton = (idx: number, icon: string | JSX.Element): JSX.Element => {
+    const { theme = DEFAULT_THEME } = this.props
     if (this.getIconButtonState(idx) === LOADING) {
       return <Spinner className={spinner} />
     } else if (this.getIconButtonState(idx) === ERROR) {

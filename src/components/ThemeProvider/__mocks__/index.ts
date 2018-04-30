@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import { FullTheme } from '../themeTypes'
 
-const DEFAULT_THEME: FullTheme = {
+export const DEFAULT_THEME: FullTheme = {
   primaryColor: '#000000',
   secondaryColor: '#000000',
   red: '#000000',
@@ -40,3 +40,5 @@ export const ThemeConsumer = (props) => {
     React.createElement('theme-consumer', { props }, props.children(DEFAULT_THEME))
   )
 }
+
+export const themed = (BaseComponent) => BaseComponent
