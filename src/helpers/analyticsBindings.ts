@@ -1,4 +1,5 @@
 
+import '../customTypings/adb'
 import { deviceIsReady } from './cordovaHelper'
 import { startObservable } from './psiphonHelper'
 
