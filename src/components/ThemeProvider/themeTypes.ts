@@ -54,6 +54,13 @@ export interface PopupButtonGroupTheme {
   popupButtonBackground?: string // baseTheme.lightGrey
 }
 
+export interface PillManagerTheme {
+  pillBackground?: string // baseTheme.secondaryColor
+  pillColor?: string // baseTheme.white
+  pillSelectedBackground?: string // baseTheme.accentGreen
+  pillSelectedColor?: string // baseTheme.black
+}
+
 export type FullTheme =
   & BaseTheme
   & TopNavTheme
@@ -62,3 +69,4 @@ export type FullTheme =
   & LargeCardListTheme
   & ModalTheme
   & PopupButtonGroupTheme
+  & PillManagerTheme

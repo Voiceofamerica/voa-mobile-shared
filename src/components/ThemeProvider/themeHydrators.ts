@@ -2,19 +2,19 @@
 import * as Types from './themeTypes'
 
 export const BASE_DEFAULT_THEME: Required<Types.BaseTheme> = {
-  primaryColor: '#D41010',
-  secondaryColor: '#0061B0',
   red: '#D41010',
   blue: '#0061B0',
-  grey: '#B4BCC2',
-  lightGrey: '#EEEEEE',
-  darkGrey: '#333333',
-  white: '#FFFFFF',
-  black: '#000000',
   accentBlue: '#2083C6',
   accentGreen: '#1AB088',
-  accentGrey: '#8E8E93',
   accentYellow: '#FAD245',
+  white: '#FFFFFF',
+  lightGrey: '#EEEEEE',
+  grey: '#B4BCC2',
+  accentGrey: '#8E8E93',
+  darkGrey: '#333333',
+  black: '#000000',
+  primaryColor: '#D41010',
+  secondaryColor: '#0061B0',
 }
 
 export const hydrateBase = (theme: Types.BaseTheme): Required<Types.BaseTheme> => ({
@@ -69,6 +69,14 @@ export const hydratePopupButtonGroup = (theme: Required<Types.BaseTheme> & Types
   ...theme,
 })
 
+export const hydratePillManager = (theme: Required<Types.BaseTheme> & Types.PillManagerTheme): Required<Types.BaseTheme & Types.PillManagerTheme> => ({
+  pillBackground: theme.secondaryColor,
+  pillColor: theme.white,
+  pillSelectedBackground: theme.accentGreen,
+  pillSelectedColor: theme.white,
+  ...theme,
+})
+
 export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> => {
   let fullTheme: Required<Types.FullTheme> = hydrateBase(theme) as Required<Types.FullTheme>
   fullTheme = hydrateBase(fullTheme) as Required<Types.FullTheme>
@@ -78,6 +86,7 @@ export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> =
   fullTheme = hydrateLargeCardList(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateModal(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydratePopupButtonGroup(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydratePillManager(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

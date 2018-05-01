@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { FullTheme } from './themeTypes'
 import ThemeContext from './ThemeContext'
+import { unique } from '../../helpers/arrayHelpers'
 
 export const RESERVED_FIELDS = [
   'constructor',
@@ -19,12 +20,6 @@ export const RESERVED_FIELDS = [
 
 export interface ThemeProps {
   theme?: FullTheme
-}
-
-function unique<T> (array: T[]) {
-  return array.filter((value, index, self) => (
-    self.indexOf(value) === index
-  ))
 }
 
 export function themed<B extends React.ComponentClass<P>, P extends ThemeProps> (BaseComponent: B): B {
