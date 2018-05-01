@@ -48,6 +48,12 @@ export interface ModalTheme {
   modalBackdropColor?: string // baseTheme.black
 }
 
+export interface PopupButtonGroupTheme {
+  popupButtonBorder?: string // baseTheme.grey
+  popupButtonColor?: string // baseTheme.black
+  popupButtonBackground?: string // baseTheme.lightGrey
+}
+
 export type FullTheme =
   & BaseTheme
   & TopNavTheme
@@ -55,3 +61,4 @@ export type FullTheme =
   & LargeCardTheme
   & LargeCardListTheme
   & ModalTheme
+  & PopupButtonGroupTheme

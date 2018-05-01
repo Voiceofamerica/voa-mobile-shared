@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopupButton /> shapshots should render with children 1`] = `
+<div
+  className="button "
+  onClick={[Function]}
+  style={
+    Object {
+      "borderColor": "#B4BCC2",
+      "color": "#000000",
+    }
+  }
+>
+  <div
+    className="content"
+  >
+    This should show up
+  </div>
+</div>
+`;
+
+exports[`<PopupButton /> shapshots should render without children 1`] = `
+<div
+  className="button "
+  onClick={[Function]}
+  style={
+    Object {
+      "borderColor": "#B4BCC2",
+      "color": "#000000",
+    }
+  }
+>
+  <div
+    className="content"
+  />
+</div>
+`;

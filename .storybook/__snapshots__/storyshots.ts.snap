@@ -15157,6 +15157,378 @@ exports[`Storyshots PhotoGallery display 1`] = `
 </div>
 `;
 
+exports[`Storyshots PopupButtonGroup base themed display 1`] = `
+<div
+  className="popupButtonGroup show "
+  style={
+    Object {
+      "background": "#666666",
+      "top": 50,
+    }
+  }
+>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#AAAAAA",
+        "color": "#DDDDFF",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+            "color": "#D41010",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#AAAAAA",
+        "color": "#DDDDFF",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#AAAAAA",
+        "color": "#DDDDFF",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PopupButtonGroup default display 1`] = `
+<div
+  className="popupButtonGroup show "
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "top": 50,
+    }
+  }
+>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#B4BCC2",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+            "color": "#D41010",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#B4BCC2",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#B4BCC2",
+        "color": "#000000",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PopupButtonGroup local themed display 1`] = `
+<div
+  className="popupButtonGroup show "
+  style={
+    Object {
+      "background": "#003300",
+      "top": 50,
+    }
+  }
+>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#664499",
+        "color": "#DDFFDD",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+            "color": "#D41010",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#664499",
+        "color": "#DDFFDD",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="button "
+    onClick={[Function]}
+    style={
+      Object {
+        "borderColor": "#664499",
+        "color": "#DDFFDD",
+      }
+    }
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="icon "
+        style={
+          Object {
+            "WebkitMaskImage": "url(Some File)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PopupButtonGroup positionable display 1`] = `
+<div>
+  <div
+    onClick={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "background": "#bbbbbb",
+        "bottom": 0,
+        "color": "#666666",
+        "cursor": "pointer",
+        "display": "flex",
+        "fontSize": 30,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    Click anywhere to show buttons
+  </div>
+  <div
+    className="popupButtonGroup "
+    style={
+      Object {
+        "background": "#EEEEEE",
+        "top": 0,
+      }
+    }
+  >
+    <div
+      className="button "
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "#B4BCC2",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="icon "
+          style={
+            Object {
+              "WebkitMaskImage": "url(Some File)",
+              "color": "#D41010",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="button "
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "#B4BCC2",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="icon "
+          style={
+            Object {
+              "WebkitMaskImage": "url(Some File)",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="button "
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "#B4BCC2",
+          "color": "#000000",
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="icon "
+          style={
+            Object {
+              "WebkitMaskImage": "url(Some File)",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="button "
+      onClick={[Function]}
+      style={
+        Object {
+          "borderColor": "#B4BCC2",
+          "color": "#000000",
+          "fontSize": 15,
+        }
+      }
+    >
+      <div
+        className="content"
+      >
+        Cancel
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots ResilientImage display 1`] = `
 <div
   className="resilientImage "

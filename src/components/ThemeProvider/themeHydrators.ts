@@ -62,6 +62,13 @@ export const hydrateModal = (theme: Required<Types.BaseTheme> & Types.ModalTheme
   ...theme,
 })
 
+export const hydratePopupButtonGroup = (theme: Required<Types.BaseTheme> & Types.PopupButtonGroupTheme): Required<Types.BaseTheme & Types.PopupButtonGroupTheme> => ({
+  popupButtonBorder: theme.grey,
+  popupButtonColor: theme.black,
+  popupButtonBackground: theme.lightGrey,
+  ...theme,
+})
+
 export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> => {
   let fullTheme: Required<Types.FullTheme> = hydrateBase(theme) as Required<Types.FullTheme>
   fullTheme = hydrateBase(fullTheme) as Required<Types.FullTheme>
@@ -70,6 +77,7 @@ export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> =
   fullTheme = hydrateLargeCard(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateLargeCardList(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydrateModal(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydratePopupButtonGroup(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

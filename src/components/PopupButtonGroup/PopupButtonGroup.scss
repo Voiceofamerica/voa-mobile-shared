@@ -1,0 +1,55 @@
+
+@import "../../commonStyles/index";
+
+$button-size: 40px;
+$button-text-size: 30px;
+$button-padding: $button-size - $button-text-size;
+$transition-time: 0.3s;
+
+.popupButtonGroup {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  position: fixed;
+  left: 50vw;
+  z-index: $menu-z-max + 1;
+  user-select: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(20px);
+  box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+  transition:
+    $transition-time opacity,
+    $transition-time transform,
+    $transition-time box-shadow;
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: $button-text-size;
+    border-right: 1px solid;
+
+    .content {
+      @include touchable();
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: $button-padding;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}

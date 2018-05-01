@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopupButtonGroup /> shapshots should render shown with specified vertical position 1`] = `
+<div
+  className="popupButtonGroup show "
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "top": 30,
+    }
+  }
+/>
+`;
+
+exports[`<PopupButtonGroup /> shapshots should render with children 1`] = `
+<div
+  className="popupButtonGroup "
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "top": 0,
+    }
+  }
+>
+  This should show up
+</div>
+`;
+
+exports[`<PopupButtonGroup /> shapshots should render without children 1`] = `
+<div
+  className="popupButtonGroup "
+  style={
+    Object {
+      "background": "#EEEEEE",
+      "top": 0,
+    }
+  }
+/>
+`;
