@@ -2,10 +2,9 @@
 import * as React from 'react'
 
 import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
-import { pill } from './PillManager.scss'
 
 import {
-  divider,
+  pill,
 } from './PillManager.scss'
 
 export interface Props extends ThemeProps {

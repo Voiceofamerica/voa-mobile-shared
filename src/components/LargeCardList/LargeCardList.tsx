@@ -28,6 +28,7 @@ export interface State {
 
 const MENU_HEIGHT = 150
 
+@themed
 class LargeCardList extends React.PureComponent<Props, State> {
   static Static = StaticLargeCardList
 
