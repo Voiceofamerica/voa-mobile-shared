@@ -49,12 +49,14 @@ const endContent = [
   'fifteenth',
 ]
 
+const clickAction = action('pill clicked')
+
 storiesOf(PillManager.name, module)
   .add('default display', () => (
     <PillManager>
       {
         startContent.map((val, idx) => (
-          <Pill selected={idx === 4}>{val}</Pill>
+          <Pill selected={idx === 4} onClick={() => clickAction('start', val)}>{val}</Pill>
         ))
       }
       <PillSpacer>
@@ -66,7 +68,7 @@ storiesOf(PillManager.name, module)
       </PillSpacer>
       {
         endContent.map((val) => (
-          <Pill>{val}</Pill>
+          <Pill onClick={() => clickAction('end', val)}>{val}</Pill>
         ))
       }
     </PillManager>

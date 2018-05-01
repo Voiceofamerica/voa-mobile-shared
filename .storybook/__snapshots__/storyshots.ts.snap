@@ -15157,6 +15157,227 @@ exports[`Storyshots PhotoGallery display 1`] = `
 </div>
 `;
 
+exports[`Storyshots PillManager default display 1`] = `
+<div
+  className="pillManager "
+  style={Object {}}
+>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    first
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    second
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    third
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    fourth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#1AB088",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    fifth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    this is a particularly long pill that will more than likely break the flow
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    sixth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    seventh
+  </div>
+  <div
+    className="divider "
+    style={Object {}}
+  >
+    <div>
+      <div
+        style={
+          Object {
+            "fontSize": "1.3em",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        This is a spacer
+      </div>
+      It takes the whole width
+    </div>
+    <div>
+      And it's flex
+    </div>
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    eighth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    ninth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    tenth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    eleventh
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    twelfth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    thirteenth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    fourteenth
+  </div>
+  <div
+    className="pill "
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#0061B0",
+        "color": "#FFFFFF",
+      }
+    }
+  >
+    fifteenth
+  </div>
+</div>
+`;
+
 exports[`Storyshots PopupButtonGroup base themed display 1`] = `
 <div
   className="popupButtonGroup show "
@@ -24156,6 +24377,1120 @@ exports[`Storyshots Switch interactible 1`] = `
   <div
     className="toggle"
   />
+</div>
+`;
+
+exports[`Storyshots ThemeProvider DEFAULT_THEME 1`] = `
+<div
+  style={
+    Object {
+      "background": "#888",
+      "padding": 10,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#D41010",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        red =&gt; #D41010
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#0061B0",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        blue =&gt; #0061B0
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#2083C6",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        accentBlue =&gt; #2083C6
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#1AB088",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        accentGreen =&gt; #1AB088
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FAD245",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        accentYellow =&gt; #FAD245
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        white =&gt; #FFFFFF
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        lightGrey =&gt; #EEEEEE
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#B4BCC2",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        grey =&gt; #B4BCC2
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#8E8E93",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        accentGrey =&gt; #8E8E93
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#333333",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        darkGrey =&gt; #333333
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#000000",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        black =&gt; #000000
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#D41010",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        primaryColor =&gt; baseTheme.red
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#0061B0",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        secondaryColor =&gt; baseTheme.blue
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#0061B0",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        pillBackground =&gt; baseTheme.blue
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        pillColor =&gt; baseTheme.white
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#1AB088",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        pillSelectedBackground =&gt; baseTheme.accentGreen
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        pillSelectedColor =&gt; baseTheme.white
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#B4BCC2",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        popupButtonBorder =&gt; baseTheme.grey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#000000",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        popupButtonColor =&gt; baseTheme.black
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        popupButtonBackground =&gt; baseTheme.lightGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        modalBackground =&gt; baseTheme.lightGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#000000",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        modalColor =&gt; baseTheme.black
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#B4BCC2",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        modalButtonBorder =&gt; baseTheme.grey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#2083C6",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        modalButtonColor =&gt; baseTheme.accentBlue
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#000000",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        modalBackdropColor =&gt; baseTheme.black
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#000000",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        cardGradientColor =&gt; baseTheme.black
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        cardTitleColor =&gt; baseTheme.white
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#D41010",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        cardBorderColor =&gt; baseTheme.red
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#EEEEEE",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        topNavBackground =&gt; baseTheme.lightGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#333333",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        topNavColor =&gt; baseTheme.darkGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#B4BCC2",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        topNavStaticColor =&gt; baseTheme.grey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#D41010",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        topNavSelectedBackground =&gt; baseTheme.red
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        topNavSelectedColor =&gt; baseTheme.white
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#FFFFFF",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        largeCardUnderBackground =&gt; baseTheme.white
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#8E8E93",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        largeCardUnderColor =&gt; baseTheme.accentGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#333333",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        largeCardIconColor =&gt; baseTheme.darkGrey
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#D41010",
+          "color": "#FFF",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        largeCardErrorIconColor =&gt; baseTheme.red
+      </pre>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+        "marginBottom": 7,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "background": "#B4BCC2",
+          "color": "#000",
+          "fontSize": 14,
+          "padding": "4px 8px",
+        }
+      }
+    >
+      <pre
+        style={
+          Object {
+            "display": "inline",
+          }
+        }
+      >
+        largeCardListBackground =&gt; baseTheme.grey
+      </pre>
+    </div>
+  </div>
 </div>
 `;
 

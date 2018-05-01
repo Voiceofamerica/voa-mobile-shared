@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PillManager /> shapshots should render with children 1`] = `
+<div
+  className="pillManager "
+  style={Object {}}
+>
+  This should show up
+</div>
+`;
+
+exports[`<PillManager /> shapshots should render with className 1`] = `
+<div
+  className="pillManager myClass"
+  style={Object {}}
+/>
+`;
+
+exports[`<PillManager /> shapshots should render with style 1`] = `
+<div
+  className="pillManager "
+  style={
+    Object {
+      "background": "myColor",
+    }
+  }
+/>
+`;
+
+exports[`<PillManager /> shapshots should render without children 1`] = `
+<div
+  className="pillManager "
+  style={Object {}}
+/>
+`;

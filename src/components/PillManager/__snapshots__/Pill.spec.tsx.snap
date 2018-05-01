@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pill /> shapshots should render selected 1`] = `
+<div
+  className="pill "
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#1AB088",
+      "color": "#FFFFFF",
+    }
+  }
+/>
+`;
+
+exports[`<Pill /> shapshots should render with children 1`] = `
+<div
+  className="pill "
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#0061B0",
+      "color": "#FFFFFF",
+    }
+  }
+>
+  This should show up
+</div>
+`;
+
+exports[`<Pill /> shapshots should render with className 1`] = `
+<div
+  className="pill myClass"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#0061B0",
+      "color": "#FFFFFF",
+    }
+  }
+/>
+`;
+
+exports[`<Pill /> shapshots should render with style 1`] = `
+<div
+  className="pill "
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "myColor",
+      "color": "#FFFFFF",
+    }
+  }
+/>
+`;
+
+exports[`<Pill /> shapshots should render without children 1`] = `
+<div
+  className="pill "
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#0061B0",
+      "color": "#FFFFFF",
+    }
+  }
+/>
+`;

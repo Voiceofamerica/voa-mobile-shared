@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PillSpacer /> shapshots should render with children 1`] = `
+<div
+  className="divider "
+  style={Object {}}
+>
+  This should show up
+</div>
+`;
+
+exports[`<PillSpacer /> shapshots should render with className 1`] = `
+<div
+  className="divider myClass"
+  style={Object {}}
+/>
+`;
+
+exports[`<PillSpacer /> shapshots should render with style 1`] = `
+<div
+  className="divider "
+  style={
+    Object {
+      "background": "myColor",
+    }
+  }
+/>
+`;
+
+exports[`<PillSpacer /> shapshots should render without children 1`] = `
+<div
+  className="divider "
+  style={Object {}}
+/>
+`;
