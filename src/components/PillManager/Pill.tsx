@@ -9,7 +9,7 @@ import {
 
 export interface Props extends ThemeProps {
   selected?: boolean
-  onClick?: () => void
+  onClick?: (ev: React.MouseEvent<HTMLDivElement>) => void
   className?: string
   style?: React.CSSProperties
 }
@@ -37,7 +37,7 @@ class Pill extends React.Component<Props> {
     const background = selected ? pillSelectedBackground : pillBackground
 
     return (
-      <div className={`${pill} ${className}`} style={{ color, background, ...style}} onClick={() => onClick()}>
+      <div className={`${pill} ${className}`} style={{ color, background, ...style}} onClick={onClick}>
         {children}
       </div>
     )
