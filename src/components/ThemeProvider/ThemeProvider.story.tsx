@@ -52,7 +52,7 @@ storiesOf('ThemeProvider', module)
           const contrast = contrastColors[baseKey]
 
           return (
-            <div style={{ fontSize, marginBottom: fontSize / 2 }}>
+            <div key={key} style={{ fontSize, marginBottom: fontSize / 2 }}>
               <div style={{
                 background: DEFAULT_THEME[key],
                 color: contrast,

@@ -56,7 +56,7 @@ storiesOf(PillManager.name, module)
     <PillManager>
       {
         startContent.map((val, idx) => (
-          <Pill selected={idx === 4} onClick={() => clickAction('start', val)}>{val}</Pill>
+          <Pill key={val} selected={idx === 4} onClick={() => clickAction('start', val)}>{val}</Pill>
         ))
       }
       <PillSpacer>
@@ -68,7 +68,7 @@ storiesOf(PillManager.name, module)
       </PillSpacer>
       {
         endContent.map((val) => (
-          <Pill onClick={() => clickAction('end', val)}>{val}</Pill>
+          <Pill key={val} onClick={() => clickAction('end', val)}>{val}</Pill>
         ))
       }
     </PillManager>
