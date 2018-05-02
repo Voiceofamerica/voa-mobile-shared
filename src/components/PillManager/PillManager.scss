@@ -4,27 +4,27 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
 
-  .pill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 0;
-    flex-shrink: 0;
-    min-width: 16vw;
-    height: 20px;
-    font-size: 14px;
-    margin-top: 6px;
-    padding: 4px 3vw;
-    border-radius: 20px;
-  }
+.pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 16vw;
+  height: 20px;
+  font-size: 14px;
+  margin: 6px 3px 0;
+  padding: 4px 3vw;
+  border-radius: 20px;
+}
 
-  .divider {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 6px;
-  }
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 6px;
 }
