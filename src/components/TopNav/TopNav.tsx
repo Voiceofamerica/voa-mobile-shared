@@ -8,17 +8,26 @@ import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 import StaticItem from './StaticItem'
 import TopNavItem, { Props as TopNavItemProps } from './TopNavItem'
 import CenterText from './CenterText'
-import { topNav, innerContainer, itemContainer, fadeout, topNavItem } from './TopNav.scss'
+import {
+  topNav,
+  flexFlow,
+  innerContainer,
+  itemContainer,
+  fadeout,
+  topNavItem,
+} from './TopNav.scss'
 
 export interface Props extends React.Props<any>, ThemeProps {
+  flex?: boolean
   rtl?: boolean
+  className?: string
   style?: React.CSSProperties
 }
 
 @themed
 class TopNav extends React.Component<Props> {
   render () {
-    const { children, rtl, style, theme = DEFAULT_THEME } = this.props
+    const { children, flex, rtl, className = '', style, theme = DEFAULT_THEME } = this.props
     const {
       topNavBackground,
       topNavColor,
@@ -68,8 +77,12 @@ class TopNav extends React.Component<Props> {
       }
     }
 
+    const fullClassName = flex
+                        ? `${topNav} ${flexFlow} ${className}`
+                        : `${topNav} ${className}`
+
     return (
-      <div className={topNav} style={{ ...style, background: topNavBackground, color: topNavColor }}>
+      <div className={fullClassName} style={{ ...style, background: topNavBackground, color: topNavColor }}>
         {startStatic}
         <div className={itemContainer}>
           <div className={innerContainer}>

@@ -1,16 +1,21 @@
 
 import * as React from 'react'
 
-import { bottomNav } from './BottomNav.scss'
+import { bottomNav, flexFlow } from './BottomNav.scss'
 
 export type Props = React.Props<any> & {
+  flex?: boolean
   style?: React.CSSProperties,
   className?: string,
 }
 
-function BottomNav ({ children, className = '', style }: Props) {
+function BottomNav ({ children, flex, className = '', style }: Props) {
+  const fullClassName = flex
+                      ? `${bottomNav} ${flexFlow} ${className}`
+                      : `${bottomNav} ${className}`
+
   return (
-    <div className={`${bottomNav} ${className}`} style={style}>
+    <div className={fullClassName} style={style}>
       {
         children
       }
