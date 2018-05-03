@@ -58,7 +58,14 @@ export interface PillManagerTheme {
   pillBackground?: string // baseTheme.secondaryColor
   pillColor?: string // baseTheme.white
   pillSelectedBackground?: string // baseTheme.accentGreen
-  pillSelectedColor?: string // baseTheme.black
+  pillSelectedColor?: string // baseTheme.white
+}
+
+export interface CheckboxTheme {
+  checkboxUncheckedColor?: string // baseTheme.accentGrey
+  checkboxCheckedColor?: string // baseTheme.secondaryColor
+  checkboxItemUncheckedTextColor?: string // baseTheme.white
+  checkboxItemCheckedTextColor?: string // baseTheme.white
 }
 
 export type FullTheme =
@@ -70,3 +77,4 @@ export type FullTheme =
   & ModalTheme
   & PopupButtonGroupTheme
   & PillManagerTheme
+  & CheckboxTheme

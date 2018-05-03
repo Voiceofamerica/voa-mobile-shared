@@ -77,6 +77,14 @@ export const hydratePillManager = (theme: Required<Types.BaseTheme> & Types.Pill
   ...theme,
 })
 
+export const hydrateCheckbox = (theme: Required<Types.BaseTheme> & Types.CheckboxTheme): Required<Types.BaseTheme & Types.CheckboxTheme> => ({
+  checkboxUncheckedColor: theme.accentGrey,
+  checkboxCheckedColor: theme.secondaryColor,
+  checkboxItemUncheckedTextColor: theme.white,
+  checkboxItemCheckedTextColor: theme.white,
+  ...theme,
+})
+
 export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> => {
   let fullTheme: Required<Types.FullTheme> = hydrateBase(theme) as Required<Types.FullTheme>
   fullTheme = hydrateBase(fullTheme) as Required<Types.FullTheme>
@@ -87,6 +95,7 @@ export const hydrateFull = (theme: Types.FullTheme): Required<Types.FullTheme> =
   fullTheme = hydrateModal(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydratePopupButtonGroup(fullTheme) as Required<Types.FullTheme>
   fullTheme = hydratePillManager(fullTheme) as Required<Types.FullTheme>
+  fullTheme = hydrateCheckbox(fullTheme) as Required<Types.FullTheme>
   return fullTheme
 }
 

@@ -1,0 +1,58 @@
+
+@import '../../commonStyles/index.scss';
+
+$checkbox-size: 30px;
+$grid-size: $checkbox-size / 15;
+
+.checkbox {
+  font-size: $checkbox-size;
+  cursor: pointer;
+
+  .iconHolder {
+    position: relative;
+    top: $grid-size;
+    margin-right: $grid-size * 4;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  &.styleBox {
+    display: flex;
+    flex-direction: row;
+
+    .iconHolder {
+      .checkmark {
+        position: absolute;
+        top: $grid-size / 2;
+        left: $grid-size * 2;
+      }
+    }
+  }
+
+  &.styleFillBox {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.styleItem {
+    @include touchable();
+
+    display: flex;
+    flex-direction: row;
+    padding: $grid-size * 2;
+    border-radius: $grid-size * 4;
+    overflow: hidden;
+    width: auto;
+    margin-top: $grid-size * 2;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+  }
+}
