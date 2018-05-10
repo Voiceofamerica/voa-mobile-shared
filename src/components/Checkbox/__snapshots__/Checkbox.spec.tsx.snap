@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> shapshots should render checked 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "checkedOutline",
+        }
+      }
+    />
+    <svg-icon
+      props={
+        Object {
+          "className": "checkmark",
+          "src": "check",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render checked with type box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "checkedOutline",
+        }
+      }
+    />
+    <svg-icon
+      props={
+        Object {
+          "className": "checkmark",
+          "src": "check",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render checked with type fill-box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "checkedOutline",
+        }
+      }
+    />
+    <svg-icon
+      props={
+        Object {
+          "className": "checkmark",
+          "src": "check",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render checked with type item 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "checkedOutline",
+        }
+      }
+    />
+    <svg-icon
+      props={
+        Object {
+          "className": "checkmark",
+          "src": "check",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render unchecked 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render unchecked with type box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render unchecked with type fill-box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render unchecked with type item 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with className 1`] = `
+<div
+  className="checkbox styleBox myClass"
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with className and type box 1`] = `
+<div
+  className="checkbox styleBox myClass"
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with className and type fill-box 1`] = `
+<div
+  className="checkbox styleBox myClass"
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with className and type item 1`] = `
+<div
+  className="checkbox styleBox myClass"
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with styles 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with styles and type box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with styles and type fill-box 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
+
+exports[`<Checkbox /> shapshots should render with styles and type item 1`] = `
+<div
+  className="checkbox styleBox "
+  onClick={[Function]}
+>
+  <div
+    className="iconHolder"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+  >
+    <svg-icon
+      props={
+        Object {
+          "src": "unChecked",
+        }
+      }
+    />
+  </div>
+  <div
+    className="content"
+  />
+</div>
+`;
