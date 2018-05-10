@@ -2,10 +2,15 @@
 import * as React from 'react'
 import * as path from 'path'
 
+import fakeContext from '../../helpers/fakeContext'
 import { icon } from './SvgIcon.scss'
-
+try {
+  fakeContext(require)
+} catch (err) {
+  // Do nothing
+}
+export const iconMap = new Map<string, any>()
 const iconContext = require.context('./icons', false, /\.svg$/i)
-const iconMap = new Map<string, any>()
 iconContext.keys().forEach(key => {
   const iconName = path.basename(key, '.svg')
   iconMap.set(iconName, iconContext(key))

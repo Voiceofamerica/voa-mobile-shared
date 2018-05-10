@@ -3,9 +3,13 @@ import * as React from 'react'
 import { create } from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
-import SvgIcon from './SvgIcon'
+import SvgIcon, { iconMap } from './SvgIcon'
 
 describe(`<${SvgIcon.name} />`, () => {
+  beforeEach(() => {
+    iconMap.clear()
+  })
+
   describe('shapshots', () => {
     it('should render', () => {
       const element = create((
@@ -22,8 +26,11 @@ describe(`<${SvgIcon.name} />`, () => {
       expect(element).toMatchSnapshot()
     })
     it('should render with the shipped svg', () => {
+      iconMap.set('mySvg', 'This should show up')
+      iconMap.set('otherSvg', 'This should NOT show up')
+
       const element = create((
-        <SvgIcon src='audio' />
+        <SvgIcon src='mySvg' />
       ))
 
       expect(element).toMatchSnapshot()
