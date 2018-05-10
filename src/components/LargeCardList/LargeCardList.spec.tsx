@@ -8,6 +8,7 @@ import LargeCardList, { Props, State } from './LargeCardList'
 
 jest.mock('react-virtualized')
 jest.mock('../LargeCard')
+jest.mock('../SvgIcon')
 
 const testItem: ListItem = {
   id: 1,

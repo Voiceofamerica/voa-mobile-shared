@@ -10,6 +10,7 @@ jest.mock('react-virtualized')
 jest.mock('../Card')
 jest.mock('../SecondaryCard')
 jest.mock('../Ticket')
+jest.mock('../SvgIcon')
 
 const testItem: ListItem = {
   id: 1,

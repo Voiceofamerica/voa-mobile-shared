@@ -9,6 +9,7 @@ import StaticDefaultList from './StaticDefaultList'
 jest.mock('../Card')
 jest.mock('../SecondaryCard')
 jest.mock('../Ticket')
+jest.mock('../SvgIcon')
 
 const testItem: ListItem = {
   id: 1,

@@ -7,6 +7,7 @@ import { ListItem, IconDefinition } from './LargeCardListTypes'
 import StaticLargeCardList from './StaticLargeCardList'
 
 jest.mock('../LargeCard')
+jest.mock('../SvgIcon')
 
 const testItem: ListItem = {
   id: 1,
