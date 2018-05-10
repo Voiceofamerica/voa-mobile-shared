@@ -31,6 +31,14 @@ $transition-time: 0.3s;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   }
 
+  &.visible {
+    transition:
+      $transition-time opacity,
+      $transition-time transform,
+      $transition-time box-shadow,
+      $transition-time top;
+  }
+
   .button {
     display: flex;
     flex-direction: row;
