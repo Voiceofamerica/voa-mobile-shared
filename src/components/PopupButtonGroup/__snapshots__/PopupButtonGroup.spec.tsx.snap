@@ -2,7 +2,7 @@
 
 exports[`<PopupButtonGroup /> shapshots should render shown with specified vertical position 1`] = `
 <div
-  className="popupButtonGroup show "
+  className="popupButtonGroup show visible "
   style={
     Object {
       "background": "#EEEEEE",
@@ -14,7 +14,7 @@ exports[`<PopupButtonGroup /> shapshots should render shown with specified verti
 
 exports[`<PopupButtonGroup /> shapshots should render with children 1`] = `
 <div
-  className="popupButtonGroup "
+  className="popupButtonGroup   "
   style={
     Object {
       "background": "#EEEEEE",
@@ -28,7 +28,7 @@ exports[`<PopupButtonGroup /> shapshots should render with children 1`] = `
 
 exports[`<PopupButtonGroup /> shapshots should render without children 1`] = `
 <div
-  className="popupButtonGroup "
+  className="popupButtonGroup   "
   style={
     Object {
       "background": "#EEEEEE",
