@@ -28,7 +28,7 @@ exports[`< /> shapshots should render with the shipped svg 1`] = `
   className="icon "
   style={
     Object {
-      "WebkitMaskImage": "url(Some File)",
+      "WebkitMaskImage": "url(This should show up)",
     }
   }
 />

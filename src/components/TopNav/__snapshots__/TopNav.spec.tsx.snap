@@ -2,7 +2,7 @@
 
 exports[`<TopNav /> shapshots should render empty 1`] = `
 <div
-  className="topNav"
+  className="topNav "
   style={
     Object {
       "background": "#000000",
@@ -36,7 +36,7 @@ exports[`<TopNav /> shapshots should render empty 1`] = `
 
 exports[`<TopNav /> shapshots should render with the given children 1`] = `
 <div
-  className="topNav"
+  className="topNav "
   style={
     Object {
       "background": "#000000",
