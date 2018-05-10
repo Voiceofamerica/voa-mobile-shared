@@ -47,6 +47,11 @@ $transition-time: 0.3s;
     font-size: $button-text-size;
     border-right: 1px solid;
 
+    [dir='rtl'] & {
+      border-right: none;
+      border-left: 1px solid;
+    }
+
     .content {
       @include touchable();
 
@@ -57,7 +62,7 @@ $transition-time: 0.3s;
     }
 
     &:last-of-type {
-      border-right: none;
+      border: none;
     }
   }
 }
