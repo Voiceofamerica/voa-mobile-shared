@@ -48,7 +48,7 @@ class Checkbox extends React.Component<Props> {
     const { className = '', style, children } = this.props
 
     return (
-      <div className={`${checkbox} ${styleBox} ${className}`} onClick={this.onClick}>
+      <div className={`${checkbox} ${styleBox} ${className}`} onClick={this.onClick} style={style}>
         {this.renderBoxIcon()}
         <div className={content}>
           {children}
@@ -84,7 +84,7 @@ class Checkbox extends React.Component<Props> {
     const { className = '', style, children } = this.props
 
     return (
-      <div className={`${checkbox} ${styleFillBox} ${className}`} onClick={this.onClick}>
+      <div className={`${checkbox} ${styleFillBox} ${className}`} onClick={this.onClick} style={style}>
         {this.renderFillBoxIcon()}
         <div className={content}>
           {children}

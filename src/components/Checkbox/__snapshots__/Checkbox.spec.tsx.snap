@@ -21,6 +21,7 @@ exports[`<Checkbox /> shapshots should render checked with type box 1`] = `
 <div
   className="checkbox styleBox "
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -56,6 +57,7 @@ exports[`<Checkbox /> shapshots should render checked with type fill-box 1`] = `
 <div
   className="checkbox styleFillBox "
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -117,6 +119,7 @@ exports[`<Checkbox /> shapshots should render unchecked with type box 1`] = `
 <div
   className="checkbox styleBox "
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -144,6 +147,7 @@ exports[`<Checkbox /> shapshots should render unchecked with type fill-box 1`] =
 <div
   className="checkbox styleFillBox "
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -205,6 +209,7 @@ exports[`<Checkbox /> shapshots should render with className and type box 1`] = 
 <div
   className="checkbox styleBox myClass"
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -232,6 +237,7 @@ exports[`<Checkbox /> shapshots should render with className and type fill-box 1
 <div
   className="checkbox styleFillBox myClass"
   onClick={[Function]}
+  style={undefined}
 >
   <div
     className="iconHolder"
@@ -293,6 +299,11 @@ exports[`<Checkbox /> shapshots should render with styles and type box 1`] = `
 <div
   className="checkbox styleBox "
   onClick={[Function]}
+  style={
+    Object {
+      "color": "myColor",
+    }
+  }
 >
   <div
     className="iconHolder"
@@ -320,6 +331,11 @@ exports[`<Checkbox /> shapshots should render with styles and type fill-box 1`] 
 <div
   className="checkbox styleFillBox "
   onClick={[Function]}
+  style={
+    Object {
+      "color": "myColor",
+    }
+  }
 >
   <div
     className="iconHolder"
