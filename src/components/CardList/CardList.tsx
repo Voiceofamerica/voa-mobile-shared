@@ -7,7 +7,6 @@ import { resizeObservable } from '../../helpers/windowHelper'
 import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
 import Card, { getHeight, CARD_PADDING } from '../Card'
 
-import StaticCardList from './StaticCardList'
 import { BaseProps } from './CardListTypes'
 import { cardList, row } from './CardList.scss'
 
@@ -28,8 +27,6 @@ export interface State {
 const MENU_HEIGHT = 150
 
 class CardList extends React.PureComponent<Props, State> {
-  static Static = StaticCardList
-
   state: State = {
     renderHeight: this.props.height || window.innerHeight - MENU_HEIGHT,
     renderWidth: this.props.width || window.innerWidth,

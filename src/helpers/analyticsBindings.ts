@@ -178,7 +178,7 @@ export function trackState (type: string, options: ADB.GeneratedTrackStateOption
     ...options,
   }
 
-  if (dataLayer) {
+  if (typeof dataLayer !== 'undefined') {
     dataLayer.push({
       ...fullOptions,
       action: type,
@@ -202,7 +202,7 @@ export function trackAction (type: string, options: ADB.GeneratedTrackActionOpti
     ...options,
   }
 
-  if (dataLayer) {
+  if (typeof dataLayer !== 'undefined') {
     dataLayer.push({
       ...fullOptions,
       action: type,

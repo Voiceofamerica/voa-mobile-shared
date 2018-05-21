@@ -7,7 +7,6 @@ import { resizeObservable } from '../../helpers/windowHelper'
 import { TextDirection, directionObservable } from '../../helpers/textDirectionHelper'
 import Ticket, { TICKET_HEIGHT } from '../Ticket'
 
-import StaticTicketList from './StaticTicketList'
 import { BaseProps } from './TicketListTypes'
 import { ticketList, row } from './TicketList.scss'
 
@@ -28,8 +27,6 @@ const MENU_HEIGHT = 150
 const BORDER_SIZE = 1
 
 class TicketList extends React.PureComponent<Props, State> {
-  static Static = StaticTicketList
-
   state: State = {
     renderHeight: this.props.height || window.innerHeight - MENU_HEIGHT,
     renderWidth: this.props.width || window.innerWidth,

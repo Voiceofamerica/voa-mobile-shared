@@ -8,7 +8,6 @@ import { TextDirection, directionObservable } from '../../helpers/textDirectionH
 import { themed, ThemeProps, DEFAULT_THEME } from '../ThemeProvider'
 import LargeCard, { IconDefinition, getHeight, CARD_PADDING } from '../LargeCard'
 
-import StaticLargeCardList from './StaticLargeCardList'
 import { BaseProps } from './LargeCardListTypes'
 import { cardList, row } from './LargeCardList.scss'
 
@@ -30,8 +29,6 @@ const MENU_HEIGHT = 150
 
 @themed
 class LargeCardList extends React.PureComponent<Props, State> {
-  static Static = StaticLargeCardList
-
   state: State = {
     renderHeight: this.props.height || window.innerHeight - MENU_HEIGHT,
     renderWidth: this.props.width || window.innerWidth,

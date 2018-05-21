@@ -9,7 +9,6 @@ import Card, { getHeight as getCardHeight } from '../Card'
 import SecondaryCard, { getHeight as getSecondaryCardHeight } from '../SecondaryCard'
 import Ticket, { TICKET_HEIGHT } from '../Ticket'
 
-import StaticDefaultList from './StaticDefaultList'
 import { BaseProps } from './DefaultListTypes'
 import { defaultList, row, ticketRow } from './DefaultList.scss'
 
@@ -34,8 +33,6 @@ const BORDER_SIZE = 1
 const CARD_MARGIN = 11
 
 class DefaultList extends React.PureComponent<Props, State> {
-  static Static = StaticDefaultList
-
   state: State = {
     renderHeight: window.innerHeight - MENU_HEIGHT,
     renderWidth: this.props.height || window.innerWidth,
