@@ -7,16 +7,35 @@ import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/first'
 import 'rxjs/add/operator/distinctUntilChanged'
 
-import * as psiphon from 'psiphon-cordova-plugin/www/psiphon'
+import * as OrigPsi from 'psiphon-cordova-plugin/www/psiphon.d'
 
 import { deviceIsReady, appResumeObservable, __HOST__ } from './cordovaHelper'
+
+let psiphonPromise: Promise<typeof OrigPsi>
+const getPsiphon = () => {
+  if (!psiphonPromise) {
+    psiphonPromise = new Promise<typeof OrigPsi>((resolve, reject) => {
+      try {
+        const psiphon = require('psiphon-cordova-plugin/www/psiphon')
+        resolve(psiphon)
+      } catch (e) {
+        reject(e)
+      }
+    })
+  }
+
+  return psiphonPromise
+}
+
+const noop = () => null
 
 let psiphonConfig: any
 let configPromise: Promise<void>
 export function setPsiphonConfig (config: any) {
   psiphonConfig = config
   configPromise = deviceIsReady
-    .then(() => new Promise<void>((resolve, reject) => {
+    .then(getPsiphon)
+    .then((psiphon) => new Promise<void>((resolve, reject) => {
       console.log('configuring psiphon')
       psiphon.config(psiphonConfig, resolve, reject)
     }))
@@ -30,12 +49,15 @@ const baseStartObservable = new Observable<boolean>((sub) => {
 
   const resumeSub = appResumeObservable.subscribe(() => {
     console.log('resuming psiphon')
-    psiphon.start(() => sub.next(true), (err) => sub.error(err))
+    getPsiphon()
+    .then(psiphon => psiphon.start(() => sub.next(true), (err) => sub.error(err)))
+    .catch(noop)
   })
 
   configPromise.then(() => {
     console.log('starting psiphon')
-    psiphon.start(() => sub.next(true), (err) => sub.error(err))
+    return getPsiphon()
+    .then(psiphon => psiphon.start(() => sub.next(true), (err) => sub.error(err)))
   }).catch((err) => {
     console.error('something went wrong configuring psiphon', err)
     sub.error(err)
@@ -85,7 +107,9 @@ export function pause (): Promise<void> {
   return configPromise.then(() => {
     return new Promise<void>((resolve, reject) => {
       console.log('pausing psiphon')
-      psiphon.pause(resolve, reject)
+      getPsiphon()
+      .then(psiphon => psiphon.pause(resolve, reject))
+      .catch(reject)
     })
   })
 }
@@ -94,7 +118,9 @@ export function port (): Promise<number> {
   return configPromise.then(() => {
     return new Promise<number>((resolve, reject) => {
       console.log('getting psiphon port')
-      psiphon.port(([portNumber]) => resolve(portNumber), reject)
+      getPsiphon()
+      .then(psiphon => psiphon.port(([portNumber]) => resolve(portNumber), reject))
+      .catch(reject)
     })
   })
 }
