@@ -173,49 +173,49 @@ export function setAnalyticsOptions (opts: AppAnalyticsOptions) {
 }
 
 export function trackState (type: string, options: ADB.GeneratedTrackStateOptions) {
-  const fullOptions = {
-    ...baseStateOptions,
-    ...options,
-  }
-
-  if (typeof dataLayer !== 'undefined') {
-    dataLayer.push({
-      ...fullOptions,
-      action: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-    dataLayer.push({
-      event: 'appScreenView',
-      action: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-  }
-
   return adbReady.then((ADB) => {
+    const fullOptions = {
+      ...baseStateOptions,
+      ...options,
+    }
+
+    if (typeof dataLayer !== 'undefined') {
+      dataLayer.push({
+        ...fullOptions,
+        action: type,
+        GoogleAnalyticsID: googleAnalyticsId,
+      })
+      dataLayer.push({
+        event: 'appScreenView',
+        action: type,
+        GoogleAnalyticsID: googleAnalyticsId,
+      })
+    }
+
     ADB.trackState(type, fullOptions)
   })
 }
 
 export function trackAction (type: string, options: ADB.GeneratedTrackActionOptions) {
-  const fullOptions = {
-    ...baseActionOptions,
-    ...options,
-  }
-
-  if (typeof dataLayer !== 'undefined') {
-    dataLayer.push({
-      ...fullOptions,
-      action: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-    dataLayer.push({
-      event: 'appEvent',
-      action: type,
-      GoogleAnalyticsID: googleAnalyticsId,
-    })
-  }
-
   return adbReady.then((ADB) => {
+    const fullOptions = {
+      ...baseActionOptions,
+      ...options,
+    }
+
+    if (typeof dataLayer !== 'undefined') {
+      dataLayer.push({
+        ...fullOptions,
+        action: type,
+        GoogleAnalyticsID: googleAnalyticsId,
+      })
+      dataLayer.push({
+        event: 'appEvent',
+        action: type,
+        GoogleAnalyticsID: googleAnalyticsId,
+      })
+    }
+
     ADB.trackAction(type, fullOptions)
   })
 }
