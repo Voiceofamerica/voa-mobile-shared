@@ -145,7 +145,6 @@ export default function analytics<P = {}> (options: HOCAnalyticsOptions | ((prop
           audio_name: itemType === 'audio' ? title : undefined,
           content_type: contentType,
           section: section,
-          category: section,
           page_title: title,
           headline: itemType === 'article' ? title : undefined,
           byline: byline,

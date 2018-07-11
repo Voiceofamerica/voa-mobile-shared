@@ -57,14 +57,13 @@ declare namespace ADB {
     audio_name?: string
     content_type: StateContentType
     section: string // ???
-    category: string // ???
     page_title: string
     headline?: string
     byline?: string
     pub_date?: string
     article_uid?: string
     search_keyword?: string
-    share_type?: string // ???
+    share_type?: string
     media_type?: MediaType
     media_name?: MediaName
     app_events?: string // ???
@@ -93,7 +92,6 @@ declare namespace ADB {
     audio_name?: string
     content_type: ActionContentType
     section: string // ???
-    category: string // ???
     page_title: string
     headline?: string
     byline?: string

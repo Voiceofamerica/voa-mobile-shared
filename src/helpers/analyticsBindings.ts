@@ -46,8 +46,7 @@ export interface ArticleActionOpts {
 export const articleToActionOptions = (opts: ArticleActionOpts): ADB.GeneratedTrackActionOptions => ({
   page_name: opts.articleTitle,
   content_type: 'article',
-  section: '???',
-  category: '???',
+  section: 'article',
   page_title: opts.articleTitle,
   headline: opts.articleTitle,
   byline: opts.authors,
@@ -89,8 +88,7 @@ export interface ProgramActionOpts {
 export const programToActionOptions = (opts: ProgramActionOpts): ADB.GeneratedTrackActionOptions => ({
   page_name: opts.mediaTitle,
   content_type: opts.contentType,
-  section: '???',
-  category: '???',
+  section: `${opts.contentType} program`,
   page_title: opts.mediaTitle,
   media_type: opts.type,
   media_name: opts.contentType,
@@ -105,8 +103,7 @@ export interface SearchActionOpts {
 export const searchToActionOptions = (opts: SearchActionOpts): ADB.GeneratedTrackActionOptions => ({
   page_name: opts.pageTitle,
   content_type: 'search',
-  section: '???',
-  category: '???',
+  section: 'search listing',
   page_title: opts.pageTitle,
   search_keyword: opts.searchQuery,
   app_events: '???',
@@ -120,8 +117,7 @@ export interface SetProxyOpts {
 export const setProxyToActionOptions = (opts: SetProxyOpts): ADB.GeneratedTrackActionOptions => ({
   page_name: opts.pageTitle,
   content_type: 'settings',
-  section: '???',
-  category: '???',
+  section: 'settings',
   page_title: opts.pageTitle,
   app_events: '???',
 })
