@@ -7,3 +7,4 @@ import './customTypings/selector'
 import './customTypings/statusBar'
 
 import 'cordova-plugin-device'
+import 'phonegap-plugin-push'

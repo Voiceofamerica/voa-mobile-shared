@@ -57,7 +57,9 @@ const baseStartObservable = new Observable<boolean>((sub) => {
   configPromise.then(() => {
     console.log('starting psiphon')
     return getPsiphon()
-    .then(psiphon => psiphon.start(() => sub.next(true), (err) => sub.error(err)))
+    .then(psiphon => {
+      psiphon.start(() => sub.next(true), (err) => sub.error(err))
+    })
   }).catch((err) => {
     console.error('something went wrong configuring psiphon', err)
     sub.error(err)
