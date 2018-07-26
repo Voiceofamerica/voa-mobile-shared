@@ -30,8 +30,8 @@ export const deviceIsReady = new Promise<Event>(resolve => {
   }, false)
 })
 
-export const appClosing = new Promise<Event>(resolve => {
-  window.addEventListener('unload', (ev) => resolve(ev))
+export const appClosing = new Promise<BeforeUnloadEvent>(resolve => {
+  window.addEventListener('beforeunload', (ev) => resolve(ev))
 })
 
 const baseAppResumeObservable = new Observable<Event>(sub => {

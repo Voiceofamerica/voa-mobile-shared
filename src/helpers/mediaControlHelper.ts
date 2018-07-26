@@ -25,6 +25,7 @@ export const showControls = ({ title, playing }: ShowControlsOptions): Promise<v
         hasPrev: false,
         hasNext: false,
         hasClose: true,
+        dismissable: true,
       },
       () => {
         showingControls = true
