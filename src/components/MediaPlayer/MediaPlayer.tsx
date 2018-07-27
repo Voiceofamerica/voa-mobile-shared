@@ -2,6 +2,8 @@
 import * as React from 'react'
 import * as Hls from 'hls.js'
 
+import { isIos } from '../../helpers/platformHelper'
+
 import { mediaPlayer, loadingBox, videoElement } from './MediaPlayer.scss'
 
 export interface Props {
@@ -102,7 +104,9 @@ class MediaPlayer extends React.Component<Props, State> {
       showLoading,
     } = this.state
 
-    const trueSrc = src.endsWith('m3u8') ? undefined : src
+    const hlsRewrite = !isIos() && src.endsWith('m3u8')
+
+    const trueSrc = hlsRewrite ? undefined : src
 
     const elementProps = {
       key: src,
@@ -185,6 +189,9 @@ class MediaPlayer extends React.Component<Props, State> {
   }
 
   private playM3U8 (src: string) {
+    if (isIos()) {
+      return
+    }
     this.hls = new Hls()
     this.hls.loadSource(src)
     this.hls.attachMedia(this.player as HTMLVideoElement)
