@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0061B0;}
+	.st1{clip-path:url(#SVGID_2_);fill:#0D73BA;}
+	.st2{clip-path:url(#SVGID_4_);fill:#2182C7;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:none;}
+	.st5{font-family:'ArialMT';}
+	.st6{font-size:128px;}
+</style>
+<g>
+	<rect x="0.5" y="-0.6" class="st0" width="1023.5" height="1023.5"/>
+	<g>
+		<g>
+			<defs>
+				<path id="SVGID_1_" d="M118.3-0.2C53.5-0.2,1,52.3,1,117.1v787.8c0,64.8,52.5,117.3,117.3,117.3h787.8
+					c61.2,0,111.5-46.9,116.8-106.8V106.6C1017.6,46.7,967.3-0.2,906.1-0.2H118.3z"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<path class="st1" d="M1030.1,511c0,286-231.9,517.9-517.9,517.9S-5.7,797-5.7,511S226.2-6.9,512.2-6.9S1030.1,225,1030.1,511"/>
+		</g>
+		<g>
+			<defs>
+				<path id="SVGID_3_" d="M118.3-0.2C53.5-0.2,1,52.3,1,117.1v787.8c0,64.8,52.5,117.3,117.3,117.3h787.8
+					c61.2,0,111.5-46.9,116.8-106.8V106.6C1017.6,46.7,967.3-0.2,906.1-0.2H118.3z"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<path class="st2" d="M876.9,511c0,201.4-163.3,364.7-364.7,364.7c-201.4,0-364.7-163.3-364.7-364.7s163.3-364.7,364.7-364.7
+				C713.6,146.3,876.9,309.6,876.9,511"/>
+		</g>
+	</g>
+	<g>
+		<path class="st3" d="M913.1,678.2l-121-333.1H666.9l-21.1,60.7c22.8,29.1,36.4,65.7,36.4,105.6c0,80.6-55.8,148.2-130.8,166.3
+			l-0.2,0.6h126.8L732,476.5l54.3,201.7H913.1z"/>
+		<path class="st3" d="M468.9,345.5H347.4l-54.3,201.8l-53.9-201.8H112.4L228,678.6h125.2l22.7-62.5c-22.5-29-35.9-65.3-35.9-104.8
+			C340,431.4,394.8,364.3,468.9,345.5"/>
+		<path class="st3" d="M511.2,432.5c-43.5,0-78.8,35.3-78.8,78.8c0,43.5,35.3,78.8,78.8,78.8c43.5,0,78.8-35.2,78.8-78.8
+			C590,467.8,554.7,432.5,511.2,432.5"/>
+	</g>
+	<rect x="1" y="-0.2" class="st4" width="1022.4" height="1022.4"/>
+</g>
+<rect x="1" y="709" class="st4" width="1023" height="134"/>
+<text transform="matrix(1 0 0 1 418.716 800.6465)" class="st3 st5 st6">اردو</text>
+</svg>
