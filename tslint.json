@@ -6,7 +6,7 @@
       "severity": "default"
     },
     "no-unused-variable": {
-      "options": [{ "ignore-pattern": "React|ProviderProps|ConsumerProps|Theme|Context" }]
+      "options": [{ "ignore-pattern": "React|ProviderProps|ConsumerProps|Theme|Context|AnyAction" }]
     }
   }
 }

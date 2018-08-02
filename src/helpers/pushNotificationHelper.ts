@@ -128,7 +128,7 @@ function handleNotification (data: VoaNotification) {
 }
 
 export function subscribeToTopic (topic: string, attemptsRemaining = 5, debounce = 3000): Observable<NotificationStatus> {
-  if (topic === undefined || topic === null) {
+  if ((topic as any) === undefined || (topic as any) === null) {
     statusSubject.error(new InputError (subscribeToTopic.name, `topic cannot be null or undefined`))
     return statusSubject
   }
@@ -166,7 +166,7 @@ export function subscribeToTopic (topic: string, attemptsRemaining = 5, debounce
 }
 
 export function unsubscribeFromTopic (topic: string, attemptsRemaining = 5, debounce = 3000) {
-  if (topic === undefined || topic === null) {
+  if ((topic as any) === undefined || (topic as any) === null) {
     statusSubject.error(new InputError (unsubscribeFromTopic.name, `topic cannot be null or undefined`))
     return statusSubject
   }
@@ -201,10 +201,10 @@ export function unsubscribeFromTopic (topic: string, attemptsRemaining = 5, debo
 }
 
 export function initializeNotifications (topic?: string, senderID?: string): Observable<NotificationStatus> {
-  if (pushSubject.getValue() === null) {
+  if ((pushSubject.getValue() as any) === null) {
     deviceIsReady.then(() => {
       initialize(topic, senderID)
-    })
+    }).catch()
   }
 
   return statusSubject.asObservable()

@@ -3,7 +3,7 @@ import { Action, Reducer } from 'redux'
 import FlatMap from './types/FlatMap'
 
 export interface ActorMap<S> {
-  [name: string]: Reducer<S>
+  [name: string]: Reducer<S> | undefined
 }
 
 export function buildReducer<S> (initialState: S, map: ActorMap<S>): Reducer<S> {
