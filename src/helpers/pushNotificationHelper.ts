@@ -1,115 +1,211 @@
+
 import { Observable } from 'rxjs/Observable'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject'
 import { ReplaySubject } from 'rxjs/ReplaySubject'
-import { AsyncSubject } from 'rxjs/AsyncSubject'
-import { of } from 'rxjs/observable/of'
+import 'rxjs/add/operator/first'
+
+import { deviceIsReady } from './cordovaHelper'
 
 export interface VoaAdditionalData extends PhonegapPluginPush.NotificationEventAdditionalData {
   articleId?: string
+}
+
+export class InputError extends Error {
+  constructor (
+    public method: string,
+    message?: string,
+  ) {
+    super(message)
+  }
+}
+
+export class SubscriptionError extends Error {
+  constructor (
+    public topic: string,
+    message?: string,
+  ) {
+    super(message)
+  }
+}
+
+export class UnsubscriptionError extends Error {
+  constructor (
+    public topic: string,
+    message?: string,
+  ) {
+    super(message)
+  }
 }
 
 export interface VoaNotification extends PhonegapPluginPush.NotificationEventResponse {
   additionalData: VoaAdditionalData
 }
 
-export const notificationSubject = new ReplaySubject<VoaNotification>(10)
-
-let push: PhonegapPluginPush.PushNotification | null = null
-
-export enum NotificationStatus {
-  initialized,
-  subscribed,
-  failed,
+export interface NotificationStatus {
+  registrationId: string | null
+  initialized: boolean
+  subscriptions: string[]
 }
 
-function initialize (initOptions: PhonegapPluginPush.InitOptions, topic?: string): Observable<boolean> {
-  const initSubject = new AsyncSubject<boolean>()
+export const notificationSubject = new ReplaySubject<VoaNotification>(10)
+export const coldStartSubject = new ReplaySubject<VoaNotification>(1)
 
-  push = PushNotification.init(initOptions)
+export const statusSubject = new BehaviorSubject<NotificationStatus>({
+  registrationId: null,
+  initialized: false,
+  subscriptions: [],
+})
 
-  push.on('registration', data => {
-    console.log('Push notification registration id:', data.registrationId)
-    subscribeToTopic(topic).subscribe(initSubject)
+// warn all errors created by this helper
+statusSubject.subscribe(() => null, (err) => {
+  console.warn('An error occurred in push notification helper:', err)
+})
+
+const updateStatus = (mapper: (oldStatus: NotificationStatus) => NotificationStatus) => {
+  statusSubject.next(mapper(statusSubject.getValue()))
+}
+
+const pushSubject = new BehaviorSubject<PhonegapPluginPush.PushNotification>(null as any)
+const pushOnce = pushSubject.first()
+
+function initialize (topic?: string, senderID = '240913753196'): Observable<NotificationStatus> {
+  const push = PushNotification.init({
+    android: {
+      senderID,
+      sound: true,
+      vibrate: true,
+      topics: topic !== undefined ? [topic] : [],
+    },
+    ios: {
+      alert: true,
+      badge: true,
+      sound: true,
+      clearBadge: true,
+      topics: topic !== undefined ? [topic] : [],
+    },
+  })
+
+  push.on('registration', ({ registrationId }) => {
+    console.log('Push notification registration id:', registrationId)
+    updateStatus(status => ({
+      ...status,
+      registrationId,
+      initialized: true,
+    }))
   })
   push.on('notification', handleNotification)
-  push.on('error', e => console.error('Notification error:', e))
+  push.on('error', e => {
+    console.error('Notification error:', e)
+    statusSubject.error(e)
+  })
 
-  return initSubject.asObservable()
+  pushSubject.next(push)
+
+  return statusSubject.asObservable()
 }
 
 function handleNotification (data: VoaNotification) {
-  notificationSubject.next(data)
-  push!.finish(
-    () => {
-      console.log('processing of push data is finished')
-    },
-    () => {
-      console.log(
-        'something went wrong with push.finish for ID =',
-        data.additionalData.notId,
-      )
-    },
-    data.additionalData.notId,
-  )
-}
-
-export function subscribeToTopic (topic: string | undefined): Observable<boolean> {
-  const subscribeObservable = new ReplaySubject<boolean>()
-
-  if (topic && push) {
-    push.subscribe(
-      topic,
-      () => {
-        console.log('success subscribing to topic')
-        subscribeObservable.next(true)
-      },
-      () => {
-        console.log('error subscribing to topic')
-        subscribeObservable.next(false)
-      },
-    )
+  if (data.additionalData.coldstart) {
+    coldStartSubject.next(data)
   } else {
-    return of(false)
+    notificationSubject.next(data)
   }
 
-  return subscribeObservable
+  pushOnce.subscribe(push => {
+    push.finish(
+      () => {
+        console.log('processing of push data is finished')
+      },
+      () => {
+        console.log(
+          'something went wrong with push.finish for ID:',
+          data.additionalData.notId,
+        )
+      },
+      data.additionalData.notId,
+    )
+  })
 }
 
-export function unsubscribeFromTopic (topic: string) {
-  const unsubscribeObservable = new ReplaySubject<boolean>()
-
-  if (topic && push) {
-    push.unsubscribe(
-      topic,
-      () => {
-        console.log('success subscribing to topic')
-        unsubscribeObservable.next(true)
-      },
-      () => {
-        console.log('error subscribing to topic')
-        unsubscribeObservable.next(false)
-      },
-    )
-  } else {
-    return of(false)
+export function subscribeToTopic (topic: string, attemptsRemaining = 5, debounce = 3000): Observable<NotificationStatus> {
+  if (topic === undefined || topic === null) {
+    statusSubject.error(new InputError (subscribeToTopic.name, `topic cannot be null or undefined`))
+    return statusSubject
   }
 
-  return unsubscribeObservable
+  pushOnce.subscribe(push => {
+    function trySubscribe () {
+      push.subscribe(
+        topic,
+        () => {
+          console.log('success subscribing to topic')
+          updateStatus(({ subscriptions, ...status }) => ({
+            ...status,
+            subscriptions: [
+              ...subscriptions,
+              topic,
+            ],
+          }))
+        },
+        () => {
+          console.log('error subscribing to topic')
+          if (attemptsRemaining === 0) {
+            statusSubject.error(new SubscriptionError(topic))
+          } else {
+            attemptsRemaining--
+            setTimeout(trySubscribe, debounce)
+          }
+        },
+      )
+    }
+
+    trySubscribe()
+  })
+
+  return statusSubject.asObservable()
 }
 
-export function initializeNotifications (initOptions: PhonegapPluginPush.InitOptions, topic?: string): Observable<NotificationStatus> {
-  const initilizationObservable = new ReplaySubject<NotificationStatus>()
+export function unsubscribeFromTopic (topic: string, attemptsRemaining = 5, debounce = 3000) {
+  if (topic === undefined || topic === null) {
+    statusSubject.error(new InputError (unsubscribeFromTopic.name, `topic cannot be null or undefined`))
+    return statusSubject
+  }
 
-  if (push === null) {
-    document.addEventListener('deviceready', () => {
-      initialize(initOptions, topic).subscribe(status =>
-        initilizationObservable.next(
-          status ? NotificationStatus.subscribed : NotificationStatus.failed,
-        ),
+  pushOnce.subscribe(push => {
+    function tryUnsubscribe () {
+      push.unsubscribe(
+        topic,
+        () => {
+          console.log('success unsubscribing from topic')
+          updateStatus(({ subscriptions, ...status }) => ({
+            ...status,
+            subscriptions: subscriptions.filter(t => t !== topic),
+          }))
+        },
+        () => {
+          console.log('error unsubscribing from topic')
+          if (attemptsRemaining === 0) {
+            statusSubject.error(new UnsubscriptionError(topic))
+          } else {
+            attemptsRemaining--
+            setTimeout(tryUnsubscribe, debounce)
+          }
+        },
       )
+    }
+
+    tryUnsubscribe()
+  })
+
+  return statusSubject.asObservable()
+}
+
+export function initializeNotifications (topic?: string, senderID?: string): Observable<NotificationStatus> {
+  if (pushSubject.getValue() === null) {
+    deviceIsReady.then(() => {
+      initialize(topic, senderID)
     })
-  } else {
-    return of(NotificationStatus.initialized)
   }
 
-  return initilizationObservable
+  return statusSubject.asObservable()
 }
