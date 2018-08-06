@@ -46,7 +46,7 @@ export default class NotificationToast extends React.Component<Props, State> {
     )
   }
 
-  private handleToastNotification (data: VoaNotification) {
+  private handleToastNotification = (data: VoaNotification) => {
     const toastId = toast(
       <ToastMessage
         notification={data}
