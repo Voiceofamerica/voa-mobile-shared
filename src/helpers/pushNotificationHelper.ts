@@ -65,7 +65,8 @@ const updateStatus = (mapper: (oldStatus: NotificationStatus) => NotificationSta
   statusSubject.next(mapper(statusSubject.getValue()))
 }
 
-const pushSubject = new BehaviorSubject<PhonegapPluginPush.PushNotification>(null as any)
+let initialized = false
+const pushSubject = new ReplaySubject<PhonegapPluginPush.PushNotification>(1)
 const pushOnce = pushSubject.first()
 
 function initialize (topic?: string, senderID = '240913753196'): Observable<NotificationStatus> {
@@ -100,6 +101,7 @@ function initialize (topic?: string, senderID = '240913753196'): Observable<Noti
   })
 
   pushSubject.next(push)
+  initialized = true
 
   return statusSubject.asObservable()
 }
@@ -201,11 +203,16 @@ export function unsubscribeFromTopic (topic: string, attemptsRemaining = 5, debo
 }
 
 export function initializeNotifications (topic?: string, senderID?: string): Observable<NotificationStatus> {
-  if ((pushSubject.getValue() as any) === null) {
-    deviceIsReady.then(() => {
-      initialize(topic, senderID)
-    }).catch()
+  if (initialized) {
+    return statusSubject.asObservable()
   }
+
+  deviceIsReady.then(() => {
+    if (initialized) {
+      return
+    }
+    initialize(topic, senderID)
+  }).catch()
 
   return statusSubject.asObservable()
 }
